@@ -8,6 +8,7 @@ namespace Capa_Entidades
 {
     public class Producto
     {
+        
 
     }
 }
