@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidades
 {
-    public class Class1
+    public class Producto
     {
+
     }
 }
