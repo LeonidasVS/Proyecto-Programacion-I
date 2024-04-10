@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidades
 {
-    public class Ventas
+    public class Venta
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
