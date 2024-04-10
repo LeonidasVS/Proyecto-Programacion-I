@@ -16,7 +16,7 @@ namespace Capa_Entidades
         [Required]
         public int Cantidad  { get; set; }
         [Required]
-        public decimal Precio_Total { get; set; }
+        public decimal Total { get; set; }
         [Required]
         public DateTime Fecha { get; set; }
     }
