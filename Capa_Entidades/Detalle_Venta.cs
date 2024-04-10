@@ -10,6 +10,7 @@ namespace Capa_Entidades
 {
     public class Detalle_Venta
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idDetalleVenta { get; set; }
