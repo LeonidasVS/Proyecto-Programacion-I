@@ -14,6 +14,7 @@ namespace Capa_Entidades
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int idVenta { get; set; }
         [Required]
+
         public int Cantidad  { get; set; }
         [Required]
         public decimal Total { get; set; }
