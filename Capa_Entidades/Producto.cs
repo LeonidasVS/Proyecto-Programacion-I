@@ -27,8 +27,8 @@ namespace Capa_Entidades
         public bool Estado { get; set; }
 
         [Required]
-        public int idVenta { get; set; }
-        [ForeignKey("idVenta")]
+        public int idMarca { get; set; }
+        [ForeignKey("idMarca")]
         public Marca Marca { get; set; }
 
         [Required]
