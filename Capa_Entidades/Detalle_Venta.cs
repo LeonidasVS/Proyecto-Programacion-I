@@ -30,5 +30,10 @@ namespace Capa_Entidades
         public int idVenta { get; set; }
         [ForeignKey("idVenta")]
         public Venta Venta { get; set; }
+
+        [Required]
+        public int idMetodoPago { get; set; }
+        [ForeignKey("idMetodoPago")]
+        public MetodoPago Metodo { get; set; }
     }
 }
