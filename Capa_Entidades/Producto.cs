@@ -33,7 +33,7 @@ namespace Capa_Entidades
 
         [Required]
         public int idCategoria { get; set; }
-        [ForeignKey("idVenta")]
+        [ForeignKey("idCategoria")]
         public Categoria Categoria { get; set; }
     }
 }
