@@ -176,11 +176,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.SeaShell;
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(335, 67);
+            this.label3.Location = new System.Drawing.Point(330, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 32);
+            this.label3.Size = new System.Drawing.Size(145, 30);
             this.label3.TabIndex = 5;
             this.label3.Text = "Store AS";
             this.label3.UseWaitCursor = true;
