@@ -1,6 +1,6 @@
 ﻿namespace CapaVista
 {
-    partial class Form1
+    partial class Store_AS
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Store_AS));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Producto = new System.Windows.Forms.ToolStripMenuItem();
             this.creacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Ventas = new System.Windows.Forms.ToolStripMenuItem();
             this.realizarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistroVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,9 +52,9 @@
             this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productoToolStripMenuItem,
-            this.ventasToolStripMenuItem,
-            this.registroVentasToolStripMenuItem});
+            this.Producto,
+            this.Ventas,
+            this.RegistroVentas});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -63,18 +63,18 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.UseWaitCursor = true;
             // 
-            // productoToolStripMenuItem
+            // Producto
             // 
-            this.productoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Producto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.creacionToolStripMenuItem,
             this.modificarProductoToolStripMenuItem,
             this.eliminarProductoToolStripMenuItem});
-            this.productoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.productoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.productoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Gold;
-            this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
-            this.productoToolStripMenuItem.Text = "Producto";
+            this.Producto.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Producto.ForeColor = System.Drawing.Color.White;
+            this.Producto.ImageTransparentColor = System.Drawing.Color.Gold;
+            this.Producto.Name = "Producto";
+            this.Producto.Size = new System.Drawing.Size(79, 23);
+            this.Producto.Text = "Producto";
             // 
             // creacionToolStripMenuItem
             // 
@@ -94,15 +94,15 @@
             this.eliminarProductoToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.eliminarProductoToolStripMenuItem.Text = "- Eliminar Producto";
             // 
-            // ventasToolStripMenuItem
+            // Ventas
             // 
-            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Ventas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.realizarVentasToolStripMenuItem});
-            this.ventasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.ventasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
-            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.Ventas.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Ventas.ForeColor = System.Drawing.Color.White;
+            this.Ventas.Name = "Ventas";
+            this.Ventas.Size = new System.Drawing.Size(64, 23);
+            this.Ventas.Text = "Ventas";
             // 
             // realizarVentasToolStripMenuItem
             // 
@@ -110,15 +110,15 @@
             this.realizarVentasToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
             this.realizarVentasToolStripMenuItem.Text = "- Realizar Venta";
             // 
-            // registroVentasToolStripMenuItem
+            // RegistroVentas
             // 
-            this.registroVentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RegistroVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroDeVentasToolStripMenuItem});
-            this.registroVentasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registroVentasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.registroVentasToolStripMenuItem.Name = "registroVentasToolStripMenuItem";
-            this.registroVentasToolStripMenuItem.Size = new System.Drawing.Size(117, 23);
-            this.registroVentasToolStripMenuItem.Text = "Registro Ventas";
+            this.RegistroVentas.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistroVentas.ForeColor = System.Drawing.Color.White;
+            this.RegistroVentas.Name = "RegistroVentas";
+            this.RegistroVentas.Size = new System.Drawing.Size(117, 23);
+            this.RegistroVentas.Text = "Registro Ventas";
             // 
             // registroDeVentasToolStripMenuItem
             // 
@@ -185,7 +185,7 @@
             this.label3.Text = "Store AS";
             this.label3.UseWaitCursor = true;
             // 
-            // Form1
+            // Store_AS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,7 +201,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "Store_AS";
             this.Text = "Store AS | Viste tu estilo";
             this.UseWaitCursor = true;
             this.menuStrip1.ResumeLayout(false);
@@ -215,13 +215,13 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem productoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Producto;
         private System.Windows.Forms.ToolStripMenuItem creacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarProductoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Ventas;
         private System.Windows.Forms.ToolStripMenuItem realizarVentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registroVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RegistroVentas;
         private System.Windows.Forms.ToolStripMenuItem registroDeVentasToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
