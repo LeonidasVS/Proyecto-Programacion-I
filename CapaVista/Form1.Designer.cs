@@ -114,16 +114,16 @@
             // 
             this.registroVentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroDeVentasToolStripMenuItem});
-            this.registroVentasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.registroVentasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registroVentasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.registroVentasToolStripMenuItem.Name = "registroVentasToolStripMenuItem";
-            this.registroVentasToolStripMenuItem.Size = new System.Drawing.Size(121, 23);
+            this.registroVentasToolStripMenuItem.Size = new System.Drawing.Size(117, 23);
             this.registroVentasToolStripMenuItem.Text = "Registro Ventas";
             // 
             // registroDeVentasToolStripMenuItem
             // 
             this.registroDeVentasToolStripMenuItem.Name = "registroDeVentasToolStripMenuItem";
-            this.registroDeVentasToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
+            this.registroDeVentasToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.registroDeVentasToolStripMenuItem.Text = "- Registro de Ventas";
             // 
             // pictureBox1
@@ -141,12 +141,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(633, 6);
+            this.label1.Location = new System.Drawing.Point(593, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 16);
+            this.label1.Size = new System.Drawing.Size(206, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Atencion al Cliente";
+            this.label1.Text = "Atencion al Cliente  |  2525-0365";
             this.label1.UseWaitCursor = true;
             // 
             // richTextBox1
