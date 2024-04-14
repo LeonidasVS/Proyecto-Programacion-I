@@ -17,10 +17,5 @@ namespace CapaVista
             InitializeComponent();
         }
 
-
-        //private void eliminarProductoToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }
