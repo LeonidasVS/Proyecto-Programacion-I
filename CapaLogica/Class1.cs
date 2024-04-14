@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaEntidades
+namespace CapaLogica
 {
     public class Class1
     {
-
     }
 }
