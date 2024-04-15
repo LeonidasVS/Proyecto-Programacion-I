@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class Form1 : Form
+    public partial class AgregarProducto : Form
     {
-        public Form1()
+        public AgregarProducto()
         {
             InitializeComponent();
         }
 
-        private void administrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            AdministrarProductos objadmProductos = new AdministrarProductos();
-            objadmProductos.ShowDialog();
+            this.Close();
         }
     }
 }
