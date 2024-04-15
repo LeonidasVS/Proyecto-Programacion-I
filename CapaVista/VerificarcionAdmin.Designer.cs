@@ -47,6 +47,7 @@
             this.Usuario.Size = new System.Drawing.Size(162, 20);
             this.Usuario.TabIndex = 0;
             this.Usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Usuario.TextChanged += new System.EventHandler(this.Usuario_TextChanged);
             this.Usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
             // 
             // button1

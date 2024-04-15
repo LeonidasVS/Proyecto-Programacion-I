@@ -27,5 +27,11 @@ namespace CapaVista
             }
 
         }
+        private void AdmonProducto_Click_1(object sender, EventArgs e)
+        {
+
+            MantenimientoProducto mntoPro = new MantenimientoProducto();
+            mntoPro.ShowDialog();
+        }
     }
 }

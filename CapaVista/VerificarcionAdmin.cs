@@ -75,5 +75,10 @@ namespace CapaVista
                 Limpiar();
             }
         }
+
+        private void Usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

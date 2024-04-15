@@ -38,7 +38,7 @@
             this.Ventas = new System.Windows.Forms.ToolStripMenuItem();
             this.realizarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Producto = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AdmonProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistroVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.verRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,24 +131,25 @@
             // realizarVentaToolStripMenuItem
             // 
             this.realizarVentaToolStripMenuItem.Name = "realizarVentaToolStripMenuItem";
-            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.realizarVentaToolStripMenuItem.Text = "- Realizar Venta";
             // 
             // Producto
             // 
             this.Producto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarProductoToolStripMenuItem});
+            this.AdmonProducto});
             this.Producto.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Producto.ForeColor = System.Drawing.Color.White;
             this.Producto.Name = "Producto";
             this.Producto.Size = new System.Drawing.Size(76, 21);
             this.Producto.Text = "Producto";
             // 
-            // modificarProductoToolStripMenuItem
+            // AdmonProducto
             // 
-            this.modificarProductoToolStripMenuItem.Name = "modificarProductoToolStripMenuItem";
-            this.modificarProductoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.modificarProductoToolStripMenuItem.Text = "- Admón Producto";
+            this.AdmonProducto.Name = "AdmonProducto";
+            this.AdmonProducto.Size = new System.Drawing.Size(190, 22);
+            this.AdmonProducto.Text = "- Admón Producto";
+            this.AdmonProducto.Click += new System.EventHandler(this.AdmonProducto_Click_1);
             // 
             // RegistroVentas
             // 
@@ -203,7 +204,7 @@
         private System.Windows.Forms.ToolStripMenuItem Ventas;
         private System.Windows.Forms.ToolStripMenuItem realizarVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Producto;
-        private System.Windows.Forms.ToolStripMenuItem modificarProductoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AdmonProducto;
         private System.Windows.Forms.ToolStripMenuItem RegistroVentas;
         private System.Windows.Forms.ToolStripMenuItem verRegistroToolStripMenuItem;
     }
