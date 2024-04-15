@@ -56,10 +56,12 @@ namespace CapaVista
 
             if (Username == "admin123" && Contraseña == "admin123")
             {
+                Limpiar();
                Ventana();
             }
             else if (Username == "vendedor123" && Contraseña == "vendedor123")
             {
+               Limpiar();
                Ventana();
             }
             else

@@ -15,13 +15,17 @@ namespace CapaVista
         public Store_AS(string pass)
         {
             InitializeComponent();
-            if (pass== "vendedor123")
+            if (pass == "vendedor123")
             {
-                Producto.Enabled = false;
-                RegistroVentas.Enabled = false;
+                Producto.Visible = false;
+                RegistroVentas.Visible = false;
 
             }
-        }
+            else if(pass=="admin123")
+            {
+                Ventas.Enabled = false;
+            }
 
+        }
     }
 }
