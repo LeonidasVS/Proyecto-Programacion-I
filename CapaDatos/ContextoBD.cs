@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace CapaDatos
 {
-    public partial class Model1 : DbContext
+    public partial class ContextoBD : DbContext
     {
-        public Model1()
+        public ContextoBD()
             : base("name=ContextoBD")
         {
         }

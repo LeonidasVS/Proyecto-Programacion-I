@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace CapaVista
 {
     public partial class AdministrarProductos : Form
     {
+        ProductoLOG _productoLOG;
         public AdministrarProductos()
         {
             InitializeComponent();
+            _productoLOG = new ProductoLOG();
+            dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

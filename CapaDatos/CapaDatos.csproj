@@ -53,13 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ProductoDAL.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.Designer.cs">
       <DependentUpon>202404150318538_Modelos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model1.cs" />
+    <Compile Include="ContextoBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -87,18 +87,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaDatos.Class1.datasource" />
+    <None Include="Properties\DataSources\CapaDatos.ContextoBD.datasource" />
     <None Include="Properties\DataSources\CapaDatos.Migrations.Modelos.datasource" />
     <None Include="Properties\DataSources\CapaDatos.Model1.datasource" />
+    <None Include="Properties\DataSources\CapaDatos.ProductoDAL.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.DetalleVenta.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Producto.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Venta.datasource" />
@@ -116,9 +112,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImagenPrincipal.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
       <Project>{dc5475e7-991a-4bf3-9a47-22a0a58b1b89}</Project>
       <Name>CapaDatos</Name>
@@ -127,6 +120,16 @@
       <Project>{1502eae6-4243-46a3-b485-6fc350707236}</Project>
       <Name>CapaEntidades</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+      <Project>{E9801E51-4FE7-4153-AD0C-A07166680AE7}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inicio2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Principal.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
