@@ -6,20 +6,16 @@ using System.Linq;
 
 namespace CapaDatos
 {
-    public partial class ContextoBD : DbContext
+    public partial class Model1 : DbContext
     {
-        public ContextoBD()
+        public Model1()
             : base("name=ContextoBD")
         {
         }
 
-
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //}
-
         public virtual DbSet<Venta> Ventas { get; set; }
         public virtual DbSet<Producto> Productos { get; set; }
         public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
+
     }
 }
