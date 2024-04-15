@@ -33,6 +33,11 @@ namespace CapaVista
             {
                 e.Handled = true;
             }
+
+            if (e.KeyChar==Convert.ToChar(Keys.Enter))
+            {
+                Password.Focus();
+            }
         }
 
         private void Password_KeyPress(object sender, KeyPressEventArgs e)
