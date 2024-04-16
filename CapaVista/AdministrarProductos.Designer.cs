@@ -35,6 +35,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.existenciasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +62,7 @@
             this.dgvMostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrarProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProductoDataGridViewTextBoxColumn,
+            this.idMarca,
             this.nombreDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn,
             this.existenciasDataGridViewTextBoxColumn,
@@ -110,6 +112,12 @@
             this.idProductoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
             this.idProductoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // idMarca
+            // 
+            this.idMarca.DataPropertyName = "idMarca";
+            this.idMarca.HeaderText = "idMarca";
+            this.idMarca.Name = "idMarca";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -180,6 +188,7 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.BindingSource productoBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn existenciasDataGridViewTextBoxColumn;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,19 @@ namespace CapaVista
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string pass)
         {
             InitializeComponent();
+            if (pass == "vendedor123")
+            {
+                tsmProductos.Visible = false;
+                tsmDetalleVenta.Visible = false;
+
+            }
+            else if (pass == "admin123")
+            {
+                tsmVentas.Enabled = false;
+            }
         }
 
         private void administrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
