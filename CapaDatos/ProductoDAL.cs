@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CapaDatos
 {
@@ -39,11 +40,13 @@ namespace CapaDatos
         {
             _db = new ContextoBD();
             return _db.Productos.Where(p => p.Activo == true).ToList();
+
         }
         public Producto LeerPorId(int id)
         {
             _db = new ContextoBD();
             return _db.Productos.Find(id);
         }
+
     }
 }

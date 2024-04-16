@@ -11,6 +11,7 @@ namespace CapaLogica
 {
     public class ProductoLOG
     {
+        Producto _producto;
         ProductoDAL _productoDal;
 
         public int GuardarProducto(Producto producto, int id = 0, bool esActualizacion = false)
@@ -21,9 +22,8 @@ namespace CapaLogica
         }
 
         public List<Producto> ObtenerProductos()
-        {
+        {  
             _productoDal = new ProductoDAL();
-
             return _productoDal.Leer();
         }
     }

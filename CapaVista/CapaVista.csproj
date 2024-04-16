@@ -95,7 +95,9 @@
     <None Include="Properties\DataSources\CapaDatos.Migrations.Modelos.datasource" />
     <None Include="Properties\DataSources\CapaDatos.Model1.datasource" />
     <None Include="Properties\DataSources\CapaDatos.ProductoDAL.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Categoria.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.DetalleVenta.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Marca.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Producto.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Venta.datasource" />
     <None Include="Properties\Settings.settings">
