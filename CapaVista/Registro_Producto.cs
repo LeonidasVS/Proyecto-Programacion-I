@@ -56,50 +56,53 @@ namespace CapaVista
                     DescripcionProducto.BackColor = Color.Azure;
                     return;
                 }
-            }
-        }
+                if (string.IsNullOrEmpty(PrecioUni.Text) || Convert.ToDecimal(PrecioUni.Text) == 0)
+                {
+                    MessageBox.Show("Por favor ingrese el precio valido del producto", "Tienda AS | Registro Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    PrecioUni.Focus();
+                    PrecioUni.BackColor = Color.Azure;
+                }
+                else if (string.IsNullOrEmpty(Stock.Text) || Convert.ToDecimal(Stock.Text) == 0)
+                {
+                    MessageBox.Show("Por favor ingrese las existencias validas del producto", "Tienda AS | Registro Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Stock.Focus();
+                    Stock.BackColor = Color.Azure;
+                }
+                else if (!Activo.Checked)
+                {
+                    var dialogo = MessageBox.Show("Estas seguro que desea guardar el producto inactivo?", "Tienda AS | Registro Producto",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                DescripcionProducto.Focus();
-            }
-        }
+                    if (dialogo != DialogResult.Yes)
+                    {
+                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda  AS| Registro Productos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
 
-        private void DescripcionProducto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                PrecioUni.Focus();
-            }
-        }
+                Producto producto;
+                producto = (Producto)ProductoBindingSource.Current;
+                int resultado = _productoLog.SaveProducto(producto);
 
-        private void PrecioUni_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Producto Agregado con Exito", "Tienda | Registro Productos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("No se logro agregagr el producto", "Tienda | Registro Productos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            catch (Exception)
             {
-                Stock.Focus();
-            }
-        }
-
-        private void Stock_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
+                MessageBox.Show("Ocurrio un error :(", "Tienda | Registro Productos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
