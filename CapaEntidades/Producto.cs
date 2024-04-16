@@ -26,5 +26,13 @@ namespace CapaEntidades
         public decimal PrecioUnitario { get; set; }
         [Required]
         public bool Activo { get; set; }
+        [Required]
+        public int idMarca { get; set; }
+        [ForeignKey("idMarca")]
+        public Marca Marca { get; set; }
+        [Required]
+        public int idCategoria { get; set; }
+        [ForeignKey("idCategoria")]
+        public Categoria Categoria { get;set; }
     }
 }

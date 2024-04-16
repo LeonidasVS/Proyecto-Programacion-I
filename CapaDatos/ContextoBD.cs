@@ -16,6 +16,9 @@ namespace CapaDatos
         public virtual DbSet<Venta> Ventas { get; set; }
         public virtual DbSet<Producto> Productos { get; set; }
         public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
+        public virtual DbSet<Categoria> Categorias {  get; set; }
+        public virtual DbSet<Marca> Marcas { get; set; }
+        public virtual DbSet<MetodoPago> MetodoPagos { get; set;}
 
     }
 }

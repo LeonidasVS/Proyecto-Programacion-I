@@ -53,6 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202404160354259_Nuevas_Tablas.cs" />
+    <Compile Include="Migrations\202404160354259_Nuevas_Tablas.Designer.cs">
+      <DependentUpon>202404160354259_Nuevas_Tablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404160432508_Actualizacion.cs" />
+    <Compile Include="Migrations\202404160432508_Actualizacion.Designer.cs">
+      <DependentUpon>202404160432508_Actualizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.Designer.cs">
@@ -75,6 +83,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202404150318538_Modelos.resx">
       <DependentUpon>202404150318538_Modelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404160354259_Nuevas_Tablas.resx">
+      <DependentUpon>202404160354259_Nuevas_Tablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404160432508_Actualizacion.resx">
+      <DependentUpon>202404160432508_Actualizacion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
