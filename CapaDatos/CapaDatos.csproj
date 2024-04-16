@@ -54,9 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContextoBD.cs" />
-    <Compile Include="Migrations\202404161211396_conexion.cs" />
-    <Compile Include="Migrations\202404161211396_conexion.Designer.cs">
-      <DependentUpon>202404161211396_conexion.cs</DependentUpon>
+    <Compile Include="Migrations\202404170013177_connecion.cs" />
+    <Compile Include="Migrations\202404170013177_connecion.Designer.cs">
+      <DependentUpon>202404170013177_connecion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
@@ -73,8 +73,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404161211396_conexion.resx">
-      <DependentUpon>202404161211396_conexion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202404170013177_connecion.resx">
+      <DependentUpon>202404170013177_connecion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

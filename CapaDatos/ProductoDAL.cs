@@ -38,10 +38,12 @@ namespace CapaDatos
 
         public List<Producto> leer()
         {
+            contexto = new ContextoBD();
             return contexto.Producto.Where(p => p.Estado == true).ToList();
         }
         public Producto LeerProducto(int id)
         {
+            contexto = new ContextoBD();
             return contexto.Producto.Find(id);
         }
     }
