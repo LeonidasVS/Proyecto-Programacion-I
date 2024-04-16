@@ -7,13 +7,13 @@ namespace CapaDatos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Prueba : IMigrationMetadata
+    public sealed partial class conexion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Prueba));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(conexion));
         
         string IMigrationMetadata.Id
         {
-            get { return "202404130200013_Prueba"; }
+            get { return "202404161211396_conexion"; }
         }
         
         string IMigrationMetadata.Source

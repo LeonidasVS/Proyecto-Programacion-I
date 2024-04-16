@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,9 +38,15 @@
             this.DescripcionProducto = new System.Windows.Forms.TextBox();
             this.Stock = new System.Windows.Forms.TextBox();
             this.PrecioUni = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Activo = new System.Windows.Forms.CheckBox();
             this.GuardarProducto = new System.Windows.Forms.Button();
             this.Salir2 = new System.Windows.Forms.Button();
+            this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 263);
+            this.label2.Location = new System.Drawing.Point(82, 328);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 1;
@@ -63,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 328);
+            this.label3.Location = new System.Drawing.Point(98, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 2;
@@ -90,6 +97,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Nombre", true));
             this.textBox1.Location = new System.Drawing.Point(168, 58);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(572, 20);
@@ -98,6 +106,7 @@
             // 
             // DescripcionProducto
             // 
+            this.DescripcionProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Descripcion", true));
             this.DescripcionProducto.Location = new System.Drawing.Point(166, 122);
             this.DescripcionProducto.Multiline = true;
             this.DescripcionProducto.Name = "DescripcionProducto";
@@ -107,7 +116,8 @@
             // 
             // Stock
             // 
-            this.Stock.Location = new System.Drawing.Point(168, 325);
+            this.Stock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Precio", true));
+            this.Stock.Location = new System.Drawing.Point(168, 262);
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(223, 20);
             this.Stock.TabIndex = 7;
@@ -115,21 +125,23 @@
             // 
             // PrecioUni
             // 
-            this.PrecioUni.Location = new System.Drawing.Point(168, 263);
+            this.PrecioUni.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Stock", true));
+            this.PrecioUni.Location = new System.Drawing.Point(166, 328);
             this.PrecioUni.Name = "PrecioUni";
             this.PrecioUni.Size = new System.Drawing.Size(223, 20);
             this.PrecioUni.TabIndex = 8;
             this.PrecioUni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioUni_KeyPress);
             // 
-            // checkBox1
+            // Activo
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(166, 388);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Activo.AutoSize = true;
+            this.Activo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.ProductoBindingSource, "Estado", true));
+            this.Activo.Location = new System.Drawing.Point(166, 388);
+            this.Activo.Name = "Activo";
+            this.Activo.Size = new System.Drawing.Size(56, 17);
+            this.Activo.TabIndex = 9;
+            this.Activo.Text = "Activo";
+            this.Activo.UseVisualStyleBackColor = true;
             // 
             // GuardarProducto
             // 
@@ -151,14 +163,56 @@
             this.Salir2.UseVisualStyleBackColor = true;
             this.Salir2.Click += new System.EventHandler(this.Salir2_Click);
             // 
+            // ProductoBindingSource
+            // 
+            this.ProductoBindingSource.DataSource = typeof(Capa_Entidades.Producto);
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "idMarca", true));
+            this.textBox2.Location = new System.Drawing.Point(587, 257);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "idCategoria", true));
+            this.textBox3.Location = new System.Drawing.Point(587, 328);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(544, 260);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Marca";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(529, 331);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Categoria";
+            // 
             // Registro_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 499);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Salir2);
             this.Controls.Add(this.GuardarProducto);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.Activo);
             this.Controls.Add(this.PrecioUni);
             this.Controls.Add(this.Stock);
             this.Controls.Add(this.DescripcionProducto);
@@ -170,6 +224,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Registro_Producto";
             this.Text = "Registro_Producto";
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,8 +241,13 @@
         private System.Windows.Forms.TextBox DescripcionProducto;
         private System.Windows.Forms.TextBox Stock;
         private System.Windows.Forms.TextBox PrecioUni;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox Activo;
         private System.Windows.Forms.Button GuardarProducto;
         private System.Windows.Forms.Button Salir2;
+        private System.Windows.Forms.BindingSource ProductoBindingSource;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

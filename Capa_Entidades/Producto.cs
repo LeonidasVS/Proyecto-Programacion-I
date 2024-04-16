@@ -18,7 +18,8 @@ namespace Capa_Entidades
         [MaxLength(100)]
         public string Nombre { get; set; }
         [Required]
-        public int Cantidad { get; set; }
+        [MaxLength(200)]
+        public string Descripcion { get; set; }
         [Required]
         public int Stock { get; set; }
         [Required]

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Prueba : DbMigration
+    public partial class conexion : DbMigration
     {
         public override void Up()
         {
@@ -51,7 +51,7 @@
                     {
                         idProducto = c.Int(nullable: false, identity: true),
                         Nombre = c.String(nullable: false, maxLength: 100),
-                        Cantidad = c.Int(nullable: false),
+                        Descripcion = c.String(nullable: false, maxLength: 200),
                         Stock = c.Int(nullable: false),
                         Precio = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Estado = c.Boolean(nullable: false),
