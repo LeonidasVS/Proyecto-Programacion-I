@@ -56,72 +56,51 @@ namespace CapaVista
                     DescripcionProducto.BackColor = Color.Azure;
                     return;
                 }
-                if (string.IsNullOrEmpty(Stock.Text) || Convert.ToDecimal(Stock.Text)==0)
-                {
-                    MessageBox.Show("Se requiere existencia del producto", "Tienda AS | Registro Producto",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Stock.Focus();
-                    Stock.BackColor = Color.Azure;
-                    return;
-                }
-                if (string.IsNullOrEmpty(PrecioUni.Text) || Convert.ToDecimal(PrecioUni.Text) == 0)
-                {
-                    MessageBox.Show("Se requiere precio del producto", "Tienda AS | Registro Producto",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    PrecioUni.Focus();
-                    PrecioUni.BackColor = Color.Azure;
-                    return;
-                }
-                if (!Activo.Checked)
-                {
-                    var dialogo= MessageBox.Show("¿Desear guardar el produco INACTIVO?", "Tienda AS | Registro Producto",
-                       MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                    if (dialogo==DialogResult.No)
-                    {
-                        MessageBox.Show("Chequea el estado como ACTIVO", "Tienda AS | Registro Producto",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                }
-
-                ProductoBindingSource.EndEdit();
-                Producto producto;
-                producto = (Producto)ProductoBindingSource.Current;
-                int resultado = _productoLog.SaveProducto(producto);
-
-                if (resultado > 0)
-                {
-                    MessageBox.Show("Producto añadido 'Exitosamente'", "Tienda AS | Registro Producto",
-                      MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    resert();
-                }
-                else
-                {
-                    MessageBox.Show("Error de registro", "Tienda AS | Registro Producto",
-                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            catch(Exception){
-                MessageBox.Show("Eror! La creacion fue denegada", "Tienda AS | Registro Producto",
-                       MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
         }
-        public void resert()
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                DescripcionProducto.Focus();
+            }
+        }
 
-            textBox1.Clear();
-            DescripcionProducto.Clear();
-            Stock.Clear();
-            PrecioUni.Clear();
-            textBox1.BackColor = Color.White;
-            DescripcionProducto.BackColor = Color.White;
-            Stock.BackColor = Color.White;
-            PrecioUni.BackColor = Color.White;
-            Activo.Checked = false;
+        private void DescripcionProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                PrecioUni.Focus();
+            }
+        }
 
+        private void PrecioUni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                Stock.Focus();
+            }
+        }
+
+        private void Stock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
