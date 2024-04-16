@@ -22,25 +22,10 @@ namespace CapaVista
         {
             this.Close();
         }
-
+        
         private void GuardarProducto_Click(object sender, EventArgs e)
         {
-
-            if (textBox1.Text.Length == 0 || DescripcionProducto.Text.Length == 0 || PrecioUni.Text == "" || Stock.Text == "")
-            {
-                MessageBox.Show("Rellena los campos vacios", "Error | Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (PrecioUni.Text == "0" || Stock.Text == "0")
-                {
-                    MessageBox.Show("El Precio o las Existencias tienen que ser diferente de 0", "Error | Falta de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    
-                }
-            }
+            GuardarPro();
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -84,6 +69,60 @@ namespace CapaVista
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void GuardarPro()
+        {
+            try
+            {
+
+                if (string.IsNullOrEmpty(textBox1.Text))
+                {
+                    MessageBox.Show("Se requiere nombre de producto", "Store AS | Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox1.Focus();
+                    textBox1.BackColor = Color.Azure;
+                    return;
+                }
+                if (string.IsNullOrEmpty(DescripcionProducto.Text))
+                {
+                    MessageBox.Show("Se requiere descripcion de producto", "Store AS | Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DescripcionProducto.Focus();
+                    DescripcionProducto.BackColor = Color.Azure;
+                    return;
+                }
+                if (string.IsNullOrEmpty(PrecioUni.Text) || Convert.ToDecimal(PrecioUni.Text) == 0)
+                {
+                    MessageBox.Show("Se requiere precio de producto", "Store AS | Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    PrecioUni.Focus();
+                    PrecioUni.BackColor = Color.Azure;
+                    return;
+                }
+                if (string.IsNullOrEmpty(Stock.Text) || Convert.ToDecimal(Stock.Text) == 0)
+                {
+                    MessageBox.Show("Se requiere existencias de producto", "Store AS | Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Stock.Focus();
+                    Stock.BackColor = Color.Azure;
+                    return;
+                }
+                if (!checkBox1.Checked)
+                {
+                    var dialogo = MessageBox.Show("¿Desear guardar el producto inactivo?", "Store AS | Registro Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (dialogo==DialogResult.No)
+                    {
+                        MessageBox.Show("Chequea el campo 'Estado' como ACTIVO", "Store AS | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un eror", "Store AS | Registro de Productos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+
             }
         }
     }

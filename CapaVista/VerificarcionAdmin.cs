@@ -71,7 +71,7 @@ namespace CapaVista
             }
             else
             {
-                MessageBox.Show("Error!! Intentalo de nuevo", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error!! Intentalo de nuevo", "Store AS | Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Limpiar();
             }
         }
