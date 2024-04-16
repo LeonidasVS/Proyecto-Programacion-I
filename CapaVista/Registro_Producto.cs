@@ -17,84 +17,111 @@ namespace CapaVista
     {
         ProductoLog _productoLog;
 
-        public Registro_Producto()
+    public Registro_Producto()
         {
             InitializeComponent();
             ProductoBindingSource.MoveLast();
             ProductoBindingSource.AddNew();
-            textBox1.BackColor = Color.White;
-            DescripcionProducto.BackColor = Color.White;
-            PrecioUni.BackColor = Color.White;
-            Stock.BackColor = Color.White;
         }
 
         private void Salir2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        
+
         private void GuardarProducto_Click(object sender, EventArgs e)
         {
+            Guardarproducto();
+        }
 
-            if (textBox1.Text.Length == 0 || DescripcionProducto.Text.Length == 0 || PrecioUni.Text == "" || Stock.Text == "")
+        private void Guardarproducto()
+        {
+            try
             {
-                MessageBox.Show("Rellena los campos vacios", "Error | Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (PrecioUni.Text == "0" || Stock.Text == "0")
+                _productoLog = new ProductoLog();
+
+                if (string.IsNullOrEmpty(textBox1.Text))
                 {
-                    MessageBox.Show("El Precio o las Existencias tienen que ser diferente de 0", "Error | Falta de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Se requiere el nombre del producto", "Tienda AS | Registro Producto",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox1.Focus();
+                    textBox1.BackColor = Color.Azure;
+                    return;
+                }
+                if (string.IsNullOrEmpty(DescripcionProducto.Text))
+                {
+                    MessageBox.Show("Se requiere la descripcion del producto", "Tienda AS | Registro Producto",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DescripcionProducto.Focus();
+                    DescripcionProducto.BackColor = Color.Azure;
+                    return;
+                }
+                if (string.IsNullOrEmpty(Stock.Text) || Convert.ToDecimal(Stock.Text)==0)
+                {
+                    MessageBox.Show("Se requiere existencia del producto", "Tienda AS | Registro Producto",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Stock.Focus();
+                    Stock.BackColor = Color.Azure;
+                    return;
+                }
+                if (string.IsNullOrEmpty(PrecioUni.Text) || Convert.ToDecimal(PrecioUni.Text) == 0)
+                {
+                    MessageBox.Show("Se requiere precio del producto", "Tienda AS | Registro Producto",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PrecioUni.Focus();
+                    PrecioUni.BackColor = Color.Azure;
+                    return;
+                }
+                if (!Activo.Checked)
+                {
+                    var dialogo= MessageBox.Show("¿Desear guardar el produco INACTIVO?", "Tienda AS | Registro Producto",
+                       MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (dialogo==DialogResult.No)
+                    {
+                        MessageBox.Show("Chequea el estado como ACTIVO", "Tienda AS | Registro Producto",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+
+                ProductoBindingSource.EndEdit();
+                Producto producto;
+                producto = (Producto)ProductoBindingSource.Current;
+                int resultado = _productoLog.SaveProducto(producto);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Producto añadido 'Exitosamente'", "Tienda AS | Registro Producto",
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    resert();
                 }
                 else
                 {
-                    
+                    MessageBox.Show("Error de registro", "Tienda AS | Registro Producto",
+                      MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+            }
+            catch(Exception){
+                MessageBox.Show("Eror! La creacion fue denegada", "Tienda AS | Registro Producto",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        public void resert()
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                DescripcionProducto.Focus();
-            }
-        }
 
-        private void DescripcionProducto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                PrecioUni.Focus();
-            }
-        }
+            textBox1.Clear();
+            DescripcionProducto.Clear();
+            Stock.Clear();
+            PrecioUni.Clear();
+            textBox1.BackColor = Color.White;
+            DescripcionProducto.BackColor = Color.White;
+            Stock.BackColor = Color.White;
+            PrecioUni.BackColor = Color.White;
+            Activo.Checked = false;
 
-        private void PrecioUni_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                Stock.Focus();
-            }
-        }
-
-        private void Stock_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
     }
 }

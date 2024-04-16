@@ -35,13 +35,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DescripcionProducto = new System.Windows.Forms.TextBox();
             this.Stock = new System.Windows.Forms.TextBox();
             this.PrecioUni = new System.Windows.Forms.TextBox();
             this.Activo = new System.Windows.Forms.CheckBox();
             this.GuardarProducto = new System.Windows.Forms.Button();
             this.Salir2 = new System.Windows.Forms.Button();
-            this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -102,7 +102,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(572, 20);
             this.textBox1.TabIndex = 5;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // ProductoBindingSource
+            // 
+            this.ProductoBindingSource.DataSource = typeof(Capa_Entidades.Producto);
             // 
             // DescripcionProducto
             // 
@@ -112,7 +115,6 @@
             this.DescripcionProducto.Name = "DescripcionProducto";
             this.DescripcionProducto.Size = new System.Drawing.Size(572, 105);
             this.DescripcionProducto.TabIndex = 6;
-            this.DescripcionProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripcionProducto_KeyPress);
             // 
             // Stock
             // 
@@ -121,7 +123,6 @@
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(223, 20);
             this.Stock.TabIndex = 7;
-            this.Stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Stock_KeyPress);
             // 
             // PrecioUni
             // 
@@ -130,7 +131,6 @@
             this.PrecioUni.Name = "PrecioUni";
             this.PrecioUni.Size = new System.Drawing.Size(223, 20);
             this.PrecioUni.TabIndex = 8;
-            this.PrecioUni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrecioUni_KeyPress);
             // 
             // Activo
             // 
@@ -162,10 +162,6 @@
             this.Salir2.Text = "Regresar";
             this.Salir2.UseVisualStyleBackColor = true;
             this.Salir2.Click += new System.EventHandler(this.Salir2_Click);
-            // 
-            // ProductoBindingSource
-            // 
-            this.ProductoBindingSource.DataSource = typeof(Capa_Entidades.Producto);
             // 
             // textBox2
             // 
