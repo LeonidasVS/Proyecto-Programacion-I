@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MarcaDAL.cs" />
     <Compile Include="Migrations\202404160354259_Nuevas_Tablas.cs" />
     <Compile Include="Migrations\202404160354259_Nuevas_Tablas.Designer.cs">
       <DependentUpon>202404160354259_Nuevas_Tablas.cs</DependentUpon>

@@ -43,10 +43,12 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtIdMarca = new System.Windows.Forms.TextBox();
             this.txtIdCategoria = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cmbMarcas = new System.Windows.Forms.ComboBox();
+            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.productobindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -165,24 +167,17 @@
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(73, 456);
+            this.label6.Location = new System.Drawing.Point(146, 456);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(218, 18);
+            this.label6.Size = new System.Drawing.Size(142, 18);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Id de de la marca del producto";
-            // 
-            // txtIdMarca
-            // 
-            this.txtIdMarca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productobindingSource1, "idMarca", true));
-            this.txtIdMarca.Location = new System.Drawing.Point(322, 448);
-            this.txtIdMarca.Name = "txtIdMarca";
-            this.txtIdMarca.Size = new System.Drawing.Size(558, 26);
-            this.txtIdMarca.TabIndex = 13;
+            this.label6.Text = "Marca del producto";
             // 
             // txtIdCategoria
             // 
@@ -202,14 +197,30 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Id de de la categoria del producto";
             // 
+            // cmbMarcas
+            // 
+            this.cmbMarcas.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productobindingSource1, "idMarca", true));
+            this.cmbMarcas.DataSource = this.marcaBindingSource;
+            this.cmbMarcas.DisplayMember = "Nombre";
+            this.cmbMarcas.FormattingEnabled = true;
+            this.cmbMarcas.Location = new System.Drawing.Point(322, 448);
+            this.cmbMarcas.Name = "cmbMarcas";
+            this.cmbMarcas.Size = new System.Drawing.Size(247, 26);
+            this.cmbMarcas.TabIndex = 16;
+            this.cmbMarcas.ValueMember = "Nombre";
+            // 
+            // marcaBindingSource
+            // 
+            this.marcaBindingSource.DataSource = typeof(CapaEntidades.Marca);
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
+            this.Controls.Add(this.cmbMarcas);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtIdCategoria);
-            this.Controls.Add(this.txtIdMarca);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -229,6 +240,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda AS | Agregar Producto";
             ((System.ComponentModel.ISupportInitialize)(this.productobindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,8 +262,9 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.BindingSource productobindingSource1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtIdMarca;
         private System.Windows.Forms.TextBox txtIdCategoria;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbMarcas;
+        private System.Windows.Forms.BindingSource marcaBindingSource;
     }
 }

@@ -14,6 +14,7 @@ namespace CapaVista
     public partial class AdministrarProductos : Form
     {
         ProductoLOG _productoLOG;
+        MarcaLOG _marcaLOG;
         public AdministrarProductos()
         {
             InitializeComponent();
@@ -30,6 +31,18 @@ namespace CapaVista
         {
             AgregarProducto objAgregarProducto = new AgregarProducto();
             objAgregarProducto.ShowDialog();
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            _marcaLOG = new MarcaLOG();
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarProductos.Columns["IdMarca"].Index)
+            {
+                int idMarca = Convert.ToInt32(e.Value);
+                string nombreMarca = _marcaLOG.mostrarNombreMarca(idMarca);
+                e.Value = nombreMarca;
+                e.FormattingApplied = true;
+            }
         }
     }
 }

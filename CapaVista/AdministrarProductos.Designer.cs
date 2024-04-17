@@ -35,8 +35,8 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.existenciasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +62,8 @@
             this.dgvMostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrarProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProductoDataGridViewTextBoxColumn,
-            this.idMarca,
             this.nombreDataGridViewTextBoxColumn,
+            this.idMarca,
             this.descripcionDataGridViewTextBoxColumn,
             this.existenciasDataGridViewTextBoxColumn,
             this.precioUnitarioDataGridViewTextBoxColumn,
@@ -76,6 +76,7 @@
             this.dgvMostrarProductos.RowTemplate.Height = 28;
             this.dgvMostrarProductos.Size = new System.Drawing.Size(878, 430);
             this.dgvMostrarProductos.TabIndex = 1;
+            this.dgvMostrarProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // productoBindingSource1
             // 
@@ -111,13 +112,7 @@
             this.idProductoDataGridViewTextBoxColumn.HeaderText = "Codigo";
             this.idProductoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
-            this.idProductoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // idMarca
-            // 
-            this.idMarca.DataPropertyName = "idMarca";
-            this.idMarca.HeaderText = "idMarca";
-            this.idMarca.Name = "idMarca";
+            this.idProductoDataGridViewTextBoxColumn.Width = 75;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -125,7 +120,14 @@
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            this.nombreDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // idMarca
+            // 
+            this.idMarca.DataPropertyName = "idMarca";
+            this.idMarca.HeaderText = "Marca";
+            this.idMarca.Name = "idMarca";
+            this.idMarca.Width = 175;
             // 
             // descripcionDataGridViewTextBoxColumn
             // 
@@ -141,7 +143,6 @@
             this.existenciasDataGridViewTextBoxColumn.HeaderText = "Existencias";
             this.existenciasDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.existenciasDataGridViewTextBoxColumn.Name = "existenciasDataGridViewTextBoxColumn";
-            this.existenciasDataGridViewTextBoxColumn.Width = 150;
             // 
             // precioUnitarioDataGridViewTextBoxColumn
             // 
@@ -149,7 +150,7 @@
             this.precioUnitarioDataGridViewTextBoxColumn.HeaderText = "Precio Unitario";
             this.precioUnitarioDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.precioUnitarioDataGridViewTextBoxColumn.Name = "precioUnitarioDataGridViewTextBoxColumn";
-            this.precioUnitarioDataGridViewTextBoxColumn.Width = 160;
+            this.precioUnitarioDataGridViewTextBoxColumn.Width = 140;
             // 
             // activoDataGridViewCheckBoxColumn
             // 
@@ -188,8 +189,8 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.BindingSource productoBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn existenciasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitarioDataGridViewTextBoxColumn;

@@ -46,6 +46,5 @@ namespace CapaDatos
             _db = new ContextoBD();
             return _db.Productos.Find(id);
         }
-
     }
 }

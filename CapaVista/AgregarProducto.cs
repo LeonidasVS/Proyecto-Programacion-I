@@ -15,9 +15,15 @@ namespace CapaVista
     public partial class AgregarProducto : Form
     {
         ProductoLOG _productoLOG;
+        MarcaLOG _marcaLOG;
         public AgregarProducto()
         {
             InitializeComponent();
+
+            _marcaLOG = new MarcaLOG();
+            cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            cmbMarcas.DisplayMember = "Nombre";
+            cmbMarcas.ValueMember = "idMarca";
 
             productobindingSource1.MoveLast();
             productobindingSource1.AddNew();
@@ -98,6 +104,11 @@ namespace CapaVista
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
