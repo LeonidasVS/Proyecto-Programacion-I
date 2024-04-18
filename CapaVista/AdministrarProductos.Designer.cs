@@ -41,6 +41,7 @@
             this.existenciasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +68,8 @@
             this.descripcionDataGridViewTextBoxColumn,
             this.existenciasDataGridViewTextBoxColumn,
             this.precioUnitarioDataGridViewTextBoxColumn,
-            this.activoDataGridViewCheckBoxColumn});
+            this.activoDataGridViewCheckBoxColumn,
+            this.idCategoria});
             this.dgvMostrarProductos.DataSource = this.productoBindingSource1;
             this.dgvMostrarProductos.Location = new System.Drawing.Point(14, 141);
             this.dgvMostrarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -161,6 +163,12 @@
             this.activoDataGridViewCheckBoxColumn.Visible = false;
             this.activoDataGridViewCheckBoxColumn.Width = 150;
             // 
+            // idCategoria
+            // 
+            this.idCategoria.DataPropertyName = "idCategoria";
+            this.idCategoria.HeaderText = "Categoria";
+            this.idCategoria.Name = "idCategoria";
+            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -195,5 +203,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn existenciasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
     }
 }

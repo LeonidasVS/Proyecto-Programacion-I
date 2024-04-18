@@ -15,6 +15,7 @@ namespace CapaVista
     {
         ProductoLOG _productoLOG;
         MarcaLOG _marcaLOG;
+        CategoriaLOG _categoriaLOG;
         public AdministrarProductos()
         {
             InitializeComponent();
@@ -41,6 +42,15 @@ namespace CapaVista
                 int idMarca = Convert.ToInt32(e.Value);
                 string nombreMarca = _marcaLOG.mostrarNombreMarca(idMarca);
                 e.Value = nombreMarca;
+                e.FormattingApplied = true;
+            }
+
+            _categoriaLOG = new CategoriaLOG();
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarProductos.Columns["IdCategoria"].Index)
+            {
+                int idCategoria = Convert.ToInt32(e.Value);
+                string nombreCategoria = _categoriaLOG.ObtenerCategoriaPorId(idCategoria);
+                e.Value = nombreCategoria;
                 e.FormattingApplied = true;
             }
         }

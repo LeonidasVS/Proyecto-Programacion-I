@@ -16,6 +16,8 @@ namespace CapaVista
     {
         ProductoLOG _productoLOG;
         MarcaLOG _marcaLOG;
+        CategoriaLOG _categoriaLOG;
+
         public AgregarProducto()
         {
             InitializeComponent();
@@ -24,6 +26,14 @@ namespace CapaVista
             cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
             cmbMarcas.DisplayMember = "Nombre";
             cmbMarcas.ValueMember = "idMarca";
+            cmbMarcas.SelectedIndex = -1;
+
+            _categoriaLOG = new CategoriaLOG();
+            cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+            cmbCategorias.DisplayMember = "Nombre";
+            cmbCategorias.ValueMember = "idCategoria";
+            cmbCategorias.SelectedIndex = -1;
+
 
             productobindingSource1.MoveLast();
             productobindingSource1.AddNew();
