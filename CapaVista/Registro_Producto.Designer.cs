@@ -122,7 +122,7 @@
             // 
             // Stock
             // 
-            this.Stock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Precio", true));
+            this.Stock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Stock", true));
             this.Stock.Location = new System.Drawing.Point(168, 262);
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(223, 20);
@@ -130,7 +130,7 @@
             // 
             // PrecioUni
             // 
-            this.PrecioUni.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Stock", true));
+            this.PrecioUni.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Precio", true));
             this.PrecioUni.Location = new System.Drawing.Point(166, 328);
             this.PrecioUni.Name = "PrecioUni";
             this.PrecioUni.Size = new System.Drawing.Size(223, 20);
@@ -187,7 +187,6 @@
             // 
             // cbxMarca
             // 
-            this.cbxMarca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcaBindingSource, "Nombre", true));
             this.cbxMarca.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "idMarca", true));
             this.cbxMarca.DataSource = this.marcaBindingSource;
             this.cbxMarca.DisplayMember = "Nombre";
@@ -204,7 +203,6 @@
             // 
             // cbxCategoria
             // 
-            this.cbxCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "Nombre", true));
             this.cbxCategoria.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "idCategoria", true));
             this.cbxCategoria.DataSource = this.categoriaBindingSource;
             this.cbxCategoria.DisplayMember = "Nombre";

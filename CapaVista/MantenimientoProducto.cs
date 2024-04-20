@@ -30,6 +30,7 @@ namespace CapaVista
         {
             Registro_Producto acceder = new Registro_Producto();
             acceder.ShowDialog();
+
         }
     }
 }

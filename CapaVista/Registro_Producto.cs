@@ -108,7 +108,7 @@ namespace CapaVista
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("¡ EL Producto Se Añadió Exitosamente !", "Tienda AS | Registro Productos",
+                    MessageBox.Show("¡ EL Producto se añadió Exitosamente !", "Tienda AS | Registro Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
