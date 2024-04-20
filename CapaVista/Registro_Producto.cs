@@ -4,9 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,18 +19,32 @@ namespace CapaVista
     public partial class Registro_Producto : Form
     {
         ProductoLog _productoLog;
-
-    public Registro_Producto()
+        MarcaLOG _marcaLog;
+        CategoriaLog categoriaLog;
+        public Registro_Producto()
         {
             InitializeComponent();
+            CargarMarcas();
+            CargarCategorias();
             ProductoBindingSource.MoveLast();
-            ProductoBindingSource.AddNew();
+            ProductoBindingSource.AddNew(); 
         }
 
+        private void CargarMarcas()
+        {
+            _marcaLog = new MarcaLOG();
+            marcaBindingSource.DataSource = _marcaLog.ObtenerMarcas();
+        }
+        private void CargarCategorias()
+        {
+            categoriaLog = new CategoriaLog();
+            categoriaBindingSource.DataSource = categoriaLog.ObtenerCategorias();
+        }
         private void Salir2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
 
         private void GuardarProducto_Click(object sender, EventArgs e)
         {
@@ -58,7 +75,7 @@ namespace CapaVista
                 }
                 if (string.IsNullOrEmpty(Stock.Text) || Convert.ToDecimal(Stock.Text) == 0)
                 {
-                    MessageBox.Show("Se Requiere Stock del Producto", "Tienda AS | Registro Producto",
+                    MessageBox.Show("Se Requiere Existencias del Producto", "Tienda AS | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Stock.Focus();
                     Stock.BackColor = Color.Azure;
@@ -75,7 +92,7 @@ namespace CapaVista
                 if (!Activo.Checked)
                 {
                     var dialogo = MessageBox.Show("¿Deseas Dejar El Producto Inactivo?", "Tienda AS | Registro Producto",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (dialogo != DialogResult.Yes)
                     {
@@ -101,11 +118,12 @@ namespace CapaVista
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
+            catch (Exception ex) 
             {
-                MessageBox.Show("Ocurrio un error :(", "Tienda AS | Registro Productos",
+                MessageBox.Show($"Ocurrio un error {ex.Message} :(", "Tienda AS | Registro Productos",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
     }
 }

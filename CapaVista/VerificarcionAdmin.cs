@@ -20,7 +20,7 @@ namespace CapaVista
         public string Username { get; set; }
         public string Contraseña { get; set; }
 
-        public void Ventana()
+        public void Login()
         {
             Store_AS StoreAS = new Store_AS(Contraseña);
             StoreAS.ShowDialog();
@@ -62,12 +62,12 @@ namespace CapaVista
             if (Username == "admin123" && Contraseña == "admin123")
             {
                 Limpiar();
-               Ventana();
+               Login();
             }
             else if (Username == "vendedor123" && Contraseña == "vendedor123")
             {
                Limpiar();
-               Ventana();
+               Login();
             }
             else
             {

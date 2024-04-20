@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaLog.cs" />
+    <Compile Include="MarcaLOG.cs" />
     <Compile Include="ProductoLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

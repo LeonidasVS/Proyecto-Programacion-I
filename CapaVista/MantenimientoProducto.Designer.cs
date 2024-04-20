@@ -30,8 +30,6 @@
         {
             this.Filtro = new System.Windows.Forms.GroupBox();
             this.TablaProductos = new System.Windows.Forms.DataGridView();
-            this.AgregarProducto = new System.Windows.Forms.Button();
-            this.Regresar = new System.Windows.Forms.Button();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +40,8 @@
             this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AgregarProducto = new System.Windows.Forms.Button();
+            this.Regresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,26 +72,6 @@
             this.TablaProductos.Name = "TablaProductos";
             this.TablaProductos.Size = new System.Drawing.Size(776, 284);
             this.TablaProductos.TabIndex = 1;
-            // 
-            // AgregarProducto
-            // 
-            this.AgregarProducto.Location = new System.Drawing.Point(12, 464);
-            this.AgregarProducto.Name = "AgregarProducto";
-            this.AgregarProducto.Size = new System.Drawing.Size(75, 23);
-            this.AgregarProducto.TabIndex = 2;
-            this.AgregarProducto.Text = "Agregar";
-            this.AgregarProducto.UseVisualStyleBackColor = true;
-            this.AgregarProducto.Click += new System.EventHandler(this.AgregarProducto_Click);
-            // 
-            // Regresar
-            // 
-            this.Regresar.Location = new System.Drawing.Point(713, 464);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(75, 23);
-            this.Regresar.TabIndex = 3;
-            this.Regresar.Text = "Regresar";
-            this.Regresar.UseVisualStyleBackColor = true;
-            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
             // 
             // idProducto
             // 
@@ -165,6 +145,26 @@
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
             this.Categoria.Visible = false;
+            // 
+            // AgregarProducto
+            // 
+            this.AgregarProducto.Location = new System.Drawing.Point(12, 464);
+            this.AgregarProducto.Name = "AgregarProducto";
+            this.AgregarProducto.Size = new System.Drawing.Size(75, 23);
+            this.AgregarProducto.TabIndex = 2;
+            this.AgregarProducto.Text = "Agregar";
+            this.AgregarProducto.UseVisualStyleBackColor = true;
+            this.AgregarProducto.Click += new System.EventHandler(this.AgregarProducto_Click);
+            // 
+            // Regresar
+            // 
+            this.Regresar.Location = new System.Drawing.Point(713, 464);
+            this.Regresar.Name = "Regresar";
+            this.Regresar.Size = new System.Drawing.Size(75, 23);
+            this.Regresar.TabIndex = 3;
+            this.Regresar.Text = "Regresar";
+            this.Regresar.UseVisualStyleBackColor = true;
+            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
             // 
             // MantenimientoProducto
             // 

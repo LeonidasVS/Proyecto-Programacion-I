@@ -53,7 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaDal.cs" />
     <Compile Include="ContextoBD.cs" />
+    <Compile Include="MarcaDAL.cs" />
     <Compile Include="Migrations\202404170013177_connecion.cs" />
     <Compile Include="Migrations\202404170013177_connecion.Designer.cs">
       <DependentUpon>202404170013177_connecion.cs</DependentUpon>

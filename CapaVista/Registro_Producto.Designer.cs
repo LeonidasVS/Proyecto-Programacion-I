@@ -42,11 +42,15 @@
             this.Activo = new System.Windows.Forms.CheckBox();
             this.GuardarProducto = new System.Windows.Forms.Button();
             this.Salir2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbxMarca = new System.Windows.Forms.ComboBox();
+            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -163,22 +167,6 @@
             this.Salir2.UseVisualStyleBackColor = true;
             this.Salir2.Click += new System.EventHandler(this.Salir2_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "idMarca", true));
-            this.textBox2.Location = new System.Drawing.Point(587, 257);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "idCategoria", true));
-            this.textBox3.Location = new System.Drawing.Point(587, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 13;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -197,15 +185,49 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Categoria";
             // 
+            // cbxMarca
+            // 
+            this.cbxMarca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcaBindingSource, "Nombre", true));
+            this.cbxMarca.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "idMarca", true));
+            this.cbxMarca.DataSource = this.marcaBindingSource;
+            this.cbxMarca.DisplayMember = "Nombre";
+            this.cbxMarca.FormattingEnabled = true;
+            this.cbxMarca.Location = new System.Drawing.Point(587, 257);
+            this.cbxMarca.Name = "cbxMarca";
+            this.cbxMarca.Size = new System.Drawing.Size(151, 21);
+            this.cbxMarca.TabIndex = 18;
+            this.cbxMarca.ValueMember = "idMarca";
+            // 
+            // marcaBindingSource
+            // 
+            this.marcaBindingSource.DataSource = typeof(Capa_Entidades.Marca);
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "Nombre", true));
+            this.cbxCategoria.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "idCategoria", true));
+            this.cbxCategoria.DataSource = this.categoriaBindingSource;
+            this.cbxCategoria.DisplayMember = "Nombre";
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(587, 331);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(151, 21);
+            this.cbxCategoria.TabIndex = 19;
+            this.cbxCategoria.ValueMember = "idCategoria";
+            // 
+            // categoriaBindingSource
+            // 
+            this.categoriaBindingSource.DataSource = typeof(Capa_Entidades.Categoria);
+            // 
             // Registro_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 499);
+            this.ClientSize = new System.Drawing.Size(797, 499);
+            this.Controls.Add(this.cbxCategoria);
+            this.Controls.Add(this.cbxMarca);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Salir2);
             this.Controls.Add(this.GuardarProducto);
             this.Controls.Add(this.Activo);
@@ -219,8 +241,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Registro_Producto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_Producto";
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,9 +266,11 @@
         private System.Windows.Forms.Button GuardarProducto;
         private System.Windows.Forms.Button Salir2;
         private System.Windows.Forms.BindingSource ProductoBindingSource;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbxMarca;
+        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.BindingSource marcaBindingSource;
+        private System.Windows.Forms.BindingSource categoriaBindingSource;
     }
 }
