@@ -1,12 +1,5 @@
 ﻿using CapaLogica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaVista
@@ -21,7 +14,7 @@ namespace CapaVista
             TablaProductos.DataSource = productoLog.ObtenerProductos();
         }
 
-        private void Regresar_Click(object sender, EventArgs e)
+        public void Regresar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -30,7 +23,6 @@ namespace CapaVista
         {
             Registro_Producto acceder = new Registro_Producto();
             acceder.ShowDialog();
-
         }
     }
 }

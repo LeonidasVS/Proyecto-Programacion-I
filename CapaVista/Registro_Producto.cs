@@ -34,6 +34,7 @@ namespace CapaVista
         {
             _marcaLog = new MarcaLOG();
             marcaBindingSource.DataSource = _marcaLog.ObtenerMarcas();
+
         }
         private void CargarCategorias()
         {
@@ -96,10 +97,15 @@ namespace CapaVista
 
                     if (dialogo != DialogResult.Yes)
                     {
-                        MessageBox.Show("Chequea el estado como ACTIVO", "Tienda  AS| Registro Productos",
+                        MessageBox.Show("Selecciona el estado como ACTIVO", "Tienda  AS| Registro Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
+                }
+                if (cbxMarca.SelectedItem==null)
+                {
+                    MessageBox.Show("Selecciona una Marca del Producto", "Tienda AS | Registro Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 Producto producto;

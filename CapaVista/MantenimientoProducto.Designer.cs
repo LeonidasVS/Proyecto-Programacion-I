@@ -176,6 +176,7 @@
             this.Controls.Add(this.TablaProductos);
             this.Controls.Add(this.Filtro);
             this.Name = "MantenimientoProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoProducto";
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
             this.ResumeLayout(false);

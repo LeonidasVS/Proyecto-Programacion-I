@@ -29,7 +29,6 @@ namespace CapaVista
         }
         private void AdmonProducto_Click_1(object sender, EventArgs e)
         {
-            this.Close();
             MantenimientoProducto mntoPro = new MantenimientoProducto();
             mntoPro.ShowDialog();
         }
