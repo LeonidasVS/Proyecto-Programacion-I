@@ -14,12 +14,12 @@ namespace CapaVista
             TablaProductos.DataSource = productoLog.ObtenerProductos();
         }
 
-        public void Regresar_Click(object sender, EventArgs e)
+        private void Regresar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void AgregarProducto_Click(object sender, EventArgs e)
+        private void AñadirProducto_Click(object sender, EventArgs e)
         {
             Registro_Producto acceder = new Registro_Producto();
             acceder.ShowDialog();

@@ -30,6 +30,7 @@ namespace CapaVista
             ProductoBindingSource.AddNew(); 
         }
 
+       
         private void CargarMarcas()
         {
             _marcaLog = new MarcaLOG();
@@ -41,7 +42,7 @@ namespace CapaVista
             categoriaLog = new CategoriaLog();
             categoriaBindingSource.DataSource = categoriaLog.ObtenerCategorias();
         }
-        private void Salir2_Click(object sender, EventArgs e)
+        private void Regresar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -106,6 +107,13 @@ namespace CapaVista
                 {
                     MessageBox.Show("Selecciona una Marca del Producto", "Tienda AS | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (cbxCategoria.SelectedItem==null)
+                {
+                    MessageBox.Show("Selecciona una Categoria del Producto", "Tienda AS | Registro Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
                 Producto producto;
@@ -131,5 +139,6 @@ namespace CapaVista
             }
 
         }
+
     }
 }

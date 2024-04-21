@@ -41,6 +41,9 @@
             this.AdmonProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistroVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.verRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Mas = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.SteelBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(593, 6);
@@ -106,11 +109,12 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuStrip1.BackColor = System.Drawing.Color.CadetBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Ventas,
             this.Producto,
-            this.RegistroVentas});
+            this.RegistroVentas,
+            this.Mas});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(810, 25);
@@ -131,7 +135,7 @@
             // realizarVentaToolStripMenuItem
             // 
             this.realizarVentaToolStripMenuItem.Name = "realizarVentaToolStripMenuItem";
-            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.realizarVentaToolStripMenuItem.Text = "- Realizar Venta";
             // 
             // Producto
@@ -153,7 +157,7 @@
             // 
             // RegistroVentas
             // 
-            this.RegistroVentas.BackColor = System.Drawing.Color.SteelBlue;
+            this.RegistroVentas.BackColor = System.Drawing.Color.CadetBlue;
             this.RegistroVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verRegistroToolStripMenuItem});
             this.RegistroVentas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,14 +169,37 @@
             // verRegistroToolStripMenuItem
             // 
             this.verRegistroToolStripMenuItem.Name = "verRegistroToolStripMenuItem";
-            this.verRegistroToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.verRegistroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verRegistroToolStripMenuItem.Text = "- Ver Registro";
+            // 
+            // Mas
+            // 
+            this.Mas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.añadirMarcasToolStripMenuItem,
+            this.añadirCategoriasToolStripMenuItem});
+            this.Mas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Mas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Mas.Name = "Mas";
+            this.Mas.Size = new System.Drawing.Size(45, 21);
+            this.Mas.Text = "Más";
+            // 
+            // añadirMarcasToolStripMenuItem
+            // 
+            this.añadirMarcasToolStripMenuItem.Name = "añadirMarcasToolStripMenuItem";
+            this.añadirMarcasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.añadirMarcasToolStripMenuItem.Text = "- Añadir Marcas";
+            // 
+            // añadirCategoriasToolStripMenuItem
+            // 
+            this.añadirCategoriasToolStripMenuItem.Name = "añadirCategoriasToolStripMenuItem";
+            this.añadirCategoriasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.añadirCategoriasToolStripMenuItem.Text = "- Añadir Categorias";
             // 
             // Store_AS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(810, 478);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -185,7 +212,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Store_AS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Store AS Viste tu estilo";
+            this.Text = "Store AS | Ventana Principal";
             this.UseWaitCursor = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -208,6 +235,9 @@
         private System.Windows.Forms.ToolStripMenuItem AdmonProducto;
         private System.Windows.Forms.ToolStripMenuItem RegistroVentas;
         private System.Windows.Forms.ToolStripMenuItem verRegistroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Mas;
+        private System.Windows.Forms.ToolStripMenuItem añadirMarcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirCategoriasToolStripMenuItem;
     }
 }
 

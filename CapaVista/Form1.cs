@@ -19,6 +19,7 @@ namespace CapaVista
             {
                 Producto.Visible = false;
                 RegistroVentas.Visible = false;
+                Mas.Visible = false;
 
             }
             else if(pass=="admin123")
