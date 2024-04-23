@@ -29,9 +29,9 @@ namespace CapaVista
             detalleVenta.Columns.Add("Codigo", typeof(int));
             detalleVenta.Columns.Add("Nombre", typeof(string));
             detalleVenta.Columns.Add("Marca", typeof(string));
-            detalleVenta.Columns.Add("Precio", typeof(int));
+            detalleVenta.Columns.Add("Precio", typeof(decimal));
             detalleVenta.Columns.Add("Cantidad", typeof(int));
-            detalleVenta.Columns.Add("SubTotal", typeof(int));
+            detalleVenta.Columns.Add("SubTotal", typeof(decimal));
 
             _metodoPagoLOG = new MetodoPagoLOG();
             MetodoPagoBindingSource.DataSource = _metodoPagoLOG.FormasDePago();
@@ -96,7 +96,7 @@ namespace CapaVista
 
                     foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
                     {
-                        montoTotal += int.Parse(row.Cells["SubTotal"].Value.ToString());
+                        montoTotal += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
                     }
 
                     txtTotal.Text = montoTotal.ToString();
@@ -125,7 +125,7 @@ namespace CapaVista
                     var detalle = new DetalleVenta()
                     {
                         ProductoId = int.Parse(row.Cells["Codigo"].Value.ToString()),
-                        Precio = int.Parse(row.Cells["Precio"].Value.ToString()),
+                        Precio = decimal.Parse(row.Cells["Precio"].Value.ToString()),
                         Cantidad = int.Parse(row.Cells["Cantidad"].Value.ToString()),
                         idMetodoPago = int.Parse(cmbMetodoPago.SelectedValue.ToString())
                     };

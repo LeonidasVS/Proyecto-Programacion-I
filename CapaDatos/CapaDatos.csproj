@@ -64,6 +64,10 @@
     <Compile Include="Migrations\202404160432508_Actualizacion.Designer.cs">
       <DependentUpon>202404160432508_Actualizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404232239026_Verificar.cs" />
+    <Compile Include="Migrations\202404232239026_Verificar.Designer.cs">
+      <DependentUpon>202404232239026_Verificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.Designer.cs">
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404160432508_Actualizacion.resx">
       <DependentUpon>202404160432508_Actualizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404232239026_Verificar.resx">
+      <DependentUpon>202404232239026_Verificar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

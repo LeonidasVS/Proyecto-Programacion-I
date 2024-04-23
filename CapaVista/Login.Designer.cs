@@ -42,7 +42,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(378, 164);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(248, 26);
             this.txtNombre.TabIndex = 0;
@@ -70,7 +70,7 @@
             // txtcontrasena
             // 
             this.txtcontrasena.Location = new System.Drawing.Point(378, 246);
-            this.txtcontrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcontrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtcontrasena.Name = "txtcontrasena";
             this.txtcontrasena.PasswordChar = '*';
             this.txtcontrasena.Size = new System.Drawing.Size(248, 26);
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(651, 336);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnAcceder);
@@ -119,7 +119,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda AS | Login";
