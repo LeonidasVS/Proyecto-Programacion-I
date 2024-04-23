@@ -82,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVenta.Designer.cs">
+      <DependentUpon>RegistroVenta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +105,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroVenta.resx">
+      <DependentUpon>RegistroVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaDatos.Class1.datasource" />
     <None Include="Properties\DataSources\CapaDatos.ContextoBD.datasource" />
@@ -108,6 +117,7 @@
     <None Include="Properties\DataSources\CapaEntidades.Categoria.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.DetalleVenta.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Marca.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.MetodoPago.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Producto.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Venta.datasource" />
     <None Include="Properties\Settings.settings">

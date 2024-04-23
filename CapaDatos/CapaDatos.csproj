@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="CategoriaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
+    <Compile Include="MetodoPagoDAL.cs" />
     <Compile Include="Migrations\202404160354259_Nuevas_Tablas.cs" />
     <Compile Include="Migrations\202404160354259_Nuevas_Tablas.Designer.cs">
       <DependentUpon>202404160354259_Nuevas_Tablas.cs</DependentUpon>
@@ -71,6 +72,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ContextoBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
