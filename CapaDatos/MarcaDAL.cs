@@ -10,6 +10,32 @@ namespace CapaDatos
     public class MarcaDAL
     {
         ContextoBD contexto;
+
+        public int GuardarMarca(Marca marca, int id, bool esActualizacion = false, bool esEliminacion=false)
+        {
+            contexto = new ContextoBD();
+
+            int resultado;
+
+            if (esActualizacion)
+            {
+                marca.idMarca = id;
+
+                contexto.Entry(marca).State = System.Data.Entity.EntityState.Modified;
+                contexto.SaveChanges();
+
+                resultado = marca.idMarca;
+
+            }else
+            {
+                contexto.Marca.Add(marca);
+                contexto.SaveChanges();
+
+                resultado = marca.idMarca;
+
+            }
+            return resultado;
+        }
         public List<Marca> LeerMarcas()
         {
             contexto = new ContextoBD();

@@ -21,5 +21,7 @@ namespace Capa_Entidades
         [Required]
         [MaxLength(200)]
         public string Descripcion { get; set; }
+        [Required]
+        public bool Estado { get; set; }
     }
 }

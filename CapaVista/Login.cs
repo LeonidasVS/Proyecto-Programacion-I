@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class VerificarcionAdmin : System.Windows.Forms.Form
+    public partial class Login : System.Windows.Forms.Form
     {
-        public VerificarcionAdmin()
+        public Login()
         {
             InitializeComponent();
         }
         public string Username { get; set; }
         public string Contraseña { get; set; }
 
-        public void Login()
+        public void Inicio()
         {
             Store_AS StoreAS = new Store_AS(Contraseña);
             StoreAS.ShowDialog();
@@ -62,12 +62,12 @@ namespace CapaVista
             if (Username == "admin123" && Contraseña == "admin123")
             {
                 Limpiar();
-               Login();
+               Inicio();
             }
             else if (Username == "vendedor123" && Contraseña == "vendedor123")
             {
                Limpiar();
-               Login();
+               Inicio();
             }
             else
             {

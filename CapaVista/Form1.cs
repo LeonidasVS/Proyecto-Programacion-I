@@ -33,5 +33,11 @@ namespace CapaVista
             MantenimientoProducto mntoPro = new MantenimientoProducto();
             mntoPro.ShowDialog();
         }
+
+        private void añadirMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CategoriaRegistro categoria = new CategoriaRegistro();
+            categoria.ShowDialog();
+        }
     }
 }

@@ -10,11 +10,17 @@ namespace CapaLogica
 {
     public class CategoriaLog
     {
-        CategoriaDal categorialog;
+        CategoriaDal categoriaDAL;
+
+        public int GuardarCategoria(Categoria categoria,int id=0,bool Actualizacion=false)
+        {
+            categoriaDAL = new CategoriaDal();
+            return categoriaDAL.SaveCategoria(categoria,id,Actualizacion);
+        }
         public List<Categoria> ObtenerCategorias()
         {
-            categorialog = new CategoriaDal();
-            return categorialog.LeerCategoria();
+            categoriaDAL = new CategoriaDal();
+            return categoriaDAL.LeerCategoria();
         }
     }
 }

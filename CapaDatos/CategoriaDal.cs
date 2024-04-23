@@ -10,14 +10,40 @@ namespace CapaDatos
     public class CategoriaDal
     {
         ContextoBD contexto;
+       
+        public int SaveCategoria(Categoria categoria, int id=0,bool esActualizacion=false)
+        {
+            contexto = new ContextoBD();
+            int resultado;
+
+            if (esActualizacion)
+            {
+                categoria.idCategoria = id;
+                contexto.Entry(categoria).State = System.Data.Entity.EntityState.Modified;
+                contexto.SaveChanges();
+
+                resultado = categoria.idCategoria;
+            }
+            else
+            {
+
+                contexto.Categoria.Add(categoria);
+                contexto.SaveChanges();
+
+                resultado = categoria.idCategoria;
+            }
+
+            return resultado;
+        }
+
         public List<Categoria> LeerCategoria()
         {
             contexto = new ContextoBD();
-            return contexto.Categoria.Where(c => c.idCategoria > 0).ToList();
+            return contexto.Categoria.Where(c => c.Estado == true).ToList();
         }
-        public Categoria BuscarCategorias(int id)
+
+        public Categoria BuscarCategoria(int id)
         {
-            contexto = new ContextoBD();
             return contexto.Categoria.Find(id);
         }
     }

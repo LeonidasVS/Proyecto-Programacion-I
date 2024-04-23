@@ -55,14 +55,17 @@
   <ItemGroup>
     <Compile Include="CategoriaDal.cs" />
     <Compile Include="ContextoBD.cs" />
+    <Compile Include="Detalle_VentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
-    <Compile Include="Migrations\202404170013177_connecion.cs" />
-    <Compile Include="Migrations\202404170013177_connecion.Designer.cs">
-      <DependentUpon>202404170013177_connecion.cs</DependentUpon>
+    <Compile Include="Metodo_PagoDAL.cs" />
+    <Compile Include="Migrations\202404232007190_conexion.cs" />
+    <Compile Include="Migrations\202404232007190_conexion.Designer.cs">
+      <DependentUpon>202404232007190_conexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -75,8 +78,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404170013177_connecion.resx">
-      <DependentUpon>202404170013177_connecion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202404232007190_conexion.resx">
+      <DependentUpon>202404232007190_conexion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

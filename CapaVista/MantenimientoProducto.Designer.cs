@@ -149,17 +149,17 @@
             // 
             // Regresar
             // 
-            this.Regresar.BackColor = System.Drawing.Color.IndianRed;
+            this.Regresar.BackColor = System.Drawing.Color.Transparent;
+            this.Regresar.FlatAppearance.BorderSize = 0;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Regresar.Location = new System.Drawing.Point(686, 454);
+            this.Regresar.Location = new System.Drawing.Point(760, 460);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(102, 37);
+            this.Regresar.Size = new System.Drawing.Size(33, 46);
             this.Regresar.TabIndex = 12;
-            this.Regresar.Text = "Regresar";
             this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Regresar.UseMnemonic = false;
             this.Regresar.UseVisualStyleBackColor = false;
@@ -173,7 +173,7 @@
             this.AñadirProducto.ForeColor = System.Drawing.SystemColors.Info;
             this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
             this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(12, 454);
+            this.AñadirProducto.Location = new System.Drawing.Point(8, 460);
             this.AñadirProducto.Name = "AñadirProducto";
             this.AñadirProducto.Size = new System.Drawing.Size(88, 37);
             this.AñadirProducto.TabIndex = 13;
