@@ -19,7 +19,7 @@ namespace CapaVista
     public partial class Registro_Producto : Form
     {
         ProductoLog _productoLog;
-        MarcaLOG _marcaLog;
+        MarcaLog _marcaLog;
         CategoriaLog categoriaLog;
         public Registro_Producto()
         {
@@ -33,7 +33,7 @@ namespace CapaVista
        
         private void CargarMarcas()
         {
-            _marcaLog = new MarcaLOG();
+            _marcaLog = new MarcaLog();
             marcaBindingSource.DataSource = _marcaLog.ObtenerMarcas();
 
         }

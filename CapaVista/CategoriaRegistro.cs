@@ -28,7 +28,7 @@ namespace CapaVista
             this.Close();
         }
 
-        private void GuardarProducto_Click(object sender, EventArgs e)
+        private void GuardarCategoria_Click(object sender, EventArgs e)
         {
             GuardarCategoria();
         }
@@ -41,7 +41,7 @@ namespace CapaVista
 
                 if (string.IsNullOrEmpty(NombreCategoria.Text))
                 {
-                    MessageBox.Show("Se Requiere Nombre de la Categoria", "Tienda AS | Registro Producto",
+                    MessageBox.Show("Se Requiere Nombre de la Categoria", "Tienda AS | Registro Categoria",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     NombreCategoria.Focus();
                     NombreCategoria.BackColor = Color.Azure;
@@ -49,7 +49,7 @@ namespace CapaVista
                 }
                 if (string.IsNullOrEmpty(Descripcion.Text))
                 {
-                    MessageBox.Show("Se Requiere Descripcion de la Categoria", "Tienda AS | Registro Producto",
+                    MessageBox.Show("Se Requiere Descripcion de la Categoria", "Tienda AS | Registro Categoria",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Descripcion.Focus();
                     Descripcion.BackColor = Color.Azure;
@@ -57,12 +57,12 @@ namespace CapaVista
                 }
                 if (!checkCategoria.Checked)
                 {
-                    var dialogo = MessageBox.Show("¿Deseas Dejar La Categoria Inactiva?", "Tienda AS | Registro Producto",
+                    var dialogo = MessageBox.Show("¿Deseas Dejar La Categoria Inactiva?", "Tienda AS | Registro Categoria",
                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (dialogo != DialogResult.Yes)
                     {
-                        MessageBox.Show("Selecciona el estado como ACTIVO", "Tienda  AS| Registro Productos",
+                        MessageBox.Show("Selecciona el estado como ACTIVO", "Tienda  AS| Registro Categoria",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
@@ -75,19 +75,19 @@ namespace CapaVista
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("¡La categoria se añadió Exitosamente!", "Tienda AS | Registro Productos",
+                    MessageBox.Show("¡La Categoria se añadió Exitosamente!", "Tienda AS | Registro Categoria",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error! La Categoria no se guardo", "Tienda AS | Registro Productos",
+                    MessageBox.Show("Error! La Categoria no se guardo", "Tienda AS | Registro Categoria",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message }", "Tienda AS | Registro Producto",
+                MessageBox.Show($"{ex.Message }", "Tienda AS | Registro Categoria",
                        MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

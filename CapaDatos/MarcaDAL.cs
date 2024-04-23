@@ -11,7 +11,7 @@ namespace CapaDatos
     {
         ContextoBD contexto;
 
-        public int GuardarMarca(Marca marca, int id, bool esActualizacion = false, bool esEliminacion=false)
+        public int GuardarMarca(Marca marca, int id, bool esActualizacion = false)
         {
             contexto = new ContextoBD();
 

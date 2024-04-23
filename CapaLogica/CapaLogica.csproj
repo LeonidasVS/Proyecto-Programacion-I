@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaLog.cs" />
-    <Compile Include="MarcaLOG.cs" />
+    <Compile Include="MarcaLog.cs" />
     <Compile Include="ProductoLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

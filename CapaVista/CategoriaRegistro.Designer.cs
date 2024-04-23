@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(218, 31);
+            this.label1.Location = new System.Drawing.Point(139, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 25);
@@ -60,7 +60,7 @@
             this.NombreCategoria.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.NombreCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cateBinding, "Nombre", true));
             this.NombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreCategoria.Location = new System.Drawing.Point(203, 136);
+            this.NombreCategoria.Location = new System.Drawing.Point(118, 113);
             this.NombreCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.NombreCategoria.Name = "NombreCategoria";
             this.NombreCategoria.Size = new System.Drawing.Size(253, 22);
@@ -75,18 +75,18 @@
             this.Descripcion.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Descripcion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cateBinding, "Descripcion", true));
             this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.Location = new System.Drawing.Point(48, 242);
+            this.Descripcion.Location = new System.Drawing.Point(28, 219);
             this.Descripcion.Margin = new System.Windows.Forms.Padding(4);
             this.Descripcion.Multiline = true;
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(558, 89);
+            this.Descripcion.Size = new System.Drawing.Size(453, 89);
             this.Descripcion.TabIndex = 2;
             // 
             // checkCategoria
             // 
             this.checkCategoria.AutoSize = true;
             this.checkCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cateBinding, "Estado", true));
-            this.checkCategoria.Location = new System.Drawing.Point(289, 412);
+            this.checkCategoria.Location = new System.Drawing.Point(209, 391);
             this.checkCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.checkCategoria.Name = "checkCategoria";
             this.checkCategoria.Size = new System.Drawing.Size(69, 20);
@@ -102,7 +102,7 @@
             this.GuardarProducto.ForeColor = System.Drawing.SystemColors.Info;
             this.GuardarProducto.Image = ((System.Drawing.Image)(resources.GetObject("GuardarProducto.Image")));
             this.GuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarProducto.Location = new System.Drawing.Point(271, 481);
+            this.GuardarProducto.Location = new System.Drawing.Point(191, 466);
             this.GuardarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarProducto.Name = "GuardarProducto";
             this.GuardarProducto.Size = new System.Drawing.Size(100, 41);
@@ -110,20 +110,21 @@
             this.GuardarProducto.Text = "Guardar";
             this.GuardarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarProducto.UseVisualStyleBackColor = false;
-            this.GuardarProducto.Click += new System.EventHandler(this.GuardarProducto_Click);
+            this.GuardarProducto.Click += new System.EventHandler(this.GuardarCategoria_Click);
             // 
             // Regresar
             // 
             this.Regresar.FlatAppearance.BorderSize = 0;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.Color.CadetBlue;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Regresar.Location = new System.Drawing.Point(1, 2);
             this.Regresar.Margin = new System.Windows.Forms.Padding(4);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(58, 39);
+            this.Regresar.Size = new System.Drawing.Size(37, 39);
             this.Regresar.TabIndex = 12;
             this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Regresar.UseVisualStyleBackColor = false;
@@ -134,7 +135,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(287, 107);
+            this.label2.Location = new System.Drawing.Point(202, 84);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 16);
@@ -146,7 +147,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(278, 209);
+            this.label3.Location = new System.Drawing.Point(195, 184);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 16);
@@ -158,7 +159,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(294, 377);
+            this.label4.Location = new System.Drawing.Point(216, 361);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
@@ -170,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(654, 554);
+            this.ClientSize = new System.Drawing.Size(509, 554);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

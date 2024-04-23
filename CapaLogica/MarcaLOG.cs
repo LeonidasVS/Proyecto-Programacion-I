@@ -8,12 +8,17 @@ using System.Threading.Tasks;
 
 namespace CapaLogica
 {
-    public class MarcaLOG
+    public class MarcaLog
     {
         MarcaDAL _marDal;
+
+        public int SaveMarcas(Marca marca, int id=0,bool esActualizacion=false)
+        {
+            _marDal = new MarcaDAL();
+            return _marDal.GuardarMarca(marca, id, esActualizacion);
+        }
         public List<Marca> ObtenerMarcas()
         {
-
             _marDal = new MarcaDAL();
             return _marDal.LeerMarcas();
         }

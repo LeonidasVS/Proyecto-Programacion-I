@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriaDal.cs" />
+    <Compile Include="CategoriaDAL.cs" />
     <Compile Include="ContextoBD.cs" />
     <Compile Include="Detalle_VentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />

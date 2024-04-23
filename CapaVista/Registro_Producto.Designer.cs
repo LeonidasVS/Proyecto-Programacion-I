@@ -191,6 +191,8 @@
             // 
             this.Regresar.BackColor = System.Drawing.Color.Transparent;
             this.Regresar.FlatAppearance.BorderSize = 0;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;

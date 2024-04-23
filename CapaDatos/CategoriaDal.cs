@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class CategoriaDal
+    public class CategoriaDAL
     {
         ContextoBD contexto;
        

@@ -195,6 +195,7 @@
             this.añadirCategoriasToolStripMenuItem.Name = "añadirCategoriasToolStripMenuItem";
             this.añadirCategoriasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.añadirCategoriasToolStripMenuItem.Text = "- Añadir Categorias";
+            this.añadirCategoriasToolStripMenuItem.Click += new System.EventHandler(this.añadirCategoriasToolStripMenuItem_Click);
             // 
             // Store_AS
             // 

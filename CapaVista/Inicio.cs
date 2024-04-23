@@ -36,6 +36,12 @@ namespace CapaVista
 
         private void añadirMarcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MarcaRegistro marca = new MarcaRegistro();
+            marca.ShowDialog();
+        }
+
+        private void añadirCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             CategoriaRegistro categoria = new CategoriaRegistro();
             categoria.ShowDialog();
         }
