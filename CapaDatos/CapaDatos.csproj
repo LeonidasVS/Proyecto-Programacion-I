@@ -53,12 +53,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaDAL.cs" />
     <Compile Include="ContextoBd.cs" />
+    <Compile Include="MarcaDAL.cs" />
     <Compile Include="Migrations\202404160453579_Modelitos.cs" />
     <Compile Include="Migrations\202404160453579_Modelitos.Designer.cs">
       <DependentUpon>202404160453579_Modelitos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404240007372_Actualizar.cs" />
+    <Compile Include="Migrations\202404240007372_Actualizar.Designer.cs">
+      <DependentUpon>202404240007372_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404240459271_Correcioncita.cs" />
+    <Compile Include="Migrations\202404240459271_Correcioncita.Designer.cs">
+      <DependentUpon>202404240459271_Correcioncita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +85,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202404160453579_Modelitos.resx">
       <DependentUpon>202404160453579_Modelitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404240007372_Actualizar.resx">
+      <DependentUpon>202404240007372_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404240459271_Correcioncita.resx">
+      <DependentUpon>202404240459271_Correcioncita.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,9 +19,6 @@ namespace CapaEntidades
         public string Nombre { get; set; }
 
         [Required]
-        public int Cantidad { get; set; }
-
-        [Required]
         public int Stock { get; set; }
 
         [Required]
@@ -39,5 +36,9 @@ namespace CapaEntidades
         public int idCategoria { get; set; }
         [ForeignKey("idCategoria")]
         public Categoria Categoria { get; set; }
+
+        [Required]
+        [MaxLength(250)]
+        public string Descripcion { get; set; }
     }
 }
