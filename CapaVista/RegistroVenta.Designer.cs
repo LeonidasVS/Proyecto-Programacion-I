@@ -53,13 +53,13 @@
             this.ventaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
-            this.MetodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DetalleVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.MetodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MetodoPagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MetodoPagoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -273,13 +273,13 @@
             this.cmbMetodoPago.TabIndex = 15;
             this.cmbMetodoPago.ValueMember = "idMetodoPago";
             // 
-            // MetodoPagoBindingSource
-            // 
-            this.MetodoPagoBindingSource.DataSource = typeof(CapaEntidades.MetodoPago);
-            // 
             // DetalleVentaBindingSource
             // 
             this.DetalleVentaBindingSource.DataSource = typeof(CapaEntidades.DetalleVenta);
+            // 
+            // MetodoPagoBindingSource
+            // 
+            this.MetodoPagoBindingSource.DataSource = typeof(CapaEntidades.MetodoPago);
             // 
             // RegistroVenta
             // 
@@ -310,8 +310,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MetodoPagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MetodoPagoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

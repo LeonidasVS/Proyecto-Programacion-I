@@ -120,5 +120,11 @@ namespace CapaVista
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdministrarMarcas objAdministrarMarcas = new AdministrarMarcas();
+            objAdministrarMarcas.ShowDialog();
+        }
     }
 }

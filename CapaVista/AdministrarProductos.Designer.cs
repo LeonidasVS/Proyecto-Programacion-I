@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvMostrarProductos = new System.Windows.Forms.DataGridView();
-            this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,10 @@
             this.precioUnitarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.process1 = new System.Diagnostics.Process();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -79,34 +80,6 @@
             this.dgvMostrarProductos.Size = new System.Drawing.Size(878, 430);
             this.dgvMostrarProductos.TabIndex = 1;
             this.dgvMostrarProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // productoBindingSource1
-            // 
-            this.productoBindingSource1.DataSource = typeof(CapaEntidades.Producto);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(14, 602);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(204, 37);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(688, 602);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(204, 37);
-            this.btnRegresar.TabIndex = 3;
-            this.btnRegresar.Text = "Atras";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // idProductoDataGridViewTextBoxColumn
             // 
@@ -169,6 +142,45 @@
             this.idCategoria.HeaderText = "Categoria";
             this.idCategoria.Name = "idCategoria";
             // 
+            // productoBindingSource1
+            // 
+            this.productoBindingSource1.DataSource = typeof(CapaEntidades.Producto);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(14, 602);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(204, 37);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(688, 602);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(204, 37);
+            this.btnRegresar.TabIndex = 3;
+            this.btnRegresar.Text = "Atras";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // process1
+            // 
+            this.process1.StartInfo.Domain = "";
+            this.process1.StartInfo.LoadUserProfile = false;
+            this.process1.StartInfo.Password = null;
+            this.process1.StartInfo.StandardErrorEncoding = null;
+            this.process1.StartInfo.StandardOutputEncoding = null;
+            this.process1.StartInfo.UserName = "";
+            this.process1.SynchronizingObject = this;
+            this.process1.Exited += new System.EventHandler(this.process1_Exited);
+            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -182,7 +194,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AdministrarProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tienda AS | Aministrar Productos";
+            this.Text = "Tienda AS | Administrar Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -204,5 +216,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
+        private System.Diagnostics.Process process1;
     }
 }

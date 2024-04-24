@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace CapaDatos
         public List<Marca> marcas()
         {
             _db = new ContextoBD();
-            return _db.Marcas.ToList();
+            return _db.Marcas.Where(p => p.Estado == true).ToList();
         }
 
         public string ObtenerNombreMarcaDesdeBD(int idMarca)
@@ -27,6 +28,33 @@ namespace CapaDatos
                 nombreMarca = marca.Nombre;               
             }           
             return nombreMarca;
+        }
+
+        public int GuardarMarca(Marca marca, int id, bool esActualizacion = false)
+        {
+            _db = new ContextoBD();
+
+            int resultado;
+
+            if (esActualizacion)
+            {
+                marca.idMarca = id;
+
+                _db.Entry(marca).State = System.Data.Entity.EntityState.Modified;
+                _db.SaveChanges();
+
+                resultado = marca.idMarca;
+
+            }
+            else
+            {
+                _db.Marcas.Add(marca);
+                _db.SaveChanges();
+
+                resultado = marca.idMarca;
+
+            }
+            return resultado;
         }
     }
 }

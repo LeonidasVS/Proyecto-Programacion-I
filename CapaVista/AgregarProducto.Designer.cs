@@ -48,6 +48,8 @@
             this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbCategorias = new System.Windows.Forms.ComboBox();
             this.CategoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productobindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource1)).BeginInit();
@@ -199,7 +201,7 @@
             this.cmbMarcas.FormattingEnabled = true;
             this.cmbMarcas.Location = new System.Drawing.Point(322, 448);
             this.cmbMarcas.Name = "cmbMarcas";
-            this.cmbMarcas.Size = new System.Drawing.Size(247, 26);
+            this.cmbMarcas.Size = new System.Drawing.Size(327, 26);
             this.cmbMarcas.TabIndex = 16;
             this.cmbMarcas.ValueMember = "Nombre";
             // 
@@ -214,18 +216,39 @@
             this.cmbCategorias.FormattingEnabled = true;
             this.cmbCategorias.Location = new System.Drawing.Point(322, 507);
             this.cmbCategorias.Name = "cmbCategorias";
-            this.cmbCategorias.Size = new System.Drawing.Size(247, 26);
+            this.cmbCategorias.Size = new System.Drawing.Size(327, 26);
             this.cmbCategorias.TabIndex = 17;
             // 
             // CategoriaBindingSource1
             // 
             this.CategoriaBindingSource1.DataSource = typeof(CapaEntidades.Categoria);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(698, 444);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 32);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Administrar Marcas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(698, 503);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(182, 32);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Administrar Categorias";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbCategorias);
             this.Controls.Add(this.cmbMarcas);
             this.Controls.Add(this.label7);
@@ -276,5 +299,7 @@
         private System.Windows.Forms.BindingSource marcaBindingSource;
         private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.BindingSource CategoriaBindingSource1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

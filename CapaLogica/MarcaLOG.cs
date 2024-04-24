@@ -23,5 +23,11 @@ namespace CapaLogica
             _marcaDAL = new MarcaDAL();
             return _marcaDAL.ObtenerNombreMarcaDesdeBD(idMarca);
         }
+
+        public int AgregarMarca(Marca marca, int id = 0, bool esActualizacion = false)
+        {
+            _marcaDAL = new MarcaDAL();
+            return _marcaDAL.GuardarMarca(marca, id, esActualizacion);
+        }
     }
 }

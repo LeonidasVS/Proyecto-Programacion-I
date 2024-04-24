@@ -54,5 +54,10 @@ namespace CapaVista
                 e.FormattingApplied = true;
             }
         }
+
+        private void process1_Exited(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,5 +19,7 @@ namespace CapaEntidades
         [Required]
         [StringLength(200)]
         public string Descripcion { get; set;}
+        [Required]
+        public bool Estado { get; set; }
     }
 }

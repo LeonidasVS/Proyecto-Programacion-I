@@ -11,6 +11,11 @@ namespace CapaLogica
     public class CategoriaLOG
     {
         CategoriaDAL _categoriaDAL;
+        public int GuardarCategoria(Categoria categoria, int id = 0, bool Actualizacion = false)
+        {
+            _categoriaDAL = new CategoriaDAL();
+            return _categoriaDAL.AgregarCategoria(categoria, id, Actualizacion);
+        }
         public List<Categoria> ObtenerCategorias()
         {
             _categoriaDAL = new CategoriaDAL();
