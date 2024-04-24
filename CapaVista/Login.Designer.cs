@@ -35,7 +35,7 @@
             this.labelContrasena = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.buttonAcceder = new System.Windows.Forms.Button();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtcontrasena = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(203, 23);
             this.txtUsuario.TabIndex = 6;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
             // 
             // buttonAcceder
             // 
@@ -96,14 +97,17 @@
             this.buttonAcceder.TabIndex = 7;
             this.buttonAcceder.Text = "Acceder";
             this.buttonAcceder.UseVisualStyleBackColor = true;
+            this.buttonAcceder.Click += new System.EventHandler(this.buttonAcceder_Click);
             // 
-            // txtContrasena
+            // txtcontrasena
             // 
-            this.txtContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(391, 240);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(203, 23);
-            this.txtContrasena.TabIndex = 8;
+            this.txtcontrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontrasena.Location = new System.Drawing.Point(391, 240);
+            this.txtcontrasena.Name = "txtcontrasena";
+            this.txtcontrasena.PasswordChar = '*';
+            this.txtcontrasena.Size = new System.Drawing.Size(203, 23);
+            this.txtcontrasena.TabIndex = 8;
+            this.txtcontrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
             // Login
             // 
@@ -111,7 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(640, 339);
-            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtcontrasena);
             this.Controls.Add(this.buttonAcceder);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.labelContrasena);
@@ -136,6 +140,6 @@
         private System.Windows.Forms.Label labelContrasena;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button buttonAcceder;
-        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtcontrasena;
     }
 }

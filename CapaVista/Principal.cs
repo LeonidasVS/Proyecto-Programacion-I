@@ -12,9 +12,19 @@ namespace CapaVista
 {
     public partial class Principal : Form
     {
-        public Principal()
+        public Principal(string pass)
         {
             InitializeComponent();
+            if (pass == "vendedor123")
+            {
+                AdministrarProductos.Visible = false;
+                tsmDetalleVenta.Visible = false;
+
+            }
+            else if (pass == "admin123")
+            {
+                tsmVentas.Enabled = false;
+            }
         }
 
         private void administrarProductosToolStripMenuItem_Click(object sender, EventArgs e)

@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.realizarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detalleVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.AdministrarProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDetalleVenta = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -44,9 +44,9 @@
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventasToolStripMenuItem,
-            this.productosToolStripMenuItem,
-            this.detalleVentaToolStripMenuItem});
+            this.tsmVentas,
+            this.tsmProductos,
+            this.tsmDetalleVenta});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -54,13 +54,13 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // ventasToolStripMenuItem
+            // tsmVentas
             // 
-            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.realizarVentaToolStripMenuItem});
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(62, 21);
-            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.tsmVentas.Name = "tsmVentas";
+            this.tsmVentas.Size = new System.Drawing.Size(62, 21);
+            this.tsmVentas.Text = "Ventas";
             // 
             // realizarVentaToolStripMenuItem
             // 
@@ -68,26 +68,26 @@
             this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.realizarVentaToolStripMenuItem.Text = "Realizar Venta";
             // 
-            // productosToolStripMenuItem
+            // tsmProductos
             // 
-            this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrarProductosToolStripMenuItem});
-            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
-            this.productosToolStripMenuItem.Text = "Productos";
+            this.tsmProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AdministrarProductos});
+            this.tsmProductos.Name = "tsmProductos";
+            this.tsmProductos.Size = new System.Drawing.Size(80, 21);
+            this.tsmProductos.Text = "Productos";
             // 
-            // administrarProductosToolStripMenuItem
+            // AdministrarProductos
             // 
-            this.administrarProductosToolStripMenuItem.Name = "administrarProductosToolStripMenuItem";
-            this.administrarProductosToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.administrarProductosToolStripMenuItem.Text = "Administrar Productos";
-            this.administrarProductosToolStripMenuItem.Click += new System.EventHandler(this.administrarProductosToolStripMenuItem_Click);
+            this.AdministrarProductos.Name = "AdministrarProductos";
+            this.AdministrarProductos.Size = new System.Drawing.Size(206, 22);
+            this.AdministrarProductos.Text = "Administrar Productos";
+            this.AdministrarProductos.Click += new System.EventHandler(this.administrarProductosToolStripMenuItem_Click);
             // 
-            // detalleVentaToolStripMenuItem
+            // tsmDetalleVenta
             // 
-            this.detalleVentaToolStripMenuItem.Name = "detalleVentaToolStripMenuItem";
-            this.detalleVentaToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
-            this.detalleVentaToolStripMenuItem.Text = "Detalle Venta";
+            this.tsmDetalleVenta.Name = "tsmDetalleVenta";
+            this.tsmDetalleVenta.Size = new System.Drawing.Size(104, 21);
+            this.tsmDetalleVenta.Text = "Detalle Venta";
             // 
             // pictureBox
             // 
@@ -123,11 +123,11 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmVentas;
         private System.Windows.Forms.ToolStripMenuItem realizarVentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administrarProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detalleVentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmProductos;
+        private System.Windows.Forms.ToolStripMenuItem AdministrarProductos;
+        private System.Windows.Forms.ToolStripMenuItem tsmDetalleVenta;
         private System.Windows.Forms.PictureBox pictureBox;
     }
 }
