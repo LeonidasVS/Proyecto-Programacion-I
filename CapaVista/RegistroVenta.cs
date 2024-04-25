@@ -1,4 +1,5 @@
-﻿using CapaEntidades;
+﻿using CapaDatos;
+using CapaEntidades;
 using CapaLogica;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,7 @@ namespace CapaVista
             _metodoPagoLOG = new MetodoPagoLOG();
             MetodoPagoBindingSource.DataSource = _metodoPagoLOG.FormasDePago();
             cmbMetodoPago.DataSource = _metodoPagoLOG.FormasDePago();
+            txtCodigoProducto.Text = "-1";
         }
 
         private void CargarProducto()

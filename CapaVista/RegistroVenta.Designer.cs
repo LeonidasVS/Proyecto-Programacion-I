@@ -131,7 +131,6 @@
             this.cmbNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbNombre.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "IdProducto", true));
-            this.cmbNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Nombre", true));
             this.cmbNombre.DataSource = this.ProductoBindingSource;
             this.cmbNombre.DisplayMember = "Nombre";
             this.cmbNombre.FormattingEnabled = true;
