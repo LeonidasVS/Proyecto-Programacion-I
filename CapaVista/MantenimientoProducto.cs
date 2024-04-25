@@ -24,5 +24,11 @@ namespace CapaVista
             Registro_Producto acceder = new Registro_Producto();
             acceder.ShowDialog();
         }
+
+        private void actualizarProducto_Click(object sender, EventArgs e)
+        {
+            productoLog = new ProductoLog();
+            TablaProductos.DataSource = productoLog.ObtenerProductos();
+        }
     }
 }

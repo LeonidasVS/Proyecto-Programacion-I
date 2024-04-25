@@ -135,8 +135,9 @@
             // realizarVentaToolStripMenuItem
             // 
             this.realizarVentaToolStripMenuItem.Name = "realizarVentaToolStripMenuItem";
-            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.realizarVentaToolStripMenuItem.Text = "- Realizar Venta";
+            this.realizarVentaToolStripMenuItem.Click += new System.EventHandler(this.realizarVentaToolStripMenuItem_Click);
             // 
             // Producto
             // 

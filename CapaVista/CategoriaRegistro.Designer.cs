@@ -65,6 +65,7 @@
             this.NombreCategoria.Name = "NombreCategoria";
             this.NombreCategoria.Size = new System.Drawing.Size(253, 22);
             this.NombreCategoria.TabIndex = 1;
+            this.NombreCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cateBinding
             // 
@@ -81,6 +82,7 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Size = new System.Drawing.Size(453, 89);
             this.Descripcion.TabIndex = 2;
+            this.Descripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // checkCategoria
             // 

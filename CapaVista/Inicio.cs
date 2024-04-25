@@ -45,5 +45,11 @@ namespace CapaVista
             CategoriaRegistro categoria = new CategoriaRegistro();
             categoria.ShowDialog();
         }
+
+        private void realizarVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            ventas.ShowDialog();
+        }
     }
 }

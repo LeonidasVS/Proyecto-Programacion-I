@@ -43,14 +43,15 @@
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Regresar = new System.Windows.Forms.Button();
             this.AñadirProducto = new System.Windows.Forms.Button();
+            this.actualizarProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // Filtro
             // 
-            this.Filtro.Location = new System.Drawing.Point(13, 13);
+            this.Filtro.Location = new System.Drawing.Point(76, 24);
             this.Filtro.Name = "Filtro";
-            this.Filtro.Size = new System.Drawing.Size(775, 71);
+            this.Filtro.Size = new System.Drawing.Size(642, 75);
             this.Filtro.TabIndex = 0;
             this.Filtro.TabStop = false;
             this.Filtro.Text = "Filtrar Producto";
@@ -69,9 +70,9 @@
             this.idCategoria,
             this.Marca,
             this.Categoria});
-            this.TablaProductos.Location = new System.Drawing.Point(12, 106);
+            this.TablaProductos.Location = new System.Drawing.Point(18, 122);
             this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.Size = new System.Drawing.Size(776, 284);
+            this.TablaProductos.Size = new System.Drawing.Size(761, 284);
             this.TablaProductos.TabIndex = 1;
             // 
             // idProducto
@@ -158,9 +159,9 @@
             this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Regresar.Location = new System.Drawing.Point(760, 460);
+            this.Regresar.Location = new System.Drawing.Point(1, -1);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(33, 46);
+            this.Regresar.Size = new System.Drawing.Size(33, 38);
             this.Regresar.TabIndex = 12;
             this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Regresar.UseMnemonic = false;
@@ -184,14 +185,32 @@
             this.AñadirProducto.UseVisualStyleBackColor = false;
             this.AñadirProducto.Click += new System.EventHandler(this.AñadirProducto_Click);
             // 
+            // actualizarProducto
+            // 
+            this.actualizarProducto.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.actualizarProducto.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.actualizarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.actualizarProducto.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actualizarProducto.Image = ((System.Drawing.Image)(resources.GetObject("actualizarProducto.Image")));
+            this.actualizarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.actualizarProducto.Location = new System.Drawing.Point(678, 461);
+            this.actualizarProducto.Name = "actualizarProducto";
+            this.actualizarProducto.Size = new System.Drawing.Size(113, 37);
+            this.actualizarProducto.TabIndex = 14;
+            this.actualizarProducto.Text = "Actualizar";
+            this.actualizarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.actualizarProducto.UseVisualStyleBackColor = false;
+            this.actualizarProducto.Click += new System.EventHandler(this.actualizarProducto_Click);
+            // 
             // MantenimientoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 506);
-            this.Controls.Add(this.AñadirProducto);
             this.Controls.Add(this.Regresar);
+            this.Controls.Add(this.actualizarProducto);
+            this.Controls.Add(this.AñadirProducto);
             this.Controls.Add(this.TablaProductos);
             this.Controls.Add(this.Filtro);
             this.Name = "MantenimientoProducto";
@@ -218,5 +237,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.Button Regresar;
         private System.Windows.Forms.Button AñadirProducto;
+        private System.Windows.Forms.Button actualizarProducto;
     }
 }

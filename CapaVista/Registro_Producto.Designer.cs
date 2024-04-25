@@ -121,6 +121,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ProductoBindingSource
             // 
@@ -136,6 +137,7 @@
             this.DescripcionProducto.Name = "DescripcionProducto";
             this.DescripcionProducto.Size = new System.Drawing.Size(646, 103);
             this.DescripcionProducto.TabIndex = 6;
+            this.DescripcionProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Stock
             // 

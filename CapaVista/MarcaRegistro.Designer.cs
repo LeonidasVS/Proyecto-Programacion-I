@@ -126,6 +126,7 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.Size = new System.Drawing.Size(405, 89);
             this.Descripcion.TabIndex = 18;
+            this.Descripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // NombreMarca
             // 
@@ -137,6 +138,7 @@
             this.NombreMarca.Name = "NombreMarca";
             this.NombreMarca.Size = new System.Drawing.Size(253, 22);
             this.NombreMarca.TabIndex = 17;
+            this.NombreMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 

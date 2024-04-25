@@ -30,7 +30,6 @@ namespace CapaVista
             ProductoBindingSource.AddNew(); 
         }
 
-       
         private void CargarMarcas()
         {
             _marcaLog = new MarcaLog();
