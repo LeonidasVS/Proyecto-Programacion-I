@@ -30,7 +30,7 @@ namespace CapaDatos
             return nombreMarca;
         }
 
-        public int GuardarMarca(Marca marca, int id, bool esActualizacion = false)
+        public int GuardarMarca(Marca marca, int id = 0, bool esActualizacion = false)
         {
             _db = new ContextoBD();
 

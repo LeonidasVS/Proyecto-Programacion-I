@@ -32,5 +32,10 @@ namespace CapaVista
             AgregarCategoria objAgregarCategoria = new AgregarCategoria();
             objAgregarCategoria.ShowDialog();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            dgvCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+        }
     }
 }

@@ -43,6 +43,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.process1 = new System.Diagnostics.Process();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.GroupBox1.Size = new System.Drawing.Size(878, 104);
+            this.GroupBox1.Size = new System.Drawing.Size(672, 104);
             this.GroupBox1.TabIndex = 0;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Filtrar Productos";
@@ -181,11 +182,22 @@
             this.process1.SynchronizingObject = this;
             this.process1.Exited += new System.EventHandler(this.process1_Exited);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(747, 48);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(121, 40);
+            this.btnActualizar.TabIndex = 4;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvMostrarProductos);
@@ -217,5 +229,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
         private System.Diagnostics.Process process1;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

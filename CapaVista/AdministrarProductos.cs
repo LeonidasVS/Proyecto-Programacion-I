@@ -59,5 +59,11 @@ namespace CapaVista
         {
 
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            _productoLOG = new ProductoLOG();
+            dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
+        }
     }
 }

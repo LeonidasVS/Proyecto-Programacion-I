@@ -22,6 +22,14 @@ namespace CapaVista
         {
             InitializeComponent();
 
+            MostrarMarcasYCategorias();
+
+            productobindingSource1.MoveLast();
+            productobindingSource1.AddNew();
+        }
+
+        private void MostrarMarcasYCategorias()
+        {
             _marcaLOG = new MarcaLOG();
             cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
             cmbMarcas.DisplayMember = "Nombre";
@@ -33,13 +41,7 @@ namespace CapaVista
             cmbCategorias.DisplayMember = "Nombre";
             cmbCategorias.ValueMember = "idCategoria";
             cmbCategorias.SelectedIndex = -1;
-
-
-            productobindingSource1.MoveLast();
-            productobindingSource1.AddNew();
         }
-
-
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -133,6 +135,11 @@ namespace CapaVista
         {
             MantenimientoCategoria objMantenimeintoCategoria = new MantenimientoCategoria();
             objMantenimeintoCategoria.ShowDialog();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            MostrarMarcasYCategorias();
         }
     }
 }

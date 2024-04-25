@@ -32,5 +32,11 @@ namespace CapaVista
             AgregarMarca objAgregarMarca = new AgregarMarca();
             objAgregarMarca.ShowDialog();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            _marcaLOG = new MarcaLOG();
+            dgvMarcas.DataSource = _marcaLOG.ObtenerMarca();
+        }
     }
 }

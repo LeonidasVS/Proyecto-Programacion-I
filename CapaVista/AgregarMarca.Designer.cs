@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreMarca = new System.Windows.Forms.TextBox();
+            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chbActivo = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,10 @@
             this.txtNombreMarca.Size = new System.Drawing.Size(661, 26);
             this.txtNombreMarca.TabIndex = 2;
             // 
+            // marcaBindingSource
+            // 
+            this.marcaBindingSource.DataSource = typeof(CapaEntidades.Marca);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -80,6 +84,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcaBindingSource, "Descripcion", true));
             this.txtDescripcion.Location = new System.Drawing.Point(157, 194);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -98,6 +103,7 @@
             // chbActivo
             // 
             this.chbActivo.AutoSize = true;
+            this.chbActivo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.marcaBindingSource, "Estado", true));
             this.chbActivo.Location = new System.Drawing.Point(157, 381);
             this.chbActivo.Name = "chbActivo";
             this.chbActivo.Size = new System.Drawing.Size(70, 22);
@@ -124,10 +130,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // marcaBindingSource
-            // 
-            this.marcaBindingSource.DataSource = typeof(CapaEntidades.Marca);
             // 
             // AgregarMarca
             // 
