@@ -19,6 +19,7 @@ namespace CapaVista
             {
                 tsmProductos.Visible = false;
                 tsmDetalleVenta.Visible = false;
+                tsmMas.Visible = false;
 
             }
             else if (pass == "admin123")
@@ -47,6 +48,18 @@ namespace CapaVista
         {
             RegistroVenta objRegistroVenta = new RegistroVenta();
             objRegistroVenta.ShowDialog();
+        }
+
+        private void administrarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministrarMarcas objAdministrarMarcas = new AdministrarMarcas();
+            objAdministrarMarcas.ShowDialog();
+        }
+
+        private void adminitrarCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoCategoria objMantenientoCategoria = new MantenimientoCategoria();
+            objMantenientoCategoria.ShowDialog();
         }
     }
 }

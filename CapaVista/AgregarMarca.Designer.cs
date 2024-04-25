@@ -46,7 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 41);
+            this.label1.Location = new System.Drawing.Point(317, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 25);
             this.label1.TabIndex = 0;
@@ -80,7 +80,6 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcaBindingSource, "Descripcion", true));
             this.txtDescripcion.Location = new System.Drawing.Point(157, 194);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -99,7 +98,6 @@
             // chbActivo
             // 
             this.chbActivo.AutoSize = true;
-            this.chbActivo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.marcaBindingSource, "Estado", true));
             this.chbActivo.Location = new System.Drawing.Point(157, 381);
             this.chbActivo.Name = "chbActivo";
             this.chbActivo.Size = new System.Drawing.Size(70, 22);
@@ -146,7 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda AS | Agregar Marca";

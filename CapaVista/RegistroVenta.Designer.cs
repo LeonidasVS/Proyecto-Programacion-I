@@ -105,7 +105,8 @@
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(257, 26);
             this.txtCodigoProducto.TabIndex = 4;
-            this.txtCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
+            this.txtCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigoProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // ProductoBindingSource
             // 
@@ -130,7 +131,6 @@
             // 
             this.cmbNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbNombre.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "IdProducto", true));
             this.cmbNombre.DataSource = this.ProductoBindingSource;
             this.cmbNombre.DisplayMember = "Nombre";
             this.cmbNombre.FormattingEnabled = true;

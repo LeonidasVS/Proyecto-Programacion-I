@@ -37,6 +37,10 @@
             this.AdministrarProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDetalleVenta = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tsmMas = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminitrarCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarMetodosDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -45,7 +49,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(668, 407);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,7 +61,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 24);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(906, 636);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,13 +111,44 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmVentas,
             this.tsmProductos,
-            this.tsmDetalleVenta});
+            this.tsmDetalleVenta,
+            this.tsmMas});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
             this.menuStrip1.Size = new System.Drawing.Size(906, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tsmMas
+            // 
+            this.tsmMas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.administrarMarcasToolStripMenuItem,
+            this.adminitrarCategoriasToolStripMenuItem,
+            this.administrarMetodosDePagoToolStripMenuItem});
+            this.tsmMas.Name = "tsmMas";
+            this.tsmMas.Size = new System.Drawing.Size(44, 22);
+            this.tsmMas.Text = "MAS";
+            // 
+            // administrarMarcasToolStripMenuItem
+            // 
+            this.administrarMarcasToolStripMenuItem.Name = "administrarMarcasToolStripMenuItem";
+            this.administrarMarcasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.administrarMarcasToolStripMenuItem.Text = "Administrar marcas";
+            this.administrarMarcasToolStripMenuItem.Click += new System.EventHandler(this.administrarMarcasToolStripMenuItem_Click);
+            // 
+            // adminitrarCategoriasToolStripMenuItem
+            // 
+            this.adminitrarCategoriasToolStripMenuItem.Name = "adminitrarCategoriasToolStripMenuItem";
+            this.adminitrarCategoriasToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.adminitrarCategoriasToolStripMenuItem.Text = "Adminitrar categorias";
+            this.adminitrarCategoriasToolStripMenuItem.Click += new System.EventHandler(this.adminitrarCategoriasToolStripMenuItem_Click);
+            // 
+            // administrarMetodosDePagoToolStripMenuItem
+            // 
+            this.administrarMetodosDePagoToolStripMenuItem.Name = "administrarMetodosDePagoToolStripMenuItem";
+            this.administrarMetodosDePagoToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.administrarMetodosDePagoToolStripMenuItem.Text = "Administrar metodos de Pago";
             // 
             // Form1
             // 
@@ -124,7 +159,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda AS  | Principal";
@@ -146,6 +181,10 @@
         private System.Windows.Forms.ToolStripMenuItem AdministrarProductos;
         private System.Windows.Forms.ToolStripMenuItem tsmDetalleVenta;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tsmMas;
+        private System.Windows.Forms.ToolStripMenuItem administrarMarcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adminitrarCategoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrarMetodosDePagoToolStripMenuItem;
     }
 }
 

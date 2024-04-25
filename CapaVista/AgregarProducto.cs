@@ -39,6 +39,8 @@ namespace CapaVista
             productobindingSource1.AddNew();
         }
 
+
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             GuardarProducto();
@@ -125,6 +127,12 @@ namespace CapaVista
         {
             AdministrarMarcas objAdministrarMarcas = new AdministrarMarcas();
             objAdministrarMarcas.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MantenimientoCategoria objMantenimeintoCategoria = new MantenimientoCategoria();
+            objMantenimeintoCategoria.ShowDialog();
         }
     }
 }

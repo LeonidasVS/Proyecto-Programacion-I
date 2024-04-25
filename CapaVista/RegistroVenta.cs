@@ -49,9 +49,17 @@ namespace CapaVista
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
-        private void txtCodigoProducto_TextChanged(object sender, EventArgs e)
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtCodigoProducto.Text))
             {
@@ -89,19 +97,40 @@ namespace CapaVista
 
                 if (producto != null)
                 {
-                    detalleVenta.Rows.Add(codigo, producto.Nombre, producto.idMarca, producto.PrecioUnitario,
-                        cantidad, (cantidad * producto.PrecioUnitario));
-
-                    dgvDetalleVenta.DataSource = detalleVenta;
 
                     decimal montoTotal = 0;
-
-                    foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
+                    
+                    if (int.Parse(txtCantidad.Text) > int.Parse(txtExistencias.Text))
                     {
-                        montoTotal += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
+                        // Mensaje en caso de que no hayan suficientes existencias
+                        MessageBox.Show("Las existencias no son suficientes para esta venta", "Tienda | Registro venta",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    else if (int.Parse(txtCantidad.Text) == 0) 
+                    {
+                        MessageBox.Show("No se pueden vender CERO productos", "Tienda | Registro venta",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        // Agregar venta
+                        detalleVenta.Rows.Add(codigo, producto.Nombre, producto.idMarca, producto.PrecioUnitario,
+                        cantidad, (cantidad * producto.PrecioUnitario));
 
-                    txtTotal.Text = montoTotal.ToString();
+                        dgvDetalleVenta.DataSource = detalleVenta;
+                        // Restar los productos vendidos
+                        int existenciasAct = int.Parse(txtExistencias.Text) - int.Parse(txtCantidad.Text);
+                        txtExistencias.Text = existenciasAct.ToString();
+                        producto.Existencias = existenciasAct;
+
+                        foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
+                        {
+                            montoTotal += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
+                        }
+
+                        // Agregar monto total
+                        txtTotal.Text = montoTotal.ToString();
+                    }         
                 }
             }
             catch (Exception)
@@ -117,6 +146,7 @@ namespace CapaVista
             try
             {
                 _ventaLOG = new VentaLOG();
+                _productoLOG  = new ProductoLOG();
 
                 Venta venta = new Venta();
                 venta.Fecha = DateTime.Now;
@@ -139,8 +169,10 @@ namespace CapaVista
 
                 if (resultado >= 0)
                 {
+
                     MessageBox.Show("Venta guardada con exito", "Tienda | Registro venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 else
                 {
