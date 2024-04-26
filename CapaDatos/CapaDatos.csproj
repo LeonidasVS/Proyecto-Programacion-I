@@ -72,9 +72,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
+    <ProjectReference Include="..\Capa_Entidades\CapaEntidades.csproj">
       <Project>{E8BA4062-C71A-4845-A425-4121E5E29C3B}</Project>
-      <Name>Capa_Entidades</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

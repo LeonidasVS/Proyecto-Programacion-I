@@ -181,9 +181,9 @@
       <Project>{254BCE81-8047-4BF7-A487-CCCDAF039726}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
+    <ProjectReference Include="..\Capa_Entidades\CapaEntidades.csproj">
       <Project>{e8ba4062-c71a-4845-a425-4121e5e29c3b}</Project>
-      <Name>Capa_Entidades</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

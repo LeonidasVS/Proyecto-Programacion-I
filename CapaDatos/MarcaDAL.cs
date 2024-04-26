@@ -19,6 +19,7 @@ namespace CapaDatos
 
             if (esActualizacion)
             {
+
                 marca.idMarca = id;
 
                 contexto.Entry(marca).State = System.Data.Entity.EntityState.Modified;
