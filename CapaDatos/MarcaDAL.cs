@@ -41,10 +41,10 @@ namespace CapaDatos
             contexto = new ContextoBD();
             return contexto.Marca.Where(m=> m.idMarca>0).ToList();
         }
-        public Marca BuscarMarca(int id)
-        {
-            contexto = new ContextoBD();
-            return contexto.Marca.Find(id);
-        }
+        //public Marca BuscarMarca(int id)
+        //{
+        //    contexto = new ContextoBD();
+        //    return contexto.Marca.Find(id);
+        //}
     }
 }

@@ -147,34 +147,10 @@
   <metadata name="Categoria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="idProducto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Editar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Descripcion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Exitencias.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Precio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="idMarca.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="idCategoria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Marca.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Categoria.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -196,7 +172,7 @@
   <data name="AñadirProducto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADdEAAA3RAcIr3+MAAAAHdElNRQfoBBUUChvPIRjoAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADdAAAA3QARBsPQcAAAAHdElNRQfoBBUUChvPIRjoAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAYJJREFUSEu91j1KxUAUBeAHioWllY2F
         S3APLsNCsNBeOxE7sbBzK2IpWLsJ2wfWgoXo+UIGYt5LTJTkwGGYmXNPfu69kywGYDs8CI/Cy/CmHs2t
         2/8zdsLj8DFchp/hV4Pm1u3T0Y/CYfgcFsPX8CG8D2/r0dx60dCL+xUb4Vn4Fgp8CU/D/XArbMLcun06
@@ -210,7 +186,7 @@
   <data name="actualizarProducto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAHdElNRQfoBBkVAw2hI8N/AAAC
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxAAAAsQAa0jvXUAAAAHdElNRQfoBBkVAw2hI8N/AAAC
         OUlEQVRIS52WvS4EURTHVyKISJAoRLElESWdVihI9DyAygMolV6BSqUjSp1G5aug8AYalYjC9/+3e87M
         mbuzZmdP8svsPR/3zNx77rnbqJJms1lJX1I2kRgU42LKnozL/AqUSuLERItiT5yJG/FoT8bosceEI3Hc
         IW4w5sWReBG/xqd4t6frsB+KWTEjTsW+aCUqCIrAungSTPIqzsWuWBXL9mSMHjt+D+JAfIl7MSFsdgmD

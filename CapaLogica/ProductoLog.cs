@@ -18,10 +18,22 @@ namespace CapaLogica
             return productodal.GuardarProducto(producto, id, actualizacion);
         }
 
+        public int ActualizarProducto(Producto producto,int id )
+        {
+            productodal = new ProductoDAL();
+
+            return productodal.GuardarProducto(producto, id, true);
+        }
         public List<Producto> ObtenerProductos()
         {
             productodal = new ProductoDAL();
             return productodal.leer();
+        }
+        public Producto ObtenerProductoPorId(int codigo)
+        {
+            productodal = new ProductoDAL();
+
+            return productodal.LeerProducto(codigo);
         }
     }
 }

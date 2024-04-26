@@ -22,5 +22,11 @@ namespace CapaLogica
             categoriaDAL = new CategoriaDAL();
             return categoriaDAL.LeerCategoria();
         }
+        //public Categoria ObtenerCategoriaPorId(int codigo)
+        //{
+        //    categoriaDAL = new CategoriaDAL();
+
+        //    return categoriaDAL.BuscarCategoria(codigo);
+        //}
     }
 }

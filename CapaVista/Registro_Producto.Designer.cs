@@ -180,9 +180,9 @@
             this.GuardarProducto.ForeColor = System.Drawing.SystemColors.Info;
             this.GuardarProducto.Image = ((System.Drawing.Image)(resources.GetObject("GuardarProducto.Image")));
             this.GuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarProducto.Location = new System.Drawing.Point(300, 480);
+            this.GuardarProducto.Location = new System.Drawing.Point(302, 480);
             this.GuardarProducto.Name = "GuardarProducto";
-            this.GuardarProducto.Size = new System.Drawing.Size(98, 37);
+            this.GuardarProducto.Size = new System.Drawing.Size(96, 37);
             this.GuardarProducto.TabIndex = 10;
             this.GuardarProducto.Text = "Guardar";
             this.GuardarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -232,6 +232,8 @@
             // 
             // cbxMarca
             // 
+            this.cbxMarca.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxMarca.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.cbxMarca.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "idMarca", true));
             this.cbxMarca.DataSource = this.marcaBindingSource;

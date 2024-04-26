@@ -21,13 +21,33 @@ namespace CapaVista
         ProductoLog _productoLog;
         MarcaLog _marcaLog;
         CategoriaLog categoriaLog;
-        public Registro_Producto()
+        int _id=0;
+        public Registro_Producto(int id=0)
         {
+            _id = id;
             InitializeComponent();
+
+            if (_id>0)
+            {
+                this.Text = "Tienda Store_AS | Edicion de Productos";
+                GuardarProducto.Text = "Update";
+                CargarDatosProdutos(_id);
+            }
+            else
+            {
+                CargarMarcas();
+                CargarCategorias();
+                ProductoBindingSource.MoveLast();
+                ProductoBindingSource.AddNew();
+            }
+        }
+
+        private void CargarDatosProdutos(int id)
+        {
+            _productoLog = new ProductoLog();
+            ProductoBindingSource.DataSource = _productoLog.ObtenerProductoPorId(id);
             CargarMarcas();
             CargarCategorias();
-            ProductoBindingSource.MoveLast();
-            ProductoBindingSource.AddNew(); 
         }
 
         private void CargarMarcas()
@@ -40,6 +60,7 @@ namespace CapaVista
         {
             categoriaLog = new CategoriaLog();
             categoriaBindingSource.DataSource = categoriaLog.ObtenerCategorias();
+            
         }
         private void Regresar_Click(object sender, EventArgs e)
         {
@@ -115,20 +136,44 @@ namespace CapaVista
                     return;
                 }
 
-                Producto producto;
-                producto = (Producto)ProductoBindingSource.Current;
-                int resultado = _productoLog.SaveProducto(producto);
+                int resultado;
 
-                if (resultado > 0)
+                if (_id > 0)
                 {
-                    MessageBox.Show("¡ EL Producto se añadió Exitosamente !", "Tienda AS | Registro Productos",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Producto producto;
+                    producto = (Producto)ProductoBindingSource.Current;
+
+                    resultado = _productoLog.ActualizarProducto(producto,_id);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("¡ EL Producto se Actualizo Exitosamente !", "Tienda AS | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! El producto no se actualizo", "Tienda AS | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error! El producto no se guardo", "Tienda AS | Registro Productos",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Producto producto;
+                    producto = (Producto)ProductoBindingSource.Current;
+                    resultado = _productoLog.SaveProducto(producto);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("¡ EL Producto se añadió Exitosamente !", "Tienda AS | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! El producto no se guardo", "Tienda AS | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex) 
