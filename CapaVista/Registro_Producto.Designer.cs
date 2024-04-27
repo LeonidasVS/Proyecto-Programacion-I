@@ -50,7 +50,7 @@
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Titulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
@@ -280,17 +280,17 @@
             this.textBox2.Text = "$";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label8
+            // Titulo
             // 
-            this.label8.AutoSize = true;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(227, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(273, 25);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Departamento de Registros";
+            this.Titulo.AutoSize = true;
+            this.Titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Titulo.Location = new System.Drawing.Point(227, 24);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(273, 25);
+            this.Titulo.TabIndex = 21;
+            this.Titulo.Text = "Departamento de Registros";
             // 
             // Registro_Producto
             // 
@@ -298,7 +298,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(717, 554);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Titulo);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.cbxMarca);
@@ -350,6 +350,6 @@
         private System.Windows.Forms.BindingSource marcaBindingSource;
         private System.Windows.Forms.BindingSource categoriaBindingSource;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Titulo;
     }
 }

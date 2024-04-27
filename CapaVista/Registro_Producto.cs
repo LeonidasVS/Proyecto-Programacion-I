@@ -27,10 +27,11 @@ namespace CapaVista
             _id = id;
             InitializeComponent();
 
-            if (_id>0)
+            if (_id > 0)
             {
                 this.Text = "Tienda Store_AS | Edicion de Productos";
                 GuardarProducto.Text = "Update";
+                Titulo.Text = "Edicion de Productos";
                 CargarDatosProdutos(_id);
             }
             else

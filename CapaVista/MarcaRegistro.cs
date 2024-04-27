@@ -15,11 +15,32 @@ namespace CapaVista
     public partial class MarcaRegistro : Form
     {
         MarcaLog _marcalog;
-        public MarcaRegistro()
+
+        int _id = 0;
+        public MarcaRegistro(int id=0)
         {
+            _id = id;
             InitializeComponent();
-            marcasBinding.MoveLast();
-            marcasBinding.AddNew();
+
+            if (_id > 0)
+            {
+                this.Text = "Tienda Store_AS | Edicion de Marcas";
+                GuardarMarca.Text = "Update";
+                NombreMarca.Enabled = false;
+                Titulo.Text = "Edicion de Marca";
+                CargarDatosMarcas(_id);
+            }
+            else
+            {
+                marcasBinding.MoveLast();
+                marcasBinding.AddNew();
+            }
+        }
+
+        private void CargarDatosMarcas(int id)
+        {
+            _marcalog = new MarcaLog();
+            marcasBinding.DataSource = _marcalog.ObtenerMarcaPorId(id);
         }
 
         private void GuardarMarca_Click(object sender, EventArgs e)
@@ -62,22 +83,46 @@ namespace CapaVista
                     }
                 }
 
-                marcasBinding.EndEdit();
-                Marca marca;
-                marca = (Marca)marcasBinding.Current;
-                int resultado =_marcalog.SaveMarcas(marca);
+                int resultado;
 
-                if (resultado > 0)
+                if (_id>0)
                 {
-                    MessageBox.Show("¡La Marca se añadió Exitosamente!", "Tienda AS | Registro Marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Marca marcas;
+                    marcas= (Marca)marcasBinding.Current;
 
+                    resultado = _marcalog.ActualizarMarca(marcas, _id);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("¡ La Marca se Actualizo Exitosamente !", "Tienda AS | Edicion Marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! La Marca no se actualizo", "Tienda AS | Edicion Marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error! La Marca no se guardo", "Tienda AS | Registro Marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    marcasBinding.EndEdit();
+                    Marca marca;
+                    marca = (Marca)marcasBinding.Current;
+                    resultado = _marcalog.SaveMarcas(marca);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("¡La Marca se añadió Exitosamente!", "Tienda AS | Registro Marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! La Marca no se guardo", "Tienda AS | Registro Marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

@@ -40,12 +40,30 @@ namespace CapaDatos
         public List<Marca> LeerMarcas()
         {
             contexto = new ContextoBD();
-            return contexto.Marca.Where(m=> m.idMarca>0).ToList();
+            return contexto.Marca.Where(m=> m.Estado==true).ToList();
         }
-        //public Marca BuscarMarca(int id)
-        //{
-        //    contexto = new ContextoBD();
-        //    return contexto.Marca.Find(id);
-        //}
+        public Marca BuscarMarca(int id)
+        {
+            contexto = new ContextoBD();
+            return contexto.Marca.Find(id);
+        }
+
+        public int Eliminar(int id)
+        {
+            contexto = new ContextoBD();
+            int resultado = 0;
+
+            var marca = contexto.Marca.Find(id);
+
+            if (marca != null)
+            {
+                marca.Estado = false;
+                contexto.SaveChanges();
+
+                resultado = marca.idMarca;
+            }
+
+            return resultado;
+        }
     }
 }

@@ -38,7 +38,7 @@
             this.marcasBinding = new System.Windows.Forms.BindingSource(this.components);
             this.Descripcion = new System.Windows.Forms.TextBox();
             this.NombreMarca = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Titulo = new System.Windows.Forms.Label();
             this.GuardarMarca = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBinding)).BeginInit();
             this.SuspendLayout();
@@ -140,17 +140,17 @@
             this.NombreMarca.TabIndex = 17;
             this.NombreMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // Titulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(134, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 25);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Registro de Marcas";
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Titulo.Location = new System.Drawing.Point(134, 25);
+            this.Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(198, 25);
+            this.Titulo.TabIndex = 16;
+            this.Titulo.Text = "Registro de Marcas";
             // 
             // GuardarMarca
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.checkMarca);
             this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.NombreMarca);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Titulo);
             this.Name = "MarcaRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MarcaRegistro";
@@ -203,7 +203,7 @@
         private System.Windows.Forms.CheckBox checkMarca;
         private System.Windows.Forms.TextBox Descripcion;
         private System.Windows.Forms.TextBox NombreMarca;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Button GuardarMarca;
         private System.Windows.Forms.BindingSource marcasBinding;
     }

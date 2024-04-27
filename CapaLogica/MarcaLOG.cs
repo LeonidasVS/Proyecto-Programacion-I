@@ -22,12 +22,24 @@ namespace CapaLogica
             _marDal = new MarcaDAL();
             return _marDal.LeerMarcas();
         }
-        //public Marca ObtenerMarcaPorId(int codigo)
-        //{
-        //    _marDal = new MarcaDAL();
 
-        //    return _marDal.BuscarMarca(codigo);
-        //}
+        public Marca ObtenerMarcaPorId(int id)
+        {
+            _marDal = new MarcaDAL();
 
+            return _marDal.BuscarMarca(id);
+        }
+        public int ActualizarMarca(Marca marca, int id)
+        {
+            _marDal = new MarcaDAL();
+
+            return _marDal.GuardarMarca(marca, id, true);
+        }
+
+        public int EliminarMarca(int id)
+        {
+            _marDal = new MarcaDAL();
+            return _marDal.Eliminar(id);
+        }
     }
 }
