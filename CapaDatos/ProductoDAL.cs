@@ -10,7 +10,25 @@ namespace CapaDatos
     public class ProductoDAL
     {
         ContextoBD contexto;
-        
+
+        public int Eliminar(int id)
+        {
+            contexto = new ContextoBD();
+            int resultado=0;
+
+            var producto = contexto.Producto.Find(id);
+
+            if (producto!=null)
+            {
+                producto.Estado = false;
+                contexto.SaveChanges();
+
+                resultado = producto.idProducto;
+            }
+
+            return resultado;
+        }
+
         public int GuardarProducto(Producto producto,int id=0, bool actualizacion=false)
         {
             contexto = new ContextoBD();

@@ -126,7 +126,7 @@ namespace CapaVista
                 if (cbxMarca.SelectedItem==null)
                 {
                     MessageBox.Show("Selecciona una Marca del Producto", "Tienda AS | Registro Producto",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (cbxCategoria.SelectedItem==null)

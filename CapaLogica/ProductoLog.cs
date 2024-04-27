@@ -35,5 +35,11 @@ namespace CapaLogica
 
             return productodal.LeerProducto(codigo);
         }
+
+        public int EliminarProducto(int id)
+        {
+            productodal = new ProductoDAL();
+            return productodal.Eliminar(id);
+        }
     }
 }

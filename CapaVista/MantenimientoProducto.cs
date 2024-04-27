@@ -10,9 +10,8 @@ namespace CapaVista
         public MantenimientoProducto()
         {
             InitializeComponent();
-            productoLog = new ProductoLog();
-            TablaProductos.DataSource = productoLog.ObtenerProductos();
-        }
+            CargarPRoducto();
+;        }
 
         private void Regresar_Click_1(object sender, EventArgs e)
         {
@@ -23,9 +22,10 @@ namespace CapaVista
         {
             Registro_Producto acceder = new Registro_Producto();
             acceder.ShowDialog();
+            CargarPRoducto();
         }
 
-        private void actualizarProducto_Click(object sender, EventArgs e)
+        private void CargarPRoducto()
         {
             productoLog = new ProductoLog();
             TablaProductos.DataSource = productoLog.ObtenerProductos();
@@ -43,8 +43,35 @@ namespace CapaVista
                     {
                         Registro_Producto acceder = new Registro_Producto(id);
                         acceder.ShowDialog();
+                        CargarPRoducto();
+
+                    }else if (TablaProductos.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                    {
+                        var ValidarEliminar = MessageBox.Show("¿Deseas Eliminar EL Producto?", "Tienda AS | Precaución", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                        if (ValidarEliminar == DialogResult.Yes)
+                        {
+                            productoLog = new ProductoLog();
+
+                            int resultado = productoLog.EliminarProducto(id);
+
+                            if (resultado>0)
+                            {
+                                MessageBox.Show("Producto Eliminado con Exito", "Tienda AS | Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CargarPRoducto();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Producto no se Elimino", "Tienda AS | Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+
                     }
                 }
+
+
             }
             catch (Exception ex)
             {
