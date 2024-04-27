@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202404242052320_AtributoEstado.Designer.cs">
       <DependentUpon>202404242052320_AtributoEstado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404270227434_EstadoMtdPago.cs" />
+    <Compile Include="Migrations\202404270227434_EstadoMtdPago.Designer.cs">
+      <DependentUpon>202404270227434_EstadoMtdPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.cs" />
     <Compile Include="Migrations\202404150318538_Modelos.Designer.cs">
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404242052320_AtributoEstado.resx">
       <DependentUpon>202404242052320_AtributoEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404270227434_EstadoMtdPago.resx">
+      <DependentUpon>202404270227434_EstadoMtdPago.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

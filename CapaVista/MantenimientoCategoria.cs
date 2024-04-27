@@ -18,8 +18,7 @@ namespace CapaVista
         {
             InitializeComponent();
 
-            _categoriaLOG = new CategoriaLOG();
-            dgvCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+            CargarProductos();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -31,10 +30,12 @@ namespace CapaVista
         {
             AgregarCategoria objAgregarCategoria = new AgregarCategoria();
             objAgregarCategoria.ShowDialog();
+            CargarProductos();
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void CargarProductos()
         {
+            _categoriaLOG = new CategoriaLOG();
             dgvCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
         }
     }

@@ -40,7 +40,7 @@
             this.MarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,9 +68,9 @@
             this.Eliminar,
             this.estadoDataGridViewCheckBoxColumn});
             this.dgvMarcas.DataSource = this.MarcaBindingSource;
-            this.dgvMarcas.Location = new System.Drawing.Point(17, 80);
+            this.dgvMarcas.Location = new System.Drawing.Point(15, 181);
             this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.Size = new System.Drawing.Size(873, 412);
+            this.dgvMarcas.Size = new System.Drawing.Size(873, 392);
             this.dgvMarcas.TabIndex = 1;
             // 
             // idMarcaDataGridViewTextBoxColumn
@@ -137,22 +137,21 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // btnActualizar
+            // groupBox1
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(789, 532);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(99, 33);
-            this.btnActualizar.TabIndex = 4;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.groupBox1.Location = new System.Drawing.Point(15, 78);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 86);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar por estado";
             // 
             // AdministrarMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
-            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvMarcas);
@@ -182,6 +181,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

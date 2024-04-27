@@ -149,6 +149,7 @@
             this.administrarMetodosDePagoToolStripMenuItem.Name = "administrarMetodosDePagoToolStripMenuItem";
             this.administrarMetodosDePagoToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.administrarMetodosDePagoToolStripMenuItem.Text = "Administrar metodos de Pago";
+            this.administrarMetodosDePagoToolStripMenuItem.Click += new System.EventHandler(this.administrarMetodosDePagoToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -48,10 +48,9 @@
             this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbCategorias = new System.Windows.Forms.ComboBox();
             this.CategoriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdmMarcas = new System.Windows.Forms.Button();
+            this.btnAdmCategorias = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productobindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource1)).BeginInit();
@@ -225,25 +224,25 @@
             // 
             this.CategoriaBindingSource1.DataSource = typeof(CapaEntidades.Categoria);
             // 
-            // button1
+            // btnAdmMarcas
             // 
-            this.button1.Location = new System.Drawing.Point(698, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 32);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Administrar Marcas";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdmMarcas.Location = new System.Drawing.Point(698, 411);
+            this.btnAdmMarcas.Name = "btnAdmMarcas";
+            this.btnAdmMarcas.Size = new System.Drawing.Size(182, 32);
+            this.btnAdmMarcas.TabIndex = 18;
+            this.btnAdmMarcas.Text = "Administrar Marcas";
+            this.btnAdmMarcas.UseVisualStyleBackColor = true;
+            this.btnAdmMarcas.Click += new System.EventHandler(this.btnAdmMarcas_Click);
             // 
-            // button2
+            // btnAdmCategorias
             // 
-            this.button2.Location = new System.Drawing.Point(698, 463);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 32);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Administrar Categorias";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAdmCategorias.Location = new System.Drawing.Point(698, 463);
+            this.btnAdmCategorias.Name = "btnAdmCategorias";
+            this.btnAdmCategorias.Size = new System.Drawing.Size(182, 32);
+            this.btnAdmCategorias.TabIndex = 19;
+            this.btnAdmCategorias.Text = "Administrar Categorias";
+            this.btnAdmCategorias.UseVisualStyleBackColor = true;
+            this.btnAdmCategorias.Click += new System.EventHandler(this.btnAdmCategorias_Click);
             // 
             // label8
             // 
@@ -255,25 +254,14 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Agregar Productos";
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(743, 531);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(137, 38);
-            this.btnActualizar.TabIndex = 21;
-            this.btnActualizar.Text = "Reiniciar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdmCategorias);
+            this.Controls.Add(this.btnAdmMarcas);
             this.Controls.Add(this.cmbCategorias);
             this.Controls.Add(this.cmbMarcas);
             this.Controls.Add(this.label7);
@@ -324,9 +312,8 @@
         private System.Windows.Forms.BindingSource marcaBindingSource;
         private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.BindingSource CategoriaBindingSource1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdmMarcas;
+        private System.Windows.Forms.Button btnAdmCategorias;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnActualizar;
     }
 }

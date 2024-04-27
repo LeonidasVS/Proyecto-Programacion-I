@@ -62,6 +62,12 @@
     <Compile Include="AdministrarMarcas.Designer.cs">
       <DependentUpon>AdministrarMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdministrarMetodosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministrarMetodosPago.Designer.cs">
+      <DependentUpon>AdministrarMetodosPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="AgregarMarca.Designer.cs">
       <DependentUpon>AgregarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMetodoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMetodoPago.Designer.cs">
+      <DependentUpon>AgregarMetodoPago.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarProducto.cs">
       <SubType>Form</SubType>
@@ -115,11 +127,17 @@
     <EmbeddedResource Include="AdministrarMarcas.resx">
       <DependentUpon>AdministrarMarcas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdministrarMetodosPago.resx">
+      <DependentUpon>AdministrarMetodosPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarCategoria.resx">
       <DependentUpon>AgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarMarca.resx">
       <DependentUpon>AgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMetodoPago.resx">
+      <DependentUpon>AgregarMetodoPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>

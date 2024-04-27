@@ -18,8 +18,7 @@ namespace CapaVista
         {
             InitializeComponent();
 
-            _marcaLOG = new MarcaLOG();
-            dgvMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            cargarMarcas();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -31,9 +30,10 @@ namespace CapaVista
         {
             AgregarMarca objAgregarMarca = new AgregarMarca();
             objAgregarMarca.ShowDialog();
+            cargarMarcas();
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void cargarMarcas()
         {
             _marcaLOG = new MarcaLOG();
             dgvMarcas.DataSource = _marcaLOG.ObtenerMarca();

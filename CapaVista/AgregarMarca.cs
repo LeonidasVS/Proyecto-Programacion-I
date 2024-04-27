@@ -84,7 +84,8 @@ namespace CapaVista
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show("Ocurrio un error", "Tienda AS | Agregar Marca",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

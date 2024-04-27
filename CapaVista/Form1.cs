@@ -61,5 +61,11 @@ namespace CapaVista
             MantenimientoCategoria objMantenientoCategoria = new MantenimientoCategoria();
             objMantenientoCategoria.ShowDialog();
         }
+
+        private void administrarMetodosDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministrarMetodosPago objAdmMtdsPago = new AdministrarMetodosPago();
+            objAdmMtdsPago.ShowDialog();
+        }
     }
 }

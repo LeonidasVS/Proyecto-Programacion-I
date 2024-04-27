@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class AgregarCategoria : Form
+    public partial class AgregarMetodoPago : Form
     {
-        CategoriaLOG _categoriaLOG;
-        public AgregarCategoria()
+        MetodoPagoLOG _metodoPagoLOG;
+        public AgregarMetodoPago()
         {
             InitializeComponent();
 
-            categoriaBindingSource.MoveLast();
-            categoriaBindingSource.AddNew();
+            MetdPagoBindingSource.MoveLast();
+            MetdPagoBindingSource.AddNew();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -30,24 +30,17 @@ namespace CapaVista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            GuardarCategoria();
+            GuardarMtdPago();
         }
 
-        private void GuardarCategoria()
+        private void GuardarMtdPago()
         {
             try
             {
-                _categoriaLOG = new CategoriaLOG();
+                _metodoPagoLOG = new MetodoPagoLOG();
                 if (string.IsNullOrEmpty(txtNombre.Text))
                 {
                     MessageBox.Show("Por favor ingrese el nombre de la marca", "Tienda AS | Agregar Marca",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNombre.Focus();
-                    txtNombre.BackColor = Color.LightYellow;
-                }
-                else if (string.IsNullOrEmpty(txtDescripcion.Text))
-                {
-                    MessageBox.Show("Por favor ingrese la descripción de la marca", "Tienda AS | Agregar Marca",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombre.Focus();
                     txtNombre.BackColor = Color.LightYellow;
@@ -65,9 +58,9 @@ namespace CapaVista
                     }
                 }
 
-                Categoria categoria;
-                categoria = (Categoria)categoriaBindingSource.Current;
-                int resultado = _categoriaLOG.GuardarCategoria(categoria);
+                MetodoPago metdpago;
+                metdpago = (MetodoPago)MetdPagoBindingSource.Current;
+                int resultado = _metodoPagoLOG.AgregarMtdPago(metdpago);
 
                 if (resultado > 0)
                 {
@@ -84,10 +77,9 @@ namespace CapaVista
             catch (Exception)
             {
 
-                MessageBox.Show("Ocurrio un error", "Tienda AS | Agregar categorias",
+                MessageBox.Show("Ocurrio un error", "Tienda AS | Agregar Marca",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

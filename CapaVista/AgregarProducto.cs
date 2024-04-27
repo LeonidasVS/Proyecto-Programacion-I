@@ -125,21 +125,24 @@ namespace CapaVista
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdmMarcas_Click(object sender, EventArgs e)
         {
             AdministrarMarcas objAdministrarMarcas = new AdministrarMarcas();
             objAdministrarMarcas.ShowDialog();
+            _marcaLOG = new MarcaLOG();
+            cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            cmbMarcas.DisplayMember = "Nombre";
+            cmbMarcas.ValueMember = "idMarca";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAdmCategorias_Click(object sender, EventArgs e)
         {
             MantenimientoCategoria objMantenimeintoCategoria = new MantenimientoCategoria();
             objMantenimeintoCategoria.ShowDialog();
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            MostrarMarcasYCategorias();
+            _categoriaLOG = new CategoriaLOG();
+            cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+            cmbCategorias.DisplayMember = "Nombre";
+            cmbCategorias.ValueMember = "idCategoria";
         }
     }
 }

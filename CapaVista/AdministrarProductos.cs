@@ -19,8 +19,7 @@ namespace CapaVista
         public AdministrarProductos()
         {
             InitializeComponent();
-            _productoLOG = new ProductoLOG();
-            dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
+            CargarProductos();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -32,6 +31,7 @@ namespace CapaVista
         {
             AgregarProducto objAgregarProducto = new AgregarProducto();
             objAgregarProducto.ShowDialog();
+            CargarProductos();
         }
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -55,12 +55,7 @@ namespace CapaVista
             }
         }
 
-        private void process1_Exited(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void CargarProductos()
         {
             _productoLOG = new ProductoLOG();
             dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
