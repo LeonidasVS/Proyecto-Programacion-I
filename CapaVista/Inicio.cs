@@ -34,16 +34,20 @@ namespace CapaVista
             mntoPro.ShowDialog();
         }
 
-        private void añadirMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MarcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MarcaRegistro marca = new MarcaRegistro();
+            //MarcaRegistro marca = new MarcaRegistro();
+            //marca.ShowDialog();
+            MantenimientoMarca marca = new MantenimientoMarca();
             marca.ShowDialog();
         }
 
-        private void añadirCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CategoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CategoriaRegistro categoria = new CategoriaRegistro();
-            categoria.ShowDialog();
+            //CategoriaRegistro categoria = new CategoriaRegistro();
+            //categoria.ShowDialog();
+            MantenimientoCategorias category = new MantenimientoCategorias();
+            category.ShowDialog();
         }
 
         private void realizarVentaToolStripMenuItem_Click(object sender, EventArgs e)

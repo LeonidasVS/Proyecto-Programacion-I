@@ -67,15 +67,12 @@ namespace CapaVista
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
-
                     }
                 }
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error");
+                MessageBox.Show($"Error:{ex.Message} ");
             }
         }
     }

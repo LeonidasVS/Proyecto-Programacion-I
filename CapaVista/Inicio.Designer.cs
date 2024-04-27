@@ -135,7 +135,7 @@
             // realizarVentaToolStripMenuItem
             // 
             this.realizarVentaToolStripMenuItem.Name = "realizarVentaToolStripMenuItem";
-            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.realizarVentaToolStripMenuItem.Text = "- Realizar Venta";
             this.realizarVentaToolStripMenuItem.Click += new System.EventHandler(this.realizarVentaToolStripMenuItem_Click);
             // 
@@ -187,16 +187,16 @@
             // añadirMarcasToolStripMenuItem
             // 
             this.añadirMarcasToolStripMenuItem.Name = "añadirMarcasToolStripMenuItem";
-            this.añadirMarcasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.añadirMarcasToolStripMenuItem.Text = "- Añadir Marcas";
-            this.añadirMarcasToolStripMenuItem.Click += new System.EventHandler(this.añadirMarcasToolStripMenuItem_Click);
+            this.añadirMarcasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.añadirMarcasToolStripMenuItem.Text = "- Admón Marcas";
+            this.añadirMarcasToolStripMenuItem.Click += new System.EventHandler(this.MarcasToolStripMenuItem_Click);
             // 
             // añadirCategoriasToolStripMenuItem
             // 
             this.añadirCategoriasToolStripMenuItem.Name = "añadirCategoriasToolStripMenuItem";
-            this.añadirCategoriasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.añadirCategoriasToolStripMenuItem.Text = "- Añadir Categorias";
-            this.añadirCategoriasToolStripMenuItem.Click += new System.EventHandler(this.añadirCategoriasToolStripMenuItem_Click);
+            this.añadirCategoriasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.añadirCategoriasToolStripMenuItem.Text = "- Admón Categorias";
+            this.añadirCategoriasToolStripMenuItem.Click += new System.EventHandler(this.CategoriasToolStripMenuItem_Click);
             // 
             // Store_AS
             // 
