@@ -32,6 +32,7 @@ namespace CapaVista
             }
             else
             {
+                Habilitar.Visible = false;
                 marcasBinding.MoveLast();
                 marcasBinding.AddNew();
             }
@@ -135,6 +136,11 @@ namespace CapaVista
         private void Regresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void habilitar_Click(object sender, EventArgs e)
+        {
+            NombreMarca.Enabled = true;
         }
     }
 }

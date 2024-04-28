@@ -58,9 +58,9 @@
     <Compile Include="Detalle_VentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
     <Compile Include="Metodo_PagoDAL.cs" />
-    <Compile Include="Migrations\202404260240345_conexion.cs" />
-    <Compile Include="Migrations\202404260240345_conexion.Designer.cs">
-      <DependentUpon>202404260240345_conexion.cs</DependentUpon>
+    <Compile Include="Migrations\202404281627106_conexion.cs" />
+    <Compile Include="Migrations\202404281627106_conexion.Designer.cs">
+      <DependentUpon>202404281627106_conexion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
@@ -78,8 +78,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404260240345_conexion.resx">
-      <DependentUpon>202404260240345_conexion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202404281627106_conexion.resx">
+      <DependentUpon>202404281627106_conexion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

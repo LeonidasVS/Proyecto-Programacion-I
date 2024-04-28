@@ -168,8 +168,11 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Capa_Entidades.Categoria.datasource" />
+    <None Include="Properties\DataSources\Capa_Entidades.Detalle_Venta.datasource" />
     <None Include="Properties\DataSources\Capa_Entidades.Marca.datasource" />
+    <None Include="Properties\DataSources\Capa_Entidades.MetodoPago.datasource" />
     <None Include="Properties\DataSources\Capa_Entidades.Producto.datasource" />
+    <None Include="Properties\DataSources\Capa_Entidades.Venta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

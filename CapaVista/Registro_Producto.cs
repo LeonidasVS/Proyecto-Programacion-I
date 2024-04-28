@@ -160,6 +160,7 @@ namespace CapaVista
                 }
                 else
                 {
+
                     Producto producto;
                     producto = (Producto)ProductoBindingSource.Current;
                     resultado = _productoLog.SaveProducto(producto);

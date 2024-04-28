@@ -22,7 +22,12 @@ namespace CapaVista
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ProcesarVenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void añadirVenta_Click(object sender, EventArgs e)
         {
 
         }

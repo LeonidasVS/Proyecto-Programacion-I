@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriaRegistro));
-            this.label1 = new System.Windows.Forms.Label();
+            this.Titulo = new System.Windows.Forms.Label();
             this.NombreCategoria = new System.Windows.Forms.TextBox();
             this.cateBinding = new System.Windows.Forms.BindingSource(this.components);
             this.Descripcion = new System.Windows.Forms.TextBox();
@@ -40,20 +40,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Habilitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cateBinding)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // Titulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(139, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Registro de Categorias";
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Titulo.Location = new System.Drawing.Point(139, 16);
+            this.Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(232, 25);
+            this.Titulo.TabIndex = 0;
+            this.Titulo.Text = "Registro de Categorias";
             // 
             // NombreCategoria
             // 
@@ -104,7 +105,7 @@
             this.GuardarProducto.ForeColor = System.Drawing.SystemColors.Info;
             this.GuardarProducto.Image = ((System.Drawing.Image)(resources.GetObject("GuardarProducto.Image")));
             this.GuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarProducto.Location = new System.Drawing.Point(191, 466);
+            this.GuardarProducto.Location = new System.Drawing.Point(191, 468);
             this.GuardarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarProducto.Name = "GuardarProducto";
             this.GuardarProducto.Size = new System.Drawing.Size(100, 41);
@@ -168,12 +169,29 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Estado";
             // 
+            // Habilitar
+            // 
+            this.Habilitar.BackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatAppearance.BorderSize = 0;
+            this.Habilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Habilitar.ForeColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.Image = ((System.Drawing.Image)(resources.GetObject("Habilitar.Image")));
+            this.Habilitar.Location = new System.Drawing.Point(378, 98);
+            this.Habilitar.Name = "Habilitar";
+            this.Habilitar.Size = new System.Drawing.Size(35, 53);
+            this.Habilitar.TabIndex = 26;
+            this.Habilitar.UseVisualStyleBackColor = false;
+            this.Habilitar.Click += new System.EventHandler(this.Habilitar_Click);
+            // 
             // CategoriaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(509, 554);
+            this.Controls.Add(this.Habilitar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -182,7 +200,7 @@
             this.Controls.Add(this.checkCategoria);
             this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.NombreCategoria);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Titulo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -197,7 +215,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.TextBox NombreCategoria;
         private System.Windows.Forms.TextBox Descripcion;
         private System.Windows.Forms.CheckBox checkCategoria;
@@ -207,5 +225,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.BindingSource cateBinding;
+        private System.Windows.Forms.Button Habilitar;
     }
 }

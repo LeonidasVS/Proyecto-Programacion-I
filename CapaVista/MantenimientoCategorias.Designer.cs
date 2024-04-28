@@ -33,7 +33,7 @@
             this.Regresar = new System.Windows.Forms.Button();
             this.AñadirCategory = new System.Windows.Forms.Button();
             this.TablaCategorias = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -94,7 +94,7 @@
             this.TablaCategorias.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.TablaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
+            this.idCategoria,
             this.Nombre,
             this.Descripcion,
             this.Estado,
@@ -104,14 +104,15 @@
             this.TablaCategorias.Name = "TablaCategorias";
             this.TablaCategorias.Size = new System.Drawing.Size(724, 224);
             this.TablaCategorias.TabIndex = 15;
+            this.TablaCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaCategorias_CellClick);
             // 
-            // Codigo
+            // idCategoria
             // 
-            this.Codigo.DataPropertyName = "idCategoria";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 50;
+            this.idCategoria.DataPropertyName = "idCategoria";
+            this.idCategoria.HeaderText = "Codigo";
+            this.idCategoria.Name = "idCategoria";
+            this.idCategoria.ReadOnly = true;
+            this.idCategoria.Width = 50;
             // 
             // Nombre
             // 
@@ -178,7 +179,7 @@
         private System.Windows.Forms.Button Regresar;
         private System.Windows.Forms.Button AñadirCategory;
         private System.Windows.Forms.DataGridView TablaCategorias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Estado;

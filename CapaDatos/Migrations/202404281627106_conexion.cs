@@ -43,6 +43,7 @@
                     {
                         idMetodoPago = c.Int(nullable: false, identity: true),
                         FormaDePago = c.String(nullable: false, maxLength: 60),
+                        Estado = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.idMetodoPago);
             

@@ -148,7 +148,7 @@
   <metadata name="SubTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ProcesarVenta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAd0SU1FB+gE
         GRM2M8b+YNAAAAJmSURBVEhLrdZJqE5hGMDxDzfTRUJENoooU7JRSDYWUlaUTCULlJQxQxYsCCUioozd
@@ -164,10 +164,10 @@
         CDg2pipOSctK7WNlw0PP/1r8TycOuCQqlV98zPZu7M0srAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="añadirProducto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="añadirVenta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADdQAAA3UAe+RuhUAAAAHdElNRQfoBBkTMALBesdsAAAA
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADdEAAA3RAcIr3+MAAAAHdElNRQfoBBkTMALBesdsAAAA
         GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAiNJREFUSEu11ktvDWEcx/FJadFUU6Ra
         SkQa14WiWBE7RWxqgyAhQohbXCN2JCIWrNwrbhESCxXiEve421gQL6Dqhfh+n3MmTqZnpmfOiV/ySeaZ
         mTMz53nm+T8TkTFoQZON/5VteIXnOIaxSMt4LEN7aP3LaHQVlc10+MM1eIbjiFOHVqzCWbzGAPZgFBbi
@@ -181,4 +181,10 @@
         RK5CYII=
 </value>
   </data>
+  <metadata name="detalleVentaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>173, 24</value>
+  </metadata>
+  <metadata name="metodoPagoBinding.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

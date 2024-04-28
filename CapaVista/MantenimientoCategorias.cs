@@ -37,5 +37,51 @@ namespace CapaVista
         {
             this.Close();
         }
+
+        private void TablaCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    int id = int.Parse(TablaCategorias.Rows[e.RowIndex].Cells["idCategoria"].Value.ToString());
+
+                    if (TablaCategorias.Columns[e.ColumnIndex].Name.Equals("Editar"))
+                    {
+                       CategoriaRegistro acceder = new CategoriaRegistro(id);
+                        acceder.ShowDialog();
+                        CargarCategoriaas();
+
+                    }
+                    else if (TablaCategorias.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                    {
+                        var ValidarEliminar = MessageBox.Show("¿Deseas Eliminar La Categoria?", "Tienda AS | Precaución", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (ValidarEliminar == DialogResult.Yes)
+                        {
+                            category = new CategoriaLog();
+
+                            int resultado = category.EliminarCategoria(id);
+
+                            if (resultado > 0)
+                            {
+                                MessageBox.Show("Categoria Eliminada con Exito", "Tienda AS | Categorias",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                CargarCategoriaas();
+                            }
+                            else
+                            {
+                                MessageBox.Show("La Categoria no se Elimino", "Tienda AS | Categoria",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error:{ex.Message} ");
+            }
+        }
     }
 }

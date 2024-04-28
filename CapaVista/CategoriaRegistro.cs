@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,11 +17,34 @@ namespace CapaVista
     public partial class CategoriaRegistro : Form
     {
         CategoriaLog categoriaLog;
-        public CategoriaRegistro()
+        int _id = 0;
+        public CategoriaRegistro(int id=0)
         {
+            _id = id;
             InitializeComponent();
             cateBinding.MoveLast();
             cateBinding.AddNew();
+
+            if (_id > 0)
+            {
+                this.Text = "Tienda Store_AS | Edicion de Categorias";
+                GuardarProducto.Text = "Update";
+                Titulo.Text = "Edicion de Categorias";
+                NombreCategoria.Enabled = false;
+                CargarDatosCategoria(_id);
+            }
+            else
+            {
+                Habilitar.Visible = false;
+                cateBinding.MoveLast();
+                cateBinding.AddNew();
+            }
+        }
+
+        private void CargarDatosCategoria(int id)
+        {
+            categoriaLog = new CategoriaLog();
+            cateBinding.DataSource = categoriaLog.ObtenerCategoriaPorId(id);
         }
 
         private void Regresar_Click(object sender, EventArgs e)
@@ -68,21 +92,45 @@ namespace CapaVista
                     }
                 }
 
-                cateBinding.EndEdit();
-                Categoria categoria;
-                categoria = (Categoria)cateBinding.Current;
-                int resultado= categoriaLog.GuardarCategoria(categoria);
+                int resultado;
 
-                if (resultado > 0)
+                if (_id > 0)
                 {
-                    MessageBox.Show("¡La Categoria se añadió Exitosamente!", "Tienda AS | Registro Categoria",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Categoria categorya;
+                    categorya = (Categoria)cateBinding.Current;
+
+                    resultado = categoriaLog.ActualizarCategoria(categorya, _id);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("¡ La Categoria se Actualizo Exitosamente !", "Tienda AS | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! La Categoria no se actualizo", "Tienda AS | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error! La Categoria no se guardo", "Tienda AS | Registro Categoria",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cateBinding.EndEdit();
+                    Categoria categoria;
+                    categoria = (Categoria)cateBinding.Current;
+                    resultado = categoriaLog.GuardarCategoria(categoria);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("¡La Categoria se añadió Exitosamente!", "Tienda AS | Registro Categoria",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error! La Categoria no se guardo", "Tienda AS | Registro Categoria",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -90,6 +138,11 @@ namespace CapaVista
                 MessageBox.Show($"{ex.Message }", "Tienda AS | Registro Categoria",
                        MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Habilitar_Click(object sender, EventArgs e)
+        {
+            NombreCategoria.Enabled = true;
         }
     }
 }

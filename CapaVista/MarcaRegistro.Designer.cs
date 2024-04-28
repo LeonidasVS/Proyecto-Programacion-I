@@ -40,6 +40,7 @@
             this.NombreMarca = new System.Windows.Forms.TextBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.GuardarMarca = new System.Windows.Forms.Button();
+            this.Habilitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBinding)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,12 +171,29 @@
             this.GuardarMarca.UseVisualStyleBackColor = false;
             this.GuardarMarca.Click += new System.EventHandler(this.GuardarMarca_Click);
             // 
+            // Habilitar
+            // 
+            this.Habilitar.BackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatAppearance.BorderSize = 0;
+            this.Habilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Habilitar.ForeColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.Image = ((System.Drawing.Image)(resources.GetObject("Habilitar.Image")));
+            this.Habilitar.Location = new System.Drawing.Point(356, 105);
+            this.Habilitar.Name = "Habilitar";
+            this.Habilitar.Size = new System.Drawing.Size(35, 53);
+            this.Habilitar.TabIndex = 25;
+            this.Habilitar.UseVisualStyleBackColor = false;
+            this.Habilitar.Click += new System.EventHandler(this.habilitar_Click);
+            // 
             // MarcaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(473, 531);
+            this.Controls.Add(this.Habilitar);
             this.Controls.Add(this.GuardarMarca);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -206,5 +224,6 @@
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Button GuardarMarca;
         private System.Windows.Forms.BindingSource marcasBinding;
+        private System.Windows.Forms.Button Habilitar;
     }
 }

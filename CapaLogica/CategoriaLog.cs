@@ -12,6 +12,18 @@ namespace CapaLogica
     {
         CategoriaDAL categoriaDAL;
 
+        public int ActualizarCategoria(Categoria categorya, int id)
+        {
+            categoriaDAL = new CategoriaDAL();
+
+            return categoriaDAL.SaveCategoria(categorya, id, true);
+        }
+
+        public int EliminarCategoria(int id)
+        {
+            categoriaDAL = new CategoriaDAL();
+            return categoriaDAL.Eliminar(id);
+        }
         public int GuardarCategoria(Categoria categoria,int id=0,bool Actualizacion=false)
         {
             categoriaDAL = new CategoriaDAL();
@@ -22,11 +34,11 @@ namespace CapaLogica
             categoriaDAL = new CategoriaDAL();
             return categoriaDAL.LeerCategoria();
         }
-        //public Categoria ObtenerCategoriaPorId(int codigo)
-        //{
-        //    categoriaDAL = new CategoriaDAL();
 
-        //    return categoriaDAL.BuscarCategoria(codigo);
-        //}
+        public object ObtenerCategoriaPorId(int id)
+        {
+            categoriaDAL = new CategoriaDAL();
+            return categoriaDAL.BuscarCategoria(id);
+        }
     }
 }

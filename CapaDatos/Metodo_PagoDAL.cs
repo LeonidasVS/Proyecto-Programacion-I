@@ -44,7 +44,7 @@ namespace CapaDatos
         public List<MetodoPago> LeerMetodoPago()
         {
             contexto = new ContextoBD();
-            return contexto.Metodo.Where(m => m.idMetodoPago > 0).ToList();
+            return contexto.Metodo.Where(m => m.Estado==true).ToList();
         }
     }
 }

@@ -44,7 +44,26 @@ namespace CapaDatos
 
         public Categoria BuscarCategoria(int id)
         {
+            contexto = new ContextoBD();
             return contexto.Categoria.Find(id);
+        }
+
+        public int Eliminar(int id)
+        {
+            contexto = new ContextoBD();
+            int resultado = 0;
+
+            var cate = contexto.Categoria.Find(id);
+
+            if (cate != null)
+            {
+                cate.Estado = false;
+                contexto.SaveChanges();
+
+                resultado = cate.idCategoria;
+            }
+
+            return resultado;
         }
     }
 }
