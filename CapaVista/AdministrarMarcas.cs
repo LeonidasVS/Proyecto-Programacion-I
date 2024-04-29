@@ -18,7 +18,7 @@ namespace CapaVista
         {
             InitializeComponent();
 
-            cargarMarcas();
+            CargarMarcas();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -30,13 +30,84 @@ namespace CapaVista
         {
             AgregarMarca objAgregarMarca = new AgregarMarca();
             objAgregarMarca.ShowDialog();
-            cargarMarcas();
+            CargarMarcas();
         }
 
-        private void cargarMarcas()
+        private void CargarMarcas()
         {
             _marcaLOG = new MarcaLOG();
-            dgvMarcas.DataSource = _marcaLOG.ObtenerMarca();
+
+            if (rdbActivos.Checked)
+            {
+                dgvMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            }
+            else if (rdbInactivos.Checked)
+            {
+                dgvMarcas.DataSource = _marcaLOG.ObtenerMarca(true);
+            }
+        }
+
+        private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    int id = int.Parse(dgvMarcas.Rows[e.RowIndex].Cells["Codigo"].Value.ToString());
+
+                    if (dgvMarcas.Columns[e.ColumnIndex].Name.Equals("Editar"))
+                    {
+                        AgregarMarca objAgregarMarca = new AgregarMarca(id);
+                        objAgregarMarca.ShowDialog();
+                        CargarMarcas();
+                    }
+                    else if (dgvMarcas.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                    {
+                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar la marca?", "Tienda | Editar marca",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        _marcaLOG = new MarcaLOG();
+
+                        int resultado = 0;
+
+                        if (desicion != DialogResult.Yes)
+                        {
+                            MessageBox.Show("La marca se continua mostrando en el listado.", "Tienda | Editar marca",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            resultado = _marcaLOG.EliminarMarca(id);
+                            CargarMarcas();
+
+                            if (resultado > 0)
+                            {
+                                MessageBox.Show("Marca eliminado con Exito.", "Tienda | Editar marca",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se logro eliminar la marca.", "Tienda | Editar marca",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ocurrio un error");
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarMarcas();
+        }
+
+        private void rdbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarMarcas();
         }
     }
 }

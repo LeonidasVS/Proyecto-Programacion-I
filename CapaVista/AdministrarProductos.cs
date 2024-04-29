@@ -108,7 +108,7 @@ namespace CapaVista
 
                         if (desicion != DialogResult.Yes)
                         {
-                            MessageBox.Show("El producto se continua mostrando en el listado", "Tienda | Edicion Productos",
+                            MessageBox.Show("El producto se continua mostrando en el listado.", "Tienda | Edicion Productos",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
@@ -118,12 +118,12 @@ namespace CapaVista
 
                             if (resultado > 0)
                             {
-                                MessageBox.Show("Producto eliminado con Exito", "Tienda | Edicion de Producto",
+                                MessageBox.Show("Producto eliminado con exito.", "Tienda | Edicion de Producto",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
-                                MessageBox.Show("No se logro eliminar el producto", "Tienda | Edicion de Producto",
+                                MessageBox.Show("No se logro eliminar el producto.", "Tienda | Edicion de Producto",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }

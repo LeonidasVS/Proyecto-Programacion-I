@@ -12,10 +12,24 @@ namespace CapaDatos
     {
         ContextoBD _db;
 
-        public List<Marca> marcas()
+        public List<Marca> marcas(bool inactivo = false)
         {
             _db = new ContextoBD();
-            return _db.Marcas.Where(p => p.Estado == true).ToList();
+
+            if (inactivo)
+            {
+                return _db.Marcas.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Marcas.Where(p => p.Estado == true).ToList();
+            }
+        }
+
+        public Marca LeerPorId(int id)
+        {
+            _db = new ContextoBD();
+            return _db.Marcas.Find(id);
         }
 
         public string ObtenerNombreMarcaDesdeBD(int idMarca)
@@ -54,6 +68,24 @@ namespace CapaDatos
                 resultado = marca.idMarca;
 
             }
+            return resultado;
+        }
+
+        public int EliminarMarca(int id)
+        {
+            _db = new ContextoBD();
+            int resultado = 0;
+
+            var marca = _db.Marcas.Find(id);
+
+            if (marca != null)
+            {
+                marca.Estado = false;
+                _db.SaveChanges();
+
+                resultado = marca.idMarca;
+            }
+
             return resultado;
         }
     }

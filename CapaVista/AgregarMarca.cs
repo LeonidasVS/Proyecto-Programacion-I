@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,35 @@ namespace CapaVista
     public partial class AgregarMarca : Form
     {
         MarcaLOG _marcaLOG;
-        public AgregarMarca()
+        int _id;
+        public AgregarMarca(int id = 0)
         {
+            
             InitializeComponent();
 
-            marcaBindingSource.MoveLast();
-            marcaBindingSource.AddNew();
+            _id = id;
+
+            if (_id > 0)
+            {
+                this.Text = "Tienda AS | Editar marca";
+                btnGuardar.Text = "Actualizar";
+                lblTitulo.Text = "Editar Marca";
+
+                CargarDatos(_id);
+
+            }
+            else
+            {
+                marcaBindingSource.MoveLast();
+                marcaBindingSource.AddNew();
+            }
+
+        }
+
+        private void CargarDatos(int id)
+        {
+            _marcaLOG = new MarcaLOG();
+            marcaBindingSource.DataSource = _marcaLOG.LeerPorId(_id);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -65,20 +89,41 @@ namespace CapaVista
                     }
                 }
 
-                Marca marca;
-                marca = (Marca)marcaBindingSource.Current;
-                int resultado = _marcaLOG.AgregarMarca(marca);
-
-                if (resultado > 0)
+                if (_id > 0)
                 {
-                    MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro Marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Marca marca;
+                    marca = (Marca)marcaBindingSource.Current;
+                    int resultado = _marcaLOG.EditarMarca(marca, _id, true);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Marca editada con exito", "Tienda | Editar Marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro editar la Marca", "Tienda | Editar marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se logro agregagr la Marca", "Tienda | Registro marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Marca marca;
+                    marca = (Marca)marcaBindingSource.Current;
+                    int resultado = _marcaLOG.AgregarMarca(marca);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro Marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro agregagr la Marca", "Tienda | Registro marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception)
