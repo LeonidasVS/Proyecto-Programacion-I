@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace CapaVista
 {
@@ -58,7 +59,82 @@ namespace CapaVista
         private void CargarProductos()
         {
             _productoLOG = new ProductoLOG();
-            dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
+            if (rdbActivos.Checked)
+            {
+                dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
+            }
+            else if (rdbInactivos.Checked)
+            {
+                dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos(true);
+            }
+        }
+
+        private void AdministrarProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void rdbInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void dgvMostrarProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    int id = int.Parse(dgvMostrarProductos.Rows[e.RowIndex].Cells["Codigo"].Value.ToString());
+
+                    if (dgvMostrarProductos.Columns[e.ColumnIndex].Name.Equals("Editar"))
+                    {
+                        AgregarProducto objRegistroProducto = new AgregarProducto(id);
+                        objRegistroProducto.ShowDialog();
+                        CargarProductos();
+                    }
+                    else if (dgvMostrarProductos.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                    {
+                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar el producto?", "Tienda | Edicion Producto",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        _productoLOG = new ProductoLOG();
+
+                        int resultado = 0;
+
+                        if (desicion != DialogResult.Yes)
+                        {
+                            MessageBox.Show("El producto se continua mostrando en el listado", "Tienda | Edicion Productos",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            resultado = _productoLOG.EliminarProducto(id);
+                            CargarProductos();
+
+                            if (resultado > 0)
+                            {
+                                MessageBox.Show("Producto eliminado con Exito", "Tienda | Edicion de Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se logro eliminar el producto", "Tienda | Edicion de Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ocurrio un error");
+            }
         }
     }
 }

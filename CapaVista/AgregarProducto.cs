@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,15 +18,35 @@ namespace CapaVista
         ProductoLOG _productoLOG;
         MarcaLOG _marcaLOG;
         CategoriaLOG _categoriaLOG;
+        int _id;
 
-        public AgregarProducto()
+        public AgregarProducto(int id = 0)
         {
             InitializeComponent();
 
-            MostrarMarcasYCategorias();
+            _id = id;
 
-            productobindingSource1.MoveLast();
-            productobindingSource1.AddNew();
+            if (_id > 0)
+            {
+                this.Text = "Tienda | Edicion de Producto";
+                btnGuardar.Text = "Actualizar";
+                lblTitulo.Text = "Editar Productos";
+
+                CargarDatos(_id);
+            }
+            else
+            {
+                MostrarMarcasYCategorias();
+                productobindingSource1.MoveLast();
+                productobindingSource1.AddNew();
+            }  
+        }
+
+        private void CargarDatos(int id)
+        {
+            _productoLOG = new ProductoLOG();
+            productobindingSource1.DataSource = _productoLOG.ObtenerProductoPorId(id);
+            MostrarMarcasYCategorias();
         }
 
         private void MostrarMarcasYCategorias()
@@ -85,7 +106,7 @@ namespace CapaVista
                 }
                 else if(!chkEstado.Checked)
                 {
-                    var dialogo = MessageBox.Show("Estas seguro que desea guardar el producto inactivo?", "Tienda | Registro Producto",
+                    var dialogo = MessageBox.Show("¿Está seguro que desea guardar el producto como inactivo?", "Tienda | Registro Producto",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (dialogo != DialogResult.Yes)
@@ -94,22 +115,44 @@ namespace CapaVista
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                }
+                } 
 
-                Producto producto;
-                producto = (Producto)productobindingSource1.Current;
-                int resultado = _productoLOG.GuardarProducto(producto);
-
-                if (resultado > 0)
+                // En caso de ser actualizacion.
+                if (_id > 0)
                 {
-                    MessageBox.Show("Producto Agregado con Exito", "Tienda | Registro Productos",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Producto producto;
+                    producto = (Producto)productobindingSource1.Current;
+                    int resultado = _productoLOG.EditarProducto(producto, _id);
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Producto Editado con Exito", "Tienda | Edicion Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro editar el producto", "Tienda | Edicion Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                // En caso de ser nuevo producto.
                 else
                 {
-                    MessageBox.Show("No se logro agregagr el producto", "Tienda | Registro Productos",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Producto producto;
+                    producto = (Producto)productobindingSource1.Current;
+                    int resultado = _productoLOG.GuardarProducto(producto);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Producto Agregado con Exito", "Tienda | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro agregagr el producto", "Tienda | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

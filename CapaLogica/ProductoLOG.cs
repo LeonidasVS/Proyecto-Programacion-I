@@ -13,6 +13,18 @@ namespace CapaLogica
     {
         ProductoDAL _productoDAL;
 
+        public int EditarProducto(Producto producto, int id)
+        {
+            _productoDAL = new ProductoDAL();
+            return _productoDAL.Guardar(producto, id, true);
+        }
+
+        public int EliminarProducto(int id)
+        {
+            _productoDAL = new ProductoDAL();
+            return _productoDAL.EliminarProducto(id);
+        }
+
         public int GuardarProducto(Producto producto, int id = 0, bool esActualizacion = false)
         {
             _productoDAL = new ProductoDAL();
@@ -26,10 +38,10 @@ namespace CapaLogica
             return _productoDAL.LeerPorId(codigo);
         }
 
-        public List<Producto> ObtenerProductos()
+        public List<Producto> ObtenerProductos(bool inactivos = false)
         {  
             _productoDAL = new ProductoDAL();
-            return _productoDAL.Leer();
+            return _productoDAL.Leer(inactivos);
         }
     }
 }
