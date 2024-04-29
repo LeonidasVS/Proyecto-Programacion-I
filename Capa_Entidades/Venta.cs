@@ -20,5 +20,12 @@ namespace Capa_Entidades
         public decimal Total { get; set; }
         [Required]
         public DateTime Fecha { get; set; }
+
+        public List<Detalle_Venta> Detalles { get; set; }
+
+        public Venta()
+        {
+            Detalles = new List<Detalle_Venta>();
+        }
     }
 }

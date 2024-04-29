@@ -36,26 +36,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ProcesarVenta = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.añadirVenta = new System.Windows.Forms.Button();
-            this.comboPagos = new System.Windows.Forms.ComboBox();
-            this.detalleVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.metodoPagoBinding = new System.Windows.Forms.BindingSource(this.components);
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.productoBinding = new System.Windows.Forms.BindingSource(this.components);
+            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.VentabindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.DetalleVentaData = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Productos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBinding)).BeginInit();
+            this.ProcesarVenta = new System.Windows.Forms.Button();
+            this.comboBoxNombrePro = new System.Windows.Forms.ComboBox();
+            this.añadirVenta = new System.Windows.Forms.Button();
+            this.comboPagos = new System.Windows.Forms.ComboBox();
+            this.meotdoBinding = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBinding)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VentabindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meotdoBinding)).BeginInit();
             this.SuspendLayout();
             // 
             // Regresar
@@ -68,9 +72,9 @@
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Regresar.Location = new System.Drawing.Point(2, 1);
-            this.Regresar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Regresar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(40, 45);
+            this.Regresar.Size = new System.Drawing.Size(35, 51);
             this.Regresar.TabIndex = 13;
             this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Regresar.UseVisualStyleBackColor = false;
@@ -81,9 +85,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(101, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(189, 125);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 14;
@@ -93,9 +97,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(134, 120);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(539, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 15);
             this.label2.TabIndex = 15;
@@ -105,9 +109,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(472, 35);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(221, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 15);
             this.label3.TabIndex = 16;
@@ -117,9 +121,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(456, 120);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(561, 121);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 15);
             this.label4.TabIndex = 17;
@@ -129,66 +133,124 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(650, 558);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(27, 552);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 15);
             this.label5.TabIndex = 18;
             this.label5.Text = "Monto total";
             // 
-            // textBox2
+            // txtStock
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(536, 116);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(105, 21);
-            this.textBox2.TabIndex = 20;
+            this.txtStock.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtStock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Stock", true));
+            this.txtStock.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStock.Location = new System.Drawing.Point(542, 143);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
+            this.txtStock.Size = new System.Drawing.Size(115, 24);
+            this.txtStock.TabIndex = 20;
             // 
-            // textBox3
+            // productoBinding
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox3.Location = new System.Drawing.Point(732, 554);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(91, 21);
-            this.textBox3.TabIndex = 21;
+            this.productoBinding.DataSource = typeof(Capa_Entidades.Producto);
             // 
-            // textBox4
+            // txtMonto
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox4.Location = new System.Drawing.Point(198, 116);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(88, 21);
-            this.textBox4.TabIndex = 22;
+            this.txtMonto.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtMonto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.VentabindingSource, "Total", true));
+            this.txtMonto.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(114, 548);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.ReadOnly = true;
+            this.txtMonto.Size = new System.Drawing.Size(135, 24);
+            this.txtMonto.TabIndex = 21;
             // 
-            // textBox6
+            // VentabindingSource
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox6.Location = new System.Drawing.Point(198, 33);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(86, 21);
-            this.textBox6.TabIndex = 24;
+            this.VentabindingSource.DataSource = typeof(Capa_Entidades.Venta);
             // 
-            // dataGridView1
+            // txtCantidad
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.txtCantidad.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtCantidad.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.Location = new System.Drawing.Point(495, 49);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(143, 24);
+            this.txtCantidad.TabIndex = 22;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "idProducto", true));
+            this.txtCodigo.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(165, 143);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(140, 24);
+            this.txtCodigo.TabIndex = 24;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            // 
+            // DetalleVentaData
+            // 
+            this.DetalleVentaData.AllowUserToAddRows = false;
+            this.DetalleVentaData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalleVentaData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Productos,
             this.Precio,
             this.Cantidad,
             this.SubTotal});
-            this.dataGridView1.Location = new System.Drawing.Point(55, 197);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(768, 271);
-            this.dataGridView1.TabIndex = 25;
+            this.DetalleVentaData.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DetalleVentaData.Location = new System.Drawing.Point(37, 224);
+            this.DetalleVentaData.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.DetalleVentaData.Name = "DetalleVentaData";
+            this.DetalleVentaData.Size = new System.Drawing.Size(774, 307);
+            this.DetalleVentaData.TabIndex = 25;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 57;
+            // 
+            // Productos
+            // 
+            this.Productos.DataPropertyName = "Productos";
+            this.Productos.HeaderText = "Producto";
+            this.Productos.Name = "Productos";
+            this.Productos.ReadOnly = true;
+            this.Productos.Width = 300;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.DataPropertyName = "SubTotal";
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Width = 125;
             // 
             // ProcesarVenta
             // 
@@ -199,25 +261,32 @@
             this.ProcesarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProcesarVenta.Image = ((System.Drawing.Image)(resources.GetObject("ProcesarVenta.Image")));
             this.ProcesarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProcesarVenta.Location = new System.Drawing.Point(14, 542);
-            this.ProcesarVenta.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.ProcesarVenta.Location = new System.Drawing.Point(367, 642);
+            this.ProcesarVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ProcesarVenta.Name = "ProcesarVenta";
-            this.ProcesarVenta.Size = new System.Drawing.Size(96, 45);
+            this.ProcesarVenta.Size = new System.Drawing.Size(98, 51);
             this.ProcesarVenta.TabIndex = 26;
             this.ProcesarVenta.Text = "Procesar";
             this.ProcesarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ProcesarVenta.UseVisualStyleBackColor = false;
             this.ProcesarVenta.Click += new System.EventHandler(this.ProcesarVenta_Click);
             // 
-            // comboBox1
+            // comboBoxNombrePro
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(536, 30);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 23);
-            this.comboBox1.TabIndex = 29;
+            this.comboBoxNombrePro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxNombrePro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxNombrePro.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboBoxNombrePro.DataSource = this.productoBinding;
+            this.comboBoxNombrePro.DisplayMember = "Nombre";
+            this.comboBoxNombrePro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNombrePro.FormattingEnabled = true;
+            this.comboBoxNombrePro.Location = new System.Drawing.Point(142, 48);
+            this.comboBoxNombrePro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxNombrePro.Name = "comboBoxNombrePro";
+            this.comboBoxNombrePro.Size = new System.Drawing.Size(221, 25);
+            this.comboBoxNombrePro.TabIndex = 29;
+            this.comboBoxNombrePro.ValueMember = "idProducto";
+            this.comboBoxNombrePro.SelectedIndexChanged += new System.EventHandler(this.comboBoxNombrePro_SelectedIndexChanged);
             // 
             // añadirVenta
             // 
@@ -227,12 +296,11 @@
             this.añadirVenta.ForeColor = System.Drawing.SystemColors.Info;
             this.añadirVenta.Image = ((System.Drawing.Image)(resources.GetObject("añadirVenta.Image")));
             this.añadirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.añadirVenta.Location = new System.Drawing.Point(737, 108);
-            this.añadirVenta.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.añadirVenta.Location = new System.Drawing.Point(696, 48);
+            this.añadirVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.añadirVenta.Name = "añadirVenta";
-            this.añadirVenta.Size = new System.Drawing.Size(86, 38);
+            this.añadirVenta.Size = new System.Drawing.Size(39, 37);
             this.añadirVenta.TabIndex = 30;
-            this.añadirVenta.Text = "Añadir";
             this.añadirVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.añadirVenta.UseVisualStyleBackColor = false;
             this.añadirVenta.Click += new System.EventHandler(this.añadirVenta_Click);
@@ -240,102 +308,92 @@
             // comboPagos
             // 
             this.comboPagos.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.comboPagos.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.detalleVentaBindingSource, "idMetodoPago", true));
-            this.comboPagos.DataSource = this.metodoPagoBinding;
+            this.comboPagos.DataSource = this.meotdoBinding;
             this.comboPagos.DisplayMember = "FormaDePago";
+            this.comboPagos.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPagos.FormattingEnabled = true;
-            this.comboPagos.Location = new System.Drawing.Point(636, 506);
-            this.comboPagos.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.comboPagos.Location = new System.Drawing.Point(633, 552);
+            this.comboPagos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboPagos.Name = "comboPagos";
-            this.comboPagos.Size = new System.Drawing.Size(187, 23);
+            this.comboPagos.Size = new System.Drawing.Size(178, 25);
             this.comboPagos.TabIndex = 31;
             this.comboPagos.ValueMember = "idMetodoPago";
             // 
-            // detalleVentaBindingSource
+            // meotdoBinding
             // 
-            this.detalleVentaBindingSource.DataSource = typeof(Capa_Entidades.Detalle_Venta);
-            // 
-            // metodoPagoBinding
-            // 
-            this.metodoPagoBinding.DataSource = typeof(Capa_Entidades.MetodoPago);
+            this.meotdoBinding.DataSource = typeof(Capa_Entidades.MetodoPago);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(523, 510);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(513, 555);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 15);
             this.label6.TabIndex = 32;
             this.label6.Text = "Metodo de Pago";
             // 
-            // Codigo
+            // textBox1
             // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 57;
+            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Precio", true));
+            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(377, 143);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(115, 24);
+            this.textBox1.TabIndex = 34;
             // 
-            // Productos
+            // label7
             // 
-            this.Productos.HeaderText = "Producto";
-            this.Productos.Name = "Productos";
-            this.Productos.ReadOnly = true;
-            this.Productos.Width = 300;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 125;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 125;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "SubTotal";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 125;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(412, 125);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 15);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Precio";
             // 
             // Ventas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(872, 597);
+            this.ClientSize = new System.Drawing.Size(865, 705);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboPagos);
             this.Controls.Add(this.añadirVenta);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxNombrePro);
             this.Controls.Add(this.ProcesarVenta);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.DetalleVentaData);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtMonto);
+            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Regresar);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagoBinding)).EndInit();
+            this.Load += new System.EventHandler(this.Ventas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.productoBinding)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VentabindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meotdoBinding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,22 +407,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.DataGridView DetalleVentaData;
         private System.Windows.Forms.Button ProcesarVenta;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxNombrePro;
         private System.Windows.Forms.Button añadirVenta;
         private System.Windows.Forms.ComboBox comboPagos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.BindingSource metodoPagoBinding;
-        private System.Windows.Forms.BindingSource detalleVentaBindingSource;
+        private System.Windows.Forms.BindingSource VentabindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.BindingSource productoBinding;
+        private System.Windows.Forms.BindingSource meotdoBinding;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -11,7 +11,7 @@ namespace CapaDatos
     {
         ContextoBD contexto;
 
-        public int GuardarVenta(Venta venta, int id = 0, bool actualizacion = false)
+        public int GuardarVentaDal(Venta venta, int id = 0, bool actualizacion = false)
         {
             contexto = new ContextoBD();
             int resultado;
@@ -36,15 +36,15 @@ namespace CapaDatos
             return resultado;
         }
 
-        public List<Venta> LeerVenta()
-        {
-            contexto = new ContextoBD();
-            return contexto.Venta.Where(p => p.idVenta>0 == true).ToList();
-        }
-        public Venta ObtenerVenta(int id)
-        {
-            contexto = new ContextoBD();
-            return contexto.Venta.Find(id);
-        }
+        //public List<Venta> LeerVenta()
+        //{
+        //    contexto = new ContextoBD();
+        //    return contexto.Venta.Where(p => p.idVenta>0 == true).ToList();
+        //}
+        //public Venta ObtenerVenta(int id)
+        //{
+        //    contexto = new ContextoBD();
+        //    return contexto.Venta.Find(id);
+        //}
     }
 }
