@@ -75,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(692, 21);
+            this.label1.Location = new System.Drawing.Point(813, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 31);
             this.label1.TabIndex = 14;
@@ -97,10 +97,10 @@
             this.Producto,
             this.Metodo,
             this.Venta});
-            this.detalleVentaGrid.Location = new System.Drawing.Point(548, 73);
+            this.detalleVentaGrid.Location = new System.Drawing.Point(600, 73);
             this.detalleVentaGrid.Name = "detalleVentaGrid";
             this.detalleVentaGrid.ReadOnly = true;
-            this.detalleVentaGrid.Size = new System.Drawing.Size(531, 350);
+            this.detalleVentaGrid.Size = new System.Drawing.Size(639, 350);
             this.detalleVentaGrid.TabIndex = 15;
             this.detalleVentaGrid.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.detalleVentaGrid_CellFormatting);
             // 
@@ -114,10 +114,10 @@
             this.CodigoVenta,
             this.Total,
             this.Fecha});
-            this.dataVentaGrid.Location = new System.Drawing.Point(14, 73);
+            this.dataVentaGrid.Location = new System.Drawing.Point(12, 73);
             this.dataVentaGrid.Name = "dataVentaGrid";
             this.dataVentaGrid.ReadOnly = true;
-            this.dataVentaGrid.Size = new System.Drawing.Size(493, 350);
+            this.dataVentaGrid.Size = new System.Drawing.Size(526, 350);
             this.dataVentaGrid.TabIndex = 16;
             // 
             // CodigoVenta
@@ -149,7 +149,7 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(147, 22);
+            this.label2.Location = new System.Drawing.Point(148, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 31);
             this.label2.TabIndex = 17;
@@ -157,7 +157,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(523, -6);
+            this.textBox1.Location = new System.Drawing.Point(546, -9);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(10, 459);
@@ -190,15 +190,15 @@
             // idProducto
             // 
             this.idProducto.DataPropertyName = "idProducto";
-            this.idProducto.HeaderText = "idProducto";
+            this.idProducto.HeaderText = "Producto";
             this.idProducto.Name = "idProducto";
             this.idProducto.ReadOnly = true;
-            this.idProducto.Width = 80;
+            this.idProducto.Width = 140;
             // 
             // idVenta
             // 
             this.idVenta.DataPropertyName = "idVenta";
-            this.idVenta.HeaderText = "idVenta";
+            this.idVenta.HeaderText = "Venta";
             this.idVenta.Name = "idVenta";
             this.idVenta.ReadOnly = true;
             this.idVenta.Width = 80;
@@ -206,9 +206,10 @@
             // idMetodoPago
             // 
             this.idMetodoPago.DataPropertyName = "idMetodoPago";
-            this.idMetodoPago.HeaderText = "idMetodoPago";
+            this.idMetodoPago.HeaderText = "MetodoPago";
             this.idMetodoPago.Name = "idMetodoPago";
             this.idMetodoPago.ReadOnly = true;
+            this.idMetodoPago.Width = 130;
             // 
             // Producto
             // 
@@ -240,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1091, 450);
+            this.ClientSize = new System.Drawing.Size(1251, 450);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataVentaGrid);

@@ -51,6 +51,20 @@ namespace CapaVista
             this.Close();
         }
 
+        public void Limpiar()
+        {
+            CargarProductos();
+            CargarMetodoPagos();
+            txtCantidad.Clear();
+            int calcular = DetalleVentaData.Rows.Count;
+
+            for (int i=calcular-1;i>=0; i--)
+            {
+                DetalleVentaData.Rows.RemoveAt(i);
+            }
+
+        }
+
         private void ProcesarVenta_Click(object sender, EventArgs e)
         {
             try
@@ -60,10 +74,8 @@ namespace CapaVista
                     ventalog = new _VentaLog();
 
                     Venta venta = new Venta();
-
                     venta.Fecha = DateTime.Now;
                     venta.Total = decimal.Parse(txtMonto.Text);
-
                     foreach (DataGridViewRow row in DetalleVentaData.Rows)
                     {
                         var detalle = new Detalle_Venta()
@@ -82,6 +94,7 @@ namespace CapaVista
                     if (resultado > 0)
                     {
                         MessageBox.Show("Venta realizada con Exito","Tienda AS | Ventas",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        Limpiar();
                     }
                     else
                     {

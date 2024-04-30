@@ -75,9 +75,9 @@
             this.Editar,
             this.Eliminar});
             this.TablaProductos.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.TablaProductos.Location = new System.Drawing.Point(16, 122);
+            this.TablaProductos.Location = new System.Drawing.Point(14, 128);
             this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.Size = new System.Drawing.Size(778, 284);
+            this.TablaProductos.Size = new System.Drawing.Size(782, 284);
             this.TablaProductos.TabIndex = 1;
             this.TablaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaProductos_CellClick);
             this.TablaProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.TablaProductos_CellFormatting);
@@ -133,7 +133,7 @@
             this.Nombre.HeaderText = "Producto";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 160;
+            this.Nombre.Width = 125;
             // 
             // Descripcion
             // 
@@ -165,6 +165,7 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
+            this.Estado.Width = 75;
             // 
             // idMarca
             // 
@@ -172,7 +173,7 @@
             this.idMarca.HeaderText = "Marca";
             this.idMarca.Name = "idMarca";
             this.idMarca.ReadOnly = true;
-            this.idMarca.Width = 50;
+            this.idMarca.Width = 89;
             // 
             // idCategoria
             // 
@@ -180,7 +181,7 @@
             this.idCategoria.HeaderText = "Categoria";
             this.idCategoria.Name = "idCategoria";
             this.idCategoria.ReadOnly = true;
-            this.idCategoria.Width = 63;
+            this.idCategoria.Width = 89;
             // 
             // Marca
             // 
