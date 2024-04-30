@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace CapaVista
 {
@@ -16,25 +18,41 @@ namespace CapaVista
         ProductoLOG _productoLOG;
         MarcaLOG _marcaLOG;
         CategoriaLOG _categoriaLOG;
-
         public AdministrarProductos()
         {
             InitializeComponent();
-
-            _productoLOG = new ProductoLOG();
-            dataGridViewAdminProductos.DataSource = _productoLOG.ObtenerProductos();
+            CargarProductos();
+            CargarMarcasYCategorias();
         }
 
-        private void buttonAgregar_Click(object sender, EventArgs e)
+        private void CargarMarcasYCategorias()
+        {
+            _categoriaLOG = new CategoriaLOG();
+            _marcaLOG = new MarcaLOG();
+            cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            cmbMarcas.SelectedIndex = -1;
+            cmbMarcas.SelectedValue = 0;
+            cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+            cmbCategorias.SelectedIndex = -1;
+            cmbCategorias.SelectedValue = 0;
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             AgregarProducto objAgregarProducto = new AgregarProducto();
             objAgregarProducto.ShowDialog();
+            CargarProductos();
         }
 
-        private void dataGridViewAdminProductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             _marcaLOG = new MarcaLOG();
-            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridViewAdminProductos.Columns["IdMarca"].Index)
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarProductos.Columns["IdMarca"].Index)
             {
                 int idMarca = Convert.ToInt32(e.Value);
                 string nombreMarca = _marcaLOG.mostrarNombreMarca(idMarca);
@@ -43,19 +61,175 @@ namespace CapaVista
             }
 
             _categoriaLOG = new CategoriaLOG();
-            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridViewAdminProductos.Columns["IdCategoria"].Index)
+            if (e.RowIndex >= 0 && e.ColumnIndex == dgvMostrarProductos.Columns["IdCategoria"].Index)
             {
                 int idCategoria = Convert.ToInt32(e.Value);
                 string nombreCategoria = _categoriaLOG.ObtenerCategoriaPorId(idCategoria);
                 e.Value = nombreCategoria;
                 e.FormattingApplied = true;
             }
-
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void CargarProductos()
         {
-           this.Close();
+            _productoLOG = new ProductoLOG();
+            _marcaLOG = new MarcaLOG();
+            int idMarca = 0;
+            int idCategoria = 0;
+            string nombreProducto = null;
+
+            if (cmbMarcas.SelectedValue != null)
+            {
+                idMarca = int.Parse(cmbMarcas.SelectedValue.ToString());
+            }
+            if (cmbCategorias.SelectedValue != null)
+            {
+                idCategoria = int.Parse(cmbCategorias.SelectedValue.ToString());
+            }
+            if (txtNombre.Text.Length > 0)
+            {
+                nombreProducto = txtNombre.Text;
+            }
+
+            if (cmbMarcas.SelectedValue == null && cmbCategorias.SelectedValue == null && txtNombre.Text == "")
+            {
+                if (rdbActivos.Checked)
+                {
+
+                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
+                }
+                else if (rdbInactivos.Checked)
+                {
+
+                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos(true);
+                }
+            }
+            else if (idMarca > 0)
+            {
+                if (rdbActivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca);
+                }
+                else if (rdbInactivos.Checked)
+                {
+
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca, true);
+                }
+            }
+            else if (idCategoria > 0)
+            {
+                if (rdbActivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria);
+                }
+                else if (rdbInactivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria, true);
+                }
+            }
+            else if (nombreProducto != "")
+            {
+                if (rdbActivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto);
+                }
+                else if (rdbInactivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto, true);
+                }
+            }
+        }
+
+        private void rdbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void rdbInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void dgvMostrarProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    int id = int.Parse(dgvMostrarProductos.Rows[e.RowIndex].Cells["Codigo"].Value.ToString());
+
+                    if (dgvMostrarProductos.Columns[e.ColumnIndex].Name.Equals("Editar"))
+                    {
+                        AgregarProducto objRegistroProducto = new AgregarProducto(id);
+                        objRegistroProducto.ShowDialog();
+                        CargarProductos();
+                    }
+                    else if (dgvMostrarProductos.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                    {
+                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar el producto?", "Tienda | Edicion Producto",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        _productoLOG = new ProductoLOG();
+
+                        int resultado = 0;
+
+                        if (desicion != DialogResult.Yes)
+                        {
+                            MessageBox.Show("El producto se continua mostrando en el listado.", "Tienda | Edicion Productos",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            resultado = _productoLOG.EliminarProducto(id);
+                            CargarProductos();
+
+                            if (resultado > 0)
+                            {
+                                MessageBox.Show("Producto eliminado con exito.", "Tienda | Edicion de Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se logro eliminar el producto.", "Tienda | Edicion de Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ocurrio un error");
+            }
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            cmbMarcas.SelectedIndex = -1;
+            cmbCategorias.SelectedIndex = -1;
+            txtNombre.Clear();
+            txtNombre.Text = "";
+        }
+
+        private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbCategorias.SelectedIndex = -1;
+            txtNombre.Clear();
+            CargarProductos();
+        }
+
+        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbMarcas.SelectedIndex = -1;
+            txtNombre.Clear();
+            CargarProductos();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            cmbCategorias.SelectedIndex = -1;
+            cmbMarcas.SelectedIndex = -1;
+            CargarProductos();
         }
     }
 }

@@ -3,16 +3,16 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Correcioncita : DbMigration
+    public partial class A : DbMigration
     {
         public override void Up()
         {
-            DropColumn("dbo.Productoes", "Cantidad");
+            AddColumn("dbo.MetodoPagoes", "Estado", c => c.Boolean(nullable: false));
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Productoes", "Cantidad", c => c.Int(nullable: false));
+            DropColumn("dbo.MetodoPagoes", "Estado");
         }
     }
 }

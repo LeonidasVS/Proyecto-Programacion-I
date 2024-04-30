@@ -3,16 +3,16 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Actualizar : DbMigration
+    public partial class ActPre : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Productoes", "Descripcion", c => c.String(nullable: false, maxLength: 250));
+            AddColumn("dbo.Productoes", "PrecioUnitario", c => c.Decimal(nullable: false, precision: 18, scale: 2));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Productoes", "Descripcion");
+            DropColumn("dbo.Productoes", "PrecioUnitario");
         }
     }
 }

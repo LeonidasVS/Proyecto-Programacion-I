@@ -22,9 +22,6 @@ namespace CapaEntidades
         public int Stock { get; set; }
 
         [Required]
-        public decimal Precio { get; set; }
-
-        [Required]
         public bool Estado { get; set; }
 
         [Required]
@@ -40,5 +37,8 @@ namespace CapaEntidades
         [Required]
         [MaxLength(250)]
         public string Descripcion { get; set; }
+
+        [Required]
+        public decimal PrecioUnitario { get; set; }
     }
 }

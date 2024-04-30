@@ -55,22 +55,25 @@
   <ItemGroup>
     <Compile Include="CategoriaDAL.cs" />
     <Compile Include="ContextoBd.cs" />
+    <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
-    <Compile Include="Migrations\202404160453579_Modelitos.cs" />
-    <Compile Include="Migrations\202404160453579_Modelitos.Designer.cs">
-      <DependentUpon>202404160453579_Modelitos.cs</DependentUpon>
+    <Compile Include="MetodoPagoDAL.cs" />
+    <Compile Include="Migrations\202405021932477_A.cs" />
+    <Compile Include="Migrations\202405021932477_A.Designer.cs">
+      <DependentUpon>202405021932477_A.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202404240007372_Actualizar.cs" />
-    <Compile Include="Migrations\202404240007372_Actualizar.Designer.cs">
-      <DependentUpon>202404240007372_Actualizar.cs</DependentUpon>
+    <Compile Include="Migrations\202405021949291_B.cs" />
+    <Compile Include="Migrations\202405021949291_B.Designer.cs">
+      <DependentUpon>202405021949291_B.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202404240459271_Correcioncita.cs" />
-    <Compile Include="Migrations\202404240459271_Correcioncita.Designer.cs">
-      <DependentUpon>202404240459271_Correcioncita.cs</DependentUpon>
+    <Compile Include="Migrations\202405031802404_productos.cs" />
+    <Compile Include="Migrations\202405031802404_productos.Designer.cs">
+      <DependentUpon>202405031802404_productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,14 +86,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404160453579_Modelitos.resx">
-      <DependentUpon>202404160453579_Modelitos.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405021932477_A.resx">
+      <DependentUpon>202405021932477_A.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404240007372_Actualizar.resx">
-      <DependentUpon>202404240007372_Actualizar.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405021949291_B.resx">
+      <DependentUpon>202405021949291_B.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404240459271_Correcioncita.resx">
-      <DependentUpon>202404240459271_Correcioncita.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405031802404_productos.resx">
+      <DependentUpon>202405031802404_productos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

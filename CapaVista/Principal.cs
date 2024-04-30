@@ -17,8 +17,9 @@ namespace CapaVista
             InitializeComponent();
             if (pass == "vendedor123")
             {
-                AdministrarProductos.Visible = false;
+                tsmProductos.Visible = false;
                 tsmDetalleVenta.Visible = false;
+                tsmMas.Visible = false;
 
             }
             else if (pass == "admin123")
@@ -29,8 +30,44 @@ namespace CapaVista
 
         private void administrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdministrarProductos objAdministrarProductos = new AdministrarProductos();
-            objAdministrarProductos.ShowDialog();
+            AdministrarProductos objadmProductos = new AdministrarProductos();
+            objadmProductos.ShowDialog();
         }
+
+        private void realizarVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroVenta objRegistroVenta = new RegistroVenta();
+            objRegistroVenta.ShowDialog();
+        }
+
+        private void administrarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministrarMarcas objAdministrarMarcas = new AdministrarMarcas();
+            objAdministrarMarcas.ShowDialog();
+        }
+
+        private void adminitrarCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoCategoria objMantenientoCategoria = new MantenimientoCategoria();
+            objMantenientoCategoria.ShowDialog();
+        }
+
+        private void administrarMetodosDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministrarMetodosPago objAdmMtdsPago = new AdministrarMetodosPago();
+            objAdmMtdsPago.ShowDialog();
+        }
+
+        private void lOGINToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tsmDetalleVenta_Click(object sender, EventArgs e)
+        {
+            VerDetalleVenta objVerDetalleVenta = new VerDetalleVenta();
+            objVerDetalleVenta.ShowDialog();
+        }
+
     }
 }

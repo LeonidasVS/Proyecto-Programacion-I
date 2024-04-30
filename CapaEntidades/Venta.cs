@@ -23,5 +23,13 @@ namespace CapaEntidades
         [Required]
         public DateTime Fecha { get; set; }
 
+        // Propiedades de navegacion
+        public List<DetalleVenta> Detalles { get; set; }
+
+        public Venta()
+        {
+            Detalles = new List<DetalleVenta>();
+        }
+
     }
 }

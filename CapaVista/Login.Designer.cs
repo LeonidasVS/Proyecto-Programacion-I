@@ -62,20 +62,20 @@
             // labelUsuario
             // 
             this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.Location = new System.Drawing.Point(388, 168);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(54, 17);
+            this.labelUsuario.Size = new System.Drawing.Size(55, 16);
             this.labelUsuario.TabIndex = 2;
             this.labelUsuario.Text = "Usuario";
             // 
             // labelContrasena
             // 
             this.labelContrasena.AutoSize = true;
-            this.labelContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContrasena.Location = new System.Drawing.Point(388, 220);
             this.labelContrasena.Name = "labelContrasena";
-            this.labelContrasena.Size = new System.Drawing.Size(84, 17);
+            this.labelContrasena.Size = new System.Drawing.Size(82, 16);
             this.labelContrasena.TabIndex = 3;
             this.labelContrasena.Text = "Contraseña";
             // 
@@ -90,7 +90,7 @@
             // 
             // buttonAcceder
             // 
-            this.buttonAcceder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAcceder.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAcceder.Location = new System.Drawing.Point(517, 285);
             this.buttonAcceder.Name = "buttonAcceder";
             this.buttonAcceder.Size = new System.Drawing.Size(77, 24);

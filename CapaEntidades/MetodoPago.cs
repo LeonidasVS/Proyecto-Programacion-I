@@ -17,5 +17,8 @@ namespace CapaEntidades
         [Required]
         [MaxLength(60)]
         public string FormaPago { get; set; }
+
+        [Required]
+        public bool Estado { get; set; }
     }
 }

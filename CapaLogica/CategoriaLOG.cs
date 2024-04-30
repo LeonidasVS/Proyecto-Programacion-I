@@ -16,16 +16,34 @@ namespace CapaLogica
             _categoriaDAL = new CategoriaDAL();
             return _categoriaDAL.AgregarCategoria(categoria, id, Actualizacion);
         }
-        public List<Categoria> ObtenerCategorias()
+        public List<Categoria> ObtenerCategorias(bool inactivo = false)
         {
             _categoriaDAL = new CategoriaDAL();
-            return _categoriaDAL.Categorias();
+            return _categoriaDAL.Categorias(inactivo);
         }
 
         public string ObtenerCategoriaPorId(int idCategoria)
         {
             _categoriaDAL = new CategoriaDAL();
             return _categoriaDAL.ObtenerNombreCategoriaDesdeBD(idCategoria);
+        }
+
+        public int EditarCategoria(Categoria categoria, int id, bool esActualizacion)
+        {
+            _categoriaDAL = new CategoriaDAL();
+            return _categoriaDAL.AgregarCategoria(categoria, id, esActualizacion);
+        }
+
+        public int EliminarCategoria(int id)
+        {
+            _categoriaDAL = new CategoriaDAL();
+            return _categoriaDAL.Eliminarcategoria(id);
+        }
+
+        public Categoria LeerPorID(int id)
+        {
+            _categoriaDAL = new CategoriaDAL();
+            return _categoriaDAL.LeerPorId(id);
         }
     }
 }
