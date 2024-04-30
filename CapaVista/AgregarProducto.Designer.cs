@@ -198,13 +198,11 @@
             // 
             this.cmbMarcas.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productobindingSource1, "idMarca", true));
             this.cmbMarcas.DataSource = this.marcaBindingSource;
-            this.cmbMarcas.DisplayMember = "Nombre";
             this.cmbMarcas.FormattingEnabled = true;
             this.cmbMarcas.Location = new System.Drawing.Point(322, 415);
             this.cmbMarcas.Name = "cmbMarcas";
             this.cmbMarcas.Size = new System.Drawing.Size(327, 26);
             this.cmbMarcas.TabIndex = 16;
-            this.cmbMarcas.ValueMember = "Nombre";
             // 
             // marcaBindingSource
             // 

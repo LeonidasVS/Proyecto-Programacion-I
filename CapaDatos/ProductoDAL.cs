@@ -29,6 +29,19 @@ namespace CapaDatos
             return resultado;
         }
 
+        public List<Producto> FiltrarPorMarca(int idMarca, bool inactivo = false)
+        {
+            _db = new ContextoBD();
+            if (inactivo)
+            {
+                return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false).ToList();
+            }
+            else
+            {
+                return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true).ToList();
+            }
+        }
+
         public int Guardar(Producto producto, int id = 0, bool esActualizacion = false)
         {
             _db = new ContextoBD();

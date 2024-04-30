@@ -35,14 +35,14 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbInactivos = new System.Windows.Forms.RadioButton();
+            this.rdbActivos = new System.Windows.Forms.RadioButton();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.rdbActivos = new System.Windows.Forms.RadioButton();
-            this.rdbInactivos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -113,6 +113,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar por estado";
             // 
+            // rdbInactivos
+            // 
+            this.rdbInactivos.AutoSize = true;
+            this.rdbInactivos.Location = new System.Drawing.Point(98, 39);
+            this.rdbInactivos.Name = "rdbInactivos";
+            this.rdbInactivos.Size = new System.Drawing.Size(86, 22);
+            this.rdbInactivos.TabIndex = 1;
+            this.rdbInactivos.Text = "Inactivos";
+            this.rdbInactivos.UseVisualStyleBackColor = true;
+            this.rdbInactivos.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // rdbActivos
+            // 
+            this.rdbActivos.AutoSize = true;
+            this.rdbActivos.Checked = true;
+            this.rdbActivos.Location = new System.Drawing.Point(3, 39);
+            this.rdbActivos.Name = "rdbActivos";
+            this.rdbActivos.Size = new System.Drawing.Size(77, 22);
+            this.rdbActivos.TabIndex = 0;
+            this.rdbActivos.TabStop = true;
+            this.rdbActivos.Text = "Activos";
+            this.rdbActivos.UseVisualStyleBackColor = true;
+            this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
+            // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "idMarca";
@@ -137,6 +161,7 @@
             // Editar
             // 
             this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::CapaVista.Properties.Resources.Editar;
             this.Editar.Name = "Editar";
             this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Editar.Width = 105;
@@ -154,30 +179,6 @@
             this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
             this.estadoDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // rdbActivos
-            // 
-            this.rdbActivos.AutoSize = true;
-            this.rdbActivos.Checked = true;
-            this.rdbActivos.Location = new System.Drawing.Point(3, 39);
-            this.rdbActivos.Name = "rdbActivos";
-            this.rdbActivos.Size = new System.Drawing.Size(77, 22);
-            this.rdbActivos.TabIndex = 0;
-            this.rdbActivos.TabStop = true;
-            this.rdbActivos.Text = "Activos";
-            this.rdbActivos.UseVisualStyleBackColor = true;
-            this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
-            // 
-            // rdbInactivos
-            // 
-            this.rdbInactivos.AutoSize = true;
-            this.rdbInactivos.Location = new System.Drawing.Point(98, 39);
-            this.rdbInactivos.Name = "rdbInactivos";
-            this.rdbInactivos.Size = new System.Drawing.Size(86, 22);
-            this.rdbInactivos.TabIndex = 1;
-            this.rdbInactivos.Text = "Inactivos";
-            this.rdbInactivos.UseVisualStyleBackColor = true;
-            this.rdbInactivos.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // AdministrarMarcas
             // 
@@ -211,13 +212,13 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbInactivos;
+        private System.Windows.Forms.RadioButton rdbActivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.RadioButton rdbInactivos;
-        private System.Windows.Forms.RadioButton rdbActivos;
     }
 }

@@ -21,6 +21,9 @@ namespace CapaVista
         {
             InitializeComponent();
             CargarProductos();
+            cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            cmbMarcas.SelectedIndex = -1;
+            cmbMarcas.SelectedValue = 0;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -59,19 +62,40 @@ namespace CapaVista
         private void CargarProductos()
         {
             _productoLOG = new ProductoLOG();
-            if (rdbActivos.Checked)
-            {
-                dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
-            }
-            else if (rdbInactivos.Checked)
-            {
-                dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos(true);
-            }
-        }
+            _marcaLOG = new MarcaLOG();
+            int idMarca = 0;
 
-        private void AdministrarProductos_Load(object sender, EventArgs e)
-        {
+            if (cmbMarcas.SelectedValue != null)
+            {
+                idMarca = int.Parse(cmbMarcas.SelectedValue.ToString());              
+            }
 
+            if (cmbMarcas.SelectedValue == null) 
+            {
+                if (rdbActivos.Checked)
+                {                        
+                       
+                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();                    
+                }                  
+                else if (rdbInactivos.Checked)
+                {                        
+                     
+                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos(true);
+                }
+            }
+            else if (idMarca > 0)
+            {
+                if (rdbActivos.Checked)
+                {
+
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca);
+                }
+                else if (rdbInactivos.Checked)
+                {
+
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca, true);
+                }
+            }
         }
 
         private void rdbActivos_CheckedChanged(object sender, EventArgs e)
@@ -135,6 +159,17 @@ namespace CapaVista
 
                 MessageBox.Show("Ocurrio un error");
             }
+        }
+
+        private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            cmbMarcas.SelectedIndex = -1;
+            txtNombre.Text = "";
         }
     }
 }
