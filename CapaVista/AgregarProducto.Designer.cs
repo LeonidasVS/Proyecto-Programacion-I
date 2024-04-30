@@ -75,12 +75,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(56, 437);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(252, 17);
+            this.label7.Size = new System.Drawing.Size(255, 16);
             this.label7.TabIndex = 27;
-            this.label7.Text = "Seleccione la Categoria del Producto";
+            this.label7.Text = "Seleccione la Categoria del Producto:";
             // 
             // cmbMarcas
             // 
@@ -99,21 +99,21 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(80, 397);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(226, 17);
+            this.label6.Size = new System.Drawing.Size(232, 16);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Seleccione la Marca del Producto";
+            this.label6.Text = "Seleccione la Marca del Producto:";
             // 
             // chkEstado
             // 
             this.chkEstado.AutoSize = true;
             this.chkEstado.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.productoBindingSource, "Estado", true));
-            this.chkEstado.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkEstado.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEstado.Location = new System.Drawing.Point(337, 347);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(68, 21);
+            this.chkEstado.Size = new System.Drawing.Size(64, 20);
             this.chkEstado.TabIndex = 24;
             this.chkEstado.Text = "Activo";
             this.chkEstado.UseVisualStyleBackColor = true;
@@ -121,12 +121,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(168, 351);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 17);
+            this.label5.Size = new System.Drawing.Size(140, 16);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Estado del Producto";
+            this.label5.Text = "Estado del Producto:";
             // 
             // txtExistencias
             // 
@@ -139,16 +139,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(145, 303);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 17);
+            this.label4.Size = new System.Drawing.Size(168, 16);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Existencias del Producto";
+            this.label4.Text = "Existencias del Producto:";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Precio", true));
+            this.txtPrecio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "PrecioUnitario", true));
             this.txtPrecio.Location = new System.Drawing.Point(337, 260);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(517, 20);
@@ -157,12 +157,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(172, 263);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 17);
+            this.label3.Size = new System.Drawing.Size(137, 16);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Precio del Producto";
+            this.label3.Text = "Precio del Producto:";
             // 
             // txtDescripcion
             // 
@@ -176,12 +176,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(137, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 17);
+            this.label2.Size = new System.Drawing.Size(174, 16);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Descripcion del Producto";
+            this.label2.Text = "Descripcion del Producto:";
             // 
             // txtNombre
             // 
@@ -194,16 +194,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(159, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 17);
+            this.label1.Size = new System.Drawing.Size(149, 16);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Nombre del Producto";
+            this.label1.Text = "Nombre del Producto:";
             // 
             // buttonGuardar
             // 
-            this.buttonGuardar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGuardar.Location = new System.Drawing.Point(337, 500);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
@@ -214,7 +214,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Location = new System.Drawing.Point(779, 500);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
@@ -248,6 +248,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AgregarProducto";
             this.Text = "Tienda AS |  Agregar Producto";
+            this.Load += new System.EventHandler(this.AgregarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaBindingSource)).EndInit();

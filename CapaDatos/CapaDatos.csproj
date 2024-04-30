@@ -56,6 +56,7 @@
     <Compile Include="CategoriaDAL.cs" />
     <Compile Include="ContextoBd.cs" />
     <Compile Include="MarcaDAL.cs" />
+    <Compile Include="MetodoPagoDAL.cs" />
     <Compile Include="Migrations\202404160453579_Modelitos.cs" />
     <Compile Include="Migrations\202404160453579_Modelitos.Designer.cs">
       <DependentUpon>202404160453579_Modelitos.cs</DependentUpon>
@@ -68,9 +69,14 @@
     <Compile Include="Migrations\202404240459271_Correcioncita.Designer.cs">
       <DependentUpon>202404240459271_Correcioncita.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404242227079_ActPre.cs" />
+    <Compile Include="Migrations\202404242227079_ActPre.Designer.cs">
+      <DependentUpon>202404242227079_ActPre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404240459271_Correcioncita.resx">
       <DependentUpon>202404240459271_Correcioncita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404242227079_ActPre.resx">
+      <DependentUpon>202404242227079_ActPre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

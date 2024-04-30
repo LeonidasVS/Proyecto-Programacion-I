@@ -46,8 +46,10 @@
   <ItemGroup>
     <Compile Include="CategoriaLOG.cs" />
     <Compile Include="MarcaLOG.cs" />
+    <Compile Include="MetodoPagoLOG.cs" />
     <Compile Include="ProductoLOG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaLOG.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">

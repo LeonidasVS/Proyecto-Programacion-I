@@ -40,5 +40,8 @@ namespace CapaEntidades
         [Required]
         [MaxLength(250)]
         public string Descripcion { get; set; }
+
+        [Required]
+        public decimal PrecioUnitario { get; set; }
     }
 }
