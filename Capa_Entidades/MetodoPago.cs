@@ -20,5 +20,10 @@ namespace Capa_Entidades
 
         [Required]
         public bool  Estado { get; set; }
+
+        public static implicit operator MetodoPago(List<MetodoPago> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

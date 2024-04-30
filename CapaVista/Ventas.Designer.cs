@@ -56,10 +56,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.detalleVentaBinding = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.productoBinding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VentabindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meotdoBinding)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBinding)).BeginInit();
             this.SuspendLayout();
             // 
             // Regresar
@@ -208,7 +210,7 @@
             this.Cantidad,
             this.SubTotal});
             this.DetalleVentaData.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DetalleVentaData.Location = new System.Drawing.Point(37, 224);
+            this.DetalleVentaData.Location = new System.Drawing.Point(52, 224);
             this.DetalleVentaData.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetalleVentaData.Name = "DetalleVentaData";
             this.DetalleVentaData.Size = new System.Drawing.Size(774, 307);
@@ -309,6 +311,7 @@
             // comboPagos
             // 
             this.comboPagos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboPagos.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.detalleVentaBinding, "idMetodoPago", true));
             this.comboPagos.DataSource = this.meotdoBinding;
             this.comboPagos.DisplayMember = "FormaDePago";
             this.comboPagos.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,6 +363,10 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Precio";
             // 
+            // detalleVentaBinding
+            // 
+            this.detalleVentaBinding.DataSource = typeof(Capa_Entidades.Detalle_Venta);
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -395,6 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.VentabindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meotdoBinding)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBinding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +436,6 @@
         private System.Windows.Forms.BindingSource meotdoBinding;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.BindingSource detalleVentaBinding;
     }
 }

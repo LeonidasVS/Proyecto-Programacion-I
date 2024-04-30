@@ -53,6 +53,50 @@ namespace CapaVista
 
         private void ProcesarVenta_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (DetalleVentaData.Rows.Count>0)
+                {
+                    ventalog = new _VentaLog();
+
+                    Venta venta = new Venta();
+
+                    venta.Fecha = DateTime.Now;
+                    venta.Total = decimal.Parse(txtMonto.Text);
+
+                    foreach (DataGridViewRow row in DetalleVentaData.Rows)
+                    {
+                        var detalle = new Detalle_Venta()
+                        {
+                            idProducto = int.Parse(row.Cells["Codigo"].Value.ToString()),
+                            Precio = decimal.Parse(row.Cells["Precio"].Value.ToString()),
+                            Cantidad = int.Parse(row.Cells["Cantidad"].Value.ToString()),
+                            idMetodoPago = int.Parse(comboPagos.SelectedValue.ToString())
+                        };
+
+                        venta.Detalles.Add(detalle);
+                    }
+
+                    int resultado = ventalog.GuardarVenta(venta);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Venta realizada con Exito","Tienda AS | Ventas",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("La venta no se logro realizar", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debes realizar una venta para procesarla", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}");
+            }
 
         }
  
@@ -70,7 +114,6 @@ namespace CapaVista
 
                     if (producto != null)
                     {
-
                         foreach (DataGridViewRow buscar in DetalleVentaData.Rows)
                         {
                             encontrarCodigo = int.Parse(buscar.Cells["Codigo"].Value.ToString());
