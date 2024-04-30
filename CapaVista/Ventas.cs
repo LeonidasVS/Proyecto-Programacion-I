@@ -55,7 +55,7 @@ namespace CapaVista
         {
 
         }
-
+ 
         private void añadirVenta_Click(object sender, EventArgs e)
         {
             try
@@ -65,10 +65,22 @@ namespace CapaVista
                     _productolog = new ProductoLog();
                     int codigo = int.Parse(txtCodigo.Text);
                     int cantidad = int.Parse(txtCantidad.Text);
-
+                    int encontrarCodigo;
                     var producto = (Producto)productoBinding.Current;
+
                     if (producto != null)
                     {
+
+                        foreach (DataGridViewRow buscar in DetalleVentaData.Rows)
+                        {
+                            encontrarCodigo = int.Parse(buscar.Cells["Codigo"].Value.ToString());
+
+                            if (encontrarCodigo == codigo)
+                            {
+                                MessageBox.Show("EL Producto es existente. Escoge otro a tu gusto","Tienda AS | Ventas",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                                return;
+                            }
+                        }
                         detalleVenta.Rows.Add(codigo, producto.Nombre, producto.Precio, cantidad, (cantidad * producto.Precio));
 
                         DetalleVentaData.DataSource = detalleVenta;
@@ -128,6 +140,13 @@ namespace CapaVista
         private void Ventas_Load(object sender, EventArgs e)
         {
 
+        }
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

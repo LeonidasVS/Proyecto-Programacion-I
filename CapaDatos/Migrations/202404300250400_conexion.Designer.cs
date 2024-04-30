@@ -13,7 +13,7 @@ namespace CapaDatos.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202404281627106_conexion"; }
+            get { return "202404300250400_conexion"; }
         }
         
         string IMigrationMetadata.Source
