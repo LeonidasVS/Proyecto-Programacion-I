@@ -40,5 +40,11 @@ namespace CapaLogica
             categoriaDAL = new CategoriaDAL();
             return categoriaDAL.BuscarCategoria(id);
         }
+
+        public string mostrarNombreCategorya(int idcategoria)
+        {
+            categoriaDAL = new CategoriaDAL();
+            return categoriaDAL.ObtenerNombreCategoriaDesdeBD(idcategoria);
+        }
     }
 }

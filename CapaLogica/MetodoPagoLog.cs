@@ -16,6 +16,11 @@ namespace CapaLogica
             metodo = new Metodo_PagoDAL();
             return metodo.LeerMetodoPago();
         }
-     
+
+        public string ObtenerMetodoPagoPorNombre(int idMetodo)
+        {
+            metodo = new Metodo_PagoDAL();
+            return metodo.ObtenerNombreMetodoDesdeBD(idMetodo);
+        }
     }
 }

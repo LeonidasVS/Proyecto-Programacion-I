@@ -7,6 +7,8 @@ namespace CapaVista
     public partial class MantenimientoProducto : Form
     {
         ProductoLog productoLog;
+        MarcaLog marcalog;
+        CategoriaLog categorilog;
         public MantenimientoProducto()
         {
             InitializeComponent();
@@ -87,6 +89,30 @@ namespace CapaVista
             {
                 MessageBox.Show($"Error:{ex.Message} ");
             }
+        }
+
+        private void TablaProductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            marcalog = new MarcaLog();
+
+            if (e.RowIndex>=0 && e.ColumnIndex == TablaProductos.Columns["idMarca"].Index)
+            {
+                int idMarca = Convert.ToInt32(e.Value);
+                string nombreMarca = marcalog.mostrarNombreMarca(idMarca);
+                e.Value = nombreMarca;
+                e.FormattingApplied = true;
+            }
+
+            categorilog = new CategoriaLog();
+
+            if (e.RowIndex >= 0 && e.ColumnIndex == TablaProductos.Columns["idCategoria"].Index)
+            {
+                int idcategoria = Convert.ToInt32(e.Value);
+                string nombreCategoria = categorilog.mostrarNombreCategorya(idcategoria);
+                e.Value = nombreCategoria;
+                e.FormattingApplied = true;
+            }
+
         }
     }
 }

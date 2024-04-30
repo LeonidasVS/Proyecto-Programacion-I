@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProducto));
             this.Filtro = new System.Windows.Forms.GroupBox();
             this.TablaProductos = new System.Windows.Forms.DataGridView();
+            this.Regresar = new System.Windows.Forms.Button();
+            this.AñadirProducto = new System.Windows.Forms.Button();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +45,6 @@
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Regresar = new System.Windows.Forms.Button();
-            this.AñadirProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +80,44 @@
             this.TablaProductos.Size = new System.Drawing.Size(778, 284);
             this.TablaProductos.TabIndex = 1;
             this.TablaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaProductos_CellClick);
+            this.TablaProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.TablaProductos_CellFormatting);
+            // 
+            // Regresar
+            // 
+            this.Regresar.BackColor = System.Drawing.Color.Transparent;
+            this.Regresar.FlatAppearance.BorderSize = 0;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
+            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Regresar.Location = new System.Drawing.Point(1, -1);
+            this.Regresar.Name = "Regresar";
+            this.Regresar.Size = new System.Drawing.Size(33, 38);
+            this.Regresar.TabIndex = 12;
+            this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Regresar.UseMnemonic = false;
+            this.Regresar.UseVisualStyleBackColor = false;
+            this.Regresar.Click += new System.EventHandler(this.Regresar_Click_1);
+            // 
+            // AñadirProducto
+            // 
+            this.AñadirProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.AñadirProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AñadirProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AñadirProducto.ForeColor = System.Drawing.SystemColors.Info;
+            this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
+            this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AñadirProducto.Location = new System.Drawing.Point(367, 447);
+            this.AñadirProducto.Name = "AñadirProducto";
+            this.AñadirProducto.Size = new System.Drawing.Size(88, 37);
+            this.AñadirProducto.TabIndex = 13;
+            this.AñadirProducto.Text = "Añadir";
+            this.AñadirProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AñadirProducto.UseVisualStyleBackColor = false;
+            this.AñadirProducto.Click += new System.EventHandler(this.AñadirProducto_Click);
             // 
             // idProducto
             // 
@@ -131,7 +169,7 @@
             // idMarca
             // 
             this.idMarca.DataPropertyName = "idMarca";
-            this.idMarca.HeaderText = "idMarca";
+            this.idMarca.HeaderText = "Marca";
             this.idMarca.Name = "idMarca";
             this.idMarca.ReadOnly = true;
             this.idMarca.Width = 50;
@@ -139,7 +177,7 @@
             // idCategoria
             // 
             this.idCategoria.DataPropertyName = "idCategoria";
-            this.idCategoria.HeaderText = "idCategoria";
+            this.idCategoria.HeaderText = "Categoria";
             this.idCategoria.Name = "idCategoria";
             this.idCategoria.ReadOnly = true;
             this.idCategoria.Width = 63;
@@ -173,43 +211,6 @@
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Width = 75;
-            // 
-            // Regresar
-            // 
-            this.Regresar.BackColor = System.Drawing.Color.Transparent;
-            this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
-            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Regresar.Location = new System.Drawing.Point(1, -1);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(33, 38);
-            this.Regresar.TabIndex = 12;
-            this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Regresar.UseMnemonic = false;
-            this.Regresar.UseVisualStyleBackColor = false;
-            this.Regresar.Click += new System.EventHandler(this.Regresar_Click_1);
-            // 
-            // AñadirProducto
-            // 
-            this.AñadirProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.AñadirProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AñadirProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AñadirProducto.ForeColor = System.Drawing.SystemColors.Info;
-            this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
-            this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(367, 447);
-            this.AñadirProducto.Name = "AñadirProducto";
-            this.AñadirProducto.Size = new System.Drawing.Size(88, 37);
-            this.AñadirProducto.TabIndex = 13;
-            this.AñadirProducto.Text = "Añadir";
-            this.AñadirProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AñadirProducto.UseVisualStyleBackColor = false;
-            this.AñadirProducto.Click += new System.EventHandler(this.AñadirProducto_Click);
             // 
             // MantenimientoProducto
             // 

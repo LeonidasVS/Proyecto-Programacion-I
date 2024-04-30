@@ -41,5 +41,11 @@ namespace CapaLogica
             productodal = new ProductoDAL();
             return productodal.Eliminar(id);
         }
+
+        public string ObtenerProductoPorNombre(int idProducto)
+        {
+            productodal= new ProductoDAL();
+            return productodal.ObtenerNombreProductoDesdeBD(idProducto);
+        }
     }
 }

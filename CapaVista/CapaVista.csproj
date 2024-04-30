@@ -85,6 +85,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaDetalleVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDetalleVentas.Designer.cs">
+      <DependentUpon>ListaDetalleVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDetalleVentas.resx">
+      <DependentUpon>ListaDetalleVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoCategorias.resx">
       <DependentUpon>MantenimientoCategorias.cs</DependentUpon>

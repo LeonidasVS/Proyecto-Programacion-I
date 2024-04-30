@@ -41,5 +41,11 @@ namespace CapaLogica
             _marDal = new MarcaDAL();
             return _marDal.Eliminar(id);
         }
+
+        public string mostrarNombreMarca(int idMarca)
+        {
+            _marDal = new MarcaDAL();
+            return _marDal.ObtenerNombreMarcaDesdeBD(idMarca);
+        }
     }
 }

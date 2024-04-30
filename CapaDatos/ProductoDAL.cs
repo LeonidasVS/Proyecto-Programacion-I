@@ -64,5 +64,17 @@ namespace CapaDatos
             contexto = new ContextoBD();
             return contexto.Producto.Find(id);
         }
+
+        public string ObtenerNombreProductoDesdeBD(int idProducto)
+        {
+            string nombreProducto = string.Empty;
+            contexto = new ContextoBD();
+            Producto pro = contexto.Producto.FirstOrDefault(m => m.idProducto == idProducto);
+            if (pro != null)
+            {
+                nombreProducto = pro.Nombre;
+            }
+            return nombreProducto;
+        }
     }
 }

@@ -46,5 +46,17 @@ namespace CapaDatos
             contexto = new ContextoBD();
             return contexto.Metodo.Where(m => m.Estado==true).ToList();
         }
+
+        public string ObtenerNombreMetodoDesdeBD(int idMetodo)
+        {
+            string nombreMetodo = string.Empty;
+            contexto = new ContextoBD();
+            MetodoPago metodo = contexto.Metodo.FirstOrDefault(m => m.idMetodoPago == idMetodo);
+            if (metodo != null)
+            {
+                nombreMetodo = metodo.FormaDePago;
+            }
+            return nombreMetodo;
+        }
     }
 }

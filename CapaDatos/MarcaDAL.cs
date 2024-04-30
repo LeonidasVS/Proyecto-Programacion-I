@@ -65,5 +65,17 @@ namespace CapaDatos
 
             return resultado;
         }
+
+        public string ObtenerNombreMarcaDesdeBD(int idMarca)
+        {
+            string nombreMarca = string.Empty;
+            contexto = new ContextoBD();
+            Marca marca = contexto.Marca.FirstOrDefault(m => m.idMarca == idMarca);
+            if (marca != null)
+            {
+                nombreMarca = marca.Nombre;
+            }
+            return nombreMarca;
+        }
     }
 }

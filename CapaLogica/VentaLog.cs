@@ -17,5 +17,10 @@ namespace CapaLogica
             _ventadal = new VentaDAL();
             return _ventadal.GuardarVentaDal(venta);
         }
+        public List<Venta> ObtenerVentas()
+        {
+            _ventadal = new VentaDAL();
+            return _ventadal.LeerVenta();
+        }
     }
 }

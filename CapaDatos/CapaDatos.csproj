@@ -58,6 +58,11 @@
     <Compile Include="Detalle_VentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
     <Compile Include="Metodo_PagoDAL.cs" />
+    <Compile Include="Migrations\202404301414250_conexion.cs" />
+    <Compile Include="Migrations\202404301414250_conexion.designer.cs">
+      <DependentUpon>202404301414250_conexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VentaDAL.cs" />
@@ -71,6 +76,11 @@
       <Project>{E8BA4062-C71A-4845-A425-4121E5E29C3B}</Project>
       <Name>CapaEntidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202404301414250_conexion.resx">
+      <DependentUpon>202404301414250_conexion.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

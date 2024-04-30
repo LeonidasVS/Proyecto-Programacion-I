@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace CapaVista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Ventas());
+            Application.Run(new MantenimientoProducto());
             
         }
     }

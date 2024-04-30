@@ -65,5 +65,17 @@ namespace CapaDatos
 
             return resultado;
         }
+
+        public string ObtenerNombreCategoriaDesdeBD(int idcategoria)
+        {
+            string nombreCategoria = string.Empty;
+            contexto = new ContextoBD();
+            Categoria cate = contexto.Categoria.FirstOrDefault(m => m.idCategoria == idcategoria);
+            if (cate != null)
+            {
+                nombreCategoria = cate.Nombre;
+            }
+            return nombreCategoria;
+        }
     }
 }

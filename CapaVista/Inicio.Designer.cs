@@ -170,8 +170,9 @@
             // verRegistroToolStripMenuItem
             // 
             this.verRegistroToolStripMenuItem.Name = "verRegistroToolStripMenuItem";
-            this.verRegistroToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.verRegistroToolStripMenuItem.Text = "- Ver Registro";
+            this.verRegistroToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.verRegistroToolStripMenuItem.Text = "- Listado de Ventas";
+            this.verRegistroToolStripMenuItem.Click += new System.EventHandler(this.verRegistroToolStripMenuItem_Click);
             // 
             // Mas
             // 

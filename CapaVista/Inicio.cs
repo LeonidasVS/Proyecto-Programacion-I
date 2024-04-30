@@ -59,5 +59,11 @@ namespace CapaVista
             Ventas ventas = new Ventas();
             ventas.ShowDialog();
         }
+
+        private void verRegistroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaDetalleVentas listado = new ListaDetalleVentas();
+            listado.ShowDialog();
+        }
     }
 }
