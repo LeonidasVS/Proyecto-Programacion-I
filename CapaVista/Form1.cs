@@ -34,16 +34,6 @@ namespace CapaVista
             objadmProductos.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void realizarVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegistroVenta objRegistroVenta = new RegistroVenta();

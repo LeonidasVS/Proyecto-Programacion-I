@@ -239,6 +239,13 @@ namespace CapaVista
                             txtExistencias.Text = prodAct.ToString();                            
                         }                        
                     }
+                    else
+                    {
+                        MessageBox.Show("Las existencias no son suficientes para esta venta", "Tienda | Registro venta",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value = CantInicial;
+                        txtExistencias.Text = (_productoLOG.ObtenerExistenciasDesdeBD(id) - CantInicial).ToString();
+                    }
                     if (e.ColumnIndex == dgvDetalleVenta.Columns["Cantidad"].Index && Convert.ToInt32(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value) == 0)
                     {
                         dgvDetalleVenta.Rows.RemoveAt(e.RowIndex);
@@ -247,13 +254,7 @@ namespace CapaVista
                         CargarProducto();
                         CalcularMontoTotal();
                     }
-                    else                   
-                    {                                      
-                        MessageBox.Show("Las existencias no son suficientes para esta venta", "Tienda | Registro venta",                       
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value = CantInicial;
-                        txtExistencias.Text = (_productoLOG.ObtenerExistenciasDesdeBD(id) - CantInicial).ToString();
-                    }                    
+                                        
                 }
             }
             catch (Exception)
