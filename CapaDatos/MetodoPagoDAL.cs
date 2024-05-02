@@ -46,5 +46,18 @@ namespace CapaDatos
             _db = new ContextoBD();
             return _db.MetodoPagos.Find(id);
         }
+
+        public string ObtenerNombreMetdPagoDesdeBD(int id)
+        {
+            _db = new ContextoBD();
+            string NombreMtdPago = string.Empty;
+            MetodoPago metodoPago = _db.MetodoPagos.FirstOrDefault(m => m.idMetodoPago == id);
+            if (metodoPago != null)
+            {
+                NombreMtdPago = metodoPago.FormaDePago;
+            }
+
+            return NombreMtdPago;
+        }
     } 
 }

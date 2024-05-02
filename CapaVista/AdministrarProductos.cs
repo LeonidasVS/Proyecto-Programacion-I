@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace CapaVista
@@ -21,6 +22,11 @@ namespace CapaVista
         {
             InitializeComponent();
             CargarProductos();
+            CargarMarcasYCategorias();
+        }
+
+        private void CargarMarcasYCategorias()
+        {
             _categoriaLOG = new CategoriaLOG();
             _marcaLOG = new MarcaLOG();
             cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
@@ -29,7 +35,6 @@ namespace CapaVista
             cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
             cmbCategorias.SelectedIndex = -1;
             cmbCategorias.SelectedValue = 0;
-            
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -75,7 +80,7 @@ namespace CapaVista
 
             if (cmbMarcas.SelectedValue != null)
             {
-                idMarca = int.Parse(cmbMarcas.SelectedValue.ToString());              
+                idMarca = int.Parse(cmbMarcas.SelectedValue.ToString());
             }
             if (cmbCategorias.SelectedValue != null)
             {
@@ -86,16 +91,16 @@ namespace CapaVista
                 nombreProducto = txtNombre.Text;
             }
 
-            if (cmbMarcas.SelectedValue == null && cmbCategorias.SelectedValue == null && txtNombre.Text == "") 
+            if (cmbMarcas.SelectedValue == null && cmbCategorias.SelectedValue == null && txtNombre.Text == "")
             {
                 if (rdbActivos.Checked)
-                {                        
-                       
-                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();                    
-                }                  
+                {
+
+                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
+                }
                 else if (rdbInactivos.Checked)
-                {                        
-                     
+                {
+
                     dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos(true);
                 }
             }
@@ -111,7 +116,7 @@ namespace CapaVista
                     dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca, true);
                 }
             }
-            else if  (idCategoria > 0)
+            else if (idCategoria > 0)
             {
                 if (rdbActivos.Checked)
                 {
@@ -130,7 +135,7 @@ namespace CapaVista
                 }
                 else if (rdbInactivos.Checked)
                 {
-                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto,true);
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto, true);
                 }
             }
         }
@@ -198,19 +203,19 @@ namespace CapaVista
             }
         }
 
-        private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbCategorias.SelectedIndex = -1;
-            txtNombre.Clear();
-            CargarProductos();
-        }
-
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
             cmbMarcas.SelectedIndex = -1;
             cmbCategorias.SelectedIndex = -1;
             txtNombre.Clear();
             txtNombre.Text = "";
+        }
+
+        private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbCategorias.SelectedIndex = -1;
+            txtNombre.Clear();
+            CargarProductos();
         }
 
         private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
@@ -223,7 +228,7 @@ namespace CapaVista
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             cmbCategorias.SelectedIndex = -1;
-            cmbCategorias.SelectedIndex = -1;
+            cmbMarcas.SelectedIndex = -1;
             CargarProductos();
         }
     }

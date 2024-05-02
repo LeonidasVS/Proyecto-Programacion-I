@@ -135,5 +135,18 @@ namespace CapaDatos
                 return _db.Productos.Where(p => p.Activo == true && p.Nombre.Contains(nombre)).ToList();
             }
         }
+
+        public string ObtenerNombreProductoDesdeBD(int id)
+        {
+            string nombreProducto = string.Empty;
+            _db = new ContextoBD();
+            Producto producto = _db.Productos.FirstOrDefault(p => p.IdProducto == id);
+            if (producto != null)
+            {
+                nombreProducto = producto.Nombre;
+            }
+
+            return nombreProducto;
+        }
     }
 }

@@ -124,6 +124,12 @@
     <Compile Include="RegistroVenta.Designer.cs">
       <DependentUpon>RegistroVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerDetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerDetalleVenta.Designer.cs">
+      <DependentUpon>VerDetalleVenta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdministrarMarcas.resx">
       <DependentUpon>AdministrarMarcas.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroVenta.resx">
       <DependentUpon>RegistroVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerDetalleVenta.resx">
+      <DependentUpon>VerDetalleVenta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaDatos.Class1.datasource" />

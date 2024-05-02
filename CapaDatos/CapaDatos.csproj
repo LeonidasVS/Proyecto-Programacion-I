@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaDAL.cs" />
+    <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
     <Compile Include="MetodoPagoDAL.cs" />
     <Compile Include="Migrations\202404160354259_Nuevas_Tablas.cs" />

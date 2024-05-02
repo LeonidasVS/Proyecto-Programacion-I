@@ -23,5 +23,11 @@ namespace CapaLogica
             _metodoPagoDAL = new MetodoPagoDAL();
             return _metodoPagoDAL.GuardarMetodoPago(metodoPago);
         }
+
+        public string ObtenerNombreMtdPagodesdeBD(int id)
+        {
+            _metodoPagoDAL = new MetodoPagoDAL();
+            return _metodoPagoDAL.ObtenerNombreMetdPagoDesdeBD(id);
+        }
     }
 }

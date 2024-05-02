@@ -72,5 +72,11 @@ namespace CapaVista
         {
             this.Close();
         }
+
+        private void tsmDetalleVenta_Click(object sender, EventArgs e)
+        {
+            VerDetalleVenta objVerDetalleVenta = new VerDetalleVenta();
+            objVerDetalleVenta.ShowDialog();
+        }
     }
 }

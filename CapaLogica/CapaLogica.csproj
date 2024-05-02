@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaLOG.cs" />
+    <Compile Include="DetalleVentaLOG.cs" />
     <Compile Include="MarcaLOG.cs" />
     <Compile Include="MetodoPagoLOG.cs" />
     <Compile Include="ProductoLOG.cs" />

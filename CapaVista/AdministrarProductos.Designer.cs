@@ -88,7 +88,7 @@
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(123, 28);
             this.btnReiniciar.TabIndex = 26;
-            this.btnReiniciar.Text = "Borrar";
+            this.btnReiniciar.Text = "Reiniciar";
             this.btnReiniciar.UseVisualStyleBackColor = true;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
