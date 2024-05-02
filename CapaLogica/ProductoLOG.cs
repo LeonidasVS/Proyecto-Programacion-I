@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,12 @@ namespace CapaLogica
         {
             _productoDAL = new ProductoDAL();
             return _productoDAL.EliminarProducto(id);
+        }
+
+        public List<Producto> FiltrarPorcategoria(int idCategoria, bool inactivo = false)
+        {
+            _productoDAL = new ProductoDAL();
+            return _productoDAL.FiltrarPorCategoria(idCategoria, inactivo);
         }
 
         public List<Producto> FiltrarPorMarca(int idMarca, bool inactivo = false)
@@ -48,6 +55,18 @@ namespace CapaLogica
         {  
             _productoDAL = new ProductoDAL();
             return _productoDAL.Leer(inactivos);
+        }
+
+        public void ProductoAgotado()
+        {
+            _productoDAL = new ProductoDAL();
+            _productoDAL.EliminarAgotado();
+        }
+
+        public int ObtenerExistenciasDesdeBD(int id) 
+        {
+            _productoDAL = new ProductoDAL();
+            return _productoDAL.ObtenerExistenciasDesdeBD(id);
         }
     }
 }

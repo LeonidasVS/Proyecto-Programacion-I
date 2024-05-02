@@ -15,12 +15,35 @@ namespace CapaVista
     public partial class AgregarCategoria : Form
     {
         CategoriaLOG _categoriaLOG;
-        public AgregarCategoria()
+        int _id;
+        public AgregarCategoria(int id = 0)
         {
             InitializeComponent();
 
-            categoriaBindingSource.MoveLast();
+            _id = id;
+
+            if (_id > 0)
+            {
+                this.Text = "Tienda AS | Editar categoria";
+                btnGuardar.Text = "Actualizar";
+                lblTitulo.Text = "Editar Marca";
+
+                CargarDatos(_id);
+
+            }
+            else
+            {
+                categoriaBindingSource.MoveLast();
             categoriaBindingSource.AddNew();
+            }
+
+            
+        }
+
+        private void CargarDatos(int id)
+        {
+            _categoriaLOG = new CategoriaLOG();
+            categoriaBindingSource.DataSource = _categoriaLOG.LeerPorID(id);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -65,21 +88,42 @@ namespace CapaVista
                     }
                 }
 
-                Categoria categoria;
-                categoria = (Categoria)categoriaBindingSource.Current;
-                int resultado = _categoriaLOG.GuardarCategoria(categoria);
-
-                if (resultado > 0)
+                if (_id > 0)
                 {
-                    MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro Marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Categoria categoria;
+                    categoria = (Categoria)categoriaBindingSource.Current;
+                    int resultado = _categoriaLOG.EditarCategoria(categoria, _id, true);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Marca editada con exito", "Tienda | Editar categoria",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro editar la Marca", "Tienda | Editar categoria",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se logro agregagr la Marca", "Tienda | Registro marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    Categoria categoria;
+                    categoria = (Categoria)categoriaBindingSource.Current;
+                    int resultado = _categoriaLOG.GuardarCategoria(categoria);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro Marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro agregagr la Marca", "Tienda | Registro marca",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }  
             }
             catch (Exception)
             {

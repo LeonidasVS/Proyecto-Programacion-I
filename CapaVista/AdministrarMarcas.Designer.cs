@@ -161,7 +161,6 @@
             // Editar
             // 
             this.Editar.HeaderText = "Editar";
-            this.Editar.Image = global::CapaVista.Properties.Resources.Editar;
             this.Editar.Name = "Editar";
             this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Editar.Width = 105;

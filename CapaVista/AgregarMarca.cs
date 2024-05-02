@@ -64,26 +64,26 @@ namespace CapaVista
                 _marcaLOG = new MarcaLOG();
                 if (string.IsNullOrEmpty(txtNombreMarca.Text))
                 {
-                    MessageBox.Show("Por favor ingrese el nombre de la marca", "Tienda AS | Agregar Marca",
+                    MessageBox.Show("Por favor ingrese el nombre de la marca", "Tienda AS | Agregar marca",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombreMarca.Focus();
                     txtNombreMarca.BackColor = Color.LightYellow;
                 }
                 else if (string.IsNullOrEmpty(txtDescripcion.Text))
                 {
-                    MessageBox.Show("Por favor ingrese la descripción de la marca", "Tienda AS | Agregar Marca",
+                    MessageBox.Show("Por favor ingrese la descripción de la marca", "Tienda AS | Agregar marca",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombreMarca.Focus();
                     txtNombreMarca.BackColor = Color.LightYellow;
                 }
                 else if (!chbActivo.Checked)
                 {
-                    var dialogo = MessageBox.Show("Estas seguro que desea guardar la marca inactiva?", "Tienda | Registro Marca",
+                    var dialogo = MessageBox.Show("Estas seguro que desea guardar la marca inactiva?", "Tienda | Registro marca",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (dialogo != DialogResult.Yes)
                     {
-                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda | Registro Marca",
+                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda | Registro marca",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
@@ -97,7 +97,7 @@ namespace CapaVista
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Marca editada con exito", "Tienda | Editar Marca",
+                        MessageBox.Show("Marca editada con exito", "Tienda | Editar marca",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -115,7 +115,7 @@ namespace CapaVista
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro Marca",
+                        MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro marca",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }

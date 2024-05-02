@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(484, 64);
+            this.label2.Location = new System.Drawing.Point(488, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.TabIndex = 1;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(460, 139);
+            this.label4.Location = new System.Drawing.Point(464, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 3;
@@ -122,7 +122,7 @@
             // txtExistencias
             // 
             this.txtExistencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Existencias", true));
-            this.txtExistencias.Location = new System.Drawing.Point(554, 136);
+            this.txtExistencias.Location = new System.Drawing.Point(558, 134);
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.Size = new System.Drawing.Size(313, 26);
             this.txtExistencias.TabIndex = 6;
@@ -134,11 +134,12 @@
             this.cmbNombre.DataSource = this.ProductoBindingSource;
             this.cmbNombre.DisplayMember = "Nombre";
             this.cmbNombre.FormattingEnabled = true;
-            this.cmbNombre.Location = new System.Drawing.Point(554, 61);
+            this.cmbNombre.Location = new System.Drawing.Point(558, 59);
             this.cmbNombre.Name = "cmbNombre";
             this.cmbNombre.Size = new System.Drawing.Size(313, 26);
             this.cmbNombre.TabIndex = 7;
             this.cmbNombre.ValueMember = "IdProducto";
+            this.cmbNombre.SelectedIndexChanged += new System.EventHandler(this.cmbNombre_SelectedIndexChanged);
             // 
             // dgvDetalleVenta
             // 
@@ -151,11 +152,12 @@
             this.Cantidad,
             this.Precio,
             this.SubTotal});
-            this.dgvDetalleVenta.Location = new System.Drawing.Point(25, 260);
+            this.dgvDetalleVenta.Location = new System.Drawing.Point(28, 260);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
-            this.dgvDetalleVenta.Size = new System.Drawing.Size(842, 249);
+            this.dgvDetalleVenta.Size = new System.Drawing.Size(843, 249);
             this.dgvDetalleVenta.TabIndex = 8;
             this.dgvDetalleVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleVenta_CellFormatting);
+            this.dgvDetalleVenta.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellValueChanged);
             // 
             // Codigo
             // 
@@ -184,7 +186,6 @@
             this.Cantidad.DataPropertyName = "Cantidad";
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
             // 
             // Precio
             // 
@@ -201,7 +202,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(782, 202);
+            this.btnRegistrar.Location = new System.Drawing.Point(786, 199);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(85, 36);
             this.btnRegistrar.TabIndex = 9;
@@ -211,7 +212,7 @@
             // 
             // btnProcesar
             // 
-            this.btnProcesar.Location = new System.Drawing.Point(25, 601);
+            this.btnProcesar.Location = new System.Drawing.Point(29, 601);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(85, 36);
             this.btnProcesar.TabIndex = 10;
@@ -221,7 +222,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(782, 601);
+            this.button1.Location = new System.Drawing.Point(786, 601);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 36);
             this.button1.TabIndex = 11;
@@ -232,7 +233,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 546);
+            this.label5.Location = new System.Drawing.Point(25, 549);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 18);
             this.label5.TabIndex = 12;
@@ -240,7 +241,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(146, 543);
+            this.txtTotal.Location = new System.Drawing.Point(133, 543);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(205, 26);
             this.txtTotal.TabIndex = 13;
@@ -252,7 +253,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(527, 546);
+            this.label6.Location = new System.Drawing.Point(512, 551);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 18);
             this.label6.TabIndex = 14;
@@ -266,9 +267,9 @@
             this.cmbMetodoPago.DataSource = this.MetodoPagoBindingSource;
             this.cmbMetodoPago.DisplayMember = "FormaDePago";
             this.cmbMetodoPago.FormattingEnabled = true;
-            this.cmbMetodoPago.Location = new System.Drawing.Point(662, 546);
+            this.cmbMetodoPago.Location = new System.Drawing.Point(647, 546);
             this.cmbMetodoPago.Name = "cmbMetodoPago";
-            this.cmbMetodoPago.Size = new System.Drawing.Size(205, 26);
+            this.cmbMetodoPago.Size = new System.Drawing.Size(224, 26);
             this.cmbMetodoPago.TabIndex = 15;
             this.cmbMetodoPago.ValueMember = "idMetodoPago";
             // 
@@ -334,15 +335,15 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.BindingSource ProductoBindingSource;
         private System.Windows.Forms.BindingSource ventaBindingSource1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbMetodoPago;
+        private System.Windows.Forms.BindingSource MetodoPagoBindingSource;
+        private System.Windows.Forms.BindingSource DetalleVentaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbMetodoPago;
-        private System.Windows.Forms.BindingSource MetodoPagoBindingSource;
-        private System.Windows.Forms.BindingSource DetalleVentaBindingSource;
     }
 }

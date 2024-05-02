@@ -36,10 +36,37 @@ namespace CapaDatos
 
             return resultado;
         }
-        public List<Categoria> Categorias()
+        public List<Categoria> Categorias(bool inactivo = false)
         {
             _db = new ContextoBD();
-            return _db.Categorias.Where(c => c.Estado == true).ToList();
+
+            if (inactivo)
+            {
+                return _db.Categorias.Where(c => c.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Categorias.Where(c => c.Estado == true).ToList();
+            }
+        }
+
+        public int Eliminarcategoria(int id)
+        {
+            _db = new ContextoBD();
+
+            int resultado = 0;
+
+            var categoria = _db.Categorias.Find(id);
+
+            if (categoria != null)
+            {
+                categoria.Estado = false;
+                _db.SaveChanges();
+
+                resultado = categoria.idCategoria;
+            }
+
+            return resultado;
         }
 
         public string ObtenerNombreCategoriaDesdeBD(int idCategoria)
@@ -52,6 +79,12 @@ namespace CapaDatos
                 nombreCategoria = categoria.Nombre;
             }
             return nombreCategoria;
+        }
+
+        public Categoria LeerPorId(int id)
+        {
+            _db = new ContextoBD();
+            return _db.Categorias.Find(id);
         }
     }
 }

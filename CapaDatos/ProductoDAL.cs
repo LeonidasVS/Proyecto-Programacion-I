@@ -29,6 +29,19 @@ namespace CapaDatos
             return resultado;
         }
 
+        public List<Producto> FiltrarPorCategoria(int idCategoria, bool inactivo = false)
+        {
+            _db = new ContextoBD();
+            if (inactivo)
+            {
+                return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == false).ToList();
+            }
+            else 
+            {
+                return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == true).ToList();
+            }
+        }
+
         public List<Producto> FiltrarPorMarca(int idMarca, bool inactivo = false)
         {
             _db = new ContextoBD();
@@ -83,6 +96,31 @@ namespace CapaDatos
         {
             _db = new ContextoBD();
             return _db.Productos.Find(id);
+        }
+
+        public void EliminarAgotado()
+        {
+            _db = new ContextoBD();
+            var productoAgotado = _db.Productos.Where(p => p.Existencias == 0);
+
+            foreach ( var producto in productoAgotado)
+            {
+                producto.Activo = false;
+            }
+            _db.SaveChanges();
+        }
+        public int ObtenerExistenciasDesdeBD(int id)
+        {
+            _db = new ContextoBD();
+            var producto = _db.Productos.FirstOrDefault(p => p.IdProducto == id);
+            if (producto != null)
+            {
+                return producto.Existencias;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

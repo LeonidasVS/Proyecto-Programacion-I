@@ -21,9 +21,15 @@ namespace CapaVista
         {
             InitializeComponent();
             CargarProductos();
+            _categoriaLOG = new CategoriaLOG();
+            _marcaLOG = new MarcaLOG();
             cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
             cmbMarcas.SelectedIndex = -1;
             cmbMarcas.SelectedValue = 0;
+            cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+            cmbCategorias.SelectedIndex = -1;
+            cmbCategorias.SelectedValue = 0;
+            
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -64,10 +70,15 @@ namespace CapaVista
             _productoLOG = new ProductoLOG();
             _marcaLOG = new MarcaLOG();
             int idMarca = 0;
+            int idCategoria = 0;
 
             if (cmbMarcas.SelectedValue != null)
             {
                 idMarca = int.Parse(cmbMarcas.SelectedValue.ToString());              
+            }
+            if (cmbCategorias.SelectedValue != null)
+            {
+                idCategoria = int.Parse(cmbCategorias.SelectedValue.ToString());
             }
 
             if (cmbMarcas.SelectedValue == null) 
@@ -87,13 +98,23 @@ namespace CapaVista
             {
                 if (rdbActivos.Checked)
                 {
-
                     dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca);
                 }
                 else if (rdbInactivos.Checked)
                 {
 
                     dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca, true);
+                }
+            }
+            if  (idCategoria > 0)
+            {
+                if (rdbActivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria);
+                }
+                else if (rdbInactivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria, true);
                 }
             }
         }
@@ -163,13 +184,21 @@ namespace CapaVista
 
         private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbCategorias.SelectedIndex = -1;
             CargarProductos();
         }
 
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
             cmbMarcas.SelectedIndex = -1;
+            cmbCategorias.SelectedIndex = -1;
             txtNombre.Text = "";
+        }
+
+        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbMarcas.SelectedIndex = -1;
+            CargarProductos();
         }
     }
 }

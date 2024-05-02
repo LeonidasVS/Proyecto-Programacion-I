@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReiniciar = new System.Windows.Forms.Button();
             this.cmbCategorias = new System.Windows.Forms.ComboBox();
             this.CategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbInactivos = new System.Windows.Forms.RadioButton();
             this.rdbActivos = new System.Windows.Forms.RadioButton();
-            this.btnReiniciar = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
@@ -82,6 +82,16 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Filtrar Productos";
             // 
+            // btnReiniciar
+            // 
+            this.btnReiniciar.Location = new System.Drawing.Point(593, 65);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(123, 28);
+            this.btnReiniciar.TabIndex = 26;
+            this.btnReiniciar.Text = "Borrar";
+            this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            // 
             // cmbCategorias
             // 
             this.cmbCategorias.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.CategoriaBindingSource, "idCategoria", true));
@@ -93,6 +103,7 @@
             this.cmbCategorias.Size = new System.Drawing.Size(271, 26);
             this.cmbCategorias.TabIndex = 25;
             this.cmbCategorias.ValueMember = "idCategoria";
+            this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
             // 
             // CategoriaBindingSource
             // 
@@ -132,13 +143,15 @@
             // 
             // cmbMarcas
             // 
+            this.cmbMarcas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbMarcas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbMarcas.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.MarcaBindingSource, "idMarca", true));
             this.cmbMarcas.DataSource = this.MarcaBindingSource;
             this.cmbMarcas.DisplayMember = "Nombre";
             this.cmbMarcas.FormattingEnabled = true;
-            this.cmbMarcas.Location = new System.Drawing.Point(506, 26);
+            this.cmbMarcas.Location = new System.Drawing.Point(475, 26);
             this.cmbMarcas.Name = "cmbMarcas";
-            this.cmbMarcas.Size = new System.Drawing.Size(210, 26);
+            this.cmbMarcas.Size = new System.Drawing.Size(241, 26);
             this.cmbMarcas.TabIndex = 20;
             this.cmbMarcas.ValueMember = "idMarca";
             this.cmbMarcas.SelectedIndexChanged += new System.EventHandler(this.cmbMarcas_SelectedIndexChanged);
@@ -150,13 +163,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(446, 29);
+            this.label6.Location = new System.Drawing.Point(415, 29);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 18);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Marca";
-            // 
+            this.label6.Text = "Marca";            // 
             // dgvMostrarProductos
             // 
             this.dgvMostrarProductos.AllowUserToAddRows = false;
@@ -317,16 +329,6 @@
             this.rdbActivos.UseVisualStyleBackColor = true;
             this.rdbActivos.UseWaitCursor = true;
             this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
-            // 
-            // btnReiniciar
-            // 
-            this.btnReiniciar.Location = new System.Drawing.Point(593, 61);
-            this.btnReiniciar.Name = "btnReiniciar";
-            this.btnReiniciar.Size = new System.Drawing.Size(123, 32);
-            this.btnReiniciar.TabIndex = 26;
-            this.btnReiniciar.Text = "Reiniciar";
-            this.btnReiniciar.UseVisualStyleBackColor = true;
-            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // AdministrarProductos
             // 

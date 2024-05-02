@@ -155,12 +155,11 @@ namespace CapaVista
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"Ocurrio un error {ex}", "Tienda | Registro Productos",
+                MessageBox.Show("Ocurrio un error al registrar el producto.", "Tienda | Registro Productos",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

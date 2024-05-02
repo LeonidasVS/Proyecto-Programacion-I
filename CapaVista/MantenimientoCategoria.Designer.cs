@@ -31,17 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.idCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CategoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbActivo = new System.Windows.Forms.RadioButton();
+            this.rdbInactivo = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -60,48 +64,50 @@
             this.dgvCategorias.AutoGenerateColumns = false;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCategoriaDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn,
+            this.Codigo,
+            this.Nombre,
+            this.Descripcion,
             this.Editar,
             this.Eliminar,
             this.estadoDataGridViewCheckBoxColumn});
             this.dgvCategorias.DataSource = this.CategoriaBindingSource;
-            this.dgvCategorias.Location = new System.Drawing.Point(18, 92);
+            this.dgvCategorias.Location = new System.Drawing.Point(18, 192);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
-            this.dgvCategorias.Size = new System.Drawing.Size(870, 416);
+            this.dgvCategorias.Size = new System.Drawing.Size(870, 378);
             this.dgvCategorias.TabIndex = 1;
+            this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellContentClick);
             // 
-            // idCategoriaDataGridViewTextBoxColumn
+            // Codigo
             // 
-            this.idCategoriaDataGridViewTextBoxColumn.DataPropertyName = "idCategoria";
-            this.idCategoriaDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.idCategoriaDataGridViewTextBoxColumn.Name = "idCategoriaDataGridViewTextBoxColumn";
-            this.idCategoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idCategoriaDataGridViewTextBoxColumn.Width = 110;
+            this.Codigo.DataPropertyName = "idCategoria";
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 110;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // Nombre
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 210;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 210;
             // 
-            // descripcionDataGridViewTextBoxColumn
+            // Descripcion
             // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn.Width = 300;
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 300;
             // 
             // Editar
             // 
             this.Editar.HeaderText = "Editar";
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Editar.Width = 105;
             // 
             // Eliminar
@@ -109,6 +115,7 @@
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.Width = 105;
             // 
             // estadoDataGridViewCheckBoxColumn
@@ -143,11 +150,47 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbInactivo);
+            this.groupBox1.Controls.Add(this.rdbActivo);
+            this.groupBox1.Location = new System.Drawing.Point(18, 86);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 85);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar por estado";
+            // 
+            // rdbActivo
+            // 
+            this.rdbActivo.AutoSize = true;
+            this.rdbActivo.Checked = true;
+            this.rdbActivo.Location = new System.Drawing.Point(7, 38);
+            this.rdbActivo.Name = "rdbActivo";
+            this.rdbActivo.Size = new System.Drawing.Size(69, 22);
+            this.rdbActivo.TabIndex = 0;
+            this.rdbActivo.TabStop = true;
+            this.rdbActivo.Text = "Activo";
+            this.rdbActivo.UseVisualStyleBackColor = true;
+            this.rdbActivo.CheckedChanged += new System.EventHandler(this.rdbActivo_CheckedChanged);
+            // 
+            // rdbInactivo
+            // 
+            this.rdbInactivo.AutoSize = true;
+            this.rdbInactivo.Location = new System.Drawing.Point(95, 38);
+            this.rdbInactivo.Name = "rdbInactivo";
+            this.rdbInactivo.Size = new System.Drawing.Size(78, 22);
+            this.rdbInactivo.TabIndex = 1;
+            this.rdbInactivo.Text = "Inactivo";
+            this.rdbInactivo.UseVisualStyleBackColor = true;
+            this.rdbInactivo.CheckedChanged += new System.EventHandler(this.rdbInactivo_CheckedChanged);
+            // 
             // MantenimientoCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvCategorias);
@@ -159,6 +202,8 @@
             this.Text = "Tienda AS | Administrar Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,11 +216,14 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.BindingSource CategoriaBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoriaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbInactivo;
+        private System.Windows.Forms.RadioButton rdbActivo;
     }
 }
