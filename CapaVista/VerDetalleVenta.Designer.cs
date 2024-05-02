@@ -69,9 +69,9 @@
             this.ventaIdDataGridViewTextBoxColumn,
             this.MetodoPago});
             this.dgvDetalleVenta.DataSource = this.DetalleVentaBindingSource;
-            this.dgvDetalleVenta.Location = new System.Drawing.Point(22, 129);
+            this.dgvDetalleVenta.Location = new System.Drawing.Point(15, 129);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
-            this.dgvDetalleVenta.Size = new System.Drawing.Size(854, 435);
+            this.dgvDetalleVenta.Size = new System.Drawing.Size(873, 435);
             this.dgvDetalleVenta.TabIndex = 2;
             this.dgvDetalleVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleVenta_CellFormatting);
             // 
@@ -95,7 +95,7 @@
             this.Producto.DataPropertyName = "ProductoId";
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
-            this.Producto.Width = 161;
+            this.Producto.Width = 180;
             // 
             // cantidadDataGridViewTextBoxColumn
             // 
