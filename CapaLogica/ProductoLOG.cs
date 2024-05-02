@@ -68,5 +68,11 @@ namespace CapaLogica
             _productoDAL = new ProductoDAL();
             return _productoDAL.ObtenerExistenciasDesdeBD(id);
         }
+
+        public List<Producto> FiltrarPorNombre(string nombre, bool inactivo = false)
+        {
+            _productoDAL = new ProductoDAL();
+            return _productoDAL.FiltrarPorNombre(nombre, inactivo);
+        }
     }
 }

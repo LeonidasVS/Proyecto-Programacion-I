@@ -71,6 +71,7 @@ namespace CapaVista
             _marcaLOG = new MarcaLOG();
             int idMarca = 0;
             int idCategoria = 0;
+            string nombreProducto = null;
 
             if (cmbMarcas.SelectedValue != null)
             {
@@ -80,8 +81,12 @@ namespace CapaVista
             {
                 idCategoria = int.Parse(cmbCategorias.SelectedValue.ToString());
             }
+            if (txtNombre.Text.Length > 0)
+            {
+                nombreProducto = txtNombre.Text;
+            }
 
-            if (cmbMarcas.SelectedValue == null) 
+            if (cmbMarcas.SelectedValue == null && cmbCategorias.SelectedValue == null && txtNombre.Text == "") 
             {
                 if (rdbActivos.Checked)
                 {                        
@@ -106,7 +111,7 @@ namespace CapaVista
                     dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca, true);
                 }
             }
-            if  (idCategoria > 0)
+            else if  (idCategoria > 0)
             {
                 if (rdbActivos.Checked)
                 {
@@ -115,6 +120,17 @@ namespace CapaVista
                 else if (rdbInactivos.Checked)
                 {
                     dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria, true);
+                }
+            }
+            else if (nombreProducto != "")
+            {
+                if (rdbActivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto);
+                }
+                else if (rdbInactivos.Checked)
+                {
+                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto,true);
                 }
             }
         }
@@ -185,6 +201,7 @@ namespace CapaVista
         private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbCategorias.SelectedIndex = -1;
+            txtNombre.Clear();
             CargarProductos();
         }
 
@@ -192,12 +209,21 @@ namespace CapaVista
         {
             cmbMarcas.SelectedIndex = -1;
             cmbCategorias.SelectedIndex = -1;
+            txtNombre.Clear();
             txtNombre.Text = "";
         }
 
         private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbMarcas.SelectedIndex = -1;
+            txtNombre.Clear();
+            CargarProductos();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            cmbCategorias.SelectedIndex = -1;
+            cmbCategorias.SelectedIndex = -1;
             CargarProductos();
         }
     }

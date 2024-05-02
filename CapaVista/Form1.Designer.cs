@@ -41,6 +41,7 @@
             this.administrarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminitrarCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarMetodosDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lOGINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -112,7 +113,8 @@
             this.tsmVentas,
             this.tsmProductos,
             this.tsmDetalleVenta,
-            this.tsmMas});
+            this.tsmMas,
+            this.lOGINToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -151,6 +153,13 @@
             this.administrarMetodosDePagoToolStripMenuItem.Text = "Administrar metodos de Pago";
             this.administrarMetodosDePagoToolStripMenuItem.Click += new System.EventHandler(this.administrarMetodosDePagoToolStripMenuItem_Click);
             // 
+            // lOGINToolStripMenuItem
+            // 
+            this.lOGINToolStripMenuItem.Name = "lOGINToolStripMenuItem";
+            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
+            this.lOGINToolStripMenuItem.Text = "LOGIN";
+            this.lOGINToolStripMenuItem.Click += new System.EventHandler(this.lOGINToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +195,7 @@
         private System.Windows.Forms.ToolStripMenuItem administrarMarcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminitrarCategoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarMetodosDePagoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lOGINToolStripMenuItem;
     }
 }
 

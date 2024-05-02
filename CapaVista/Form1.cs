@@ -67,5 +67,10 @@ namespace CapaVista
             AdministrarMetodosPago objAdmMtdsPago = new AdministrarMetodosPago();
             objAdmMtdsPago.ShowDialog();
         }
+
+        private void lOGINToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

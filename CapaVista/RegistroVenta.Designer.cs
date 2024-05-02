@@ -47,7 +47,7 @@
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnProcesar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.ventaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -55,6 +55,7 @@
             this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
             this.DetalleVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MetodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource1)).BeginInit();
@@ -124,6 +125,7 @@
             this.txtExistencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Existencias", true));
             this.txtExistencias.Location = new System.Drawing.Point(558, 134);
             this.txtExistencias.Name = "txtExistencias";
+            this.txtExistencias.ReadOnly = true;
             this.txtExistencias.Size = new System.Drawing.Size(313, 26);
             this.txtExistencias.TabIndex = 6;
             // 
@@ -202,7 +204,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(786, 199);
+            this.btnRegistrar.Location = new System.Drawing.Point(647, 198);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(85, 36);
             this.btnRegistrar.TabIndex = 9;
@@ -220,15 +222,15 @@
             this.btnProcesar.UseVisualStyleBackColor = true;
             this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
-            // button1
+            // btnCancelar
             // 
-            this.button1.Location = new System.Drawing.Point(786, 601);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 36);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(786, 601);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(85, 36);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label5
             // 
@@ -243,6 +245,7 @@
             // 
             this.txtTotal.Location = new System.Drawing.Point(133, 543);
             this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(205, 26);
             this.txtTotal.TabIndex = 13;
             // 
@@ -281,16 +284,27 @@
             // 
             this.MetodoPagoBindingSource.DataSource = typeof(CapaEntidades.MetodoPago);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(786, 198);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 36);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // RegistroVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbMetodoPago);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dgvDetalleVenta);
@@ -330,7 +344,7 @@
         private System.Windows.Forms.DataGridView dgvDetalleVenta;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnProcesar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.BindingSource ProductoBindingSource;
@@ -345,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.Button button2;
     }
 }

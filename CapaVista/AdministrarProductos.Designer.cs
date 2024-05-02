@@ -126,6 +126,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(271, 26);
             this.txtNombre.TabIndex = 23;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // productoBindingSource1
             // 
@@ -168,7 +169,8 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 18);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Marca";            // 
+            this.label6.Text = "Marca";
+            // 
             // dgvMostrarProductos
             // 
             this.dgvMostrarProductos.AllowUserToAddRows = false;

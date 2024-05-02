@@ -1,6 +1,7 @@
 ﻿using CapaDatos;
 using CapaEntidades;
 using CapaLogica;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,10 +50,9 @@ namespace CapaVista
             MetodoPagoBindingSource.DataSource = _metodoPagoLOG.FormasDePago();
             cmbMetodoPago.DataSource = _metodoPagoLOG.FormasDePago();
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
@@ -93,17 +93,12 @@ namespace CapaVista
 
                 int codigo = int.Parse(txtCodigoProducto.Text);
                 int cantidad = int.Parse(txtCantidad.Text);
-                int encontrarCodigo;
                 var producto = (Producto)ProductoBindingSource.Current;
 
                 if (producto != null)
-                {
-
-                    decimal montoTotal = 0;
-                    
+                {                  
                     if (int.Parse(txtCantidad.Text) > int.Parse(txtExistencias.Text))
                     {
-                        // Mensaje en caso de que no hayan suficientes existencias
                         MessageBox.Show("Las existencias no son suficientes para esta venta", "Tienda | Registro venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -114,7 +109,6 @@ namespace CapaVista
                     }
                     else
                     {
-
                         CalcularMontoTotal();
 
                         foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
@@ -146,7 +140,6 @@ namespace CapaVista
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Ocurrio un error", "Tienda AS | Registro venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -172,21 +165,16 @@ namespace CapaVista
                         Cantidad = int.Parse(row.Cells["Cantidad"].Value.ToString()),
                         idMetodoPago = int.Parse(cmbMetodoPago.SelectedValue.ToString())
                     };
-
                     venta.Detalles.Add(detalle);
                 }
-
                 int resultado = _ventaLOG.guardarVenta(venta);
 
                 if (resultado >= 0)
                 {
-
                     MessageBox.Show("Venta guardada con exito", "Tienda AS | Registro venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _productoLOG.ProductoAgotado();
-                    LimpiarTablaVenta();
-                    
-
+                    LimpiarTablaVenta();                   
                 }
                 else
                 {
@@ -196,7 +184,6 @@ namespace CapaVista
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show($"Ocurrio un error {ex}", "Tienda AS | Registro venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -251,18 +238,17 @@ namespace CapaVista
                             prodAct -= cantidad;                            
                             txtExistencias.Text = prodAct.ToString();                            
                         }                        
-                    }                   
-                    else if (cantidad == 0)                    
-                    {                    
-                        MessageBox.Show("No se pueden vender CERO productos", "Tienda | Registro venta",                       
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value = CantInicial;
-                        txtExistencias.Text = (_productoLOG.ObtenerExistenciasDesdeBD(id) - CantInicial).ToString();
-                    }                    
-                    else
-                    
-                    {                   
-                        // Mensaje en caso de que no hayan suficientes existencias                       
+                    }
+                    if (e.ColumnIndex == dgvDetalleVenta.Columns["Cantidad"].Index && Convert.ToInt32(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value) == 0)
+                    {
+                        dgvDetalleVenta.Rows.RemoveAt(e.RowIndex);
+                        MessageBox.Show("Se eliminó el producto de esta venta", "Tienda | Registro venta",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CargarProducto();
+                        CalcularMontoTotal();
+                    }
+                    else                   
+                    {                                      
                         MessageBox.Show("Las existencias no son suficientes para esta venta", "Tienda | Registro venta",                       
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value = CantInicial;
@@ -272,7 +258,6 @@ namespace CapaVista
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Ocurrio un error");
             }
         }
@@ -285,13 +270,20 @@ namespace CapaVista
             {
                 montoTotal += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
             }
-
             txtTotal.Text = montoTotal.ToString();
         }
 
         private void cmbNombre_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtCantidad.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LimpiarTablaVenta();
+            CargarProducto();
+            MessageBox.Show("Se eliminaron los productos registrados en la venta.","Tienda AS | Registro venta",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

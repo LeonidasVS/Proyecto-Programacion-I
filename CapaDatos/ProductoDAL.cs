@@ -122,5 +122,18 @@ namespace CapaDatos
                 return 0;
             }
         }
+
+        public List<Producto> FiltrarPorNombre(string nombre, bool inactivo = false)
+        {
+            _db = new ContextoBD();
+            if (inactivo)
+            {
+                return _db.Productos.Where(p => p.Activo == false && p.Nombre.Contains(nombre)).ToList();
+            }
+            else
+            {
+                return _db.Productos.Where(p => p.Activo == true && p.Nombre.Contains(nombre)).ToList();
+            }
+        }
     }
 }
