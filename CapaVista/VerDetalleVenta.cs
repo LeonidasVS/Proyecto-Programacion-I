@@ -43,5 +43,10 @@ namespace CapaVista
                 e.FormattingApplied = true;
             }
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
