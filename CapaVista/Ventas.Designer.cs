@@ -52,16 +52,16 @@
             this.comboBoxNombrePro = new System.Windows.Forms.ComboBox();
             this.añadirVenta = new System.Windows.Forms.Button();
             this.comboPagos = new System.Windows.Forms.ComboBox();
-            this.meotdoBinding = new System.Windows.Forms.BindingSource(this.components);
+            this.detalleVentaBinding = new System.Windows.Forms.BindingSource(this.components);
+            this.metodoBinding = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.detalleVentaBinding = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.productoBinding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VentabindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meotdoBinding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBinding)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoBinding)).BeginInit();
             this.SuspendLayout();
             // 
             // Regresar
@@ -88,7 +88,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(189, 125);
+            this.label1.Location = new System.Drawing.Point(189, 113);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
@@ -100,7 +100,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(539, 27);
+            this.label2.Location = new System.Drawing.Point(539, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 15);
@@ -112,7 +112,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(221, 30);
+            this.label3.Location = new System.Drawing.Point(221, 18);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 15);
@@ -124,7 +124,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(561, 121);
+            this.label4.Location = new System.Drawing.Point(561, 109);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 15);
@@ -136,7 +136,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(27, 552);
+            this.label5.Location = new System.Drawing.Point(38, 526);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 15);
@@ -148,7 +148,7 @@
             this.txtStock.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtStock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Stock", true));
             this.txtStock.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(542, 143);
+            this.txtStock.Location = new System.Drawing.Point(542, 131);
             this.txtStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtStock.Name = "txtStock";
             this.txtStock.ReadOnly = true;
@@ -164,7 +164,7 @@
             this.txtMonto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtMonto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.VentabindingSource, "Total", true));
             this.txtMonto.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(114, 548);
+            this.txtMonto.Location = new System.Drawing.Point(125, 522);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.ReadOnly = true;
@@ -179,7 +179,7 @@
             // 
             this.txtCantidad.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtCantidad.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(495, 49);
+            this.txtCantidad.Location = new System.Drawing.Point(495, 37);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(143, 24);
@@ -191,7 +191,7 @@
             this.txtCodigo.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "idProducto", true));
             this.txtCodigo.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(165, 143);
+            this.txtCodigo.Location = new System.Drawing.Point(168, 131);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
@@ -210,11 +210,12 @@
             this.Cantidad,
             this.SubTotal});
             this.DetalleVentaData.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DetalleVentaData.Location = new System.Drawing.Point(52, 224);
+            this.DetalleVentaData.Location = new System.Drawing.Point(42, 197);
             this.DetalleVentaData.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetalleVentaData.Name = "DetalleVentaData";
             this.DetalleVentaData.Size = new System.Drawing.Size(774, 307);
             this.DetalleVentaData.TabIndex = 25;
+            this.DetalleVentaData.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DetalleVentaData_CellValidating);
             // 
             // Codigo
             // 
@@ -264,10 +265,10 @@
             this.ProcesarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProcesarVenta.Image = ((System.Drawing.Image)(resources.GetObject("ProcesarVenta.Image")));
             this.ProcesarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProcesarVenta.Location = new System.Drawing.Point(367, 642);
+            this.ProcesarVenta.Location = new System.Drawing.Point(362, 611);
             this.ProcesarVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ProcesarVenta.Name = "ProcesarVenta";
-            this.ProcesarVenta.Size = new System.Drawing.Size(98, 51);
+            this.ProcesarVenta.Size = new System.Drawing.Size(98, 36);
             this.ProcesarVenta.TabIndex = 26;
             this.ProcesarVenta.Text = "Procesar";
             this.ProcesarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -283,7 +284,7 @@
             this.comboBoxNombrePro.DisplayMember = "Nombre";
             this.comboBoxNombrePro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNombrePro.FormattingEnabled = true;
-            this.comboBoxNombrePro.Location = new System.Drawing.Point(142, 48);
+            this.comboBoxNombrePro.Location = new System.Drawing.Point(142, 36);
             this.comboBoxNombrePro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxNombrePro.Name = "comboBoxNombrePro";
             this.comboBoxNombrePro.Size = new System.Drawing.Size(221, 25);
@@ -299,7 +300,7 @@
             this.añadirVenta.ForeColor = System.Drawing.SystemColors.Info;
             this.añadirVenta.Image = ((System.Drawing.Image)(resources.GetObject("añadirVenta.Image")));
             this.añadirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.añadirVenta.Location = new System.Drawing.Point(696, 48);
+            this.añadirVenta.Location = new System.Drawing.Point(696, 36);
             this.añadirVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.añadirVenta.Name = "añadirVenta";
             this.añadirVenta.Size = new System.Drawing.Size(39, 37);
@@ -312,27 +313,31 @@
             // 
             this.comboPagos.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.comboPagos.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.detalleVentaBinding, "idMetodoPago", true));
-            this.comboPagos.DataSource = this.meotdoBinding;
+            this.comboPagos.DataSource = this.metodoBinding;
             this.comboPagos.DisplayMember = "FormaDePago";
             this.comboPagos.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPagos.FormattingEnabled = true;
-            this.comboPagos.Location = new System.Drawing.Point(633, 552);
+            this.comboPagos.Location = new System.Drawing.Point(644, 526);
             this.comboPagos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboPagos.Name = "comboPagos";
             this.comboPagos.Size = new System.Drawing.Size(178, 25);
             this.comboPagos.TabIndex = 31;
             this.comboPagos.ValueMember = "idMetodoPago";
             // 
-            // meotdoBinding
+            // detalleVentaBinding
             // 
-            this.meotdoBinding.DataSource = typeof(Capa_Entidades.MetodoPago);
+            this.detalleVentaBinding.DataSource = typeof(Capa_Entidades.Detalle_Venta);
+            // 
+            // metodoBinding
+            // 
+            this.metodoBinding.DataSource = typeof(Capa_Entidades.MetodoPago);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(513, 555);
+            this.label6.Location = new System.Drawing.Point(524, 529);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 15);
@@ -344,7 +349,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Precio", true));
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(377, 143);
+            this.textBox1.Location = new System.Drawing.Point(377, 131);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -356,23 +361,19 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(412, 125);
+            this.label7.Location = new System.Drawing.Point(412, 113);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 15);
             this.label7.TabIndex = 33;
             this.label7.Text = "Precio";
             // 
-            // detalleVentaBinding
-            // 
-            this.detalleVentaBinding.DataSource = typeof(Capa_Entidades.Detalle_Venta);
-            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(865, 705);
+            this.ClientSize = new System.Drawing.Size(859, 659);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -401,8 +402,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBinding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VentabindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meotdoBinding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleVentaBinding)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metodoBinding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,7 +434,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.BindingSource productoBinding;
-        private System.Windows.Forms.BindingSource meotdoBinding;
+        private System.Windows.Forms.BindingSource metodoBinding;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.BindingSource detalleVentaBinding;

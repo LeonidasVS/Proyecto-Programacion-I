@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,18 +27,18 @@ namespace CapaVista
 
             detalleVenta = new DataTable();
 
-            detalleVenta.Columns.Add("Codigo",typeof(int));
-            detalleVenta.Columns.Add("Productos",typeof(string));
-            detalleVenta.Columns.Add("Precio",typeof(decimal));
-            detalleVenta.Columns.Add("Cantidad",typeof(int));
-            detalleVenta.Columns.Add("SubTotal",typeof(decimal));
+            detalleVenta.Columns.Add("Codigo", typeof(int));
+            detalleVenta.Columns.Add("Productos", typeof(string));
+            detalleVenta.Columns.Add("Precio", typeof(decimal));
+            detalleVenta.Columns.Add("Cantidad", typeof(int));
+            detalleVenta.Columns.Add("SubTotal", typeof(decimal));
 
         }
 
         private void CargarMetodoPagos()
         {
             metodo = new MetodoPagoLog();
-            meotdoBinding.DataSource = metodo.ObtenerMetodoDePago();
+            metodoBinding.DataSource = metodo.ObtenerMetodoDePago();
         }
 
         private void CargarProductos()
@@ -56,28 +57,30 @@ namespace CapaVista
             CargarProductos();
             CargarMetodoPagos();
             txtCantidad.Clear();
+            txtMonto.Clear();
             int calcular = DetalleVentaData.Rows.Count;
 
-            for (int i=calcular-1;i>=0; i--)
+            for (int i = calcular - 1; i >= 0; i--)
             {
                 DetalleVentaData.Rows.RemoveAt(i);
             }
 
         }
-
         private void ProcesarVenta_Click(object sender, EventArgs e)
         {
             try
             {
-                if (DetalleVentaData.Rows.Count>0)
+                if (DetalleVentaData.Rows.Count > 0)
                 {
-                    ventalog = new _VentaLog();
 
+                    ventalog = new _VentaLog();
                     Venta venta = new Venta();
                     venta.Fecha = DateTime.Now;
                     venta.Total = decimal.Parse(txtMonto.Text);
+
                     foreach (DataGridViewRow row in DetalleVentaData.Rows)
                     {
+
                         var detalle = new Detalle_Venta()
                         {
                             idProducto = int.Parse(row.Cells["Codigo"].Value.ToString()),
@@ -85,6 +88,8 @@ namespace CapaVista
                             Cantidad = int.Parse(row.Cells["Cantidad"].Value.ToString()),
                             idMetodoPago = int.Parse(comboPagos.SelectedValue.ToString())
                         };
+
+
 
                         venta.Detalles.Add(detalle);
                     }
@@ -108,7 +113,7 @@ namespace CapaVista
             }
             catch(Exception ex)
             {
-                MessageBox.Show($"{ex.Message}");
+                MessageBox.Show($"{ex.Message}","Tienda AS | Ventas",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
         }
@@ -125,7 +130,7 @@ namespace CapaVista
                     int encontrarCodigo;
                     var producto = (Producto)productoBinding.Current;
 
-                    if (producto != null)
+                    if (producto != null && cantidad>0 && cantidad<=producto.Stock)
                     {
                         foreach (DataGridViewRow buscar in DetalleVentaData.Rows)
                         {
@@ -150,10 +155,15 @@ namespace CapaVista
 
                         txtMonto.Text = montoTotal.ToString();
                     }
+                    else
+                    {
+                        MessageBox.Show("Digita una cantidad valida entre las exitencias", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Digita la cantidad de producto a comprar", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingresa la cantidad que deseas", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }catch(Exception)
@@ -202,6 +212,54 @@ namespace CapaVista
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void CalcularMontoTotal()
+        {
+            decimal montoTotal = 0;
+
+            foreach (DataGridViewRow row in DetalleVentaData.Rows)
+            {
+                montoTotal += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
+            }
+
+            txtMonto.Text = montoTotal.ToString();
+        }
+
+        private void DetalleVentaData_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex==2 && e.RowIndex>=0)
+                {
+                   bool esdecimal=decimal.TryParse(e.FormattedValue.ToString(),out  decimal preciofinal);
+                   int cantidadfinal = int.Parse(DetalleVentaData.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString());
+
+                    if (esdecimal)
+                    {
+                        if (preciofinal == 0)
+                        {
+                            e.Cancel = true;
+                            MessageBox.Show("Ingresa un precio valido", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            decimal SubTotal = preciofinal * cantidadfinal;
+                            DetalleVentaData.Rows[e.RowIndex].Cells["SubTotal"].Value = SubTotal;
+                            CalcularMontoTotal();
+                        }
+                    }
+                    else
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show("No se permite caracteres o espacios en blanco", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
     }
