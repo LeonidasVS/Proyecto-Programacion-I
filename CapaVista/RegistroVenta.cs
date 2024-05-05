@@ -135,7 +135,8 @@ namespace CapaVista
                 }
                 else
                 {
-                    MessageBox.Show("Digita la cantidad de producto a comprar", "Tienda AS | Registro venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Digita la cantidad de producto a comprar", "Tienda AS | Registro venta", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception)
