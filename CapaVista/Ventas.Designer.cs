@@ -66,17 +66,20 @@
             // 
             // Regresar
             // 
+            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
-            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Regresar.Location = new System.Drawing.Point(2, 1);
             this.Regresar.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(35, 51);
+            this.Regresar.Size = new System.Drawing.Size(35, 32);
             this.Regresar.TabIndex = 13;
             this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Regresar.UseVisualStyleBackColor = false;
@@ -202,6 +205,7 @@
             // DetalleVentaData
             // 
             this.DetalleVentaData.AllowUserToAddRows = false;
+            this.DetalleVentaData.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.DetalleVentaData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DetalleVentaData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -259,13 +263,14 @@
             // ProcesarVenta
             // 
             this.ProcesarVenta.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.ProcesarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProcesarVenta.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ProcesarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProcesarVenta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProcesarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProcesarVenta.Image = ((System.Drawing.Image)(resources.GetObject("ProcesarVenta.Image")));
             this.ProcesarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProcesarVenta.Location = new System.Drawing.Point(362, 611);
+            this.ProcesarVenta.Location = new System.Drawing.Point(377, 611);
             this.ProcesarVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ProcesarVenta.Name = "ProcesarVenta";
             this.ProcesarVenta.Size = new System.Drawing.Size(98, 36);
@@ -295,6 +300,7 @@
             // añadirVenta
             // 
             this.añadirVenta.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.añadirVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.añadirVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.añadirVenta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.añadirVenta.ForeColor = System.Drawing.SystemColors.Info;
@@ -372,7 +378,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(859, 659);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
@@ -397,7 +403,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ventas";
+            this.Text = "Store AS | Ventas";
             this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productoBinding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VentabindingSource)).EndInit();

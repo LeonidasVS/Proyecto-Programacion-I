@@ -61,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(51, 97);
+            this.label1.Location = new System.Drawing.Point(62, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 0;
@@ -72,7 +72,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(13, 165);
+            this.label2.Location = new System.Drawing.Point(27, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 16);
             this.label2.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(423, 96);
+            this.label3.Location = new System.Drawing.Point(403, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 2;
@@ -94,7 +94,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(304, 284);
+            this.label4.Location = new System.Drawing.Point(314, 285);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(85, 16);
@@ -106,7 +106,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(69, 232);
+            this.label5.Location = new System.Drawing.Point(80, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 4;
@@ -117,7 +117,7 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Nombre", true));
             this.textBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox1.Location = new System.Drawing.Point(125, 97);
+            this.textBox1.Location = new System.Drawing.Point(136, 94);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(194, 20);
             this.textBox1.TabIndex = 5;
@@ -132,10 +132,10 @@
             this.DescripcionProducto.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.DescripcionProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Descripcion", true));
             this.DescripcionProducto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DescripcionProducto.Location = new System.Drawing.Point(36, 313);
+            this.DescripcionProducto.Location = new System.Drawing.Point(43, 304);
             this.DescripcionProducto.Multiline = true;
             this.DescripcionProducto.Name = "DescripcionProducto";
-            this.DescripcionProducto.Size = new System.Drawing.Size(646, 103);
+            this.DescripcionProducto.Size = new System.Drawing.Size(623, 103);
             this.DescripcionProducto.TabIndex = 6;
             this.DescripcionProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -144,7 +144,7 @@
             this.Stock.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Stock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Stock", true));
             this.Stock.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Stock.Location = new System.Drawing.Point(507, 94);
+            this.Stock.Location = new System.Drawing.Point(487, 94);
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(161, 20);
             this.Stock.TabIndex = 7;
@@ -154,9 +154,9 @@
             this.PrecioUni.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.PrecioUni.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Precio", true));
             this.PrecioUni.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.PrecioUni.Location = new System.Drawing.Point(139, 165);
+            this.PrecioUni.Location = new System.Drawing.Point(153, 158);
             this.PrecioUni.Name = "PrecioUni";
-            this.PrecioUni.Size = new System.Drawing.Size(180, 20);
+            this.PrecioUni.Size = new System.Drawing.Size(83, 20);
             this.PrecioUni.TabIndex = 8;
             // 
             // Activo
@@ -165,7 +165,7 @@
             this.Activo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.ProductoBindingSource, "Estado", true));
             this.Activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Activo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Activo.Location = new System.Drawing.Point(125, 231);
+            this.Activo.Location = new System.Drawing.Point(136, 228);
             this.Activo.Name = "Activo";
             this.Activo.Size = new System.Drawing.Size(63, 19);
             this.Activo.TabIndex = 9;
@@ -175,12 +175,13 @@
             // GuardarProducto
             // 
             this.GuardarProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.GuardarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GuardarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarProducto.ForeColor = System.Drawing.SystemColors.Info;
             this.GuardarProducto.Image = ((System.Drawing.Image)(resources.GetObject("GuardarProducto.Image")));
             this.GuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarProducto.Location = new System.Drawing.Point(302, 480);
+            this.GuardarProducto.Location = new System.Drawing.Point(303, 459);
             this.GuardarProducto.Name = "GuardarProducto";
             this.GuardarProducto.Size = new System.Drawing.Size(96, 37);
             this.GuardarProducto.TabIndex = 10;
@@ -191,18 +192,19 @@
             // 
             // Regresar
             // 
-            this.Regresar.BackColor = System.Drawing.Color.Transparent;
+            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Regresar.Location = new System.Drawing.Point(0, -1);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(35, 33);
+            this.Regresar.Size = new System.Drawing.Size(37, 38);
             this.Regresar.TabIndex = 11;
             this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Regresar.UseVisualStyleBackColor = false;
@@ -213,7 +215,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(455, 161);
+            this.label6.Location = new System.Drawing.Point(435, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 16);
             this.label6.TabIndex = 14;
@@ -224,7 +226,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(432, 228);
+            this.label7.Location = new System.Drawing.Point(412, 228);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 15;
@@ -240,7 +242,7 @@
             this.cbxMarca.DisplayMember = "Nombre";
             this.cbxMarca.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(507, 160);
+            this.cbxMarca.Location = new System.Drawing.Point(487, 160);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(161, 21);
             this.cbxMarca.TabIndex = 18;
@@ -258,7 +260,7 @@
             this.cbxCategoria.DisplayMember = "Nombre";
             this.cbxCategoria.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(507, 226);
+            this.cbxCategoria.Location = new System.Drawing.Point(487, 226);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(161, 21);
             this.cbxCategoria.TabIndex = 19;
@@ -272,7 +274,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox2.Location = new System.Drawing.Point(123, 165);
+            this.textBox2.Location = new System.Drawing.Point(137, 158);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(17, 20);
@@ -284,20 +286,20 @@
             // 
             this.Titulo.AutoSize = true;
             this.Titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Titulo.Location = new System.Drawing.Point(227, 24);
+            this.Titulo.Location = new System.Drawing.Point(210, 21);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(273, 25);
+            this.Titulo.Size = new System.Drawing.Size(281, 27);
             this.Titulo.TabIndex = 21;
-            this.Titulo.Text = "Departamento de Registros";
+            this.Titulo.Text = "Registro de Productos";
             // 
             // Registro_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(717, 554);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(717, 508);
             this.Controls.Add(this.Titulo);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.cbxCategoria);
@@ -319,7 +321,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Registro_Producto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tienda AS | Agregar Productos";
+            this.Text = "Tienda AS | Registro de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();

@@ -55,13 +55,14 @@
             // 
             // Regresar
             // 
-            this.Regresar.BackColor = System.Drawing.Color.Transparent;
+            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Regresar.Location = new System.Drawing.Point(1, 0);
@@ -75,12 +76,13 @@
             // AñadirCategory
             // 
             this.AñadirCategory.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.AñadirCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AñadirCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AñadirCategory.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AñadirCategory.ForeColor = System.Drawing.SystemColors.Info;
             this.AñadirCategory.Image = ((System.Drawing.Image)(resources.GetObject("AñadirCategory.Image")));
             this.AñadirCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirCategory.Location = new System.Drawing.Point(359, 386);
+            this.AñadirCategory.Location = new System.Drawing.Point(353, 386);
             this.AñadirCategory.Name = "AñadirCategory";
             this.AñadirCategory.Size = new System.Drawing.Size(88, 37);
             this.AñadirCategory.TabIndex = 14;
@@ -100,6 +102,7 @@
             this.Estado,
             this.Editar,
             this.Eliminar});
+            this.TablaCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TablaCategorias.Location = new System.Drawing.Point(40, 116);
             this.TablaCategorias.Name = "TablaCategorias";
             this.TablaCategorias.Size = new System.Drawing.Size(724, 224);
@@ -158,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TablaCategorias);
             this.Controls.Add(this.AñadirCategory);
@@ -166,7 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MantenimientoCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MantenimientoCategorias";
+            this.Text = "Store AS | Admón Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.TablaCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

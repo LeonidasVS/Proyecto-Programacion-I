@@ -238,6 +238,7 @@ namespace CapaVista
 
                     if (esdecimal)
                     {
+                        decimal esdecimal2 = decimal.Parse(e.FormattedValue.ToString());
                         if (preciofinal == 0)
                         {
                             e.Cancel = true;
@@ -246,6 +247,7 @@ namespace CapaVista
                         else
                         {
                             decimal SubTotal = preciofinal * cantidadfinal;
+                            DetalleVentaData.Rows[e.RowIndex].Cells["Precio"].Value = esdecimal2;
                             DetalleVentaData.Rows[e.RowIndex].Cells["SubTotal"].Value = SubTotal;
                             CalcularMontoTotal();
                         }
@@ -259,7 +261,7 @@ namespace CapaVista
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Error al ingresar la cantidad", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

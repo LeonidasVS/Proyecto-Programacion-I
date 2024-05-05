@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(325, 35);
+            this.label1.Location = new System.Drawing.Point(312, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 25);
             this.label1.TabIndex = 1;
@@ -55,13 +55,14 @@
             // 
             // Regresar
             // 
-            this.Regresar.BackColor = System.Drawing.Color.Transparent;
+            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Regresar.Location = new System.Drawing.Point(0, 1);
@@ -75,12 +76,13 @@
             // AñadirProducto
             // 
             this.AñadirProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.AñadirProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AñadirProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AñadirProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AñadirProducto.ForeColor = System.Drawing.SystemColors.Info;
             this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
             this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(373, 389);
+            this.AñadirProducto.Location = new System.Drawing.Point(371, 390);
             this.AñadirProducto.Name = "AñadirProducto";
             this.AñadirProducto.Size = new System.Drawing.Size(88, 37);
             this.AñadirProducto.TabIndex = 14;
@@ -100,6 +102,7 @@
             this.Estado,
             this.Editar,
             this.Eliminar});
+            this.TablaMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TablaMarcas.Location = new System.Drawing.Point(35, 123);
             this.TablaMarcas.Name = "TablaMarcas";
             this.TablaMarcas.ReadOnly = true;
@@ -158,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(837, 450);
             this.Controls.Add(this.TablaMarcas);
             this.Controls.Add(this.AñadirProducto);
@@ -166,7 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MantenimientoMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MantenimientoMarca";
+            this.Text = "Store AS | Admón Marca";
             ((System.ComponentModel.ISupportInitialize)(this.TablaMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

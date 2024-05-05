@@ -82,11 +82,14 @@
             // 
             // Regresar
             // 
+            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Regresar.Location = new System.Drawing.Point(1, 0);
@@ -101,6 +104,7 @@
             // checkMarca
             // 
             this.checkMarca.AutoSize = true;
+            this.checkMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkMarca.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.marcasBinding, "Estado", true));
             this.checkMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -144,18 +148,19 @@
             // Titulo
             // 
             this.Titulo.AutoSize = true;
-            this.Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Titulo.Location = new System.Drawing.Point(134, 25);
+            this.Titulo.Location = new System.Drawing.Point(106, 24);
             this.Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(198, 25);
+            this.Titulo.Size = new System.Drawing.Size(243, 27);
             this.Titulo.TabIndex = 16;
             this.Titulo.Text = "Registro de Marcas";
             // 
             // GuardarMarca
             // 
             this.GuardarMarca.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.GuardarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GuardarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarMarca.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarMarca.ForeColor = System.Drawing.SystemColors.Info;
@@ -173,12 +178,13 @@
             // 
             // Habilitar
             // 
-            this.Habilitar.BackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Habilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Habilitar.FlatAppearance.BorderSize = 0;
-            this.Habilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Habilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Habilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Habilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Habilitar.ForeColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Habilitar.Image = ((System.Drawing.Image)(resources.GetObject("Habilitar.Image")));
             this.Habilitar.Location = new System.Drawing.Point(356, 105);
             this.Habilitar.Name = "Habilitar";
@@ -191,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(473, 531);
             this.Controls.Add(this.Habilitar);
             this.Controls.Add(this.GuardarMarca);
@@ -205,7 +211,7 @@
             this.Controls.Add(this.Titulo);
             this.Name = "MarcaRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MarcaRegistro";
+            this.Text = "Store AS | Registro de Marcas";
             ((System.ComponentModel.ISupportInitialize)(this.marcasBinding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

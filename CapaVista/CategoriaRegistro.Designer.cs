@@ -88,6 +88,7 @@
             // checkCategoria
             // 
             this.checkCategoria.AutoSize = true;
+            this.checkCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cateBinding, "Estado", true));
             this.checkCategoria.Location = new System.Drawing.Point(209, 391);
             this.checkCategoria.Margin = new System.Windows.Forms.Padding(4);
@@ -100,12 +101,13 @@
             // GuardarProducto
             // 
             this.GuardarProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.GuardarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GuardarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GuardarProducto.ForeColor = System.Drawing.SystemColors.Info;
             this.GuardarProducto.Image = ((System.Drawing.Image)(resources.GetObject("GuardarProducto.Image")));
             this.GuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarProducto.Location = new System.Drawing.Point(191, 468);
+            this.GuardarProducto.Location = new System.Drawing.Point(198, 462);
             this.GuardarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarProducto.Name = "GuardarProducto";
             this.GuardarProducto.Size = new System.Drawing.Size(100, 41);
@@ -117,11 +119,14 @@
             // 
             // Regresar
             // 
+            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Regresar.Location = new System.Drawing.Point(1, 2);
@@ -171,12 +176,13 @@
             // 
             // Habilitar
             // 
-            this.Habilitar.BackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Habilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Habilitar.FlatAppearance.BorderSize = 0;
-            this.Habilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.Habilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Habilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Habilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Habilitar.ForeColor = System.Drawing.Color.CadetBlue;
+            this.Habilitar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Habilitar.Image = ((System.Drawing.Image)(resources.GetObject("Habilitar.Image")));
             this.Habilitar.Location = new System.Drawing.Point(378, 98);
             this.Habilitar.Name = "Habilitar";
@@ -189,8 +195,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(509, 554);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(509, 516);
             this.Controls.Add(this.Habilitar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -206,7 +212,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CategoriaRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CategoriaRegistro";
+            this.Text = "Store AS | Registro Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.cateBinding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
