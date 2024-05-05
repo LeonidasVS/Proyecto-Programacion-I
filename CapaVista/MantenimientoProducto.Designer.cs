@@ -43,6 +43,8 @@
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Regresar = new System.Windows.Forms.Button();
             this.AñadirProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
@@ -177,6 +179,22 @@
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Width = 75;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Editar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 75;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Width = 75;
+            // 
             // Regresar
             // 
             this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -200,16 +218,21 @@
             // 
             // AñadirProducto
             // 
-            this.AñadirProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.AñadirProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.BackgroundImage")));
+            this.AñadirProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AñadirProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AñadirProducto.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.AñadirProducto.FlatAppearance.BorderSize = 0;
+            this.AñadirProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.AñadirProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.AñadirProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AñadirProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AñadirProducto.ForeColor = System.Drawing.SystemColors.Info;
+            this.AñadirProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
             this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(348, 447);
+            this.AñadirProducto.Location = new System.Drawing.Point(361, 435);
             this.AñadirProducto.Name = "AñadirProducto";
-            this.AñadirProducto.Size = new System.Drawing.Size(88, 37);
+            this.AñadirProducto.Size = new System.Drawing.Size(84, 66);
             this.AñadirProducto.TabIndex = 13;
             this.AñadirProducto.Text = "Añadir";
             this.AñadirProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -252,5 +275,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

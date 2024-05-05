@@ -41,7 +41,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Habilitar = new System.Windows.Forms.Button();
+            this.Bordes = new System.Windows.Forms.PictureBox();
+            this.Bordes2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cateBinding)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bordes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bordes2)).BeginInit();
             this.SuspendLayout();
             // 
             // Titulo
@@ -58,13 +62,14 @@
             // 
             // NombreCategoria
             // 
-            this.NombreCategoria.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.NombreCategoria.BackColor = System.Drawing.Color.White;
+            this.NombreCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NombreCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cateBinding, "Nombre", true));
             this.NombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreCategoria.Location = new System.Drawing.Point(118, 113);
+            this.NombreCategoria.Location = new System.Drawing.Point(133, 115);
             this.NombreCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.NombreCategoria.Name = "NombreCategoria";
-            this.NombreCategoria.Size = new System.Drawing.Size(253, 22);
+            this.NombreCategoria.Size = new System.Drawing.Size(237, 15);
             this.NombreCategoria.TabIndex = 1;
             this.NombreCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -74,14 +79,15 @@
             // 
             // Descripcion
             // 
-            this.Descripcion.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Descripcion.BackColor = System.Drawing.Color.White;
+            this.Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Descripcion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cateBinding, "Descripcion", true));
             this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.Location = new System.Drawing.Point(28, 219);
+            this.Descripcion.Location = new System.Drawing.Point(44, 219);
             this.Descripcion.Margin = new System.Windows.Forms.Padding(4);
             this.Descripcion.Multiline = true;
             this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(453, 89);
+            this.Descripcion.Size = new System.Drawing.Size(427, 73);
             this.Descripcion.TabIndex = 2;
             this.Descripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -90,7 +96,7 @@
             this.checkCategoria.AutoSize = true;
             this.checkCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cateBinding, "Estado", true));
-            this.checkCategoria.Location = new System.Drawing.Point(209, 391);
+            this.checkCategoria.Location = new System.Drawing.Point(216, 391);
             this.checkCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.checkCategoria.Name = "checkCategoria";
             this.checkCategoria.Size = new System.Drawing.Size(69, 20);
@@ -100,17 +106,22 @@
             // 
             // GuardarProducto
             // 
-            this.GuardarProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.GuardarProducto.BackgroundImage = global::CapaVista.Properties.Resources.button_7284348_1280;
+            this.GuardarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GuardarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GuardarProducto.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.GuardarProducto.FlatAppearance.BorderSize = 0;
+            this.GuardarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.GuardarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.GuardarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GuardarProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GuardarProducto.ForeColor = System.Drawing.SystemColors.Info;
+            this.GuardarProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GuardarProducto.Image = ((System.Drawing.Image)(resources.GetObject("GuardarProducto.Image")));
             this.GuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarProducto.Location = new System.Drawing.Point(198, 462);
+            this.GuardarProducto.Location = new System.Drawing.Point(206, 444);
             this.GuardarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarProducto.Name = "GuardarProducto";
-            this.GuardarProducto.Size = new System.Drawing.Size(100, 41);
+            this.GuardarProducto.Size = new System.Drawing.Size(91, 59);
             this.GuardarProducto.TabIndex = 11;
             this.GuardarProducto.Text = "Guardar";
             this.GuardarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -143,7 +154,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(202, 84);
+            this.label2.Location = new System.Drawing.Point(210, 83);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 16);
@@ -155,7 +166,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(195, 184);
+            this.label3.Location = new System.Drawing.Point(203, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 16);
@@ -167,7 +178,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(216, 361);
+            this.label4.Location = new System.Drawing.Point(223, 361);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
@@ -184,12 +195,34 @@
             this.Habilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Habilitar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Habilitar.Image = ((System.Drawing.Image)(resources.GetObject("Habilitar.Image")));
-            this.Habilitar.Location = new System.Drawing.Point(378, 98);
+            this.Habilitar.Location = new System.Drawing.Point(386, 97);
             this.Habilitar.Name = "Habilitar";
             this.Habilitar.Size = new System.Drawing.Size(35, 53);
             this.Habilitar.TabIndex = 26;
             this.Habilitar.UseVisualStyleBackColor = false;
             this.Habilitar.Click += new System.EventHandler(this.Habilitar_Click);
+            // 
+            // Bordes
+            // 
+            this.Bordes.Image = global::CapaVista.Properties.Resources.texbox;
+            this.Bordes.Location = new System.Drawing.Point(125, 107);
+            this.Bordes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Bordes.Name = "Bordes";
+            this.Bordes.Size = new System.Drawing.Size(253, 31);
+            this.Bordes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bordes.TabIndex = 27;
+            this.Bordes.TabStop = false;
+            // 
+            // Bordes2
+            // 
+            this.Bordes2.Image = global::CapaVista.Properties.Resources.texbox;
+            this.Bordes2.Location = new System.Drawing.Point(30, 205);
+            this.Bordes2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Bordes2.Name = "Bordes2";
+            this.Bordes2.Size = new System.Drawing.Size(456, 100);
+            this.Bordes2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bordes2.TabIndex = 28;
+            this.Bordes2.TabStop = false;
             // 
             // CategoriaRegistro
             // 
@@ -197,6 +230,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(509, 516);
+            this.Controls.Add(this.NombreCategoria);
+            this.Controls.Add(this.Bordes);
             this.Controls.Add(this.Habilitar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -205,8 +240,8 @@
             this.Controls.Add(this.GuardarProducto);
             this.Controls.Add(this.checkCategoria);
             this.Controls.Add(this.Descripcion);
-            this.Controls.Add(this.NombreCategoria);
             this.Controls.Add(this.Titulo);
+            this.Controls.Add(this.Bordes2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -214,6 +249,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store AS | Registro Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.cateBinding)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bordes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bordes2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +269,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.BindingSource cateBinding;
         private System.Windows.Forms.Button Habilitar;
+        private System.Windows.Forms.PictureBox Bordes;
+        private System.Windows.Forms.PictureBox Bordes2;
     }
 }

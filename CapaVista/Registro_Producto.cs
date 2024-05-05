@@ -30,7 +30,7 @@ namespace CapaVista
             if (_id > 0)
             {
                 this.Text = "Tienda Store_AS | Edicion de Productos";
-                GuardarProducto.Text = "Update";
+                Guardar.Text = "Update";
                 Titulo.Text = "Edicion de Productos";
                 CargarDatosProdutos(_id);
             }
@@ -67,13 +67,6 @@ namespace CapaVista
         {
             this.Close();
         }
-
-
-        private void GuardarProducto_Click(object sender, EventArgs e)
-        {
-            Guardarproducto();
-        }
-
         private void Guardarproducto()
         {
             try
@@ -85,7 +78,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Nombre del Producto", "Tienda AS | Registro Producto",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     textBox1.Focus();
-                    textBox1.BackColor = Color.Azure;
                     return;
                 }
                 if (string.IsNullOrEmpty(DescripcionProducto.Text))
@@ -93,7 +85,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Descripcion del Producto", "Tienda AS | Registro Producto",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     DescripcionProducto.Focus();
-                    DescripcionProducto.BackColor = Color.Azure;
                     return;
                 }
                 if (string.IsNullOrEmpty(Stock.Text) || Convert.ToDecimal(Stock.Text) == 0)
@@ -101,7 +92,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Existencias del Producto", "Tienda AS | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Stock.Focus();
-                    Stock.BackColor = Color.Azure;
                     return;
                 }
                 if (string.IsNullOrEmpty(PrecioUni.Text) || Convert.ToDecimal(PrecioUni.Text) == 0)
@@ -109,7 +99,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Precio del Producto", "Tienda AS | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     PrecioUni.Focus();
-                    PrecioUni.BackColor = Color.Azure;
                     return;
                 }
                 if (!Activo.Checked)
@@ -184,6 +173,10 @@ namespace CapaVista
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+        private void Guardar_Click(object sender, EventArgs e)
+        {
+            Guardarproducto();
         }
     }
 }

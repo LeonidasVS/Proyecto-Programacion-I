@@ -68,7 +68,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Nombre de la Categoria", "Tienda AS | Registro Categoria",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     NombreCategoria.Focus();
-                    NombreCategoria.BackColor = Color.Azure;
                     return;
                 }
                 if (string.IsNullOrEmpty(Descripcion.Text))
@@ -76,7 +75,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Descripcion de la Categoria", "Tienda AS | Registro Categoria",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Descripcion.Focus();
-                    Descripcion.BackColor = Color.Azure;
                     return;
                 }
                 if (!checkCategoria.Checked)
@@ -144,5 +142,7 @@ namespace CapaVista
         {
             NombreCategoria.Enabled = true;
         }
+
+
     }
 }

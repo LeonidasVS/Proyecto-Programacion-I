@@ -60,7 +60,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Nombre de la Marca", "Tienda AS | Registro Marca",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     NombreMarca.Focus();
-                    NombreMarca.BackColor = Color.Azure;
                     return;
                 }
                 if (string.IsNullOrEmpty(Descripcion.Text))
@@ -68,7 +67,6 @@ namespace CapaVista
                     MessageBox.Show("Se Requiere Descripcion de la Marca", "Tienda AS | Registro Registro Marca",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Descripcion.Focus();
-                    Descripcion.BackColor = Color.Azure;
                     return;
                 }
                 if (!checkMarca.Checked)

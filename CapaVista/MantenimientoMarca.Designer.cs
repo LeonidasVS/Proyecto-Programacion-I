@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoMarca));
             this.label1 = new System.Windows.Forms.Label();
-            this.Regresar = new System.Windows.Forms.Button();
-            this.AñadirProducto = new System.Windows.Forms.Button();
             this.TablaMarcas = new System.Windows.Forms.DataGridView();
             this.idMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +37,10 @@
             this.Estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.AñadirProducto = new System.Windows.Forms.Button();
+            this.Regresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TablaMarcas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,44 +54,6 @@
             this.label1.Size = new System.Drawing.Size(191, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "AÑADIR MARCAS";
-            // 
-            // Regresar
-            // 
-            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Regresar.FlatAppearance.BorderSize = 0;
-            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
-            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
-            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Regresar.Location = new System.Drawing.Point(0, 1);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(35, 33);
-            this.Regresar.TabIndex = 12;
-            this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Regresar.UseVisualStyleBackColor = false;
-            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
-            // 
-            // AñadirProducto
-            // 
-            this.AñadirProducto.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.AñadirProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AñadirProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AñadirProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AñadirProducto.ForeColor = System.Drawing.SystemColors.Info;
-            this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
-            this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(371, 390);
-            this.AñadirProducto.Name = "AñadirProducto";
-            this.AñadirProducto.Size = new System.Drawing.Size(88, 37);
-            this.AñadirProducto.TabIndex = 14;
-            this.AñadirProducto.Text = "Añadir";
-            this.AñadirProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AñadirProducto.UseVisualStyleBackColor = false;
-            this.AñadirProducto.Click += new System.EventHandler(this.AñadirMarca_Click);
             // 
             // TablaMarcas
             // 
@@ -157,6 +121,63 @@
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Width = 60;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Editar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 60;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 60;
+            // 
+            // AñadirProducto
+            // 
+            this.AñadirProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.BackgroundImage")));
+            this.AñadirProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AñadirProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AñadirProducto.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.AñadirProducto.FlatAppearance.BorderSize = 0;
+            this.AñadirProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.AñadirProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.AñadirProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AñadirProducto.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AñadirProducto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
+            this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AñadirProducto.Location = new System.Drawing.Point(371, 374);
+            this.AñadirProducto.Name = "AñadirProducto";
+            this.AñadirProducto.Size = new System.Drawing.Size(85, 53);
+            this.AñadirProducto.TabIndex = 14;
+            this.AñadirProducto.Text = "Añadir";
+            this.AñadirProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AñadirProducto.UseVisualStyleBackColor = false;
+            this.AñadirProducto.Click += new System.EventHandler(this.AñadirMarca_Click);
+            // 
+            // Regresar
+            // 
+            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Regresar.FlatAppearance.BorderSize = 0;
+            this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Regresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
+            this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Regresar.Location = new System.Drawing.Point(0, 1);
+            this.Regresar.Name = "Regresar";
+            this.Regresar.Size = new System.Drawing.Size(35, 33);
+            this.Regresar.TabIndex = 12;
+            this.Regresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Regresar.UseVisualStyleBackColor = false;
+            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
+            // 
             // MantenimientoMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,5 +208,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Estado;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }
