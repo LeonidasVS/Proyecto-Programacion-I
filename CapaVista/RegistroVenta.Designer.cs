@@ -235,7 +235,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 549);
+            this.label5.Location = new System.Drawing.Point(25, 541);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 18);
             this.label5.TabIndex = 12;
@@ -243,7 +243,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(133, 543);
+            this.txtTotal.Location = new System.Drawing.Point(133, 535);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(205, 26);
@@ -256,7 +256,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(512, 551);
+            this.label6.Location = new System.Drawing.Point(512, 543);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 18);
             this.label6.TabIndex = 14;
@@ -270,7 +270,7 @@
             this.cmbMetodoPago.DataSource = this.MetodoPagoBindingSource;
             this.cmbMetodoPago.DisplayMember = "FormaDePago";
             this.cmbMetodoPago.FormattingEnabled = true;
-            this.cmbMetodoPago.Location = new System.Drawing.Point(647, 546);
+            this.cmbMetodoPago.Location = new System.Drawing.Point(647, 538);
             this.cmbMetodoPago.Name = "cmbMetodoPago";
             this.cmbMetodoPago.Size = new System.Drawing.Size(224, 26);
             this.cmbMetodoPago.TabIndex = 15;

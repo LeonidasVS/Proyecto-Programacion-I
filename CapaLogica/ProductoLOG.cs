@@ -13,7 +13,6 @@ namespace CapaLogica
     public class ProductoLOG
     {
         ProductoDAL _productoDAL;
-
         public int EditarProducto(Producto producto, int id)
         {
             _productoDAL = new ProductoDAL();
@@ -74,7 +73,6 @@ namespace CapaLogica
             _productoDAL = new ProductoDAL();
             return _productoDAL.FiltrarPorNombre(nombre, inactivo);
         }
-
         public string NombreProductoDesdeBD(int id)
         {
             _productoDAL = new ProductoDAL();

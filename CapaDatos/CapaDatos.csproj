@@ -57,32 +57,12 @@
     <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
     <Compile Include="MetodoPagoDAL.cs" />
-    <Compile Include="Migrations\202404160354259_Nuevas_Tablas.cs" />
-    <Compile Include="Migrations\202404160354259_Nuevas_Tablas.Designer.cs">
-      <DependentUpon>202404160354259_Nuevas_Tablas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404160432508_Actualizacion.cs" />
-    <Compile Include="Migrations\202404160432508_Actualizacion.Designer.cs">
-      <DependentUpon>202404160432508_Actualizacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404232239026_Verificar.cs" />
-    <Compile Include="Migrations\202404232239026_Verificar.Designer.cs">
-      <DependentUpon>202404232239026_Verificar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404242052320_AtributoEstado.cs" />
-    <Compile Include="Migrations\202404242052320_AtributoEstado.Designer.cs">
-      <DependentUpon>202404242052320_AtributoEstado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404270227434_EstadoMtdPago.cs" />
-    <Compile Include="Migrations\202404270227434_EstadoMtdPago.Designer.cs">
-      <DependentUpon>202404270227434_EstadoMtdPago.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductoDAL.cs" />
-    <Compile Include="Migrations\202404150318538_Modelos.cs" />
-    <Compile Include="Migrations\202404150318538_Modelos.Designer.cs">
-      <DependentUpon>202404150318538_Modelos.cs</DependentUpon>
+    <Compile Include="Migrations\202405062254231_Migracion.cs" />
+    <Compile Include="Migrations\202405062254231_Migracion.designer.cs">
+      <DependentUpon>202405062254231_Migracion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ProductoDAL.cs" />
     <Compile Include="ContextoBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VentaDAL.cs" />
@@ -98,23 +78,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404150318538_Modelos.resx">
-      <DependentUpon>202404150318538_Modelos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404160354259_Nuevas_Tablas.resx">
-      <DependentUpon>202404160354259_Nuevas_Tablas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404160432508_Actualizacion.resx">
-      <DependentUpon>202404160432508_Actualizacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404232239026_Verificar.resx">
-      <DependentUpon>202404232239026_Verificar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404242052320_AtributoEstado.resx">
-      <DependentUpon>202404242052320_AtributoEstado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404270227434_EstadoMtdPago.resx">
-      <DependentUpon>202404270227434_EstadoMtdPago.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405062254231_Migracion.resx">
+      <DependentUpon>202405062254231_Migracion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
