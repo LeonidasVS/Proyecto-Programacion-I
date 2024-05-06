@@ -249,6 +249,7 @@
             this.Controls.Add(this.AñadirProducto);
             this.Controls.Add(this.TablaProductos);
             this.Controls.Add(this.Filtro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MantenimientoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoProducto";

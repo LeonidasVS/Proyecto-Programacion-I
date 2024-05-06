@@ -242,6 +242,7 @@
             this.Controls.Add(this.Regresar);
             this.Controls.Add(this.checkMarca);
             this.Controls.Add(this.Titulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MarcaRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store AS | Registro de Marcas";

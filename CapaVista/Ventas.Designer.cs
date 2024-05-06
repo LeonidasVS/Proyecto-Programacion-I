@@ -48,6 +48,7 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.ProcesarVenta = new System.Windows.Forms.Button();
             this.comboBoxNombrePro = new System.Windows.Forms.ComboBox();
             this.añadirVenta = new System.Windows.Forms.Button();
@@ -105,7 +106,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(177, 112);
+            this.label1.Location = new System.Drawing.Point(156, 114);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
@@ -117,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(542, 23);
+            this.label2.Location = new System.Drawing.Point(552, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 15);
@@ -129,7 +130,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(224, 26);
+            this.label3.Location = new System.Drawing.Point(278, 32);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 15);
@@ -141,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(564, 108);
+            this.label4.Location = new System.Drawing.Point(629, 114);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 15);
@@ -153,7 +154,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(38, 526);
+            this.label5.Location = new System.Drawing.Point(30, 526);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 15);
@@ -166,7 +167,7 @@
             this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Stock", true));
             this.txtStock.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(545, 135);
+            this.txtStock.Location = new System.Drawing.Point(610, 141);
             this.txtStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtStock.Name = "txtStock";
             this.txtStock.ReadOnly = true;
@@ -183,7 +184,7 @@
             this.txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMonto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.VentabindingSource, "Total", true));
             this.txtMonto.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(124, 526);
+            this.txtMonto.Location = new System.Drawing.Point(116, 526);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.ReadOnly = true;
@@ -199,7 +200,7 @@
             this.txtCantidad.BackColor = System.Drawing.Color.White;
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(519, 47);
+            this.txtCantidad.Location = new System.Drawing.Point(529, 57);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(117, 17);
@@ -212,7 +213,7 @@
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "idProducto", true));
             this.txtCodigo.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(161, 135);
+            this.txtCodigo.Location = new System.Drawing.Point(140, 137);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
@@ -230,13 +231,15 @@
             this.Productos,
             this.Precio,
             this.Cantidad,
-            this.SubTotal});
+            this.SubTotal,
+            this.Eliminar});
             this.DetalleVentaData.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DetalleVentaData.Location = new System.Drawing.Point(42, 197);
+            this.DetalleVentaData.Location = new System.Drawing.Point(32, 205);
             this.DetalleVentaData.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DetalleVentaData.Name = "DetalleVentaData";
-            this.DetalleVentaData.Size = new System.Drawing.Size(774, 307);
+            this.DetalleVentaData.Size = new System.Drawing.Size(850, 307);
             this.DetalleVentaData.TabIndex = 25;
+            this.DetalleVentaData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DetalleVentaData_CellClick);
             this.DetalleVentaData.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DetalleVentaData_CellValidating);
             // 
             // Codigo
@@ -278,6 +281,13 @@
             this.SubTotal.ReadOnly = true;
             this.SubTotal.Width = 125;
             // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Width = 75;
+            // 
             // ProcesarVenta
             // 
             this.ProcesarVenta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProcesarVenta.BackgroundImage")));
@@ -312,10 +322,10 @@
             this.comboBoxNombrePro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxNombrePro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNombrePro.FormattingEnabled = true;
-            this.comboBoxNombrePro.Location = new System.Drawing.Point(152, 48);
+            this.comboBoxNombrePro.Location = new System.Drawing.Point(211, 54);
             this.comboBoxNombrePro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxNombrePro.Name = "comboBoxNombrePro";
-            this.comboBoxNombrePro.Size = new System.Drawing.Size(209, 25);
+            this.comboBoxNombrePro.Size = new System.Drawing.Size(205, 25);
             this.comboBoxNombrePro.TabIndex = 29;
             this.comboBoxNombrePro.ValueMember = "idProducto";
             this.comboBoxNombrePro.SelectedIndexChanged += new System.EventHandler(this.comboBoxNombrePro_SelectedIndexChanged);
@@ -329,7 +339,7 @@
             this.añadirVenta.ForeColor = System.Drawing.SystemColors.Info;
             this.añadirVenta.Image = ((System.Drawing.Image)(resources.GetObject("añadirVenta.Image")));
             this.añadirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.añadirVenta.Location = new System.Drawing.Point(696, 36);
+            this.añadirVenta.Location = new System.Drawing.Point(729, 46);
             this.añadirVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.añadirVenta.Name = "añadirVenta";
             this.añadirVenta.Size = new System.Drawing.Size(39, 37);
@@ -347,7 +357,7 @@
             this.comboPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboPagos.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPagos.FormattingEnabled = true;
-            this.comboPagos.Location = new System.Drawing.Point(645, 526);
+            this.comboPagos.Location = new System.Drawing.Point(706, 523);
             this.comboPagos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboPagos.Name = "comboPagos";
             this.comboPagos.Size = new System.Drawing.Size(170, 25);
@@ -367,7 +377,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(524, 529);
+            this.label6.Location = new System.Drawing.Point(585, 526);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 15);
@@ -380,7 +390,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Precio", true));
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(358, 135);
+            this.textBox1.Location = new System.Drawing.Point(377, 141);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -392,7 +402,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(400, 112);
+            this.label7.Location = new System.Drawing.Point(419, 118);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 15);
@@ -402,7 +412,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox3.Location = new System.Drawing.Point(513, 41);
+            this.pictureBox3.Location = new System.Drawing.Point(523, 51);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(129, 29);
@@ -413,7 +423,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox1.Location = new System.Drawing.Point(540, 130);
+            this.pictureBox1.Location = new System.Drawing.Point(605, 136);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 27);
@@ -424,7 +434,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox2.Location = new System.Drawing.Point(158, 131);
+            this.pictureBox2.Location = new System.Drawing.Point(137, 133);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(135, 25);
@@ -435,7 +445,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox4.Location = new System.Drawing.Point(353, 131);
+            this.pictureBox4.Location = new System.Drawing.Point(372, 137);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(141, 26);
@@ -446,10 +456,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox5.Location = new System.Drawing.Point(145, 44);
+            this.pictureBox5.Location = new System.Drawing.Point(203, 50);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(221, 33);
+            this.pictureBox5.Size = new System.Drawing.Size(222, 33);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 39;
             this.pictureBox5.TabStop = false;
@@ -457,7 +467,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox6.Location = new System.Drawing.Point(119, 522);
+            this.pictureBox6.Location = new System.Drawing.Point(111, 522);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(135, 25);
@@ -468,7 +478,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox7.Location = new System.Drawing.Point(640, 522);
+            this.pictureBox7.Location = new System.Drawing.Point(701, 519);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(180, 33);
@@ -481,7 +491,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(859, 659);
+            this.ClientSize = new System.Drawing.Size(905, 659);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtCodigo);
@@ -509,6 +519,7 @@
             this.Controls.Add(this.pictureBox7);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -550,11 +561,6 @@
         private System.Windows.Forms.ComboBox comboPagos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource VentabindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.BindingSource productoBinding;
         private System.Windows.Forms.BindingSource metodoBinding;
         private System.Windows.Forms.TextBox textBox1;
@@ -567,5 +573,11 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Productos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

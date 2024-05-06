@@ -64,7 +64,6 @@ namespace CapaVista
             {
                 DetalleVentaData.Rows.RemoveAt(i);
             }
-
         }
         private void ProcesarVenta_Click(object sender, EventArgs e)
         {
@@ -231,7 +230,7 @@ namespace CapaVista
         {
             try
             {
-                if (e.ColumnIndex==2 && e.RowIndex>=0)
+                if (e.ColumnIndex==3 && e.RowIndex>=0)
                 {
                    bool esdecimal=decimal.TryParse(e.FormattedValue.ToString(),out  decimal preciofinal);
                    int cantidadfinal = int.Parse(DetalleVentaData.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString());
@@ -239,7 +238,7 @@ namespace CapaVista
                     if (esdecimal)
                     {
                         decimal esdecimal2 = decimal.Parse(e.FormattedValue.ToString());
-                        if (preciofinal == 0)
+                        if (preciofinal<=0)
                         {
                             e.Cancel = true;
                             MessageBox.Show("Ingresa un precio valido", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -262,6 +261,28 @@ namespace CapaVista
             catch (Exception)
             {
                 MessageBox.Show("Error al ingresar la cantidad", "Tienda AS | Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DetalleVentaData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (DetalleVentaData.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                {
+                    var ValidarEliminar = MessageBox.Show("¿Deseas Eliminar el producto de la venta?", "Tienda AS | Precaución", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                    if (ValidarEliminar==DialogResult.Yes)
+                    {
+                        DetalleVentaData.Rows.RemoveAt(e.RowIndex);
+                        CalcularMontoTotal();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
             }
         }
     }
