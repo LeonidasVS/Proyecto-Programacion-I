@@ -54,14 +54,20 @@ namespace CapaVista
         private void CargarMarcas()
         {
             _marcaLog = new MarcaLog();
-            marcaBindingSource.DataSource = _marcaLog.ObtenerMarcas();
+            List<Marca> marcas = _marcaLog.ObtenerMarcas();
+            marcas.Insert(0, new Marca { idMarca = 0, Nombre = "--- Selecciona una Opción ---" });
+            cbxMarca.DataSource = marcas;
+            cbxMarca.SelectedIndex = 0;
 
         }
         private void CargarCategorias()
         {
             categoriaLog = new CategoriaLog();
-            categoriaBindingSource.DataSource = categoriaLog.ObtenerCategorias();
-            
+            List<Categoria> categorys = categoriaLog.ObtenerCategorias();
+            categorys.Insert(0, new Categoria { idCategoria = 0, Nombre = "--- Selecciona una Opción ---" });
+            cbxCategoria.DataSource = categorys;
+            cbxCategoria.SelectedIndex = 0;
+
         }
         private void Regresar_Click(object sender, EventArgs e)
         {
@@ -113,13 +119,13 @@ namespace CapaVista
                         return;
                     }
                 }
-                if (cbxMarca.SelectedItem==null)
+                if (cbxMarca.SelectedIndex==0)
                 {
                     MessageBox.Show("Selecciona una Marca del Producto", "Tienda AS | Registro Producto",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if (cbxCategoria.SelectedItem==null)
+                if (cbxCategoria.SelectedIndex == 0)
                 {
                     MessageBox.Show("Selecciona una Categoria del Producto", "Tienda AS | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
