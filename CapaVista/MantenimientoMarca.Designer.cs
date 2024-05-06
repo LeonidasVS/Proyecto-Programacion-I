@@ -49,7 +49,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(312, 36);
+            this.label1.Location = new System.Drawing.Point(314, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 25);
             this.label1.TabIndex = 1;
@@ -67,10 +67,10 @@
             this.Editar,
             this.Eliminar});
             this.TablaMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TablaMarcas.Location = new System.Drawing.Point(35, 123);
+            this.TablaMarcas.Location = new System.Drawing.Point(37, 75);
             this.TablaMarcas.Name = "TablaMarcas";
             this.TablaMarcas.ReadOnly = true;
-            this.TablaMarcas.Size = new System.Drawing.Size(765, 221);
+            this.TablaMarcas.Size = new System.Drawing.Size(764, 280);
             this.TablaMarcas.TabIndex = 15;
             this.TablaMarcas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaMarcas_CellClick);
             // 
@@ -149,7 +149,7 @@
             this.AñadirProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
             this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(371, 374);
+            this.AñadirProducto.Location = new System.Drawing.Point(374, 375);
             this.AñadirProducto.Name = "AñadirProducto";
             this.AñadirProducto.Size = new System.Drawing.Size(85, 53);
             this.AñadirProducto.TabIndex = 14;

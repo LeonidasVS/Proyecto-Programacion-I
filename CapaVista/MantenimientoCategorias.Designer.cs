@@ -49,7 +49,7 @@
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(280, 35);
+            this.label1.Location = new System.Drawing.Point(275, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 25);
             this.label1.TabIndex = 3;
@@ -67,9 +67,9 @@
             this.Editar,
             this.Eliminar});
             this.TablaCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TablaCategorias.Location = new System.Drawing.Point(40, 116);
+            this.TablaCategorias.Location = new System.Drawing.Point(42, 75);
             this.TablaCategorias.Name = "TablaCategorias";
-            this.TablaCategorias.Size = new System.Drawing.Size(724, 224);
+            this.TablaCategorias.Size = new System.Drawing.Size(723, 284);
             this.TablaCategorias.TabIndex = 15;
             this.TablaCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaCategorias_CellClick);
             // 
@@ -151,7 +151,7 @@
             this.AñadirCategory.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AñadirCategory.Image = ((System.Drawing.Image)(resources.GetObject("AñadirCategory.Image")));
             this.AñadirCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirCategory.Location = new System.Drawing.Point(351, 373);
+            this.AñadirCategory.Location = new System.Drawing.Point(354, 380);
             this.AñadirCategory.Name = "AñadirCategory";
             this.AñadirCategory.Size = new System.Drawing.Size(84, 61);
             this.AñadirCategory.TabIndex = 14;
