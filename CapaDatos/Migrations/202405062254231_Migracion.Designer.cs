@@ -7,13 +7,13 @@ namespace CapaDatos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Verificar : IMigrationMetadata
+    public sealed partial class Migracion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Verificar));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Migracion));
         
         string IMigrationMetadata.Id
         {
-            get { return "202404232239026_Verificar"; }
+            get { return "202405062254231_Migracion"; }
         }
         
         string IMigrationMetadata.Source

@@ -13,7 +13,6 @@ namespace CapaLogica
     public class ProductoLOG
     {
         ProductoDAL _productoDAL;
-
         public int EditarProducto(Producto producto, int id)
         {
             _productoDAL = new ProductoDAL();
