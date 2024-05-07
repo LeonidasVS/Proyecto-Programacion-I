@@ -53,7 +53,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(202, 336);
+            this.label4.Location = new System.Drawing.Point(203, 270);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
@@ -65,7 +65,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(183, 186);
+            this.label3.Location = new System.Drawing.Point(185, 135);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 16);
@@ -77,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(204, 90);
+            this.label2.Location = new System.Drawing.Point(204, 63);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
@@ -91,7 +91,7 @@
             this.checkMarca.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.marcasBinding, "Estado", true));
             this.checkMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkMarca.Location = new System.Drawing.Point(197, 360);
+            this.checkMarca.Location = new System.Drawing.Point(198, 294);
             this.checkMarca.Margin = new System.Windows.Forms.Padding(4);
             this.checkMarca.Name = "checkMarca";
             this.checkMarca.Size = new System.Drawing.Size(63, 19);
@@ -109,7 +109,7 @@
             this.Descripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Descripcion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcasBinding, "Descripcion", true));
             this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.Location = new System.Drawing.Point(44, 221);
+            this.Descripcion.Location = new System.Drawing.Point(46, 170);
             this.Descripcion.Margin = new System.Windows.Forms.Padding(4);
             this.Descripcion.Multiline = true;
             this.Descripcion.Name = "Descripcion";
@@ -123,7 +123,7 @@
             this.NombreMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NombreMarca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcasBinding, "Nombre", true));
             this.NombreMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreMarca.Location = new System.Drawing.Point(112, 121);
+            this.NombreMarca.Location = new System.Drawing.Point(112, 94);
             this.NombreMarca.Margin = new System.Windows.Forms.Padding(4);
             this.NombreMarca.Name = "NombreMarca";
             this.NombreMarca.Size = new System.Drawing.Size(232, 15);
@@ -135,7 +135,7 @@
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Titulo.Location = new System.Drawing.Point(108, 27);
+            this.Titulo.Location = new System.Drawing.Point(108, 12);
             this.Titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Titulo.Name = "Titulo";
             this.Titulo.Size = new System.Drawing.Size(243, 27);
@@ -145,7 +145,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox2.Location = new System.Drawing.Point(106, 112);
+            this.pictureBox2.Location = new System.Drawing.Point(106, 85);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(245, 33);
@@ -156,7 +156,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 210);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 159);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(405, 89);
@@ -174,7 +174,7 @@
             this.Habilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Habilitar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Habilitar.Image = ((System.Drawing.Image)(resources.GetObject("Habilitar.Image")));
-            this.Habilitar.Location = new System.Drawing.Point(356, 103);
+            this.Habilitar.Location = new System.Drawing.Point(356, 76);
             this.Habilitar.Name = "Habilitar";
             this.Habilitar.Size = new System.Drawing.Size(35, 53);
             this.Habilitar.TabIndex = 25;
@@ -194,7 +194,7 @@
             this.GuardarMarca.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
             this.GuardarMarca.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GuardarMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarMarca.Location = new System.Drawing.Point(180, 426);
+            this.GuardarMarca.Location = new System.Drawing.Point(182, 335);
             this.GuardarMarca.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarMarca.Name = "GuardarMarca";
             this.GuardarMarca.Size = new System.Drawing.Size(97, 65);
@@ -229,7 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(473, 506);
+            this.ClientSize = new System.Drawing.Size(473, 403);
             this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.NombreMarca);
             this.Controls.Add(this.pictureBox2);
