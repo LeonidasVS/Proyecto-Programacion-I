@@ -101,13 +101,13 @@ namespace CapaVista
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("¡ La Categoria se Actualizo Exitosamente !", "Tienda AS | Registro Productos",
+                        MessageBox.Show("¡ La Categoria se Actualizo Exitosamente !", "Tienda AS | Registro Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Error! La Categoria no se actualizo", "Tienda AS | Registro Productos",
+                        MessageBox.Show("Error! La Categoria no se actualizo", "Tienda AS | Registro Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -142,7 +142,5 @@ namespace CapaVista
         {
             NombreCategoria.Enabled = true;
         }
-
-
     }
 }

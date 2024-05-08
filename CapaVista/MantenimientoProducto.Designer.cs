@@ -469,7 +469,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MantenimientoProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MantenimientoProducto";
+            this.Text = "Store AS | Admón Productos";
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
             this.Filtro.ResumeLayout(false);
             this.Filtro.PerformLayout();

@@ -42,6 +42,7 @@
             this.Mas = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.admónMetodosDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -155,7 +156,8 @@
             this.Mas.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.Mas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirMarcasToolStripMenuItem,
-            this.añadirCategoriasToolStripMenuItem});
+            this.añadirCategoriasToolStripMenuItem,
+            this.admónMetodosDePagoToolStripMenuItem});
             this.Mas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.Mas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Mas.Name = "Mas";
@@ -165,16 +167,23 @@
             // añadirMarcasToolStripMenuItem
             // 
             this.añadirMarcasToolStripMenuItem.Name = "añadirMarcasToolStripMenuItem";
-            this.añadirMarcasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.añadirMarcasToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.añadirMarcasToolStripMenuItem.Text = "- Admón Marcas";
             this.añadirMarcasToolStripMenuItem.Click += new System.EventHandler(this.MarcasToolStripMenuItem_Click);
             // 
             // añadirCategoriasToolStripMenuItem
             // 
             this.añadirCategoriasToolStripMenuItem.Name = "añadirCategoriasToolStripMenuItem";
-            this.añadirCategoriasToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.añadirCategoriasToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.añadirCategoriasToolStripMenuItem.Text = "- Admón Categorias";
             this.añadirCategoriasToolStripMenuItem.Click += new System.EventHandler(this.CategoriasToolStripMenuItem_Click);
+            // 
+            // admónMetodosDePagoToolStripMenuItem
+            // 
+            this.admónMetodosDePagoToolStripMenuItem.Name = "admónMetodosDePagoToolStripMenuItem";
+            this.admónMetodosDePagoToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.admónMetodosDePagoToolStripMenuItem.Text = "- Admón Metodos De Pago";
+            this.admónMetodosDePagoToolStripMenuItem.Click += new System.EventHandler(this.admónMetodosDePagoToolStripMenuItem_Click);
             // 
             // Store_AS
             // 
@@ -216,6 +225,7 @@
         private System.Windows.Forms.ToolStripMenuItem Mas;
         private System.Windows.Forms.ToolStripMenuItem añadirMarcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirCategoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem admónMetodosDePagoToolStripMenuItem;
     }
 }
 

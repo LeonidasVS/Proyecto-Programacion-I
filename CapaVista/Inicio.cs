@@ -65,5 +65,11 @@ namespace CapaVista
             ListaDetalleVentas listado = new ListaDetalleVentas();
             listado.ShowDialog();
         }
+
+        private void admónMetodosDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MantenimientoMetodoPago metodos = new MantenimientoMetodoPago();
+            metodos.ShowDialog();
+        }
     }
 }
