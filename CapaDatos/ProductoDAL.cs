@@ -54,10 +54,32 @@ namespace CapaDatos
             return resultado;
         }
 
-        public List<Producto> leer()
+        public List<Producto> leer(bool inactivos=false)
         {
             contexto = new ContextoBD();
-            return contexto.Producto.Where(p => p.Estado == true).ToList();
+
+            if (inactivos)
+            {
+                return contexto.Producto.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return contexto.Producto.Where(p => p.Estado == true).ToList();
+            }
+        }
+
+        public List<Producto> LeerPorNombre(string nombre, bool inactivos = false)
+        {
+            contexto = new ContextoBD();
+
+            if (inactivos)
+            {
+                return contexto.Producto.Where(p => p.Estado == false && p.Nombre.Contains(nombre)).ToList();
+            }
+            else
+            {
+                return contexto.Producto.Where(p => p.Estado == true && p.Nombre.Contains(nombre)).ToList();
+            }
         }
         public Producto LeerProducto(int id)
         {

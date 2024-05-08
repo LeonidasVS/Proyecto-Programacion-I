@@ -34,7 +34,25 @@ namespace CapaVista
         private void CargarPRoducto()
         {
             productoLog = new ProductoLog();
-            TablaProductos.DataSource = productoLog.ObtenerProductos();
+
+            string nombreproducto = filtrarPorNombre.Text;
+
+            if (rdbActivos.Checked && filtrarPorNombre.Text.Length > 0)
+            {
+                TablaProductos.DataSource = productoLog.LeerProductoPornombre(nombreproducto);
+            }
+            else if (rdbInactivos.Checked && filtrarPorNombre.Text.Length > 0)
+            {
+                TablaProductos.DataSource = productoLog.LeerProductoPornombre(nombreproducto,true);
+            }
+            else if (rdbActivos.Checked)
+            {
+                TablaProductos.DataSource = productoLog.ObtenerProductos();
+            }
+            else if (rdbInactivos.Checked)
+            {
+                TablaProductos.DataSource = productoLog.ObtenerProductos(true);
+            }
         }
 
         //FUncion para validad la edicion y eliminacion del producto, en donde verificamos la celda que se hace click
@@ -113,6 +131,21 @@ namespace CapaVista
                 e.FormattingApplied = true;
             }
 
+        }
+
+        private void rdbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarPRoducto();
+        }
+
+        private void rdbInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarPRoducto();
+        }
+
+        private void filtrarPorNombre_TextChanged(object sender, EventArgs e)
+        {
+            CargarPRoducto();
         }
     }
 }

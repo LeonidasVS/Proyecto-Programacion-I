@@ -12,7 +12,6 @@
             AutomaticMigrationsEnabled = false;
         }
 
-
         protected override void Seed(CapaDatos.ContextoBD context)
         {
             //  This method will be called after migrating to the latest version.

@@ -1,6 +1,7 @@
 ﻿using Capa_Entidades;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.SymbolStore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,10 +38,18 @@ namespace CapaDatos
             }
             return resultado;
         }
-        public List<Marca> LeerMarcas()
+        public List<Marca> LeerMarcas(bool inactivos=false)
         {
             contexto = new ContextoBD();
-            return contexto.Marca.Where(m=> m.Estado==true).ToList();
+
+            if (inactivos)
+            {
+                return contexto.Marca.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return contexto.Marca.Where(p => p.Estado == true).ToList();
+            }
         }
         public Marca BuscarMarca(int id)
         {
@@ -76,6 +85,20 @@ namespace CapaDatos
                 nombreMarca = marca.Nombre;
             }
             return nombreMarca;
+        }
+
+        public List<Marca> LeerPorNombre(string nombre, bool inactivos = false)
+        {
+            contexto = new ContextoBD();
+
+            if (inactivos)
+            {
+                return contexto.Marca.Where(p => p.Estado == false && p.Nombre.Contains(nombre)).ToList();
+            }
+            else
+            {
+                return contexto.Marca.Where(p => p.Estado == true && p.Nombre.Contains(nombre)).ToList();
+            }
         }
     }
 }

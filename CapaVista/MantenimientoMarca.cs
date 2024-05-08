@@ -24,6 +24,24 @@ namespace CapaVista
         {
             marca = new MarcaLog();
             TablaMarcas.DataSource = marca.ObtenerMarcas();
+            string nombremarca = filtrarPorNombre.Text;
+
+            if (rdbActivos.Checked && filtrarPorNombre.Text.Length > 0)
+            {
+                TablaMarcas.DataSource = marca.LeerMarcaPornombre(nombremarca);
+            }
+            else if (rdbInactivos.Checked && filtrarPorNombre.Text.Length > 0)
+            {
+                TablaMarcas.DataSource = marca.LeerMarcaPornombre(nombremarca,true);
+            }
+            else if (rdbActivos.Checked)
+            {
+                TablaMarcas.DataSource = marca.ObtenerMarcas();
+            }
+            else if (rdbInactivos.Checked)
+            {
+                TablaMarcas.DataSource = marca.ObtenerMarcas(true);
+            }
         }
 
         private void AñadirMarca_Click(object sender, EventArgs e)
@@ -82,6 +100,21 @@ namespace CapaVista
             {
                 MessageBox.Show($"Error:{ex.Message} ");
             }
+        }
+
+        private void rdbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarMarca();
+        }
+
+        private void rdbInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarMarca();
+        }
+
+        private void filtrarPorNombre_TextChanged(object sender, EventArgs e)
+        {
+            CargarMarca();
         }
     }
 }

@@ -36,10 +36,18 @@ namespace CapaDatos
             return resultado;
         }
 
-        public List<Categoria> LeerCategoria()
+        public List<Categoria> LeerCategoria(bool inactivos = false)
         {
             contexto = new ContextoBD();
-            return contexto.Categoria.Where(c => c.Estado == true).ToList();
+
+            if (inactivos)
+            {
+                return contexto.Categoria.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return contexto.Categoria.Where(p => p.Estado == true).ToList();
+            }
         }
 
         public Categoria BuscarCategoria(int id)
@@ -76,6 +84,19 @@ namespace CapaDatos
                 nombreCategoria = cate.Nombre;
             }
             return nombreCategoria;
+        }
+        public List<Categoria> LeerPorNombre(string nombre, bool inactivos = false)
+        {
+            contexto = new ContextoBD();
+
+            if (inactivos)
+            {
+                return contexto.Categoria.Where(p => p.Estado == false && p.Nombre.Contains(nombre)).ToList();
+            }
+            else
+            {
+                return contexto.Categoria.Where(p => p.Estado == true && p.Nombre.Contains(nombre)).ToList();
+            }
         }
     }
 }

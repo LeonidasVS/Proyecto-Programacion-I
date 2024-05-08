@@ -29,12 +29,17 @@ namespace CapaLogica
             categoriaDAL = new CategoriaDAL();
             return categoriaDAL.SaveCategoria(categoria,id,Actualizacion);
         }
-        public List<Categoria> ObtenerCategorias()
+        public List<Categoria> ObtenerCategorias(bool inactivos = false)
         {
             categoriaDAL = new CategoriaDAL();
-            return categoriaDAL.LeerCategoria();
+            return categoriaDAL.LeerCategoria(inactivos);
         }
 
+        public List<Categoria> LeerCategoriaPornombre(string nombre, bool inactivos = false)
+        {
+            categoriaDAL = new CategoriaDAL();
+            return categoriaDAL.LeerPorNombre(nombre, inactivos);
+        }
         public object ObtenerCategoriaPorId(int id)
         {
             categoriaDAL = new CategoriaDAL();

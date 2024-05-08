@@ -17,10 +17,10 @@ namespace CapaLogica
             _marDal = new MarcaDAL();
             return _marDal.GuardarMarca(marca, id, esActualizacion);
         }
-        public List<Marca> ObtenerMarcas()
+        public List<Marca> ObtenerMarcas(bool inactivos = false)
         {
             _marDal = new MarcaDAL();
-            return _marDal.LeerMarcas();
+            return _marDal.LeerMarcas(inactivos);
         }
 
         public Marca ObtenerMarcaPorId(int id)
@@ -46,6 +46,12 @@ namespace CapaLogica
         {
             _marDal = new MarcaDAL();
             return _marDal.ObtenerNombreMarcaDesdeBD(idMarca);
+        }
+
+        public List<Marca> LeerMarcaPornombre(string nombre, bool inactivos = false)
+        {
+            _marDal = new MarcaDAL();
+            return _marDal.LeerPorNombre(nombre, inactivos);
         }
     }
 }

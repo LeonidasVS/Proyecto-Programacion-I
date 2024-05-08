@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProducto));
-            this.Filtro = new System.Windows.Forms.GroupBox();
             this.TablaProductos = new System.Windows.Forms.DataGridView();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,17 +46,32 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Regresar = new System.Windows.Forms.Button();
             this.AñadirProducto = new System.Windows.Forms.Button();
+            this.Filtro = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.filtrarPorNombre = new System.Windows.Forms.TextBox();
+            this.Bordes = new System.Windows.Forms.PictureBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbxEstado = new System.Windows.Forms.GroupBox();
+            this.rdbInactivos = new System.Windows.Forms.RadioButton();
+            this.rdbActivos = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).BeginInit();
+            this.Filtro.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Bordes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbxEstado.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Filtro
-            // 
-            this.Filtro.Location = new System.Drawing.Point(73, 24);
-            this.Filtro.Name = "Filtro";
-            this.Filtro.Size = new System.Drawing.Size(673, 75);
-            this.Filtro.TabIndex = 0;
-            this.Filtro.TabStop = false;
-            this.Filtro.Text = "Filtrar Producto";
             // 
             // TablaProductos
             // 
@@ -78,9 +92,9 @@
             this.Eliminar});
             this.TablaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TablaProductos.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.TablaProductos.Location = new System.Drawing.Point(14, 128);
+            this.TablaProductos.Location = new System.Drawing.Point(30, 145);
             this.TablaProductos.Name = "TablaProductos";
-            this.TablaProductos.Size = new System.Drawing.Size(782, 284);
+            this.TablaProductos.Size = new System.Drawing.Size(845, 284);
             this.TablaProductos.TabIndex = 1;
             this.TablaProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaProductos_CellClick);
             this.TablaProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.TablaProductos_CellFormatting);
@@ -99,7 +113,7 @@
             this.Nombre.HeaderText = "Producto";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 125;
+            this.Nombre.Width = 175;
             // 
             // Descripcion
             // 
@@ -139,7 +153,7 @@
             this.idMarca.HeaderText = "Marca";
             this.idMarca.Name = "idMarca";
             this.idMarca.ReadOnly = true;
-            this.idMarca.Width = 89;
+            this.idMarca.Width = 95;
             // 
             // idCategoria
             // 
@@ -147,7 +161,7 @@
             this.idCategoria.HeaderText = "Categoria";
             this.idCategoria.Name = "idCategoria";
             this.idCategoria.ReadOnly = true;
-            this.idCategoria.Width = 89;
+            this.idCategoria.Width = 95;
             // 
             // Marca
             // 
@@ -230,7 +244,7 @@
             this.AñadirProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
             this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(361, 435);
+            this.AñadirProducto.Location = new System.Drawing.Point(407, 442);
             this.AñadirProducto.Name = "AñadirProducto";
             this.AñadirProducto.Size = new System.Drawing.Size(84, 66);
             this.AñadirProducto.TabIndex = 13;
@@ -239,12 +253,215 @@
             this.AñadirProducto.UseVisualStyleBackColor = false;
             this.AñadirProducto.Click += new System.EventHandler(this.AñadirProducto_Click);
             // 
+            // Filtro
+            // 
+            this.Filtro.Controls.Add(this.groupBox1);
+            this.Filtro.Controls.Add(this.label2);
+            this.Filtro.Controls.Add(this.label1);
+            this.Filtro.Controls.Add(this.label3);
+            this.Filtro.Controls.Add(this.filtrarPorNombre);
+            this.Filtro.Controls.Add(this.Bordes);
+            this.Filtro.Controls.Add(this.comboBox2);
+            this.Filtro.Controls.Add(this.comboBox1);
+            this.Filtro.Controls.Add(this.pictureBox2);
+            this.Filtro.Controls.Add(this.pictureBox1);
+            this.Filtro.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Filtro.ForeColor = System.Drawing.Color.White;
+            this.Filtro.Location = new System.Drawing.Point(52, 12);
+            this.Filtro.Name = "Filtro";
+            this.Filtro.Size = new System.Drawing.Size(632, 110);
+            this.Filtro.TabIndex = 0;
+            this.Filtro.TabStop = false;
+            this.Filtro.Text = "Filtrar Producto";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(667, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(177, 99);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar Producto";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(284, 26);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Marcas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(85, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(490, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Categorias";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(298, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Marcas";
+            // 
+            // filtrarPorNombre
+            // 
+            this.filtrarPorNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.filtrarPorNombre.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtrarPorNombre.Location = new System.Drawing.Point(32, 56);
+            this.filtrarPorNombre.Name = "filtrarPorNombre";
+            this.filtrarPorNombre.Size = new System.Drawing.Size(171, 13);
+            this.filtrarPorNombre.TabIndex = 0;
+            this.filtrarPorNombre.TextChanged += new System.EventHandler(this.filtrarPorNombre_TextChanged);
+            // 
+            // Bordes
+            // 
+            this.Bordes.Image = global::CapaVista.Properties.Resources.texbox;
+            this.Bordes.Location = new System.Drawing.Point(22, 47);
+            this.Bordes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Bordes.Name = "Bordes";
+            this.Bordes.Size = new System.Drawing.Size(191, 31);
+            this.Bordes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Bordes.TabIndex = 28;
+            this.Bordes.TabStop = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(462, 49);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(143, 22);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(255, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(152, 22);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaVista.Properties.Resources.texbox;
+            this.pictureBox2.Location = new System.Drawing.Point(457, 44);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(152, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaVista.Properties.Resources.texbox;
+            this.pictureBox1.Location = new System.Drawing.Point(247, 46);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // gbxEstado
+            // 
+            this.gbxEstado.Controls.Add(this.rdbInactivos);
+            this.gbxEstado.Controls.Add(this.rdbActivos);
+            this.gbxEstado.Controls.Add(this.groupBox3);
+            this.gbxEstado.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxEstado.ForeColor = System.Drawing.Color.White;
+            this.gbxEstado.Location = new System.Drawing.Point(708, 12);
+            this.gbxEstado.Name = "gbxEstado";
+            this.gbxEstado.Size = new System.Drawing.Size(147, 110);
+            this.gbxEstado.TabIndex = 33;
+            this.gbxEstado.TabStop = false;
+            this.gbxEstado.Text = "Filtrar por Estado";
+            // 
+            // rdbInactivos
+            // 
+            this.rdbInactivos.AutoSize = true;
+            this.rdbInactivos.Location = new System.Drawing.Point(17, 71);
+            this.rdbInactivos.Name = "rdbInactivos";
+            this.rdbInactivos.Size = new System.Drawing.Size(74, 20);
+            this.rdbInactivos.TabIndex = 34;
+            this.rdbInactivos.Text = "Inactivos";
+            this.rdbInactivos.UseVisualStyleBackColor = true;
+            this.rdbInactivos.CheckedChanged += new System.EventHandler(this.rdbInactivos_CheckedChanged);
+            // 
+            // rdbActivos
+            // 
+            this.rdbActivos.AutoSize = true;
+            this.rdbActivos.Checked = true;
+            this.rdbActivos.Location = new System.Drawing.Point(17, 32);
+            this.rdbActivos.Name = "rdbActivos";
+            this.rdbActivos.Size = new System.Drawing.Size(64, 20);
+            this.rdbActivos.TabIndex = 33;
+            this.rdbActivos.TabStop = true;
+            this.rdbActivos.Text = "Activos";
+            this.rdbActivos.UseVisualStyleBackColor = true;
+            this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(667, 11);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(177, 99);
+            this.groupBox3.TabIndex = 32;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Filtrar Producto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(284, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Marcas";
+            // 
             // MantenimientoProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(808, 506);
+            this.ClientSize = new System.Drawing.Size(896, 506);
+            this.Controls.Add(this.gbxEstado);
             this.Controls.Add(this.Regresar);
             this.Controls.Add(this.AñadirProducto);
             this.Controls.Add(this.TablaProductos);
@@ -254,16 +471,37 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoProducto";
             ((System.ComponentModel.ISupportInitialize)(this.TablaProductos)).EndInit();
+            this.Filtro.ResumeLayout(false);
+            this.Filtro.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Bordes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbxEstado.ResumeLayout(false);
+            this.gbxEstado.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox Filtro;
         private System.Windows.Forms.DataGridView TablaProductos;
         private System.Windows.Forms.Button Regresar;
         private System.Windows.Forms.Button AñadirProducto;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.GroupBox Filtro;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox filtrarPorNombre;
+        private System.Windows.Forms.PictureBox Bordes;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
@@ -276,7 +514,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox gbxEstado;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton rdbInactivos;
+        private System.Windows.Forms.RadioButton rdbActivos;
     }
 }

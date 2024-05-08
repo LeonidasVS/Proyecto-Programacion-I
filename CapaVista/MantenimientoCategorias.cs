@@ -17,20 +17,37 @@ namespace CapaVista
         public MantenimientoCategorias()
         {
             InitializeComponent();
-            CargarCategoriaas();
+            CargarCategorias();
         }
 
-        private void CargarCategoriaas()
+        private void CargarCategorias()
         {
             category = new CategoriaLog();
-            TablaCategorias.DataSource = category.ObtenerCategorias();
+            string nombrecategoria = filtrarPorNombre.Text;
+
+            if (rdbActivos.Checked && filtrarPorNombre.Text.Length > 0)
+            {
+                TablaCategorias.DataSource = category.LeerCategoriaPornombre(nombrecategoria);
+            }
+            else if (rdbInactivos.Checked && filtrarPorNombre.Text.Length > 0)
+            {
+                TablaCategorias.DataSource = category.LeerCategoriaPornombre(nombrecategoria,true);
+            }
+            else if (rdbActivos.Checked)
+            {
+                TablaCategorias.DataSource = category.ObtenerCategorias();
+            }
+            else if (rdbInactivos.Checked)
+            {
+                TablaCategorias.DataSource = category.ObtenerCategorias(true);
+            }
         }
 
         private void AñadirCategory_Click(object sender, EventArgs e)
         {
             CategoriaRegistro category = new CategoriaRegistro();
             category.ShowDialog();
-            CargarCategoriaas();
+            CargarCategorias();
         }
 
         private void Regresar_Click(object sender, EventArgs e)
@@ -50,7 +67,7 @@ namespace CapaVista
                     {
                        CategoriaRegistro acceder = new CategoriaRegistro(id);
                         acceder.ShowDialog();
-                        CargarCategoriaas();
+                        CargarCategorias();
 
                     }
                     else if (TablaCategorias.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
@@ -67,7 +84,7 @@ namespace CapaVista
                             {
                                 MessageBox.Show("Categoria Eliminada con Exito", "Tienda AS | Categorias",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                CargarCategoriaas();
+                                CargarCategorias();
                             }
                             else
                             {
@@ -82,6 +99,21 @@ namespace CapaVista
             {
                 MessageBox.Show($"Error:{ex.Message} ");
             }
+        }
+
+        private void rdbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarCategorias();
+        }
+
+        private void rdbInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarCategorias();
+        }
+
+        private void filtrarPorNombre_TextChanged(object sender, EventArgs e)
+        {
+            CargarCategorias();
         }
     }
 }
