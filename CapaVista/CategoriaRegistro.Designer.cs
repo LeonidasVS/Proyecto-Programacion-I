@@ -66,7 +66,7 @@
             this.NombreCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NombreCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cateBinding, "Nombre", true));
             this.NombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreCategoria.Location = new System.Drawing.Point(117, 95);
+            this.NombreCategoria.Location = new System.Drawing.Point(117, 96);
             this.NombreCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.NombreCategoria.Name = "NombreCategoria";
             this.NombreCategoria.Size = new System.Drawing.Size(237, 15);
