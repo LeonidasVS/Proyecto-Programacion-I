@@ -138,7 +138,7 @@
             // 
             // TablaMetodoPago
             // 
-            this.TablaMetodoPago.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.TablaMetodoPago.BackgroundColor = System.Drawing.Color.White;
             this.TablaMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaMetodoPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idMetodoPago,

@@ -54,8 +54,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.filtrarPorNombre = new System.Windows.Forms.TextBox();
             this.Bordes = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxCategorias = new System.Windows.Forms.ComboBox();
+            this.cbxMarcas = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxEstado = new System.Windows.Forms.GroupBox();
@@ -75,7 +75,7 @@
             // 
             // TablaProductos
             // 
-            this.TablaProductos.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.TablaProductos.BackgroundColor = System.Drawing.Color.White;
             this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
@@ -261,8 +261,8 @@
             this.Filtro.Controls.Add(this.label3);
             this.Filtro.Controls.Add(this.filtrarPorNombre);
             this.Filtro.Controls.Add(this.Bordes);
-            this.Filtro.Controls.Add(this.comboBox2);
-            this.Filtro.Controls.Add(this.comboBox1);
+            this.Filtro.Controls.Add(this.cbxCategorias);
+            this.Filtro.Controls.Add(this.cbxMarcas);
             this.Filtro.Controls.Add(this.pictureBox2);
             this.Filtro.Controls.Add(this.pictureBox1);
             this.Filtro.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,7 +313,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(490, 27);
+            this.label1.Location = new System.Drawing.Point(490, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 16);
@@ -325,7 +325,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(298, 27);
+            this.label3.Location = new System.Drawing.Point(306, 27);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
@@ -353,30 +353,31 @@
             this.Bordes.TabIndex = 28;
             this.Bordes.TabStop = false;
             // 
-            // comboBox2
+            // cbxCategorias
             // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(462, 49);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(143, 22);
-            this.comboBox2.TabIndex = 2;
+            this.cbxCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxCategorias.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCategorias.FormattingEnabled = true;
+            this.cbxCategorias.Location = new System.Drawing.Point(462, 50);
+            this.cbxCategorias.Name = "cbxCategorias";
+            this.cbxCategorias.Size = new System.Drawing.Size(143, 22);
+            this.cbxCategorias.TabIndex = 2;
             // 
-            // comboBox1
+            // cbxMarcas
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(255, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 22);
-            this.comboBox1.TabIndex = 1;
+            this.cbxMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxMarcas.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxMarcas.FormattingEnabled = true;
+            this.cbxMarcas.Location = new System.Drawing.Point(262, 50);
+            this.cbxMarcas.Name = "cbxMarcas";
+            this.cbxMarcas.Size = new System.Drawing.Size(152, 22);
+            this.cbxMarcas.TabIndex = 1;
+            this.cbxMarcas.SelectedIndexChanged += new System.EventHandler(this.cbxMarcas_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox2.Location = new System.Drawing.Point(457, 44);
+            this.pictureBox2.Location = new System.Drawing.Point(457, 46);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(152, 31);
@@ -387,7 +388,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox1.Location = new System.Drawing.Point(247, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(255, 46);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 31);
@@ -493,8 +494,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.GroupBox Filtro;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCategorias;
+        private System.Windows.Forms.ComboBox cbxMarcas;
         private System.Windows.Forms.TextBox filtrarPorNombre;
         private System.Windows.Forms.PictureBox Bordes;
         private System.Windows.Forms.PictureBox pictureBox2;

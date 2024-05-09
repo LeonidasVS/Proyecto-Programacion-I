@@ -357,7 +357,7 @@
             this.comboPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboPagos.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPagos.FormattingEnabled = true;
-            this.comboPagos.Location = new System.Drawing.Point(706, 523);
+            this.comboPagos.Location = new System.Drawing.Point(706, 524);
             this.comboPagos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboPagos.Name = "comboPagos";
             this.comboPagos.Size = new System.Drawing.Size(170, 25);
@@ -390,7 +390,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Precio", true));
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(377, 141);
+            this.textBox1.Location = new System.Drawing.Point(377, 142);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;

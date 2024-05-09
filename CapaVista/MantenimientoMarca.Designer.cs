@@ -55,7 +55,7 @@
             // 
             // TablaMarcas
             // 
-            this.TablaMarcas.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.TablaMarcas.BackgroundColor = System.Drawing.Color.White;
             this.TablaMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaMarcas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idMarca,

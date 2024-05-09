@@ -147,5 +147,11 @@ namespace CapaVista
         {
             CargarPRoducto();
         }
+
+        private void cbxMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filtrarPorNombre.Clear();
+            CargarPRoducto();
+        }
     }
 }

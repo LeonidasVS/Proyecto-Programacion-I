@@ -87,7 +87,7 @@
             // 
             this.detalleVentaGrid.AllowUserToAddRows = false;
             this.detalleVentaGrid.AllowUserToDeleteRows = false;
-            this.detalleVentaGrid.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.detalleVentaGrid.BackgroundColor = System.Drawing.Color.White;
             this.detalleVentaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.detalleVentaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -183,7 +183,7 @@
             // 
             this.dataVentaGrid.AllowUserToAddRows = false;
             this.dataVentaGrid.AllowUserToDeleteRows = false;
-            this.dataVentaGrid.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dataVentaGrid.BackgroundColor = System.Drawing.Color.White;
             this.dataVentaGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataVentaGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CodigoVenta,
