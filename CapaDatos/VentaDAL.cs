@@ -55,6 +55,19 @@ namespace CapaDatos
             return fecha;
         }
 
+        public string HoraVentaPorid(int id)
+        {
+            _db = new ContextoBD();
+            var venta = _db.Ventas.Find(id);
+            string fecha = string.Empty;
+            if (venta != null)
+            {
+                fecha = venta.Fecha.ToLongTimeString();
+            }
+
+            return fecha;
+        }
+
         public decimal TotalVentaPorid(int id)
         {
             _db = new ContextoBD();
@@ -66,6 +79,12 @@ namespace CapaDatos
             }
 
             return total;
+        }
+
+        public List<Venta> Ventas()
+        {
+            _db = new ContextoBD();
+            return _db.Ventas.ToList();
         }
     }
 }

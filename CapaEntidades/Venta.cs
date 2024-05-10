@@ -25,6 +25,5 @@ namespace CapaEntidades
         {
             Detalles = new List<DetalleVenta>();
         }
-
     }
 }

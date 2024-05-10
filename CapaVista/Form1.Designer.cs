@@ -101,8 +101,8 @@
             // tsmDetalleVenta
             // 
             this.tsmDetalleVenta.Name = "tsmDetalleVenta";
-            this.tsmDetalleVenta.Size = new System.Drawing.Size(87, 22);
-            this.tsmDetalleVenta.Text = "Detalle Venta";
+            this.tsmDetalleVenta.Size = new System.Drawing.Size(110, 22);
+            this.tsmDetalleVenta.Text = "Ventas Realizadas";
             this.tsmDetalleVenta.Click += new System.EventHandler(this.tsmDetalleVenta_Click);
             // 
             // menuStrip1

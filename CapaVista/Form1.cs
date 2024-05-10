@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,8 +66,8 @@ namespace CapaVista
 
         private void tsmDetalleVenta_Click(object sender, EventArgs e)
         {
-            Factura objVerDetalleVenta = new Factura();
-            objVerDetalleVenta.ShowDialog();
+            VerVentasRealizadas objVerVentasRealizadas = new VerVentasRealizadas();
+            objVerVentasRealizadas.ShowDialog();
         }
     }
 }

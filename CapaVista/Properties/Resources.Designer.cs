@@ -123,6 +123,16 @@ namespace CapaVista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Informacion {
+            get {
+                object obj = ResourceManager.GetObject("Informacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inicio {
             get {
                 object obj = ResourceManager.GetObject("Inicio", resourceCulture);
@@ -186,6 +196,16 @@ namespace CapaVista.Properties {
         internal static System.Drawing.Bitmap Principal {
             get {
                 object obj = ResourceManager.GetObject("Principal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print {
+            get {
+                object obj = ResourceManager.GetObject("print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
