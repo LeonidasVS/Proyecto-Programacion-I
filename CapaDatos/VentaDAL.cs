@@ -46,7 +46,7 @@ namespace CapaDatos
         {
             decimal precio=0;
             contexto = new ContextoBD();
-            Venta venta = contexto.Venta.FirstOrDefault(m => m.idVenta == idVenta);
+            Venta venta = contexto.Venta.Find(idVenta);
             if (venta != null)
             {
                 precio = venta.Total;
