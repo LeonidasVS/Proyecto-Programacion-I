@@ -24,21 +24,26 @@ namespace CapaVista
         {
             metodolog = new MetodoPagoLog();
             string nombremetodo = filtrarPorNombre.Text;
+            DataGridViewColumn columna = TablaMetodoPago.Columns["Eliminar"];
 
             if (rdbActivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
+                columna.Visible = true;
                 TablaMetodoPago.DataSource = metodolog.LeerMetodoPornombre(nombremetodo);
             }
             else if (rdbInactivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
+                columna.Visible = false;
                 TablaMetodoPago.DataSource = metodolog.LeerMetodoPornombre(nombremetodo, true);
             }
             else if (rdbActivos.Checked)
             {
+                columna.Visible = true;
                 TablaMetodoPago.DataSource = metodolog.ObtenerMetodoDePago();
             }
             else if (rdbInactivos.Checked)
             {
+                columna.Visible = false;
                 TablaMetodoPago.DataSource = metodolog.ObtenerMetodoDePago(true);
             }
         }

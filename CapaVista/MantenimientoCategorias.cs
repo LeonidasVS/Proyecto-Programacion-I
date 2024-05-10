@@ -24,21 +24,26 @@ namespace CapaVista
         {
             category = new CategoriaLog();
             string nombrecategoria = filtrarPorNombre.Text;
+            DataGridViewColumn columna = TablaCategorias.Columns["Eliminar"];
 
             if (rdbActivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
+                columna.Visible = true;
                 TablaCategorias.DataSource = category.LeerCategoriaPornombre(nombrecategoria);
             }
             else if (rdbInactivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
+                columna.Visible = false;
                 TablaCategorias.DataSource = category.LeerCategoriaPornombre(nombrecategoria,true);
             }
             else if (rdbActivos.Checked)
             {
+                columna.Visible = true;
                 TablaCategorias.DataSource = category.ObtenerCategorias();
             }
             else if (rdbInactivos.Checked)
             {
+                columna.Visible = false;
                 TablaCategorias.DataSource = category.ObtenerCategorias(true);
             }
         }

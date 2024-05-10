@@ -55,6 +55,7 @@
             // 
             // TablaCategorias
             // 
+            this.TablaCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaCategorias.BackgroundColor = System.Drawing.Color.White;
             this.TablaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -77,7 +78,6 @@
             this.idCategoria.HeaderText = "Codigo";
             this.idCategoria.Name = "idCategoria";
             this.idCategoria.ReadOnly = true;
-            this.idCategoria.Width = 50;
             // 
             // Nombre
             // 
@@ -85,7 +85,6 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 180;
             // 
             // Descripcion
             // 
@@ -93,7 +92,6 @@
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 260;
             // 
             // Estado
             // 
@@ -101,7 +99,6 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            this.Estado.Width = 75;
             // 
             // Editar
             // 
@@ -109,7 +106,6 @@
             this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
-            this.Editar.Width = 70;
             // 
             // Eliminar
             // 
@@ -117,7 +113,6 @@
             this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 70;
             // 
             // dataGridViewImageColumn1
             // 

@@ -138,6 +138,7 @@
             // 
             // TablaMetodoPago
             // 
+            this.TablaMetodoPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaMetodoPago.BackgroundColor = System.Drawing.Color.White;
             this.TablaMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaMetodoPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -158,7 +159,6 @@
             this.idMetodoPago.HeaderText = "Codigo";
             this.idMetodoPago.Name = "idMetodoPago";
             this.idMetodoPago.ReadOnly = true;
-            this.idMetodoPago.Width = 50;
             // 
             // FormaDePago
             // 
@@ -166,7 +166,6 @@
             this.FormaDePago.HeaderText = "Forma De Pago";
             this.FormaDePago.Name = "FormaDePago";
             this.FormaDePago.ReadOnly = true;
-            this.FormaDePago.Width = 230;
             // 
             // Estado
             // 
@@ -181,7 +180,6 @@
             this.Editar.Image = global::CapaVista.Properties.Resources.edit;
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
-            this.Editar.Width = 125;
             // 
             // Eliminar
             // 
@@ -189,7 +187,6 @@
             this.Eliminar.Image = global::CapaVista.Properties.Resources.delete1;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 125;
             // 
             // dataGridViewImageColumn1
             // 

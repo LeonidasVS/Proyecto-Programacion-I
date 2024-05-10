@@ -25,21 +25,26 @@ namespace CapaVista
             marca = new MarcaLog();
             TablaMarcas.DataSource = marca.ObtenerMarcas();
             string nombremarca = filtrarPorNombre.Text;
+            DataGridViewColumn columna = TablaMarcas.Columns["Eliminar"];
 
             if (rdbActivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
+                columna.Visible = true;
                 TablaMarcas.DataSource = marca.LeerMarcaPornombre(nombremarca);
             }
             else if (rdbInactivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
+                columna.Visible = false;
                 TablaMarcas.DataSource = marca.LeerMarcaPornombre(nombremarca,true);
             }
             else if (rdbActivos.Checked)
             {
+                columna.Visible = true;
                 TablaMarcas.DataSource = marca.ObtenerMarcas();
             }
             else if (rdbInactivos.Checked)
             {
+                columna.Visible = false;
                 TablaMarcas.DataSource = marca.ObtenerMarcas(true);
             }
         }

@@ -55,6 +55,7 @@
             // 
             // TablaMarcas
             // 
+            this.TablaMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaMarcas.BackgroundColor = System.Drawing.Color.White;
             this.TablaMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaMarcas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -78,7 +79,6 @@
             this.idMarca.HeaderText = "Codigo";
             this.idMarca.Name = "idMarca";
             this.idMarca.ReadOnly = true;
-            this.idMarca.Width = 50;
             // 
             // Nombre
             // 
@@ -86,7 +86,6 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 200;
             // 
             // Descripcion
             // 
@@ -94,7 +93,6 @@
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 250;
             // 
             // Estado
             // 
@@ -109,7 +107,6 @@
             this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
-            this.Editar.Width = 60;
             // 
             // Eliminar
             // 
@@ -117,7 +114,6 @@
             this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 60;
             // 
             // dataGridViewImageColumn1
             // 

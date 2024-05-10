@@ -37,22 +37,28 @@ namespace CapaVista
             productoLog = new ProductoLog();
 
             string nombreproducto = filtrarPorNombre.Text;
+            DataGridViewColumn columna = TablaProductos.Columns["Eliminar"];
 
             if (rdbActivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
+                columna.Visible = true;
                 TablaProductos.DataSource = productoLog.LeerProductoPornombre(nombreproducto);
             }
             else if (rdbInactivos.Checked && filtrarPorNombre.Text.Length > 0)
             {
-                TablaProductos.DataSource = productoLog.LeerProductoPornombre(nombreproducto,true);
+                columna.Visible = false;
+                TablaProductos.DataSource = productoLog.LeerProductoPornombre(nombreproducto, true);
             }
             else if (rdbActivos.Checked)
             {
+                columna.Visible = true;
                 TablaProductos.DataSource = productoLog.ObtenerProductos();
             }
             else if (rdbInactivos.Checked)
             {
+                columna.Visible = false;
                 TablaProductos.DataSource = productoLog.ObtenerProductos(true);
+
             }
         }
 

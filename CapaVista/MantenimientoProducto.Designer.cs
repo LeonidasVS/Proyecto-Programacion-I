@@ -75,6 +75,7 @@
             // 
             // TablaProductos
             // 
+            this.TablaProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaProductos.BackgroundColor = System.Drawing.Color.White;
             this.TablaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -105,7 +106,6 @@
             this.idProducto.HeaderText = "Codigo";
             this.idProducto.Name = "idProducto";
             this.idProducto.ReadOnly = true;
-            this.idProducto.Width = 60;
             // 
             // Nombre
             // 
@@ -113,7 +113,6 @@
             this.Nombre.HeaderText = "Producto";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 175;
             // 
             // Descripcion
             // 
@@ -129,7 +128,6 @@
             this.Exitencias.HeaderText = "Existencias";
             this.Exitencias.Name = "Exitencias";
             this.Exitencias.ReadOnly = true;
-            this.Exitencias.Width = 75;
             // 
             // Precio
             // 
@@ -137,7 +135,6 @@
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
-            this.Precio.Width = 75;
             // 
             // Estado
             // 
@@ -145,7 +142,6 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            this.Estado.Width = 75;
             // 
             // idMarca
             // 
@@ -153,7 +149,6 @@
             this.idMarca.HeaderText = "Marca";
             this.idMarca.Name = "idMarca";
             this.idMarca.ReadOnly = true;
-            this.idMarca.Width = 95;
             // 
             // idCategoria
             // 
@@ -161,7 +156,6 @@
             this.idCategoria.HeaderText = "Categoria";
             this.idCategoria.Name = "idCategoria";
             this.idCategoria.ReadOnly = true;
-            this.idCategoria.Width = 95;
             // 
             // Marca
             // 
@@ -183,7 +177,6 @@
             this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
-            this.Editar.Width = 75;
             // 
             // Eliminar
             // 
@@ -191,7 +184,6 @@
             this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 75;
             // 
             // dataGridViewImageColumn1
             // 
