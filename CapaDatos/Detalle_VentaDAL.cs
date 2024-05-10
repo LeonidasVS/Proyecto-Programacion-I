@@ -17,11 +17,13 @@ namespace CapaDatos
             return contexto.Detalle.Where(d => d.idDetalleVenta > 0).ToList();
         }
 
-        //public Detalle_Venta LeerDetalle2(int id)
-        //{
-        //    contexto = new ContextoBD();
-        //    return contexto.Detalle.Find(id);
-        //}
-      
+        public List<Detalle_Venta> LeerFactura()
+        {
+            contexto = new ContextoBD();
+            var LastRecord = (from c in contexto.Venta
+                              select c).Count();
+
+            return contexto.Detalle.Where(d => d.idVenta >= LastRecord).ToList();
+        }
     }
 }

@@ -17,6 +17,12 @@ namespace CapaLogica
             _ventadal = new VentaDAL();
             return _ventadal.GuardarVentaDal(venta);
         }
+        public decimal ObtenerVentaPorId(int idVenta)
+        {
+            _ventadal = new VentaDAL();
+            return _ventadal.ObtenerTotalDesdeBD(idVenta);
+        }
+
         public List<Venta> ObtenerVentas()
         {
             _ventadal = new VentaDAL();

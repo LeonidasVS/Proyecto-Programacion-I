@@ -16,5 +16,11 @@ namespace CapaLogica
             detalleDal = new Detalle_VentaDAL();
             return detalleDal.LeerDetalle();
         }
+
+        public object ObtenerFactura()
+        {
+            detalleDal = new Detalle_VentaDAL();
+            return detalleDal.LeerFactura();
+        }
     }
 }

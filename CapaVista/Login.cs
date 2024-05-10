@@ -29,7 +29,6 @@ namespace CapaVista
             StoreAS.ShowDialog();
         }
 
-
         private void Usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Validacion de la entrada de caracteres

@@ -19,6 +19,8 @@ namespace CapaVista
         ProductoLog _productolog;
         MetodoPagoLog metodo;
         DataTable detalleVenta;
+
+        public decimal PrecioTotal { get; set; }
         public Ventas()
         {
             InitializeComponent();
@@ -32,7 +34,6 @@ namespace CapaVista
             detalleVenta.Columns.Add("Precio", typeof(decimal));
             detalleVenta.Columns.Add("Cantidad", typeof(int));
             detalleVenta.Columns.Add("SubTotal", typeof(decimal));
-
         }
 
         private void CargarMetodoPagos()
@@ -88,8 +89,6 @@ namespace CapaVista
                             idMetodoPago = int.Parse(comboPagos.SelectedValue.ToString())
                         };
 
-
-
                         venta.Detalles.Add(detalle);
                     }
 
@@ -97,8 +96,11 @@ namespace CapaVista
 
                     if (resultado > 0)
                     {
+                        txtMonto.Text = PrecioTotal.ToString();
                         MessageBox.Show("Venta realizada con Exito","Tienda AS | Ventas",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         Limpiar();
+                        Facturacion factura = new Facturacion();
+                        factura.ShowDialog();
                     }
                     else
                     {

@@ -9,6 +9,7 @@ namespace CapaVista
         ProductoLog productoLog;
         MarcaLog marcalog;
         CategoriaLog categorilog;
+
         public MantenimientoProducto()
         {
             InitializeComponent();
