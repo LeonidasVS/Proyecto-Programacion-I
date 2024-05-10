@@ -65,7 +65,7 @@ namespace CapaVista
 
         private void tsmDetalleVenta_Click(object sender, EventArgs e)
         {
-            VerDetalleVenta objVerDetalleVenta = new VerDetalleVenta();
+            Factura objVerDetalleVenta = new Factura();
             objVerDetalleVenta.ShowDialog();
         }
     }

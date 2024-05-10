@@ -45,6 +45,7 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnProcesar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -55,7 +56,7 @@
             this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
             this.DetalleVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MetodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource1)).BeginInit();
@@ -153,17 +154,20 @@
             this.Marca,
             this.Cantidad,
             this.Precio,
-            this.SubTotal});
+            this.SubTotal,
+            this.Eliminar});
             this.dgvDetalleVenta.Location = new System.Drawing.Point(28, 260);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
             this.dgvDetalleVenta.Size = new System.Drawing.Size(843, 249);
             this.dgvDetalleVenta.TabIndex = 8;
+            this.dgvDetalleVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellContentClick);
             this.dgvDetalleVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleVenta_CellFormatting);
             this.dgvDetalleVenta.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellValueChanged);
             // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.Frozen = true;
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
@@ -171,14 +175,16 @@
             // Nombre
             // 
             this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.Frozen = true;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 300;
+            this.Nombre.Width = 200;
             // 
             // Marca
             // 
             this.Marca.DataPropertyName = "Marca";
+            this.Marca.Frozen = true;
             this.Marca.HeaderText = "Marca";
             this.Marca.Name = "Marca";
             this.Marca.ReadOnly = true;
@@ -186,21 +192,33 @@
             // Cantidad
             // 
             this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.Frozen = true;
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
+            this.Precio.Frozen = true;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             // 
             // SubTotal
             // 
             this.SubTotal.DataPropertyName = "SubTotal";
+            this.SubTotal.Frozen = true;
             this.SubTotal.HeaderText = "SubTotal";
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Frozen = true;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
             // 
             // btnRegistrar
             // 
@@ -284,22 +302,22 @@
             // 
             this.MetodoPagoBindingSource.DataSource = typeof(CapaEntidades.MetodoPago);
             // 
-            // button2
+            // btnEliminar
             // 
-            this.button2.Location = new System.Drawing.Point(786, 198);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 36);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnEliminar.Location = new System.Drawing.Point(786, 198);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(85, 36);
+            this.btnEliminar.TabIndex = 16;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // RegistroVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 658);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.cmbMetodoPago);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtTotal);
@@ -353,12 +371,13 @@
         private System.Windows.Forms.ComboBox cmbMetodoPago;
         private System.Windows.Forms.BindingSource MetodoPagoBindingSource;
         private System.Windows.Forms.BindingSource DetalleVentaBindingSource;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

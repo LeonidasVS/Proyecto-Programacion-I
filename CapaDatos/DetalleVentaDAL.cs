@@ -17,10 +17,23 @@ namespace CapaDatos
             return _db.DetalleVenta.Where(v => v.IdDetalleVenta > 0).ToList();
         }
 
-        public DetalleVenta ObtenerDetalleVenta(int id)
+        public List<DetalleVenta> ObtenerDetalleVentaPorIdVenta(int id)
         {
             _db = new ContextoBD();
-            return _db.DetalleVenta.Find(id);
+            return _db.DetalleVenta.Where(d => d.VentaId == id).ToList();
+        }
+
+        public int IdMetodoPagoPoridVenta(int id)
+        {
+            _db = new ContextoBD();
+            List<DetalleVenta> mtdPago = _db.DetalleVenta.Where(d => d.VentaId == id).ToList();
+            int idMetodPago = 0;
+            foreach (var idMtdPago in mtdPago)
+            {
+                idMetodPago = idMtdPago.idMetodoPago;
+            }
+
+            return idMetodPago;
         }
     }
 }

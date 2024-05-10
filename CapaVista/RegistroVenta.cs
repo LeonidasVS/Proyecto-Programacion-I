@@ -115,7 +115,7 @@ namespace CapaVista
                         {
                             if (int.Parse(txtCodigoProducto.Text) == int.Parse(row.Cells["Codigo"].Value.ToString()))
                             {
-                                MessageBox.Show("Este pruducto ya se encuentra en el pedido. Por favor, actualizar la cantidad directamente en la tabla.", "Tienda AS | Registro venta",
+                                MessageBox.Show("Este pruducto ya se encuentra en el pedido.", "Tienda AS | Registro venta",
                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }                               
@@ -175,7 +175,9 @@ namespace CapaVista
                     MessageBox.Show("Venta guardada con exito", "Tienda AS | Registro venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _productoLOG.ProductoAgotado();
-                    LimpiarTablaVenta();                   
+                    LimpiarTablaVenta();  
+                    Factura objFactura = new Factura(_ventaLOG.UltimoIdVenta());
+                    objFactura.ShowDialog();
                 }
                 else
                 {
@@ -223,40 +225,16 @@ namespace CapaVista
                 if (e.ColumnIndex >= 0 && e.RowIndex >= 0)                   
                 {
                     int id = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Codigo"].Value.ToString());
-                    int prodAct = _productoLOG.ObtenerExistenciasDesdeBD(id);
-                    int CantInicial = int.Parse(txtCantidad.Text);
                     bool precioValido = decimal.TryParse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Precio"].Value.ToString(), out decimal precio);                   
-                    int cantidad = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString());
-                   
-                    if (cantidad <= _productoLOG.ObtenerExistenciasDesdeBD(id))                
-                    {                    
-                        if (precioValido && cantidad > 0)                       
-                        {                       
-                            decimal subTotal = precio * cantidad;                            
-                            dgvDetalleVenta.Rows[e.RowIndex].Cells["SubTotal"].Value = subTotal;
-                            
-                            CalcularMontoTotal();                                                
-                            prodAct -= cantidad;                            
-                            txtExistencias.Text = prodAct.ToString();                            
-                        }                        
-                    }
-                    else
-                    {
-                        MessageBox.Show("Las existencias no son suficientes para esta venta", "Tienda | Registro venta",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value = CantInicial;
-                        txtExistencias.Text = (_productoLOG.ObtenerExistenciasDesdeBD(id) - CantInicial).ToString();
-                    }
-                    if (e.ColumnIndex == dgvDetalleVenta.Columns["Cantidad"].Index && Convert.ToInt32(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value) == 0)
-                    {
-                        dgvDetalleVenta.Rows.RemoveAt(e.RowIndex);
-                        MessageBox.Show("Se eliminó el producto de esta venta", "Tienda | Registro venta",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        CargarProducto();
-                        CalcularMontoTotal();
-                    }
-                                        
-                }
+                    int cantidad = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString());                                        
+                    if (precioValido)                                              
+                    {                                                  
+                        decimal subTotal = precio * cantidad;                                                       
+                        dgvDetalleVenta.Rows[e.RowIndex].Cells["SubTotal"].Value = subTotal;
+                                                     
+                        CalcularMontoTotal();                                                                                                
+                    }                                           
+                }                                       
             }
             catch (Exception)
             {
@@ -280,12 +258,69 @@ namespace CapaVista
             txtCantidad.Clear();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            LimpiarTablaVenta();
-            CargarProducto();
-            MessageBox.Show("Se eliminaron los productos registrados en la venta.","Tienda AS | Registro venta",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var desicion = MessageBox.Show("Esto eliminará todos los productos registrados en la venta actual. ¿Desea continuar?", "Tienda AS | Registro venta",
+                MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+
+            if (desicion != DialogResult.Yes)
+            {
+                MessageBox.Show("La venta del producto se continua mostrando en el listado.", "Tienda | Registro venta",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                LimpiarTablaVenta();
+                CargarProducto();
+                MessageBox.Show("Se eliminaron los productos registrados en la venta.", "Tienda AS | Registro venta",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }       
+        }
+
+        private void dgvDetalleVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    int id = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Codigo"].Value.ToString());
+                    DataRow filaEliminar = detalleVenta.AsEnumerable().FirstOrDefault(row => row.Field<int>("Codigo") == id);
+
+                    if (dgvDetalleVenta.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                    {
+                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar la venta de este producto?", "Tienda | Registro venta",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        _productoLOG = new ProductoLOG();
+
+                        if (desicion != DialogResult.Yes)
+                        {
+                            MessageBox.Show("La venta del producto se continua mostrando en el listado.", "Tienda | Registro venta",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            if (filaEliminar != null)
+                            {
+                                filaEliminar.Delete();
+                                CargarProducto();
+                                MessageBox.Show("La venta del producto se eliminó del listado.", "Tienda | Registro venta",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show($"No se encontró un producto con el id ({id}) en el listado", "Tienda | Registro venta",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error.", "Tienda | Registro venta",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

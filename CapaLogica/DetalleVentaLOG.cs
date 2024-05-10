@@ -16,5 +16,17 @@ namespace CapaLogica
             _detalleVentaDAL = new DetalleVentaDAL();
             return _detalleVentaDAL.LeerDetalleVenta();
         }
+
+        public List<DetalleVenta> ObtenerDetalleVentaPorIdVent(int id)
+        {
+            _detalleVentaDAL = new DetalleVentaDAL();
+            return _detalleVentaDAL.ObtenerDetalleVentaPorIdVenta(id);
+        }
+
+        public int IdMetodoPagoPoridVenta(int id)
+        {
+            _detalleVentaDAL = new DetalleVentaDAL();
+            return _detalleVentaDAL.IdMetodoPagoPoridVenta(id);
+        }
     }
 }

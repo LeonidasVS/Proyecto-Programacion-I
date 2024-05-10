@@ -41,6 +41,11 @@
             this.MarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.dgvMostrarProductos = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbInactivos = new System.Windows.Forms.RadioButton();
+            this.rdbActivos = new System.Windows.Forms.RadioButton();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,11 +56,6 @@
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdbInactivos = new System.Windows.Forms.RadioButton();
-            this.rdbActivos = new System.Windows.Forms.RadioButton();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
@@ -174,6 +174,7 @@
             // dgvMostrarProductos
             // 
             this.dgvMostrarProductos.AllowUserToAddRows = false;
+            this.dgvMostrarProductos.AllowUserToDeleteRows = false;
             this.dgvMostrarProductos.AutoGenerateColumns = false;
             this.dgvMostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrarProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -191,85 +192,13 @@
             this.dgvMostrarProductos.Location = new System.Drawing.Point(14, 141);
             this.dgvMostrarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dgvMostrarProductos.Name = "dgvMostrarProductos";
+            this.dgvMostrarProductos.ReadOnly = true;
             this.dgvMostrarProductos.RowHeadersWidth = 62;
             this.dgvMostrarProductos.RowTemplate.Height = 28;
             this.dgvMostrarProductos.Size = new System.Drawing.Size(878, 430);
             this.dgvMostrarProductos.TabIndex = 1;
             this.dgvMostrarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarProductos_CellContentClick);
             this.dgvMostrarProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "IdProducto";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.MinimumWidth = 8;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 75;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // idMarca
-            // 
-            this.idMarca.DataPropertyName = "idMarca";
-            this.idMarca.HeaderText = "Marca";
-            this.idMarca.Name = "idMarca";
-            this.idMarca.Width = 175;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.Width = 204;
-            // 
-            // existenciasDataGridViewTextBoxColumn
-            // 
-            this.existenciasDataGridViewTextBoxColumn.DataPropertyName = "Existencias";
-            this.existenciasDataGridViewTextBoxColumn.HeaderText = "Existencias";
-            this.existenciasDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.existenciasDataGridViewTextBoxColumn.Name = "existenciasDataGridViewTextBoxColumn";
-            // 
-            // precioUnitarioDataGridViewTextBoxColumn
-            // 
-            this.precioUnitarioDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnitario";
-            this.precioUnitarioDataGridViewTextBoxColumn.HeaderText = "Precio Unitario";
-            this.precioUnitarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.precioUnitarioDataGridViewTextBoxColumn.Name = "precioUnitarioDataGridViewTextBoxColumn";
-            this.precioUnitarioDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // idCategoria
-            // 
-            this.idCategoria.DataPropertyName = "idCategoria";
-            this.idCategoria.HeaderText = "Categoria";
-            this.idCategoria.Name = "idCategoria";
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            this.activoDataGridViewCheckBoxColumn.Visible = false;
-            this.activoDataGridViewCheckBoxColumn.Width = 150;
             // 
             // btnAgregar
             // 
@@ -332,6 +261,98 @@
             this.rdbActivos.UseWaitCursor = true;
             this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
             // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "IdProducto";
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.MinimumWidth = 8;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 75;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // idMarca
+            // 
+            this.idMarca.DataPropertyName = "idMarca";
+            this.idMarca.HeaderText = "Marca";
+            this.idMarca.MinimumWidth = 8;
+            this.idMarca.Name = "idMarca";
+            this.idMarca.ReadOnly = true;
+            this.idMarca.Width = 150;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn.Width = 204;
+            // 
+            // existenciasDataGridViewTextBoxColumn
+            // 
+            this.existenciasDataGridViewTextBoxColumn.DataPropertyName = "Existencias";
+            this.existenciasDataGridViewTextBoxColumn.HeaderText = "Existencias";
+            this.existenciasDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.existenciasDataGridViewTextBoxColumn.Name = "existenciasDataGridViewTextBoxColumn";
+            this.existenciasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioUnitarioDataGridViewTextBoxColumn
+            // 
+            this.precioUnitarioDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnitario";
+            this.precioUnitarioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioUnitarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.precioUnitarioDataGridViewTextBoxColumn.Name = "precioUnitarioDataGridViewTextBoxColumn";
+            this.precioUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precioUnitarioDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // idCategoria
+            // 
+            this.idCategoria.DataPropertyName = "idCategoria";
+            this.idCategoria.HeaderText = "Categoria";
+            this.idCategoria.MinimumWidth = 8;
+            this.idCategoria.Name = "idCategoria";
+            this.idCategoria.ReadOnly = true;
+            this.idCategoria.Width = 150;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::CapaVista.Properties.Resources.edit;
+            this.Editar.MinimumWidth = 8;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Editar.Width = 75;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.MinimumWidth = 8;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 75;
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            this.activoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.activoDataGridViewCheckBoxColumn.Visible = false;
+            this.activoDataGridViewCheckBoxColumn.Width = 150;
+            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -369,6 +390,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdbInactivos;
         private System.Windows.Forms.RadioButton rdbActivos;
+        private System.Windows.Forms.ComboBox cmbMarcas;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource MarcaBindingSource;
+        private System.Windows.Forms.BindingSource CategoriaBindingSource;
+        private System.Windows.Forms.ComboBox cmbCategorias;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMarca;
@@ -379,14 +409,5 @@
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.ComboBox cmbMarcas;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource MarcaBindingSource;
-        private System.Windows.Forms.BindingSource CategoriaBindingSource;
-        private System.Windows.Forms.ComboBox cmbCategorias;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnReiniciar;
     }
 }

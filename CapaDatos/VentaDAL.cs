@@ -33,5 +33,39 @@ namespace CapaDatos
 
             return resultado;
         }
+
+        public int IdDeUltimaVenta()
+        {
+            _db = new ContextoBD();
+            var ultimoId = _db.Ventas.OrderByDescending(v => v.VentaId).Select(v => v.VentaId).FirstOrDefault();
+
+            return ultimoId;
+        }
+
+        public string FechaVentaPorid(int id)
+        {
+            _db = new ContextoBD();
+            var venta = _db.Ventas.Find(id);
+            string fecha = string.Empty;
+            if (venta != null)
+            {
+                fecha = venta.Fecha.ToLongDateString();
+            }
+
+            return fecha;
+        }
+
+        public decimal TotalVentaPorid(int id)
+        {
+            _db = new ContextoBD();
+            var venta = _db.Ventas.Find(id);
+            decimal total = 0;
+            if (venta != null)
+            {
+                total = venta.Total;
+            }
+
+            return total;
+        }
     }
 }

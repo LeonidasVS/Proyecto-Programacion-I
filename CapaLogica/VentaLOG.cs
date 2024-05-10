@@ -16,5 +16,22 @@ namespace CapaLogica
             _ventaDAL = new VentaDAL();
             return _ventaDAL.GuardarVenta(venta);
         }
+
+        public int UltimoIdVenta()
+        {
+            _ventaDAL = new VentaDAL();
+            return _ventaDAL.IdDeUltimaVenta();
+        }
+
+        public string FechaVentaPorId(int id)
+        {
+            _ventaDAL = new VentaDAL();
+            return _ventaDAL.FechaVentaPorid(id);
+        }
+        public decimal TotalVentaPorId(int id)
+        {
+            _ventaDAL = new VentaDAL();
+            return _ventaDAL.TotalVentaPorid(id);
+        }
     }
 }

@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +99,12 @@
     <Compile Include="AdministrarProductos.Designer.cs">
       <DependentUpon>AdministrarProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +131,11 @@
     <Compile Include="RegistroVenta.Designer.cs">
       <DependentUpon>RegistroVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerDetalleVenta.cs">
+    <Compile Include="VerVentasRealizadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerDetalleVenta.Designer.cs">
-      <DependentUpon>VerDetalleVenta.cs</DependentUpon>
+    <Compile Include="VerVentasRealizadas.Designer.cs">
+      <DependentUpon>VerVentasRealizadas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdministrarMarcas.resx">
       <DependentUpon>AdministrarMarcas.cs</DependentUpon>
@@ -152,6 +159,9 @@
     <EmbeddedResource Include="AdministrarProductos.resx">
       <DependentUpon>AdministrarProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroVenta.resx">
       <DependentUpon>RegistroVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VerDetalleVenta.resx">
-      <DependentUpon>VerDetalleVenta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaDatos.Class1.datasource" />
@@ -233,6 +240,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
