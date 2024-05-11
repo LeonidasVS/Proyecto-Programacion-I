@@ -46,6 +46,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(248, 26);
             this.txtNombre.TabIndex = 0;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Usuario_KeyPress);
             // 
             // label1
@@ -73,9 +74,10 @@
             this.txtcontrasena.Location = new System.Drawing.Point(378, 246);
             this.txtcontrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtcontrasena.Name = "txtcontrasena";
-            this.txtcontrasena.PasswordChar = '*';
+            this.txtcontrasena.PasswordChar = '●';
             this.txtcontrasena.Size = new System.Drawing.Size(248, 26);
             this.txtcontrasena.TabIndex = 4;
+            this.txtcontrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtcontrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
             // btnAcceder
