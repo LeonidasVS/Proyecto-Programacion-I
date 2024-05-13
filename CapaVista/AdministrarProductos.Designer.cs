@@ -40,6 +40,11 @@
             this.cmbMarcas = new System.Windows.Forms.ComboBox();
             this.MarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdbInactivos = new System.Windows.Forms.RadioButton();
+            this.rdbActivos = new System.Windows.Forms.RadioButton();
             this.dgvMostrarProductos = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,17 +56,12 @@
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdbInactivos = new System.Windows.Forms.RadioButton();
-            this.rdbActivos = new System.Windows.Forms.RadioButton();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
@@ -171,128 +171,6 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Marca";
             // 
-            // dgvMostrarProductos
-            // 
-            this.dgvMostrarProductos.AllowUserToAddRows = false;
-            this.dgvMostrarProductos.AllowUserToDeleteRows = false;
-            this.dgvMostrarProductos.AutoGenerateColumns = false;
-            this.dgvMostrarProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvMostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.nombreDataGridViewTextBoxColumn,
-            this.idMarca,
-            this.descripcionDataGridViewTextBoxColumn,
-            this.existenciasDataGridViewTextBoxColumn,
-            this.precioUnitarioDataGridViewTextBoxColumn,
-            this.idCategoria,
-            this.Editar,
-            this.Eliminar,
-            this.activoDataGridViewCheckBoxColumn});
-            this.dgvMostrarProductos.DataSource = this.productoBindingSource1;
-            this.dgvMostrarProductos.Location = new System.Drawing.Point(14, 141);
-            this.dgvMostrarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.dgvMostrarProductos.Name = "dgvMostrarProductos";
-            this.dgvMostrarProductos.ReadOnly = true;
-            this.dgvMostrarProductos.RowHeadersWidth = 62;
-            this.dgvMostrarProductos.RowTemplate.Height = 28;
-            this.dgvMostrarProductos.Size = new System.Drawing.Size(878, 430);
-            this.dgvMostrarProductos.TabIndex = 1;
-            this.dgvMostrarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarProductos_CellContentClick);
-            this.dgvMostrarProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "IdProducto";
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.MinimumWidth = 8;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 75;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // idMarca
-            // 
-            this.idMarca.DataPropertyName = "idMarca";
-            this.idMarca.HeaderText = "Marca";
-            this.idMarca.MinimumWidth = 8;
-            this.idMarca.Name = "idMarca";
-            this.idMarca.ReadOnly = true;
-            this.idMarca.Width = 150;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descripcionDataGridViewTextBoxColumn.Width = 204;
-            // 
-            // existenciasDataGridViewTextBoxColumn
-            // 
-            this.existenciasDataGridViewTextBoxColumn.DataPropertyName = "Existencias";
-            this.existenciasDataGridViewTextBoxColumn.HeaderText = "Existencias";
-            this.existenciasDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.existenciasDataGridViewTextBoxColumn.Name = "existenciasDataGridViewTextBoxColumn";
-            this.existenciasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioUnitarioDataGridViewTextBoxColumn
-            // 
-            this.precioUnitarioDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnitario";
-            this.precioUnitarioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioUnitarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.precioUnitarioDataGridViewTextBoxColumn.Name = "precioUnitarioDataGridViewTextBoxColumn";
-            this.precioUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioUnitarioDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // idCategoria
-            // 
-            this.idCategoria.DataPropertyName = "idCategoria";
-            this.idCategoria.HeaderText = "Categoria";
-            this.idCategoria.MinimumWidth = 8;
-            this.idCategoria.Name = "idCategoria";
-            this.idCategoria.ReadOnly = true;
-            this.idCategoria.Width = 150;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = global::CapaVista.Properties.Resources.edit;
-            this.Editar.MinimumWidth = 8;
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editar.Width = 75;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
-            this.Eliminar.MinimumWidth = 8;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 75;
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewCheckBoxColumn.MinimumWidth = 8;
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
-            this.activoDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.activoDataGridViewCheckBoxColumn.Visible = false;
-            this.activoDataGridViewCheckBoxColumn.Width = 150;
-            // 
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -352,11 +230,133 @@
             this.rdbActivos.UseVisualStyleBackColor = true;
             this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
             // 
+            // dgvMostrarProductos
+            // 
+            this.dgvMostrarProductos.AllowUserToAddRows = false;
+            this.dgvMostrarProductos.AllowUserToDeleteRows = false;
+            this.dgvMostrarProductos.AutoGenerateColumns = false;
+            this.dgvMostrarProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvMostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.nombreDataGridViewTextBoxColumn,
+            this.idMarca,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.existenciasDataGridViewTextBoxColumn,
+            this.precioUnitarioDataGridViewTextBoxColumn,
+            this.idCategoria,
+            this.Editar,
+            this.Eliminar,
+            this.activoDataGridViewCheckBoxColumn});
+            this.dgvMostrarProductos.DataSource = this.productoBindingSource1;
+            this.dgvMostrarProductos.Location = new System.Drawing.Point(14, 141);
+            this.dgvMostrarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.dgvMostrarProductos.Name = "dgvMostrarProductos";
+            this.dgvMostrarProductos.ReadOnly = true;
+            this.dgvMostrarProductos.RowHeadersWidth = 62;
+            this.dgvMostrarProductos.RowTemplate.Height = 28;
+            this.dgvMostrarProductos.Size = new System.Drawing.Size(878, 430);
+            this.dgvMostrarProductos.TabIndex = 1;
+            this.dgvMostrarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarProductos_CellContentClick);
+            this.dgvMostrarProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "IdProducto";
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.MinimumWidth = 8;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 70;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 139;
+            // 
+            // idMarca
+            // 
+            this.idMarca.DataPropertyName = "idMarca";
+            this.idMarca.HeaderText = "Marca";
+            this.idMarca.MinimumWidth = 8;
+            this.idMarca.Name = "idMarca";
+            this.idMarca.ReadOnly = true;
+            this.idMarca.Width = 105;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionDataGridViewTextBoxColumn.Width = 160;
+            // 
+            // existenciasDataGridViewTextBoxColumn
+            // 
+            this.existenciasDataGridViewTextBoxColumn.DataPropertyName = "Existencias";
+            this.existenciasDataGridViewTextBoxColumn.HeaderText = "Existencias";
+            this.existenciasDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.existenciasDataGridViewTextBoxColumn.Name = "existenciasDataGridViewTextBoxColumn";
+            this.existenciasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.existenciasDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // precioUnitarioDataGridViewTextBoxColumn
+            // 
+            this.precioUnitarioDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnitario";
+            this.precioUnitarioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioUnitarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.precioUnitarioDataGridViewTextBoxColumn.Name = "precioUnitarioDataGridViewTextBoxColumn";
+            this.precioUnitarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precioUnitarioDataGridViewTextBoxColumn.Width = 91;
+            // 
+            // idCategoria
+            // 
+            this.idCategoria.DataPropertyName = "idCategoria";
+            this.idCategoria.HeaderText = "Categoria";
+            this.idCategoria.MinimumWidth = 8;
+            this.idCategoria.Name = "idCategoria";
+            this.idCategoria.ReadOnly = true;
+            this.idCategoria.Width = 90;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::CapaVista.Properties.Resources.edit;
+            this.Editar.MinimumWidth = 8;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Editar.Width = 65;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.MinimumWidth = 8;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 75;
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewCheckBoxColumn.MinimumWidth = 8;
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            this.activoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.activoDataGridViewCheckBoxColumn.Visible = false;
+            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(906, 658);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnRegresar);
@@ -373,9 +373,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,7 +383,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox GroupBox1;
-        private System.Windows.Forms.DataGridView dgvMostrarProductos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.BindingSource productoBindingSource1;
@@ -399,6 +398,7 @@
         private System.Windows.Forms.ComboBox cmbCategorias;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnReiniciar;
+        private System.Windows.Forms.DataGridView dgvMostrarProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMarca;

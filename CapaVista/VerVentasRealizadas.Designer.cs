@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerVentasRealizadas));
             this.btnAtras = new System.Windows.Forms.Button();
             this.dgvVentasRealizadas = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.ventasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalle = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ventasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasRealizadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.dgvVentasRealizadas.AllowUserToAddRows = false;
             this.dgvVentasRealizadas.AllowUserToOrderColumns = true;
             this.dgvVentasRealizadas.AutoGenerateColumns = false;
+            this.dgvVentasRealizadas.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvVentasRealizadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentasRealizadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -68,20 +70,6 @@
             this.dgvVentasRealizadas.Size = new System.Drawing.Size(873, 465);
             this.dgvVentasRealizadas.TabIndex = 6;
             this.dgvVentasRealizadas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentasRealizadas_CellContentClick);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(360, 37);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(215, 25);
-            this.lblTitulo.TabIndex = 5;
-            this.lblTitulo.Text = "Ventas Realizadas\r\n";
-            // 
-            // ventasBindingSource1
-            // 
-            this.ventasBindingSource1.DataSource = typeof(CapaEntidades.Venta);
             // 
             // Codigo
             // 
@@ -112,18 +100,35 @@
             this.Detalle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Detalle.Width = 207;
             // 
+            // ventasBindingSource1
+            // 
+            this.ventasBindingSource1.DataSource = typeof(CapaEntidades.Venta);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(360, 37);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(215, 25);
+            this.lblTitulo.TabIndex = 5;
+            this.lblTitulo.Text = "Ventas Realizadas\r\n";
+            // 
             // VerVentasRealizadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(906, 658);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dgvVentasRealizadas);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VerVentasRealizadas";
-            this.Text = "VerVentasRealizadas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tienda AS | Ventas Realizadas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentasRealizadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource1)).EndInit();
             this.ResumeLayout(false);

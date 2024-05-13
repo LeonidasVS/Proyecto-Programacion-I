@@ -95,6 +95,7 @@ namespace CapaVista
 
             if (rdbActivos.Checked)
             {
+                columna.Visible = true;
                 dgvMostrarProductos.DataSource = _productoLOG.Filtrar(idCategoria, false, idMarca, nombreProducto);
             }
             else if (rdbInactivos.Checked)

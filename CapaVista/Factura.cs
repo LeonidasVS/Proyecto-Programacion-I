@@ -38,6 +38,7 @@ namespace CapaVista
             int index = 3; // Posición vertical inicial
             int posicionVertical = 0;
 
+            lblTitulo.Text = $"Factura #{_id}";
             labelFecha.Text = $"{_ventaLOG.FechaVentaPorId(_id)}  {_ventaLOG.HoraVentaPorId(_id)}";
             lblTotal.Text = _ventaLOG.TotalVentaPorId(_id).ToString();
             lblMtdPago.Text = _metodoPagoLOG.ObtenerNombreMtdPagodesdeBD(_detalleVentaLOG.IdMetodoPagoPoridVenta(_id));

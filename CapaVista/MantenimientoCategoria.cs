@@ -37,12 +37,16 @@ namespace CapaVista
         {
             _categoriaLOG = new CategoriaLOG();
 
+            DataGridViewColumn columna = dgvCategorias.Columns["Eliminar"];
+
             if (rdbActivo.Checked)
             {
+                columna.Visible = true;
                 dgvCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
             }
             else if (rdbInactivo.Checked)
             {
+                columna.Visible = false;
                 dgvCategorias.DataSource = _categoriaLOG.ObtenerCategorias(true);
             }
             

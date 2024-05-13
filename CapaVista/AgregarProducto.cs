@@ -28,7 +28,7 @@ namespace CapaVista
 
             if (_id > 0)
             {
-                this.Text = "Tienda | Edicion de Producto";
+                this.Text = "Tienda AS | Edicion de Producto";
                 btnGuardar.Text = "Actualizar";
                 lblTitulo.Text = "Editar Productos";
 

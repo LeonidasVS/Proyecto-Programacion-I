@@ -15,12 +15,31 @@ namespace CapaVista
     public partial class AgregarMetodoPago : Form
     {
         MetodoPagoLOG _metodoPagoLOG;
-        public AgregarMetodoPago()
+        int _id;
+        public AgregarMetodoPago(int id = 0)
         {
             InitializeComponent();
+            _id = id;
+            if (id > 0)
+            {
+                lblTitulo.Text = "Editar Metodo de Pago";
 
-            MetdPagoBindingSource.MoveLast();
-            MetdPagoBindingSource.AddNew();
+                this.Text = "Tienda AS |Editar Metodo de Pago";
+                btnGuardar.Text = "Actualizar";
+
+                CargarDatos(_id);
+            }
+            else
+            {
+                MetdPagoBindingSource.MoveLast();
+                MetdPagoBindingSource.AddNew();
+            }  
+        }
+
+        private void CargarDatos(int id)
+        {
+            _metodoPagoLOG = new MetodoPagoLOG();
+            MetdPagoBindingSource.DataSource = _metodoPagoLOG.MetodoPagoPorId(_id);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -40,44 +59,65 @@ namespace CapaVista
                 _metodoPagoLOG = new MetodoPagoLOG();
                 if (string.IsNullOrEmpty(txtNombre.Text))
                 {
-                    MessageBox.Show("Por favor ingrese el nombre de la marca", "Tienda AS | Agregar Marca",
+                    MessageBox.Show("Por favor ingrese el nombre deel metodo de pago", "Tienda AS | Registro Metodo de pago",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombre.Focus();
                     txtNombre.BackColor = Color.LightYellow;
                 }
                 else if (!chbActivo.Checked)
                 {
-                    var dialogo = MessageBox.Show("Estas seguro que desea guardar la marca inactiva?", "Tienda | Registro Marca",
+                    var dialogo = MessageBox.Show("Estas seguro que desea guardar el metodo de pago inactivo?", "Tienda | Registro Metodo de pago",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (dialogo != DialogResult.Yes)
                     {
-                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda | Registro Marca",
+                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda | Registro Metodo de pago",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                 }
 
-                MetodoPago metdpago;
-                metdpago = (MetodoPago)MetdPagoBindingSource.Current;
-                int resultado = _metodoPagoLOG.AgregarMtdPago(metdpago);
-
-                if (resultado > 0)
+                if (_id > 0)
                 {
-                    MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro Marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    MetodoPago metdpago;
+                    metdpago = (MetodoPago)MetdPagoBindingSource.Current;
+                    int resultado = _metodoPagoLOG.AgregarMtdPago(metdpago, _id, true);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Metodo de pago editado con Exito", "Tienda | Editar metodo de pago",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro editarla Marca", "Tienda | Editar metodo de pago",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se logro agregagr la Marca", "Tienda | Registro marca",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetodoPago metdpago;
+                    metdpago = (MetodoPago)MetdPagoBindingSource.Current;
+                    int resultado = _metodoPagoLOG.AgregarMtdPago(metdpago);
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Metodo de pago agregado con Exito", "Tienda | Registro Metodo de pago",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro agregagr el metodo de pago", "Tienda | Registro Metodo de pago",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Ocurrio un error", "Tienda AS | Agregar Marca",
+                MessageBox.Show("Ocurrio un error", "Tienda AS | Registro Metodo de pago",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

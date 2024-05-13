@@ -210,6 +210,8 @@ namespace CapaVista
 
         private void dgvDetalleVenta_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            DataGridViewColumn columna = dgvDetalleVenta.Columns["Eliminar"];
+            columna.DisplayIndex = 6;
             _marcaLOG = new MarcaLOG();
             if (e.RowIndex >= 0 && e.ColumnIndex == dgvDetalleVenta.Columns["Marca"].Index)
             {

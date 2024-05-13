@@ -12,22 +12,34 @@ namespace CapaLogica
     public class MetodoPagoLOG
     {
         MetodoPagoDAL _metodoPagoDAL;
-        public List<MetodoPago> FormasDePago()
+        public List<MetodoPago> FormasDePago(bool inactivo = false)
         {
             _metodoPagoDAL = new MetodoPagoDAL();
-            return _metodoPagoDAL.FormasDePago();
+            return _metodoPagoDAL.FormasDePago(inactivo);
         }
 
-        public int AgregarMtdPago(MetodoPago metodoPago)
+        public int AgregarMtdPago(MetodoPago metodoPago, int id = 0, bool esActualizacion = false)
         {
             _metodoPagoDAL = new MetodoPagoDAL();
-            return _metodoPagoDAL.GuardarMetodoPago(metodoPago);
+            return _metodoPagoDAL.GuardarMetodoPago(metodoPago, id, esActualizacion);
         }
 
         public string ObtenerNombreMtdPagodesdeBD(int id)
         {
             _metodoPagoDAL = new MetodoPagoDAL();
             return _metodoPagoDAL.ObtenerNombreMetdPagoDesdeBD(id);
+        }
+
+        public int EliminarMtdPago(int id)
+        {
+            _metodoPagoDAL = new MetodoPagoDAL();
+            return _metodoPagoDAL.EliminarMtdpago(id);
+        }
+
+        public object MetodoPagoPorId(int id)
+        {
+            _metodoPagoDAL = new MetodoPagoDAL();
+            return _metodoPagoDAL.MetodoPagoPorId(id);
         }
     }
 }

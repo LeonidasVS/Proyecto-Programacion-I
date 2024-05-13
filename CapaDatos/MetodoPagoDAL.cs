@@ -10,11 +10,33 @@ namespace CapaDatos
 {
     public class MetodoPagoDAL
     {
-        ContextoBD _db; 
-        public List<MetodoPago> FormasDePago()
+        ContextoBD _db;
+
+        public int EliminarMtdpago(int id)
         {
             _db = new ContextoBD();
-            return _db.MetodoPagos.ToList();
+            var metodoPago = _db.MetodoPagos.Find(id);
+
+            if (metodoPago != null)
+            {
+                metodoPago.Estado = false;
+                _db.SaveChanges();
+            }
+
+            return metodoPago.idMetodoPago;
+        }
+
+        public List<MetodoPago> FormasDePago(bool inactivo = false)
+        {
+            _db = new ContextoBD();
+            if (inactivo)
+            {
+                return _db.MetodoPagos.Where(m => m.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.MetodoPagos.Where(m => m.Estado == true).ToList();
+            }
         }
 
         public int GuardarMetodoPago(MetodoPago metodoPago, int id = 0, bool actualizacion = false)
@@ -39,6 +61,12 @@ namespace CapaDatos
             }
 
             return retornar;
+        }
+
+        public List<MetodoPago> MetodoPagoPorId(int id)
+        {
+            _db = new ContextoBD();
+            return _db.MetodoPagos.Where(m => m.idMetodoPago == id).ToList();
         }
 
         public MetodoPago ObtenerMetodoPago(int id)

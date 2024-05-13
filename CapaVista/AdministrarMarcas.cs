@@ -37,12 +37,16 @@ namespace CapaVista
         {
             _marcaLOG = new MarcaLOG();
 
+            DataGridViewColumn columna = dgvMarcas.Columns["Eliminar"];
+
             if (rdbActivos.Checked)
             {
+                columna.Visible = true;
                 dgvMarcas.DataSource = _marcaLOG.ObtenerMarca();
             }
             else if (rdbInactivos.Checked)
             {
+                columna.Visible = false;
                 dgvMarcas.DataSource = _marcaLOG.ObtenerMarca(true);
             }
         }
@@ -81,7 +85,7 @@ namespace CapaVista
 
                             if (resultado > 0)
                             {
-                                MessageBox.Show("Marca eliminado con Exito.", "Tienda | Editar marca",
+                                MessageBox.Show("Marca eliminada con Exito.", "Tienda | Editar marca",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else

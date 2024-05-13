@@ -32,14 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.MetdPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvMtdsPago = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FormaDePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbInactivos = new System.Windows.Forms.RadioButton();
+            this.rdbActivos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.MetdPagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMtdsPago)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -60,6 +64,7 @@
             // 
             this.dgvMtdsPago.AllowUserToAddRows = false;
             this.dgvMtdsPago.AutoGenerateColumns = false;
+            this.dgvMtdsPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMtdsPago.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvMtdsPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMtdsPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -68,35 +73,11 @@
             this.Editar,
             this.Eliminar});
             this.dgvMtdsPago.DataSource = this.MetdPagoBindingSource;
-            this.dgvMtdsPago.Location = new System.Drawing.Point(11, 162);
+            this.dgvMtdsPago.Location = new System.Drawing.Point(11, 183);
             this.dgvMtdsPago.Name = "dgvMtdsPago";
             this.dgvMtdsPago.Size = new System.Drawing.Size(793, 360);
             this.dgvMtdsPago.TabIndex = 1;
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "idMetodoPago";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // FormaDePago
-            // 
-            this.FormaDePago.DataPropertyName = "FormaDePago";
-            this.FormaDePago.HeaderText = "Formas de Pago";
-            this.FormaDePago.Name = "FormaDePago";
-            this.FormaDePago.Width = 300;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.Width = 175;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Width = 175;
+            this.dgvMtdsPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMtdsPago_CellContentClick);
             // 
             // btnAgregar
             // 
@@ -118,12 +99,72 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "idMetodoPago";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // FormaDePago
+            // 
+            this.FormaDePago.DataPropertyName = "FormaDePago";
+            this.FormaDePago.HeaderText = "Formas de Pago";
+            this.FormaDePago.Name = "FormaDePago";
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::CapaVista.Properties.Resources.edit;
+            this.Editar.Name = "Editar";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.Name = "Eliminar";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbInactivos);
+            this.groupBox1.Controls.Add(this.rdbActivos);
+            this.groupBox1.Location = new System.Drawing.Point(12, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(197, 86);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar por estado";
+            // 
+            // rdbInactivos
+            // 
+            this.rdbInactivos.AutoSize = true;
+            this.rdbInactivos.Location = new System.Drawing.Point(98, 39);
+            this.rdbInactivos.Name = "rdbInactivos";
+            this.rdbInactivos.Size = new System.Drawing.Size(86, 22);
+            this.rdbInactivos.TabIndex = 1;
+            this.rdbInactivos.Text = "Inactivos";
+            this.rdbInactivos.UseVisualStyleBackColor = true;
+            this.rdbInactivos.CheckedChanged += new System.EventHandler(this.rdbInactivos_CheckedChanged);
+            // 
+            // rdbActivos
+            // 
+            this.rdbActivos.AutoSize = true;
+            this.rdbActivos.Checked = true;
+            this.rdbActivos.Location = new System.Drawing.Point(3, 39);
+            this.rdbActivos.Name = "rdbActivos";
+            this.rdbActivos.Size = new System.Drawing.Size(77, 22);
+            this.rdbActivos.TabIndex = 0;
+            this.rdbActivos.TabStop = true;
+            this.rdbActivos.Text = "Activos";
+            this.rdbActivos.UseVisualStyleBackColor = true;
+            this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
+            // 
             // AdministrarMetodosPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(815, 623);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvMtdsPago);
@@ -135,6 +176,8 @@
             this.Text = "Tienda AS | Administrar Metodos de Pago";
             ((System.ComponentModel.ISupportInitialize)(this.MetdPagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMtdsPago)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +194,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FormaDePago;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbInactivos;
+        private System.Windows.Forms.RadioButton rdbActivos;
     }
 }
