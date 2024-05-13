@@ -78,6 +78,8 @@ namespace CapaVista
             int idCategoria = 0;
             string nombreProducto = null;
 
+            DataGridViewColumn columna = dgvMostrarProductos.Columns["Eliminar"];
+
             if (cmbMarcas.SelectedValue != null)
             {
                 idMarca = int.Parse(cmbMarcas.SelectedValue.ToString());
@@ -91,53 +93,64 @@ namespace CapaVista
                 nombreProducto = txtNombre.Text;
             }
 
-            if (cmbMarcas.SelectedValue == null && cmbCategorias.SelectedValue == null && txtNombre.Text == "")
+            if (rdbActivos.Checked)
             {
-                if (rdbActivos.Checked)
-                {
+                dgvMostrarProductos.DataSource = _productoLOG.Filtrar(idCategoria, false, idMarca, nombreProducto);
+            }
+            else if (rdbInactivos.Checked)
+            {
+                columna.Visible = false;
+                dgvMostrarProductos.DataSource = _productoLOG.Filtrar(idCategoria, true, idMarca, nombreProducto);
+            }
 
-                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
-                }
-                else if (rdbInactivos.Checked)
-                {
-
-                    dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos(true);
-                }
-            }
-            else if (idMarca > 0)
-            {
-                if (rdbActivos.Checked)
-                {
-                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca);
-                }
-                else if (rdbInactivos.Checked)
-                {
-
-                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca, true);
-                }
-            }
-            else if (idCategoria > 0)
-            {
-                if (rdbActivos.Checked)
-                {
-                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria);
-                }
-                else if (rdbInactivos.Checked)
-                {
-                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria, true);
-                }
-            }
-            else if (nombreProducto != "")
-            {
-                if (rdbActivos.Checked)
-                {
-                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto);
-                }
-                else if (rdbInactivos.Checked)
-                {
-                    dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto, true);
-                }
-            }
+            //if (cmbMarcas.SelectedValue == null && cmbCategorias.SelectedValue == null && txtNombre.Text == "")
+            //{
+            //    if (rdbActivos.Checked)
+            //    {
+            //        dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos();
+            //    }
+            //    else if (rdbInactivos.Checked)
+            //    {
+            //        columna.Visible = false;
+            //        dgvMostrarProductos.DataSource = _productoLOG.ObtenerProductos(true);
+            //    }
+            //}
+            //else if (idMarca > 0)
+            //{
+            //    if (rdbActivos.Checked)
+            //    {
+            //        dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca);
+            //    }
+            //    else if (rdbInactivos.Checked)
+            //    {
+            //        columna.Visible = false;
+            //        dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorMarca(idMarca, true);
+            //    }
+            //}
+            //else if (idCategoria > 0)
+            //{
+            //    if (rdbActivos.Checked)
+            //    {
+            //        dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria);
+            //    }
+            //    else if (rdbInactivos.Checked)
+            //    {
+            //        columna.Visible = false;
+            //        dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorcategoria(idCategoria, true);
+            //    }
+            //}
+            //else if (nombreProducto != "")
+            //{
+            //    if (rdbActivos.Checked)
+            //    {
+            //        dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto);
+            //    }
+            //    else if (rdbInactivos.Checked)
+            //    {
+            //        columna.Visible = false;
+            //        dgvMostrarProductos.DataSource = _productoLOG.FiltrarPorNombre(nombreProducto, true);
+            //    }
+            //}
         }
 
         private void rdbActivos_CheckedChanged(object sender, EventArgs e)
@@ -213,22 +226,16 @@ namespace CapaVista
 
         private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbCategorias.SelectedIndex = -1;
-            txtNombre.Clear();
             CargarProductos();
         }
 
         private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbMarcas.SelectedIndex = -1;
-            txtNombre.Clear();
             CargarProductos();
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            cmbCategorias.SelectedIndex = -1;
-            cmbMarcas.SelectedIndex = -1;
             CargarProductos();
         }
     }

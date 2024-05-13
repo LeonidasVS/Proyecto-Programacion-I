@@ -39,13 +39,6 @@
             this.txtExistencias = new System.Windows.Forms.TextBox();
             this.cmbNombre = new System.Windows.Forms.ComboBox();
             this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnProcesar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -57,6 +50,13 @@
             this.DetalleVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MetodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource1)).BeginInit();
@@ -164,62 +164,6 @@
             this.dgvDetalleVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleVenta_CellFormatting);
             this.dgvDetalleVenta.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellValueChanged);
             // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "Codigo";
-            this.Codigo.Frozen = true;
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.Frozen = true;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 200;
-            // 
-            // Marca
-            // 
-            this.Marca.DataPropertyName = "Marca";
-            this.Marca.Frozen = true;
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.Frozen = true;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.Frozen = true;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.DataPropertyName = "SubTotal";
-            this.SubTotal.Frozen = true;
-            this.SubTotal.HeaderText = "SubTotal";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.Frozen = true;
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.Location = new System.Drawing.Point(647, 198);
@@ -311,6 +255,62 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.Frozen = true;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.Frozen = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 200;
+            // 
+            // Marca
+            // 
+            this.Marca.DataPropertyName = "Marca";
+            this.Marca.Frozen = true;
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.Frozen = true;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.Frozen = true;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.DataPropertyName = "SubTotal";
+            this.SubTotal.Frozen = true;
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Frozen = true;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
             // 
             // RegistroVenta
             // 

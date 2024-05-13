@@ -115,44 +115,52 @@ namespace CapaVista
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                } 
+                }
 
                 // En caso de ser actualizacion.
-                if (_id > 0)
+                if (Convert.ToDecimal(txtExistencias.Text) > 0 && Convert.ToDecimal(txtPrecio.Text) > 0)
                 {
-                    Producto producto;
-                    producto = (Producto)productobindingSource1.Current;
-                    int resultado = _productoLOG.EditarProducto(producto, _id);
-                    if (resultado > 0)
+                    if (_id > 0)
                     {
-                        MessageBox.Show("Producto Editado con Exito", "Tienda | Edicion Productos",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
+                        Producto producto;
+                        producto = (Producto)productobindingSource1.Current;
+                        int resultado = _productoLOG.EditarProducto(producto, _id);
+                        if (resultado > 0)
+                        {
+                            MessageBox.Show("Producto Editado con Exito", "Tienda | Edicion Productos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se logro editar el producto", "Tienda | Edicion Productos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
+                    // En caso de ser nuevo producto.
                     else
                     {
-                        MessageBox.Show("No se logro editar el producto", "Tienda | Edicion Productos",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Producto producto;
+                        producto = (Producto)productobindingSource1.Current;
+                        int resultado = _productoLOG.GuardarProducto(producto);
+
+                        if (resultado > 0)
+                        {
+                            MessageBox.Show("Producto Agregado con Exito", "Tienda | Registro Productos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se logro agregagr el producto", "Tienda | Registro Productos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
-                // En caso de ser nuevo producto.
                 else
                 {
-                    Producto producto;
-                    producto = (Producto)productobindingSource1.Current;
-                    int resultado = _productoLOG.GuardarProducto(producto);
-
-                    if (resultado > 0)
-                    {
-                        MessageBox.Show("Producto Agregado con Exito", "Tienda | Registro Productos",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se logro agregagr el producto", "Tienda | Registro Productos",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Solucione los requerimientos definidos", "Tienda | Registro Productos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception)

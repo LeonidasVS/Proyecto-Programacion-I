@@ -88,7 +88,7 @@
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(123, 28);
             this.btnReiniciar.TabIndex = 26;
-            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.Text = "Limpiar filtros";
             this.btnReiniciar.UseVisualStyleBackColor = true;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
@@ -337,7 +337,6 @@
             this.rdbInactivos.TabIndex = 1;
             this.rdbInactivos.Text = "Inactivos";
             this.rdbInactivos.UseVisualStyleBackColor = true;
-            this.rdbInactivos.UseWaitCursor = true;
             this.rdbInactivos.CheckedChanged += new System.EventHandler(this.rdbInactivos_CheckedChanged);
             // 
             // rdbActivos
@@ -351,7 +350,6 @@
             this.rdbActivos.TabStop = true;
             this.rdbActivos.Text = "Activos";
             this.rdbActivos.UseVisualStyleBackColor = true;
-            this.rdbActivos.UseWaitCursor = true;
             this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
             // 
             // AdministrarProductos

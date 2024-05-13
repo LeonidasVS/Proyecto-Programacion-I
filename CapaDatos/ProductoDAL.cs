@@ -42,6 +42,200 @@ namespace CapaDatos
             }
         }
 
+        public List<Producto> Filtrar(int idCategoria = 0, bool inactivo = false, int idMarca = 0, string nombre = null)
+        {
+            _db = new ContextoBD();
+            if (idMarca != 0)
+            {
+                if (inactivo)
+                {
+                    if (idCategoria != 0)
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false && p.Nombre.Contains(nombre) && p.idCategoria == idCategoria).ToList();
+                        }
+                        // En caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false && p.idCategoria == idCategoria).ToList();
+                        }
+                    }
+                    // En caso que el id categoria sea 0
+                    else
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false && p.Nombre.Contains(nombre)).ToList();
+                        }
+                        // En caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false).ToList();
+                        }                       
+                    }                    
+                }
+                // En caso de que sean los inactivos
+                else
+                {
+                    if (idCategoria != 0)
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true && p.Nombre.Contains(nombre) && p.idCategoria == idCategoria).ToList();
+                        }
+                        // En caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true && p.idCategoria == idCategoria).ToList();
+                        }
+                    }
+                    // En caso que el id categoria sea 0
+                    else
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true && p.Nombre.Contains(nombre)).ToList();
+                        }
+                        // En caso de que el nombre sea 0
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true).ToList();
+                        }
+                    }
+                }
+            }
+            else if (idCategoria != 0)
+            {
+                if (inactivo)
+                {
+                    if (idMarca != 0)
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false && p.Nombre.Contains(nombre) && p.idCategoria == idCategoria).ToList();
+                        }
+                        // En caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false && p.idCategoria == idCategoria).ToList();
+                        }
+                    }
+                    // en caso de que el id marca sea 0
+                    else 
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idCategoria== idCategoria && p.Activo == false && p.Nombre.Contains(nombre)).ToList();
+                        }
+                        // en caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == false).ToList();
+                        }
+                    }
+                }
+                else
+                {
+                    if (idMarca != 0)
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true && p.Nombre.Contains(nombre) && p.idCategoria == idCategoria).ToList();
+                        }
+                        // En caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true && p.idCategoria == idCategoria).ToList();
+                        }
+                    }
+                    // en caso de que el id marca sea 0
+                    else
+                    {
+                        if (nombre != null)
+                        {
+                            return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == true && p.Nombre.Contains(nombre)).ToList();
+                        }
+                        // en caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == true).ToList();
+                        }
+                    }
+                }
+            }
+            else if (nombre != null)
+            {
+                if (inactivo)
+                {
+                    if (idMarca != 0)
+                    {
+                        if (idCategoria != 0)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false && p.Nombre.Contains(nombre) && p.idCategoria == idCategoria).ToList();
+                        }
+                        // En caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false && p.Nombre.Contains(nombre)).ToList();
+                        }
+                    }
+                    // en caso de que el id marca sea 0
+                    else
+                    {
+                        if (idCategoria != 0)
+                        {
+                            return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == false && p.Nombre.Contains(nombre)).ToList();
+                        }
+                        // en caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.Nombre.Contains(nombre) && p.Activo == false).ToList();
+                        }
+                    }
+                }
+                else
+                {
+                    if (idMarca != 0)
+                    {
+                        if (idCategoria != 0)
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true && p.Nombre.Contains(nombre) && p.idCategoria == idCategoria).ToList();
+                        }
+                        // En caso de que el nombre sea nulo
+                        else
+                        {
+                            return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true && p.Nombre.Contains(nombre)).ToList();
+                        }
+                    }
+                    // en caso de que el id marca sea 0
+                    else
+                    {
+                        if (idCategoria != 0)
+                        {
+                            return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == true && p.Nombre.Contains(nombre)).ToList();
+                        }
+                        // en caso de que el id categoria sea 0
+                        else
+                        {
+                            return _db.Productos.Where(p => p.Nombre.Contains(nombre) && p.Activo == true).ToList();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (inactivo)
+                {
+                    return _db.Productos.Where(p => p.Activo == false).ToList();
+                }
+                else
+                {
+                    return _db.Productos.Where(p => p.Activo == true).ToList();
+                }
+            }
+        }
+
         public List<Producto> FiltrarPorMarca(int idMarca, bool inactivo = false)
         {
             _db = new ContextoBD();
@@ -108,19 +302,6 @@ namespace CapaDatos
                 producto.Activo = false;
             }
             _db.SaveChanges();
-        }
-        public int ObtenerExistenciasDesdeBD(int id)
-        {
-            _db = new ContextoBD();
-            var producto = _db.Productos.FirstOrDefault(p => p.IdProducto == id);
-            if (producto != null)
-            {
-                return producto.Existencias;
-            }
-            else
-            {
-                return 0;
-            }
         }
 
         public List<Producto> FiltrarPorNombre(string nombre, bool inactivo = false)
