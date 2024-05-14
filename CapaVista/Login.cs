@@ -75,9 +75,9 @@ namespace CapaVista
             }
         }
 
-        private void Usuario_TextChanged(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

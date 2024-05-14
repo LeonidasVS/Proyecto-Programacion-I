@@ -73,6 +73,16 @@ namespace CapaVista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_7284348_1280 {
+            get {
+                object obj = ResourceManager.GetObject("button-7284348_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -226,6 +236,16 @@ namespace CapaVista.Properties {
         internal static System.Drawing.Bitmap Rotulo1 {
             get {
                 object obj = ResourceManager.GetObject("Rotulo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap texbox {
+            get {
+                object obj = ResourceManager.GetObject("texbox", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

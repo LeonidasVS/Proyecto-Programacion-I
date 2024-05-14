@@ -56,12 +56,18 @@
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox1
@@ -73,6 +79,9 @@
             this.GroupBox1.Controls.Add(this.label1);
             this.GroupBox1.Controls.Add(this.cmbMarcas);
             this.GroupBox1.Controls.Add(this.label6);
+            this.GroupBox1.Controls.Add(this.pictureBox3);
+            this.GroupBox1.Controls.Add(this.pictureBox1);
+            this.GroupBox1.Controls.Add(this.pictureBox2);
             this.GroupBox1.Location = new System.Drawing.Point(14, 13);
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.GroupBox1.Name = "GroupBox1";
@@ -84,12 +93,15 @@
             // 
             // btnReiniciar
             // 
-            this.btnReiniciar.Location = new System.Drawing.Point(593, 65);
+            this.btnReiniciar.BackColor = System.Drawing.Color.Moccasin;
+            this.btnReiniciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReiniciar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReiniciar.Location = new System.Drawing.Point(592, 65);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(123, 28);
             this.btnReiniciar.TabIndex = 26;
             this.btnReiniciar.Text = "Limpiar filtros";
-            this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.UseVisualStyleBackColor = false;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // cmbCategorias
@@ -97,10 +109,12 @@
             this.cmbCategorias.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.CategoriaBindingSource, "idCategoria", true));
             this.cmbCategorias.DataSource = this.CategoriaBindingSource;
             this.cmbCategorias.DisplayMember = "Nombre";
+            this.cmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCategorias.FormattingEnabled = true;
-            this.cmbCategorias.Location = new System.Drawing.Point(112, 66);
+            this.cmbCategorias.Location = new System.Drawing.Point(111, 66);
             this.cmbCategorias.Name = "cmbCategorias";
-            this.cmbCategorias.Size = new System.Drawing.Size(271, 26);
+            this.cmbCategorias.Size = new System.Drawing.Size(260, 26);
             this.cmbCategorias.TabIndex = 25;
             this.cmbCategorias.ValueMember = "idCategoria";
             this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
@@ -115,16 +129,17 @@
             this.label7.Location = new System.Drawing.Point(12, 69);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 18);
+            this.label7.Size = new System.Drawing.Size(82, 18);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Categoria";
+            this.label7.Text = "Categoria:";
             // 
             // txtNombre
             // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource1, "Nombre", true));
-            this.txtNombre.Location = new System.Drawing.Point(112, 26);
+            this.txtNombre.Location = new System.Drawing.Point(111, 28);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(271, 26);
+            this.txtNombre.Size = new System.Drawing.Size(266, 19);
             this.txtNombre.TabIndex = 23;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -138,9 +153,9 @@
             this.label1.Location = new System.Drawing.Point(26, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 18);
+            this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Nombre";
+            this.label1.Text = "Nombre:";
             // 
             // cmbMarcas
             // 
@@ -149,8 +164,10 @@
             this.cmbMarcas.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.MarcaBindingSource, "idMarca", true));
             this.cmbMarcas.DataSource = this.MarcaBindingSource;
             this.cmbMarcas.DisplayMember = "Nombre";
+            this.cmbMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMarcas.FormattingEnabled = true;
-            this.cmbMarcas.Location = new System.Drawing.Point(475, 26);
+            this.cmbMarcas.Location = new System.Drawing.Point(470, 25);
             this.cmbMarcas.Name = "cmbMarcas";
             this.cmbMarcas.Size = new System.Drawing.Size(241, 26);
             this.cmbMarcas.TabIndex = 20;
@@ -164,35 +181,39 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(415, 29);
+            this.label6.Location = new System.Drawing.Point(398, 29);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 18);
+            this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Marca";
+            this.label6.Text = "Marca:";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(14, 602);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(204, 37);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.BackColor = System.Drawing.Color.LightCoral;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegresar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Location = new System.Drawing.Point(688, 602);
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(204, 37);
             this.btnRegresar.TabIndex = 3;
             this.btnRegresar.Text = "Atras";
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // groupBox2
@@ -236,6 +257,7 @@
             this.dgvMostrarProductos.AllowUserToDeleteRows = false;
             this.dgvMostrarProductos.AutoGenerateColumns = false;
             this.dgvMostrarProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvMostrarProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrarProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -249,6 +271,7 @@
             this.Eliminar,
             this.activoDataGridViewCheckBoxColumn});
             this.dgvMostrarProductos.DataSource = this.productoBindingSource1;
+            this.dgvMostrarProductos.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvMostrarProductos.Location = new System.Drawing.Point(14, 141);
             this.dgvMostrarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dgvMostrarProductos.Name = "dgvMostrarProductos";
@@ -352,6 +375,36 @@
             this.activoDataGridViewCheckBoxColumn.ReadOnly = true;
             this.activoDataGridViewCheckBoxColumn.Visible = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CapaVista.Properties.Resources.texbox;
+            this.pictureBox3.Location = new System.Drawing.Point(101, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(283, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaVista.Properties.Resources.texbox;
+            this.pictureBox1.Location = new System.Drawing.Point(101, 61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaVista.Properties.Resources.texbox;
+            this.pictureBox2.Location = new System.Drawing.Point(461, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(257, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
             // AdministrarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -376,6 +429,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,5 +465,8 @@
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

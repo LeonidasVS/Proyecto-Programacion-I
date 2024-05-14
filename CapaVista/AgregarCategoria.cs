@@ -63,26 +63,26 @@ namespace CapaVista
                 _categoriaLOG = new CategoriaLOG();
                 if (string.IsNullOrEmpty(txtNombre.Text))
                 {
-                    MessageBox.Show("Por favor ingrese el nombre de la marca", "Tienda AS | Agregar Marca",
+                    MessageBox.Show("Por favor ingrese el nombre de la categoria", "Tienda AS | Agregar Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombre.Focus();
                     txtNombre.BackColor = Color.LightYellow;
                 }
                 else if (string.IsNullOrEmpty(txtDescripcion.Text))
                 {
-                    MessageBox.Show("Por favor ingrese la descripción de la marca", "Tienda AS | Agregar Marca",
+                    MessageBox.Show("Por favor ingrese la descripción de la categoria", "Tienda AS | Agregar Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNombre.Focus();
                     txtNombre.BackColor = Color.LightYellow;
                 }
                 else if (!chbActivo.Checked)
                 {
-                    var dialogo = MessageBox.Show("Estas seguro que desea guardar la marca inactiva?", "Tienda | Registro Marca",
+                    var dialogo = MessageBox.Show("Estas seguro que desea guardar la categoria inactiva?", "Tienda AS | Registro Categoria",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (dialogo != DialogResult.Yes)
                     {
-                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda | Registro Marca",
+                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda AS | Registro Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
@@ -96,13 +96,13 @@ namespace CapaVista
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Marca editada con exito", "Tienda | Editar categoria",
+                        MessageBox.Show("Categoria editada con exito", "Tienda AS | Editar categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro editar la Marca", "Tienda | Editar categoria",
+                        MessageBox.Show("No se logro editar la Categoria", "Tienda AS | Editar categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -114,13 +114,13 @@ namespace CapaVista
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Marca Agregada con Exito", "Tienda | Registro Marca",
+                        MessageBox.Show("Categoria Agregada con Exito", "Tienda AS | Registro Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro agregagr la Marca", "Tienda | Registro marca",
+                        MessageBox.Show("No se logro agregagr la Categoria", "Tienda AS | Registro Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }  
@@ -128,7 +128,7 @@ namespace CapaVista
             catch (Exception)
             {
 
-                MessageBox.Show("Ocurrio un error", "Tienda AS | Agregar categorias",
+                MessageBox.Show("Ocurrio un error, complete la acción necesaria.", "Tienda AS | Agregar Categoria",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

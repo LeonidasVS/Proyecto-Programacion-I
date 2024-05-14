@@ -136,6 +136,9 @@
   <data name="Rotulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rotulo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="texbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\texbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImagenPrincipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImagenPrincipal.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,10 +166,13 @@
   <data name="Rotulo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rotulo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Inicio22" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inicio2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button-7284348_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button-7284348_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
