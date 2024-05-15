@@ -64,7 +64,7 @@ namespace CapaVista
             this.Close();
         }
 
-        private void tsmDetalleVenta_Click(object sender, EventArgs e)
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VerVentasRealizadas objVerVentasRealizadas = new VerVentasRealizadas();
             objVerVentasRealizadas.ShowDialog();

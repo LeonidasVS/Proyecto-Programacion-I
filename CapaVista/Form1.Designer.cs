@@ -42,6 +42,7 @@
             this.adminitrarCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarMetodosDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -100,10 +101,11 @@
             // 
             // tsmDetalleVenta
             // 
+            this.tsmDetalleVenta.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventasToolStripMenuItem});
             this.tsmDetalleVenta.Name = "tsmDetalleVenta";
-            this.tsmDetalleVenta.Size = new System.Drawing.Size(110, 22);
-            this.tsmDetalleVenta.Text = "Ventas Realizadas";
-            this.tsmDetalleVenta.Click += new System.EventHandler(this.tsmDetalleVenta_Click);
+            this.tsmDetalleVenta.Size = new System.Drawing.Size(63, 22);
+            this.tsmDetalleVenta.Text = "Historial";
             // 
             // menuStrip1
             // 
@@ -160,6 +162,13 @@
             this.lOGINToolStripMenuItem.Text = "LOGIN";
             this.lOGINToolStripMenuItem.Click += new System.EventHandler(this.lOGINToolStripMenuItem_Click);
             // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +206,7 @@
         private System.Windows.Forms.ToolStripMenuItem adminitrarCategoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarMetodosDePagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lOGINToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
     }
 }
 

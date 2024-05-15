@@ -44,12 +44,15 @@
             // 
             // btnAtras
             // 
+            this.btnAtras.BackColor = System.Drawing.Color.LightCoral;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtras.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtras.Location = new System.Drawing.Point(383, 607);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(145, 33);
             this.btnAtras.TabIndex = 8;
             this.btnAtras.Text = "Atras";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // dgvVentasRealizadas
@@ -58,6 +61,7 @@
             this.dgvVentasRealizadas.AllowUserToOrderColumns = true;
             this.dgvVentasRealizadas.AutoGenerateColumns = false;
             this.dgvVentasRealizadas.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvVentasRealizadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVentasRealizadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentasRealizadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -65,9 +69,10 @@
             this.Total,
             this.Detalle});
             this.dgvVentasRealizadas.DataSource = this.ventasBindingSource1;
-            this.dgvVentasRealizadas.Location = new System.Drawing.Point(17, 104);
+            this.dgvVentasRealizadas.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvVentasRealizadas.Location = new System.Drawing.Point(17, 107);
             this.dgvVentasRealizadas.Name = "dgvVentasRealizadas";
-            this.dgvVentasRealizadas.Size = new System.Drawing.Size(873, 465);
+            this.dgvVentasRealizadas.Size = new System.Drawing.Size(873, 462);
             this.dgvVentasRealizadas.TabIndex = 6;
             this.dgvVentasRealizadas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentasRealizadas_CellContentClick);
             // 
@@ -83,7 +88,7 @@
             this.Fecha.DataPropertyName = "Fecha";
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 208;
+            this.Fecha.Width = 210;
             // 
             // Total
             // 

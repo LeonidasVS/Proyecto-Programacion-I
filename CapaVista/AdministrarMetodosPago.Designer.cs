@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarMetodosPago));
             this.label1 = new System.Windows.Forms.Label();
             this.MetdPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvMtdsPago = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FormaDePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbInactivos = new System.Windows.Forms.RadioButton();
             this.rdbActivos = new System.Windows.Forms.RadioButton();
@@ -66,6 +67,7 @@
             this.dgvMtdsPago.AutoGenerateColumns = false;
             this.dgvMtdsPago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMtdsPago.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvMtdsPago.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMtdsPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMtdsPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -73,31 +75,12 @@
             this.Editar,
             this.Eliminar});
             this.dgvMtdsPago.DataSource = this.MetdPagoBindingSource;
+            this.dgvMtdsPago.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvMtdsPago.Location = new System.Drawing.Point(11, 183);
             this.dgvMtdsPago.Name = "dgvMtdsPago";
             this.dgvMtdsPago.Size = new System.Drawing.Size(793, 360);
             this.dgvMtdsPago.TabIndex = 1;
             this.dgvMtdsPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMtdsPago_CellContentClick);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(11, 567);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 33);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Location = new System.Drawing.Point(712, 567);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(92, 33);
-            this.btnAtras.TabIndex = 3;
-            this.btnAtras.Text = "Atras";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // Codigo
             // 
@@ -122,6 +105,32 @@
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
             this.Eliminar.Name = "Eliminar";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(11, 567);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(92, 33);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.LightCoral;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtras.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(712, 567);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(92, 33);
+            this.btnAtras.TabIndex = 3;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // groupBox1
             // 
@@ -170,6 +179,7 @@
             this.Controls.Add(this.dgvMtdsPago);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdministrarMetodosPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

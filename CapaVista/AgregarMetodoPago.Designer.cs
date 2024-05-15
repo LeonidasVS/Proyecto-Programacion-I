@@ -97,7 +97,7 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.MetdPagoBindingSource, "FormaDePago", true));
-            this.txtNombre.Location = new System.Drawing.Point(144, 79);
+            this.txtNombre.Location = new System.Drawing.Point(144, 83);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(212, 19);
             this.txtNombre.TabIndex = 20;

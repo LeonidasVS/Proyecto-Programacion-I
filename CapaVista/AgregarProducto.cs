@@ -52,16 +52,18 @@ namespace CapaVista
         private void MostrarMarcasYCategorias()
         {
             _marcaLOG = new MarcaLOG();
-            cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            List<Marca> marcas = _marcaLOG.ObtenerMarca();
+            marcas.Insert(0, new Marca() { Nombre = "-- Sin selección --" });
+            cmbMarcas.DataSource = marcas;
             cmbMarcas.DisplayMember = "Nombre";
             cmbMarcas.ValueMember = "idMarca";
-            cmbMarcas.SelectedIndex = -1;
 
             _categoriaLOG = new CategoriaLOG();
-            cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+            List<Categoria> categorias = _categoriaLOG.ObtenerCategorias();
+            categorias.Insert(0, new Categoria() { Nombre = "-- Sin selección --" });
+            cmbCategorias.DataSource = categorias;
             cmbCategorias.DisplayMember = "Nombre";
             cmbCategorias.ValueMember = "idCategoria";
-            cmbCategorias.SelectedIndex = -1;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -106,15 +108,29 @@ namespace CapaVista
                 }
                 else if(!chkEstado.Checked)
                 {
-                    var dialogo = MessageBox.Show("¿Está seguro que desea guardar el producto como inactivo?", "Tienda | Registro Producto",
+                    var dialogo = MessageBox.Show("¿Está seguro que desea guardar el producto como inactivo?", "Tienda | Agregar Producto",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (dialogo != DialogResult.Yes)
                     {
-                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda | Registro Productos",
+                        MessageBox.Show("Seleccione el cuadro estado como activo", "Tienda | AgregarProductos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
+                }
+                else if(cmbMarcas.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Por favor ingrese la marca del producto", "Tienda AS | Agregar Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbMarcas.Focus();
+                    cmbMarcas.BackColor = Color.LightYellow;
+                }
+                else if(cmbCategorias.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Por favor ingrese la categoria del producto", "Tienda AS | Agregar Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbCategorias.Focus();
+                    cmbCategorias.BackColor = Color.LightYellow;
                 }
 
                 // En caso de ser actualizacion.
@@ -180,7 +196,9 @@ namespace CapaVista
             AdministrarMarcas objAdministrarMarcas = new AdministrarMarcas();
             objAdministrarMarcas.ShowDialog();
             _marcaLOG = new MarcaLOG();
-            cmbMarcas.DataSource = _marcaLOG.ObtenerMarca();
+            List<Marca> marcas = _marcaLOG.ObtenerMarca();
+            marcas.Insert(0, new Marca() { Nombre = "-- Sin selección --" });
+            cmbMarcas.DataSource = marcas;
             cmbMarcas.DisplayMember = "Nombre";
             cmbMarcas.ValueMember = "idMarca";
         }
@@ -190,7 +208,9 @@ namespace CapaVista
             MantenimientoCategoria objMantenimeintoCategoria = new MantenimientoCategoria();
             objMantenimeintoCategoria.ShowDialog();
             _categoriaLOG = new CategoriaLOG();
-            cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
+            List<Categoria> categorias = _categoriaLOG.ObtenerCategorias();
+            categorias.Insert(0, new Categoria() { Nombre = "-- Sin selección --" });
+            cmbCategorias.DataSource = categorias;
             cmbCategorias.DisplayMember = "Nombre";
             cmbCategorias.ValueMember = "idCategoria";
         }

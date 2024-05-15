@@ -159,17 +159,21 @@
             // 
             // btnHecho
             // 
+            this.btnHecho.BackColor = System.Drawing.Color.LightCoral;
+            this.btnHecho.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHecho.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHecho.Location = new System.Drawing.Point(14, 268);
             this.btnHecho.Name = "btnHecho";
             this.btnHecho.Size = new System.Drawing.Size(94, 43);
             this.btnHecho.TabIndex = 12;
             this.btnHecho.Text = "Hecho";
-            this.btnHecho.UseVisualStyleBackColor = true;
+            this.btnHecho.UseVisualStyleBackColor = false;
             this.btnHecho.Click += new System.EventHandler(this.btnHecho_Click);
             // 
             // btnImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnImprimir.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.btnImprimir.Image = global::CapaVista.Properties.Resources.print;
             this.btnImprimir.Location = new System.Drawing.Point(500, 268);
