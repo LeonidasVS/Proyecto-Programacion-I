@@ -120,9 +120,9 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "Nombre", true));
-            this.txtNombre.Location = new System.Drawing.Point(194, 168);
+            this.txtNombre.Location = new System.Drawing.Point(208, 168);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(629, 19);
+            this.txtNombre.Size = new System.Drawing.Size(603, 19);
             this.txtNombre.TabIndex = 11;
             // 
             // label2

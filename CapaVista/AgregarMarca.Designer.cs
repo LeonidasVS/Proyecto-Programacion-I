@@ -70,9 +70,9 @@
             // 
             this.txtNombreMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreMarca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcaBindingSource, "Nombre", true));
-            this.txtNombreMarca.Location = new System.Drawing.Point(175, 111);
+            this.txtNombreMarca.Location = new System.Drawing.Point(183, 111);
             this.txtNombreMarca.Name = "txtNombreMarca";
-            this.txtNombreMarca.Size = new System.Drawing.Size(627, 19);
+            this.txtNombreMarca.Size = new System.Drawing.Size(613, 19);
             this.txtNombreMarca.TabIndex = 2;
             // 
             // marcaBindingSource

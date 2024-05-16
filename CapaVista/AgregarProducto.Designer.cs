@@ -123,9 +123,9 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productobindingSource1, "Nombre", true));
-            this.txtNombre.Location = new System.Drawing.Point(338, 74);
+            this.txtNombre.Location = new System.Drawing.Point(346, 74);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(526, 19);
+            this.txtNombre.Size = new System.Drawing.Size(507, 19);
             this.txtNombre.TabIndex = 5;
             // 
             // productobindingSource1
@@ -146,18 +146,18 @@
             // 
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productobindingSource1, "PrecioUnitario", true));
-            this.txtPrecio.Location = new System.Drawing.Point(338, 276);
+            this.txtPrecio.Location = new System.Drawing.Point(346, 276);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(526, 19);
+            this.txtPrecio.Size = new System.Drawing.Size(507, 19);
             this.txtPrecio.TabIndex = 7;
             // 
             // txtExistencias
             // 
             this.txtExistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtExistencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productobindingSource1, "Existencias", true));
-            this.txtExistencias.Location = new System.Drawing.Point(337, 321);
+            this.txtExistencias.Location = new System.Drawing.Point(346, 321);
             this.txtExistencias.Name = "txtExistencias";
-            this.txtExistencias.Size = new System.Drawing.Size(527, 19);
+            this.txtExistencias.Size = new System.Drawing.Size(507, 19);
             this.txtExistencias.TabIndex = 8;
             // 
             // chkEstado
@@ -223,9 +223,9 @@
             this.cmbMarcas.DataSource = this.marcaBindingSource;
             this.cmbMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMarcas.FormattingEnabled = true;
-            this.cmbMarcas.Location = new System.Drawing.Point(335, 416);
+            this.cmbMarcas.Location = new System.Drawing.Point(346, 416);
             this.cmbMarcas.Name = "cmbMarcas";
-            this.cmbMarcas.Size = new System.Drawing.Size(327, 26);
+            this.cmbMarcas.Size = new System.Drawing.Size(316, 26);
             this.cmbMarcas.TabIndex = 16;
             // 
             // marcaBindingSource
@@ -238,9 +238,9 @@
             this.cmbCategorias.DataSource = this.CategoriaBindingSource1;
             this.cmbCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCategorias.FormattingEnabled = true;
-            this.cmbCategorias.Location = new System.Drawing.Point(337, 465);
+            this.cmbCategorias.Location = new System.Drawing.Point(346, 465);
             this.cmbCategorias.Name = "cmbCategorias";
-            this.cmbCategorias.Size = new System.Drawing.Size(327, 26);
+            this.cmbCategorias.Size = new System.Drawing.Size(318, 26);
             this.cmbCategorias.TabIndex = 17;
             // 
             // CategoriaBindingSource1
