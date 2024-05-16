@@ -48,10 +48,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(277, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 25);
+            this.label1.Size = new System.Drawing.Size(242, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "AÑADIR CATEGORIAS";
             // 
@@ -151,7 +152,7 @@
             this.AñadirCategory.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AñadirCategory.Image = ((System.Drawing.Image)(resources.GetObject("AñadirCategory.Image")));
             this.AñadirCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirCategory.Location = new System.Drawing.Point(354, 380);
+            this.AñadirCategory.Location = new System.Drawing.Point(354, 375);
             this.AñadirCategory.Name = "AñadirCategory";
             this.AñadirCategory.Size = new System.Drawing.Size(84, 61);
             this.AñadirCategory.TabIndex = 14;

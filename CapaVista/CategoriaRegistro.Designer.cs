@@ -96,7 +96,7 @@
             this.checkCategoria.AutoSize = true;
             this.checkCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.cateBinding, "Estado", true));
-            this.checkCategoria.Location = new System.Drawing.Point(216, 391);
+            this.checkCategoria.Location = new System.Drawing.Point(221, 390);
             this.checkCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.checkCategoria.Name = "checkCategoria";
             this.checkCategoria.Size = new System.Drawing.Size(69, 20);
@@ -118,7 +118,7 @@
             this.GuardarProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GuardarProducto.Image = ((System.Drawing.Image)(resources.GetObject("GuardarProducto.Image")));
             this.GuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarProducto.Location = new System.Drawing.Point(206, 444);
+            this.GuardarProducto.Location = new System.Drawing.Point(208, 435);
             this.GuardarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarProducto.Name = "GuardarProducto";
             this.GuardarProducto.Size = new System.Drawing.Size(91, 59);
@@ -178,7 +178,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(223, 361);
+            this.label4.Location = new System.Drawing.Point(228, 361);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
