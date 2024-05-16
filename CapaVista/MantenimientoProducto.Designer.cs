@@ -230,7 +230,7 @@
             this.AñadirProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
             this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(361, 435);
+            this.AñadirProducto.Location = new System.Drawing.Point(361, 427);
             this.AñadirProducto.Name = "AñadirProducto";
             this.AñadirProducto.Size = new System.Drawing.Size(84, 66);
             this.AñadirProducto.TabIndex = 13;

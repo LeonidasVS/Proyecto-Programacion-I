@@ -48,10 +48,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(314, 24);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(319, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 25);
+            this.label1.Size = new System.Drawing.Size(193, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "AÑADIR MARCAS";
             // 
@@ -149,7 +150,7 @@
             this.AñadirProducto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AñadirProducto.Image = ((System.Drawing.Image)(resources.GetObject("AñadirProducto.Image")));
             this.AñadirProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirProducto.Location = new System.Drawing.Point(374, 375);
+            this.AñadirProducto.Location = new System.Drawing.Point(374, 376);
             this.AñadirProducto.Name = "AñadirProducto";
             this.AñadirProducto.Size = new System.Drawing.Size(85, 53);
             this.AñadirProducto.TabIndex = 14;

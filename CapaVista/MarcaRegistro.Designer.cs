@@ -53,7 +53,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(202, 336);
+            this.label4.Location = new System.Drawing.Point(204, 336);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
@@ -91,7 +91,7 @@
             this.checkMarca.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.marcasBinding, "Estado", true));
             this.checkMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkMarca.Location = new System.Drawing.Point(197, 360);
+            this.checkMarca.Location = new System.Drawing.Point(199, 360);
             this.checkMarca.Margin = new System.Windows.Forms.Padding(4);
             this.checkMarca.Name = "checkMarca";
             this.checkMarca.Size = new System.Drawing.Size(63, 19);
@@ -194,7 +194,7 @@
             this.GuardarMarca.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
             this.GuardarMarca.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GuardarMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarMarca.Location = new System.Drawing.Point(180, 426);
+            this.GuardarMarca.Location = new System.Drawing.Point(181, 416);
             this.GuardarMarca.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarMarca.Name = "GuardarMarca";
             this.GuardarMarca.Size = new System.Drawing.Size(97, 65);

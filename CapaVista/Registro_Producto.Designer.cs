@@ -84,7 +84,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(30, 182);
+            this.label2.Location = new System.Drawing.Point(486, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 16);
@@ -96,7 +96,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(470, 111);
+            this.label3.Location = new System.Drawing.Point(63, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 16);
@@ -108,7 +108,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(377, 314);
+            this.label4.Location = new System.Drawing.Point(377, 311);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -121,7 +121,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(93, 264);
+            this.label5.Location = new System.Drawing.Point(144, 256);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
@@ -151,7 +151,7 @@
             this.Activo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.ProductoBindingSource, "Estado", true));
             this.Activo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Activo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Activo.Location = new System.Drawing.Point(159, 263);
+            this.Activo.Location = new System.Drawing.Point(210, 255);
             this.Activo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Activo.Name = "Activo";
             this.Activo.Size = new System.Drawing.Size(63, 19);
@@ -185,7 +185,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(506, 186);
+            this.label6.Location = new System.Drawing.Point(506, 253);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 16);
@@ -197,7 +197,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(483, 258);
+            this.label7.Location = new System.Drawing.Point(486, 179);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 16);
@@ -215,7 +215,7 @@
             this.cbxMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxMarca.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(567, 185);
+            this.cbxMarca.Location = new System.Drawing.Point(567, 252);
             this.cbxMarca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(187, 23);
@@ -235,7 +235,7 @@
             this.cbxCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxCategoria.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(567, 257);
+            this.cbxCategoria.Location = new System.Drawing.Point(570, 178);
             this.cbxCategoria.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(187, 23);
@@ -281,7 +281,7 @@
             this.Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
             this.Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Guardar.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
-            this.Guardar.Location = new System.Drawing.Point(369, 507);
+            this.Guardar.Location = new System.Drawing.Point(369, 506);
             this.Guardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(103, 71);
@@ -296,7 +296,7 @@
             this.Stock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Stock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Stock", true));
             this.Stock.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Stock.Location = new System.Drawing.Point(566, 114);
+            this.Stock.Location = new System.Drawing.Point(159, 186);
             this.Stock.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(188, 16);
@@ -305,7 +305,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox2.Location = new System.Drawing.Point(561, 104);
+            this.pictureBox2.Location = new System.Drawing.Point(154, 176);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(198, 33);
@@ -319,7 +319,7 @@
             this.PrecioUni.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PrecioUni.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Precio", true));
             this.PrecioUni.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.PrecioUni.Location = new System.Drawing.Point(158, 187);
+            this.PrecioUni.Location = new System.Drawing.Point(610, 114);
             this.PrecioUni.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.PrecioUni.Name = "PrecioUni";
             this.PrecioUni.Size = new System.Drawing.Size(131, 16);
@@ -328,7 +328,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox3.Location = new System.Drawing.Point(153, 178);
+            this.pictureBox3.Location = new System.Drawing.Point(605, 105);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(141, 33);
@@ -342,7 +342,7 @@
             this.DescripcionProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DescripcionProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Descripcion", true));
             this.DescripcionProducto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DescripcionProducto.Location = new System.Drawing.Point(86, 357);
+            this.DescripcionProducto.Location = new System.Drawing.Point(86, 354);
             this.DescripcionProducto.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DescripcionProducto.Multiline = true;
             this.DescripcionProducto.Name = "DescripcionProducto";
@@ -353,7 +353,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox4.Location = new System.Drawing.Point(71, 336);
+            this.pictureBox4.Location = new System.Drawing.Point(71, 333);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(706, 135);
@@ -364,7 +364,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox5.Location = new System.Drawing.Point(562, 179);
+            this.pictureBox5.Location = new System.Drawing.Point(562, 246);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(198, 33);
@@ -375,7 +375,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox6.Location = new System.Drawing.Point(562, 251);
+            this.pictureBox6.Location = new System.Drawing.Point(565, 172);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(198, 33);
