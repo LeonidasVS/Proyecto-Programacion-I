@@ -14,6 +14,7 @@ namespace CapaDatos
         public int SaveCategoria(Categoria categoria, int id=0,bool esActualizacion=false)
         {
             contexto = new ContextoBD();
+
             int resultado;
 
             if (esActualizacion)

@@ -17,6 +17,7 @@ namespace CapaLogica
             _marDal = new MarcaDAL();
             return _marDal.GuardarMarca(marca, id, esActualizacion);
         }
+
         public List<Marca> ObtenerMarcas(bool inactivos = false)
         {
             _marDal = new MarcaDAL();

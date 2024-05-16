@@ -302,7 +302,7 @@
             this.ProcesarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProcesarVenta.Image = ((System.Drawing.Image)(resources.GetObject("ProcesarVenta.Image")));
             this.ProcesarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProcesarVenta.Location = new System.Drawing.Point(414, 587);
+            this.ProcesarVenta.Location = new System.Drawing.Point(391, 587);
             this.ProcesarVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ProcesarVenta.Name = "ProcesarVenta";
             this.ProcesarVenta.Size = new System.Drawing.Size(95, 60);
