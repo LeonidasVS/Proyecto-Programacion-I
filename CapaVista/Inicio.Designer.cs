@@ -48,7 +48,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.pictureBox1.Image = global::CapaVista.Properties.Resources.Inicio2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 28);

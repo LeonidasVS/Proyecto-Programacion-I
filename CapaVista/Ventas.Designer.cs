@@ -81,7 +81,7 @@
             // 
             // Regresar
             // 
-            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.BackColor = System.Drawing.Color.SlateGray;
             this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
             this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
@@ -490,7 +490,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(905, 659);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.textBox1);

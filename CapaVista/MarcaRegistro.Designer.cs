@@ -166,7 +166,7 @@
             // 
             // Habilitar
             // 
-            this.Habilitar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Habilitar.BackColor = System.Drawing.Color.SlateGray;
             this.Habilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Habilitar.FlatAppearance.BorderSize = 0;
             this.Habilitar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
@@ -205,7 +205,7 @@
             // 
             // Regresar
             // 
-            this.Regresar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Regresar.BackColor = System.Drawing.Color.SlateGray;
             this.Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Regresar.FlatAppearance.BorderSize = 0;
             this.Regresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateGray;
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(473, 506);
             this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.NombreMarca);
