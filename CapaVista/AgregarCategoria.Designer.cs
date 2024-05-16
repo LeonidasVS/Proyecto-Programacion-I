@@ -66,6 +66,7 @@
             // 
             this.chbActivo.AutoSize = true;
             this.chbActivo.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.categoriaBindingSource, "Estado", true));
+            this.chbActivo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chbActivo.Location = new System.Drawing.Point(179, 438);
             this.chbActivo.Name = "chbActivo";
             this.chbActivo.Size = new System.Drawing.Size(70, 22);
@@ -80,6 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(101, 438);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
@@ -98,6 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(67, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 18);
@@ -115,6 +118,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(95, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 18);
@@ -125,6 +129,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTitulo.Location = new System.Drawing.Point(333, 98);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(292, 25);
@@ -135,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(906, 658);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);

@@ -73,6 +73,7 @@
             this.GroupBox1.Controls.Add(this.label1);
             this.GroupBox1.Controls.Add(this.cmbMarcas);
             this.GroupBox1.Controls.Add(this.label6);
+            this.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GroupBox1.Location = new System.Drawing.Point(14, 13);
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.GroupBox1.Name = "GroupBox1";
@@ -84,6 +85,7 @@
             // 
             // btnReiniciar
             // 
+            this.btnReiniciar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReiniciar.Location = new System.Drawing.Point(593, 65);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(123, 28);
@@ -299,6 +301,7 @@
             // 
             this.groupBox2.Controls.Add(this.rdbInactivos);
             this.groupBox2.Controls.Add(this.rdbActivos);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(746, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(146, 104);
@@ -336,6 +339,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(906, 658);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnRegresar);

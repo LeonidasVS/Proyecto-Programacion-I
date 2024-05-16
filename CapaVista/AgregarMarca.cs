@@ -133,5 +133,10 @@ namespace CapaVista
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AgregarMarca_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
