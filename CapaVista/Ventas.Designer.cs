@@ -106,7 +106,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(156, 114);
+            this.label1.Location = new System.Drawing.Point(176, 119);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
@@ -118,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(552, 33);
+            this.label2.Location = new System.Drawing.Point(564, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 15);
@@ -130,7 +130,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(278, 32);
+            this.label3.Location = new System.Drawing.Point(263, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 15);
@@ -142,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(629, 114);
+            this.label4.Location = new System.Drawing.Point(434, 114);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 15);
@@ -154,7 +154,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(30, 526);
+            this.label5.Location = new System.Drawing.Point(662, 525);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 15);
@@ -167,7 +167,7 @@
             this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Stock", true));
             this.txtStock.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(610, 141);
+            this.txtStock.Location = new System.Drawing.Point(415, 141);
             this.txtStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtStock.Name = "txtStock";
             this.txtStock.ReadOnly = true;
@@ -184,7 +184,7 @@
             this.txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMonto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.VentabindingSource, "Total", true));
             this.txtMonto.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(116, 526);
+            this.txtMonto.Location = new System.Drawing.Point(748, 525);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.ReadOnly = true;
@@ -200,7 +200,7 @@
             this.txtCantidad.BackColor = System.Drawing.Color.White;
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(529, 57);
+            this.txtCantidad.Location = new System.Drawing.Point(541, 61);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(117, 17);
@@ -213,7 +213,7 @@
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "idProducto", true));
             this.txtCodigo.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(140, 137);
+            this.txtCodigo.Location = new System.Drawing.Point(160, 142);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
@@ -302,7 +302,7 @@
             this.ProcesarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProcesarVenta.Image = ((System.Drawing.Image)(resources.GetObject("ProcesarVenta.Image")));
             this.ProcesarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProcesarVenta.Location = new System.Drawing.Point(377, 587);
+            this.ProcesarVenta.Location = new System.Drawing.Point(409, 586);
             this.ProcesarVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ProcesarVenta.Name = "ProcesarVenta";
             this.ProcesarVenta.Size = new System.Drawing.Size(95, 60);
@@ -322,7 +322,7 @@
             this.comboBoxNombrePro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxNombrePro.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNombrePro.FormattingEnabled = true;
-            this.comboBoxNombrePro.Location = new System.Drawing.Point(211, 54);
+            this.comboBoxNombrePro.Location = new System.Drawing.Point(196, 55);
             this.comboBoxNombrePro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBoxNombrePro.Name = "comboBoxNombrePro";
             this.comboBoxNombrePro.Size = new System.Drawing.Size(205, 25);
@@ -336,10 +336,10 @@
             this.añadirVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.añadirVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.añadirVenta.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.añadirVenta.ForeColor = System.Drawing.SystemColors.Info;
+            this.añadirVenta.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.añadirVenta.Image = ((System.Drawing.Image)(resources.GetObject("añadirVenta.Image")));
             this.añadirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.añadirVenta.Location = new System.Drawing.Point(729, 46);
+            this.añadirVenta.Location = new System.Drawing.Point(708, 50);
             this.añadirVenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.añadirVenta.Name = "añadirVenta";
             this.añadirVenta.Size = new System.Drawing.Size(39, 37);
@@ -357,7 +357,7 @@
             this.comboPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboPagos.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPagos.FormattingEnabled = true;
-            this.comboPagos.Location = new System.Drawing.Point(706, 523);
+            this.comboPagos.Location = new System.Drawing.Point(154, 524);
             this.comboPagos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboPagos.Name = "comboPagos";
             this.comboPagos.Size = new System.Drawing.Size(170, 25);
@@ -377,7 +377,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(585, 526);
+            this.label6.Location = new System.Drawing.Point(33, 527);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 15);
@@ -390,7 +390,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBinding, "Precio", true));
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(377, 141);
+            this.textBox1.Location = new System.Drawing.Point(658, 140);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -402,7 +402,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(419, 118);
+            this.label7.Location = new System.Drawing.Point(700, 117);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 15);
@@ -412,7 +412,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox3.Location = new System.Drawing.Point(523, 51);
+            this.pictureBox3.Location = new System.Drawing.Point(535, 55);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(129, 29);
@@ -423,7 +423,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox1.Location = new System.Drawing.Point(605, 136);
+            this.pictureBox1.Location = new System.Drawing.Point(410, 136);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 27);
@@ -434,7 +434,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox2.Location = new System.Drawing.Point(137, 133);
+            this.pictureBox2.Location = new System.Drawing.Point(157, 138);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(135, 25);
@@ -445,7 +445,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox4.Location = new System.Drawing.Point(372, 137);
+            this.pictureBox4.Location = new System.Drawing.Point(653, 136);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(141, 26);
@@ -456,7 +456,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox5.Location = new System.Drawing.Point(203, 50);
+            this.pictureBox5.Location = new System.Drawing.Point(188, 51);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(222, 33);
@@ -467,7 +467,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox6.Location = new System.Drawing.Point(111, 522);
+            this.pictureBox6.Location = new System.Drawing.Point(743, 521);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(135, 25);
@@ -478,7 +478,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::CapaVista.Properties.Resources.texbox;
-            this.pictureBox7.Location = new System.Drawing.Point(701, 519);
+            this.pictureBox7.Location = new System.Drawing.Point(149, 520);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(180, 33);

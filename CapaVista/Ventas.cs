@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,17 @@ namespace CapaVista
 {
     public partial class Ventas : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeft,
+            int nTop,
+            int nRight,
+            int nBottom,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+
         _VentaLog ventalog;
         ProductoLog _productolog;
         MetodoPagoLog metodo;
@@ -202,10 +214,6 @@ namespace CapaVista
             txtCantidad.Clear();
         }
 
-        private void Ventas_Load(object sender, EventArgs e)
-        {
-
-        }
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -284,6 +292,11 @@ namespace CapaVista
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private void Ventas_Load(object sender, EventArgs e)
+        {
+            añadirVenta.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, añadirVenta.Width, añadirVenta.Height, 17, 17));
         }
     }
 }
