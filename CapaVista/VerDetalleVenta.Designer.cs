@@ -32,13 +32,13 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.DetalleVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MetodoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTitulo.Location = new System.Drawing.Point(258, 55);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(382, 25);
@@ -74,16 +75,6 @@
             this.dgvDetalleVenta.Size = new System.Drawing.Size(873, 435);
             this.dgvDetalleVenta.TabIndex = 2;
             this.dgvDetalleVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleVenta_CellFormatting);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Location = new System.Drawing.Point(406, 597);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(99, 36);
-            this.btnAtras.TabIndex = 3;
-            this.btnAtras.Text = "Atras";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // Codigo
             // 
@@ -124,10 +115,21 @@
             this.MetodoPago.Name = "MetodoPago";
             this.MetodoPago.Width = 175;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(406, 597);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(99, 36);
+            this.btnAtras.TabIndex = 3;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // VerDetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(906, 658);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dgvDetalleVenta);
