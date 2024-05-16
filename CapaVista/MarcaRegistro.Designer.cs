@@ -174,7 +174,7 @@
             this.Habilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Habilitar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Habilitar.Image = ((System.Drawing.Image)(resources.GetObject("Habilitar.Image")));
-            this.Habilitar.Location = new System.Drawing.Point(356, 103);
+            this.Habilitar.Location = new System.Drawing.Point(369, 103);
             this.Habilitar.Name = "Habilitar";
             this.Habilitar.Size = new System.Drawing.Size(35, 53);
             this.Habilitar.TabIndex = 25;
@@ -215,7 +215,7 @@
             this.Regresar.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Regresar.Image = ((System.Drawing.Image)(resources.GetObject("Regresar.Image")));
             this.Regresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Regresar.Location = new System.Drawing.Point(1, 0);
+            this.Regresar.Location = new System.Drawing.Point(3, 3);
             this.Regresar.Margin = new System.Windows.Forms.Padding(4);
             this.Regresar.Name = "Regresar";
             this.Regresar.Size = new System.Drawing.Size(37, 39);
