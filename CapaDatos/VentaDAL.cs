@@ -41,5 +41,17 @@ namespace CapaDatos
             contexto = new ContextoBD();
             return contexto.Venta.Where(p => p.idVenta > 0 == true).ToList();
         }
+
+        public decimal ObtenerTotalDesdeBD(int idVenta)
+        {
+            decimal precio = 0;
+            contexto = new ContextoBD();
+            Venta venta = contexto.Venta.Find(idVenta);
+            if (venta != null)
+            {
+                precio = venta.Total;
+            }
+            return precio;
+        }
     }
 }
