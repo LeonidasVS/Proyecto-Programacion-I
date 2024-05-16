@@ -100,7 +100,7 @@
             this.btnReiniciar.Location = new System.Drawing.Point(592, 65);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(123, 28);
-            this.btnReiniciar.TabIndex = 26;
+            this.btnReiniciar.TabIndex = 3;
             this.btnReiniciar.Text = "Limpiar filtros";
             this.btnReiniciar.UseVisualStyleBackColor = false;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
@@ -116,7 +116,7 @@
             this.cmbCategorias.Location = new System.Drawing.Point(111, 66);
             this.cmbCategorias.Name = "cmbCategorias";
             this.cmbCategorias.Size = new System.Drawing.Size(260, 26);
-            this.cmbCategorias.TabIndex = 25;
+            this.cmbCategorias.TabIndex = 3;
             this.cmbCategorias.ValueMember = "idCategoria";
             this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
             // 
@@ -141,7 +141,7 @@
             this.txtNombre.Location = new System.Drawing.Point(111, 28);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(266, 19);
-            this.txtNombre.TabIndex = 23;
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // productoBindingSource1
@@ -171,7 +171,7 @@
             this.cmbMarcas.Location = new System.Drawing.Point(470, 25);
             this.cmbMarcas.Name = "cmbMarcas";
             this.cmbMarcas.Size = new System.Drawing.Size(241, 26);
-            this.cmbMarcas.TabIndex = 20;
+            this.cmbMarcas.TabIndex = 2;
             this.cmbMarcas.ValueMember = "idMarca";
             this.cmbMarcas.SelectedIndexChanged += new System.EventHandler(this.cmbMarcas_SelectedIndexChanged);
             // 
@@ -228,7 +228,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(204, 37);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -242,7 +242,7 @@
             this.btnRegresar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(204, 37);
-            this.btnRegresar.TabIndex = 3;
+            this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Atras";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -254,7 +254,7 @@
             this.groupBox2.Location = new System.Drawing.Point(746, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(146, 104);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Filtrar por estado";
             // 
@@ -310,7 +310,7 @@
             this.dgvMostrarProductos.RowHeadersWidth = 62;
             this.dgvMostrarProductos.RowTemplate.Height = 28;
             this.dgvMostrarProductos.Size = new System.Drawing.Size(878, 430);
-            this.dgvMostrarProductos.TabIndex = 1;
+            this.dgvMostrarProductos.TabIndex = 2;
             this.dgvMostrarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarProductos_CellContentClick);
             this.dgvMostrarProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 

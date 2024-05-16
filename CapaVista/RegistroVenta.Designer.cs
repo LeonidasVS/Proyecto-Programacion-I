@@ -120,7 +120,7 @@
             this.txtCodigoProducto.Location = new System.Drawing.Point(167, 57);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(253, 19);
-            this.txtCodigoProducto.TabIndex = 4;
+            this.txtCodigoProducto.TabIndex = 1;
             this.txtCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             this.txtCodigoProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
@@ -134,7 +134,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(167, 130);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(253, 19);
-            this.txtCantidad.TabIndex = 5;
+            this.txtCantidad.TabIndex = 0;
             // 
             // txtExistencias
             // 
@@ -145,7 +145,7 @@
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.ReadOnly = true;
             this.txtExistencias.Size = new System.Drawing.Size(206, 19);
-            this.txtExistencias.TabIndex = 6;
+            this.txtExistencias.TabIndex = 3;
             // 
             // cmbNombre
             // 
@@ -158,7 +158,7 @@
             this.cmbNombre.Location = new System.Drawing.Point(544, 60);
             this.cmbNombre.Name = "cmbNombre";
             this.cmbNombre.Size = new System.Drawing.Size(313, 26);
-            this.cmbNombre.TabIndex = 7;
+            this.cmbNombre.TabIndex = 2;
             this.cmbNombre.ValueMember = "IdProducto";
             this.cmbNombre.SelectedIndexChanged += new System.EventHandler(this.cmbNombre_SelectedIndexChanged);
             // 
@@ -249,7 +249,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(633, 198);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(99, 36);
-            this.btnRegistrar.TabIndex = 9;
+            this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);

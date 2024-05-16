@@ -97,7 +97,7 @@ namespace CapaVista
             btnImprimir.Left = 502;
             btnImprimir.Top = totalY + 40;
 
-            if (btnImprimir.Bottom <= 928)
+            if (btnImprimir.Bottom <= 660)
             {
                 this.ClientSize = new Size(590, btnImprimir.Bottom + 40);
             }
