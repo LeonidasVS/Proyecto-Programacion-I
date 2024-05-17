@@ -32,18 +32,6 @@ namespace CapaLogica
             return _productoDAL.EliminarProducto(id);
         }
 
-        public List<Producto> FiltrarPorcategoria(int idCategoria, bool inactivo = false)
-        {
-            _productoDAL = new ProductoDAL();
-            return _productoDAL.FiltrarPorCategoria(idCategoria, inactivo);
-        }
-
-        public List<Producto> FiltrarPorMarca(int idMarca, bool inactivo = false)
-        {
-            _productoDAL = new ProductoDAL();
-            return _productoDAL.FiltrarPorMarca(idMarca, inactivo);
-        }
-
         public int GuardarProducto(Producto producto, int id = 0, bool esActualizacion = false)
         {
             _productoDAL = new ProductoDAL();
@@ -67,12 +55,6 @@ namespace CapaLogica
         {
             _productoDAL = new ProductoDAL();
             _productoDAL.EliminarAgotado();
-        }
-
-        public List<Producto> FiltrarPorNombre(string nombre, bool inactivo = false)
-        {
-            _productoDAL = new ProductoDAL();
-            return _productoDAL.FiltrarPorNombre(nombre, inactivo);
         }
 
         public string NombreProductoDesdeBD(int id)

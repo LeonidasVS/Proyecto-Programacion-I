@@ -69,12 +69,6 @@ namespace CapaDatos
             return _db.MetodoPagos.Where(m => m.idMetodoPago == id).ToList();
         }
 
-        public MetodoPago ObtenerMetodoPago(int id)
-        {
-            _db = new ContextoBD();
-            return _db.MetodoPagos.Find(id);
-        }
-
         public string ObtenerNombreMetdPagoDesdeBD(int id)
         {
             _db = new ContextoBD();

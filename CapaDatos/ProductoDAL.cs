@@ -29,19 +29,6 @@ namespace CapaDatos
             return resultado;
         }
 
-        public List<Producto> FiltrarPorCategoria(int idCategoria, bool inactivo = false)
-        {
-            _db = new ContextoBD();
-            if (inactivo)
-            {
-                return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == false).ToList();
-            }
-            else 
-            {
-                return _db.Productos.Where(p => p.idCategoria == idCategoria && p.Activo == true).ToList();
-            }
-        }
-
         public List<Producto> Filtrar(int idCategoria = 0, bool inactivo = false, int idMarca = 0, string nombre = null)
         {
             _db = new ContextoBD();
@@ -236,19 +223,6 @@ namespace CapaDatos
             }
         }
 
-        public List<Producto> FiltrarPorMarca(int idMarca, bool inactivo = false)
-        {
-            _db = new ContextoBD();
-            if (inactivo)
-            {
-                return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == false).ToList();
-            }
-            else
-            {
-                return _db.Productos.Where(p => p.idMarca == idMarca && p.Activo == true).ToList();
-            }
-        }
-
         public int Guardar(Producto producto, int id = 0, bool esActualizacion = false)
         {
             _db = new ContextoBD();
@@ -302,19 +276,6 @@ namespace CapaDatos
                 producto.Activo = false;
             }
             _db.SaveChanges();
-        }
-
-        public List<Producto> FiltrarPorNombre(string nombre, bool inactivo = false)
-        {
-            _db = new ContextoBD();
-            if (inactivo)
-            {
-                return _db.Productos.Where(p => p.Activo == false && p.Nombre.Contains(nombre)).ToList();
-            }
-            else
-            {
-                return _db.Productos.Where(p => p.Activo == true && p.Nombre.Contains(nombre)).ToList();
-            }
         }
 
         public string ObtenerNombreProductoDesdeBD(int id)
