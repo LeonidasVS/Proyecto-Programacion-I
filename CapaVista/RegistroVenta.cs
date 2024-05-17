@@ -269,7 +269,7 @@ namespace CapaVista
 
             if (desicion != DialogResult.Yes)
             {
-                MessageBox.Show("La venta del producto se continua mostrando en el listado.", "Tienda | Registro venta",
+                MessageBox.Show("La venta actual se mantiene.", "Tienda | Registro venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
