@@ -68,7 +68,7 @@ namespace CapaVista
                     }
                     else if (dgvCategorias.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
                     {
-                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar la marca?", "Tienda | Editar marca",
+                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar la categoria?", "Tienda | Mantenimiento Categorias",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         _categoriaLOG = new CategoriaLOG();
 
@@ -76,7 +76,7 @@ namespace CapaVista
 
                         if (desicion != DialogResult.Yes)
                         {
-                            MessageBox.Show("La marca se continua mostrando en el listado.", "Tienda | Editar marca",
+                            MessageBox.Show("La categoria se continua mostrando en el listado.", "Tienda | Mantenimiento Categorias",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
@@ -86,12 +86,12 @@ namespace CapaVista
 
                             if (resultado > 0)
                             {
-                                MessageBox.Show("Marca eliminado con Exito.", "Tienda | Editar marca",
+                                MessageBox.Show("Categoria eliminado con Exito.", "Tienda | Mantenimiento Categorias",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
-                                MessageBox.Show("No se logro eliminar la marca.", "Tienda | Editar marca",
+                                MessageBox.Show("No se logro eliminar la categoria.", "Tienda | Mantenimiento Categorias",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }

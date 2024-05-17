@@ -26,7 +26,7 @@ namespace CapaVista
             {
                 this.Text = "Tienda AS | Editar categoria";
                 btnGuardar.Text = "Actualizar";
-                lblTitulo.Text = "Editar Marca";
+                lblTitulo.Text = "Editar Categoria";
 
                 CargarDatos(_id);
 
@@ -72,8 +72,8 @@ namespace CapaVista
                 {
                     MessageBox.Show("Por favor ingrese la descripción de la categoria", "Tienda AS | Agregar Categoria",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNombre.Focus();
-                    txtNombre.BackColor = Color.LightYellow;
+                    txtDescripcion.Focus();
+                    txtDescripcion.BackColor = Color.LightYellow;
                 }
                 else if (!chbActivo.Checked)
                 {

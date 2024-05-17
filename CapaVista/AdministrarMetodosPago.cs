@@ -67,7 +67,7 @@ namespace CapaVista
                     }
                     else if (dgvMtdsPago.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
                     {
-                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar la marca?", "Tienda | Editar marca",
+                        var desicion = MessageBox.Show("¿Está seguro que desea eliminar el metodo de pago?", "Tienda | Administrar Metodos de Pago",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         _metodopagoLOG = new MetodoPagoLOG();
 
@@ -75,7 +75,7 @@ namespace CapaVista
 
                         if (desicion != DialogResult.Yes)
                         {
-                            MessageBox.Show("La marca se continua mostrando en el listado.", "Tienda | Editar marca",
+                            MessageBox.Show("El metodo de pago se continua mostrando en el listado.", "Tienda | Administrar Metodos de Pago",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
@@ -85,12 +85,12 @@ namespace CapaVista
 
                             if (resultado > 0)
                             {
-                                MessageBox.Show("Marca eliminada con Exito.", "Tienda | Editar marca",
+                                MessageBox.Show("Metodo de pago eliminado con Exito.", "Tienda | Administrar Metodos de Pago",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
-                                MessageBox.Show("No se logro eliminar la marca.", "Tienda | Editar marca",
+                                MessageBox.Show("No se logro eliminar el metodo de pago.", "Tienda | Administrar Metodos de Pago",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
