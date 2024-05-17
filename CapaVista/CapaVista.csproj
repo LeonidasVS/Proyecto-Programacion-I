@@ -130,6 +130,7 @@
     <Compile Include="RegistroVenta.Designer.cs">
       <DependentUpon>RegistroVenta.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="VerDetalleVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +143,8 @@
     <EmbeddedResource Include="AdministrarMetodosPago.resx">
       <DependentUpon>AdministrarMetodosPago.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     <EmbeddedResource Include="AdministrarProductos.resx">
       <DependentUpon>AdministrarProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,9 +184,12 @@
     <EmbeddedResource Include="RegistroVenta.resx">
       <DependentUpon>RegistroVenta.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="VerDetalleVenta.resx">
       <DependentUpon>VerDetalleVenta.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaEntidades.Categoria.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.DetalleVenta.datasource" />

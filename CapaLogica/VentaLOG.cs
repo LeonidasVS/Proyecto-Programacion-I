@@ -16,6 +16,7 @@ namespace CapaLogica
             _ventaDAL = new VentaDAL();
             return _ventaDAL.GuardarVenta(venta);
         }
+<<<<<<< HEAD
 
         public int UltimoIdVenta()
         {
@@ -45,5 +46,7 @@ namespace CapaLogica
             _ventaDAL = new VentaDAL();
             return _ventaDAL.Ventas();
         }
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     }
 }

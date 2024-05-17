@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 ﻿using CapaDatos;
 using CapaEntidades;
 using CapaLogica;
 using CapaVista.Properties;
 using Microsoft.Win32;
+=======
+﻿using CapaEntidades;
+using CapaLogica;
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+<<<<<<< HEAD
+=======
+using System.Diagnostics;
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,12 +31,19 @@ namespace CapaVista
         VentaLOG _ventaLOG;
         ProductoLOG _productoLOG;
         DataTable detalleVenta;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
         public RegistroVenta()
         {
             InitializeComponent();
 
             CargarProducto();
+<<<<<<< HEAD
             CargarMetodoPago();
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
 
             detalleVenta = new DataTable();
             detalleVenta.Columns.Add("Codigo", typeof(int));
@@ -36,12 +52,21 @@ namespace CapaVista
             detalleVenta.Columns.Add("Precio", typeof(decimal));
             detalleVenta.Columns.Add("Cantidad", typeof(int));
             detalleVenta.Columns.Add("SubTotal", typeof(decimal));
+<<<<<<< HEAD
+=======
+
+            _metodoPagoLOG = new MetodoPagoLOG();
+            MetodoPagoBindingSource.DataSource = _metodoPagoLOG.metodopago();
+            cmbMetodoPago.DataSource = _metodoPagoLOG.metodopago();
+
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
         }
 
         private void CargarProducto()
         {
             _productoLOG = new ProductoLOG();
             ProductoBindingSource.DataSource = _productoLOG.ObtenerProductos();
+<<<<<<< HEAD
             _metodoPagoLOG = new MetodoPagoLOG();
         }
 
@@ -64,11 +89,21 @@ namespace CapaVista
             }
         }
         private void cmbIdProducto_TextChanged(object sender, EventArgs e)
+=======
+        }
+        private void txtCodigoProducto_TextChanged(object sender, EventArgs e)
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
         {
             if (!string.IsNullOrEmpty(cmbIdProducto.Text))
             {
                 _productoLOG = new ProductoLOG();
+<<<<<<< HEAD
                 int codigo = int.Parse(cmbIdProducto.Text);
+=======
+
+                int codigo = int.Parse(cmbIdProducto.Text);
+
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
                 var producto = _productoLOG.ObtenerProductoPorId(codigo);
 
                 if (producto != null && producto.Estado == true)
@@ -94,10 +129,15 @@ namespace CapaVista
 
                 int codigo = int.Parse(cmbIdProducto.Text);
                 int cantidad = int.Parse(cmbCantidad.Text);
+<<<<<<< HEAD
+=======
+
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
                 var producto = (Producto)ProductoBindingSource.Current;
 
                 if (producto != null)
                 {
+<<<<<<< HEAD
                     if (int.Parse(cmbCantidad.Text) > int.Parse(cmbExistencias.Text))
                     {
                         MessageBox.Show("Las existencias no son suficientes para esta venta", "Tienda | Registro venta",
@@ -138,11 +178,31 @@ namespace CapaVista
                 {
                     MessageBox.Show("Digita la cantidad de producto a comprar", "Tienda AS | Registro venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+=======
+                    detalleVenta.Rows.Add(codigo, producto.Nombre, producto.idMarca, producto.PrecioUnitario,
+                    cantidad, (cantidad * producto.PrecioUnitario));
+
+                    dgvRegistroVenta.DataSource = detalleVenta;
+
+                    decimal montoTotal = 0;
+
+                    foreach (DataGridViewRow row in dgvRegistroVenta.Rows)
+                    {
+                        montoTotal += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
+                    }
+
+                    cmbTotal.Text = montoTotal.ToString();
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
                 }
             }
             catch (Exception)
             {
+<<<<<<< HEAD
                 MessageBox.Show("Ocurrio un error", "Tienda AS | Registro venta",
+=======
+
+                MessageBox.Show("Ocurrio un error", "Tienda | Registro venta",
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -152,7 +212,10 @@ namespace CapaVista
             try
             {
                 _ventaLOG = new VentaLOG();
+<<<<<<< HEAD
                 _productoLOG = new ProductoLOG();
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
 
                 Venta venta = new Venta();
                 venta.Fecha = DateTime.Now;
@@ -169,10 +232,15 @@ namespace CapaVista
                     };
                     venta.Detalles.Add(detalle);
                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
                 int resultado = _ventaLOG.guardarVenta(venta);
 
                 if (resultado >= 0)
                 {
+<<<<<<< HEAD
                     MessageBox.Show("Venta guardada con exito", "Tienda AS | Registro venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _productoLOG.ProductoAgotado();
@@ -181,16 +249,30 @@ namespace CapaVista
                 else
                 {
                     MessageBox.Show("No se logro guardar la venta", "Tienda AS | Registro venta",
+=======
+                    MessageBox.Show("Venta guardada con exito", "Tienda | Registro venta",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se logro guardar la venta", "Tienda | Registro venta",
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
+<<<<<<< HEAD
                 MessageBox.Show($"Ocurrio un error {ex}", "Tienda AS | Registro venta",
+=======
+
+                MessageBox.Show($"Ocurrio un error {ex}", "Tienda | Registro venta",
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+<<<<<<< HEAD
         public void LimpiarTablaVenta()
         {
             CargarProducto();
@@ -205,6 +287,8 @@ namespace CapaVista
             cmbTotal.Clear();
         }
 
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
         private void dgvRegistroVenta_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             _marcaLOG = new MarcaLOG();
@@ -217,6 +301,7 @@ namespace CapaVista
             }
         }
 
+<<<<<<< HEAD
         private void dgvRegistroVenta_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -324,3 +409,12 @@ namespace CapaVista
     }
 }
 
+=======
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+    }
+}
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31

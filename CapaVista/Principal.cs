@@ -39,6 +39,7 @@ namespace CapaVista
             RegistroVenta objRegistroVenta = new RegistroVenta();
             objRegistroVenta.ShowDialog();
         }
+<<<<<<< HEAD
 
         private void administrarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,5 +70,7 @@ namespace CapaVista
             objVerDetalleVenta.ShowDialog();
         }
 
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     }
 }

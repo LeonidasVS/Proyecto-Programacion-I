@@ -10,11 +10,16 @@ namespace CapaDatos
     public class MetodoPagoDAL
     {
         ContextoBd _db;
+<<<<<<< HEAD
         public List<MetodoPago> FormasDePago()
+=======
+        public List<MetodoPago> MetodoPagos()
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
         {
             _db = new ContextoBd();
             return _db.MetodoPagos.ToList();
         }
+<<<<<<< HEAD
 
         public int GuardarMetodoPago(MetodoPago metodoPago, int id = 0, bool actualizacion = false)
         {
@@ -58,5 +63,7 @@ namespace CapaDatos
 
             return NombreMtdPago;
         }
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     }
 }

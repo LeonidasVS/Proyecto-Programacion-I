@@ -57,7 +57,11 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+<<<<<<< HEAD
             this.menuStrip1.Size = new System.Drawing.Size(933, 26);
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(933, 24);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,9 +69,15 @@
             // 
             this.tsmVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.realizarVentaToolStripMenuItem});
+<<<<<<< HEAD
             this.tsmVentas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmVentas.Name = "tsmVentas";
             this.tsmVentas.Size = new System.Drawing.Size(70, 22);
+=======
+            this.tsmVentas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmVentas.Name = "tsmVentas";
+            this.tsmVentas.Size = new System.Drawing.Size(58, 20);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.tsmVentas.Text = "Ventas";
             // 
             // realizarVentaToolStripMenuItem
@@ -81,23 +91,39 @@
             // 
             this.tsmProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AdministrarProductos});
+<<<<<<< HEAD
             this.tsmProductos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmProductos.Name = "tsmProductos";
             this.tsmProductos.Size = new System.Drawing.Size(92, 22);
+=======
+            this.tsmProductos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmProductos.Name = "tsmProductos";
+            this.tsmProductos.Size = new System.Drawing.Size(77, 20);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.tsmProductos.Text = "Productos";
             // 
             // AdministrarProductos
             // 
             this.AdministrarProductos.Name = "AdministrarProductos";
+<<<<<<< HEAD
             this.AdministrarProductos.Size = new System.Drawing.Size(234, 22);
+=======
+            this.AdministrarProductos.Size = new System.Drawing.Size(200, 22);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.AdministrarProductos.Text = "Administrar Productos";
             this.AdministrarProductos.Click += new System.EventHandler(this.administrarProductosToolStripMenuItem_Click);
             // 
             // tsmDetalleVenta
             // 
+<<<<<<< HEAD
             this.tsmDetalleVenta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmDetalleVenta.Name = "tsmDetalleVenta";
             this.tsmDetalleVenta.Size = new System.Drawing.Size(121, 22);
+=======
+            this.tsmDetalleVenta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmDetalleVenta.Name = "tsmDetalleVenta";
+            this.tsmDetalleVenta.Size = new System.Drawing.Size(97, 20);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.tsmDetalleVenta.Text = "Detalle Venta";
             this.tsmDetalleVenta.Click += new System.EventHandler(this.tsmDetalleVenta_Click);
             // 

@@ -33,6 +33,7 @@ namespace CapaDatos
 
             return resultado;
         }
+<<<<<<< HEAD
 
         public int IdDeUltimaVenta()
         {
@@ -86,6 +87,8 @@ namespace CapaDatos
             _db = new ContextoBd();
             return _db.Ventas.ToList();
         }
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     }
 }
 

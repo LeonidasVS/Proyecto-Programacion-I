@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroVenta));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +60,10 @@
             this.MetodoPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.VentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
             this.button2 = new System.Windows.Forms.Button();
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaBindingSource)).BeginInit();
@@ -68,40 +74,68 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(44, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 19);
+=======
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(51, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 16);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo Producto:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(90, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 19);
+=======
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(97, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 16);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.label2.TabIndex = 1;
             this.label2.Text = "Cantidad:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(529, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 19);
+=======
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(542, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 16);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(514, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 19);
+=======
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(527, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 16);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.label4.TabIndex = 3;
             this.label4.Text = "Existencias:";
             // 
@@ -113,6 +147,7 @@
             this.cmbNombre.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProductoBindingSource, "idProducto", true));
             this.cmbNombre.DataSource = this.ProductoBindingSource;
             this.cmbNombre.DisplayMember = "Nombre";
+<<<<<<< HEAD
             this.cmbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNombre.FormattingEnabled = true;
             this.cmbNombre.Location = new System.Drawing.Point(615, 66);
@@ -121,6 +156,14 @@
             this.cmbNombre.TabIndex = 4;
             this.cmbNombre.ValueMember = "idProducto";
             this.cmbNombre.SelectedIndexChanged += new System.EventHandler(this.cmbNombre_SelectedIndexChanged);
+=======
+            this.cmbNombre.FormattingEnabled = true;
+            this.cmbNombre.Location = new System.Drawing.Point(615, 66);
+            this.cmbNombre.Name = "cmbNombre";
+            this.cmbNombre.Size = new System.Drawing.Size(218, 21);
+            this.cmbNombre.TabIndex = 4;
+            this.cmbNombre.ValueMember = "idProducto";
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             // 
             // ProductoBindingSource
             // 
@@ -129,6 +172,7 @@
             // cmbIdProducto
             // 
             this.cmbIdProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "idProducto", true));
+<<<<<<< HEAD
             this.cmbIdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbIdProducto.Location = new System.Drawing.Point(193, 67);
             this.cmbIdProducto.Name = "cmbIdProducto";
@@ -143,23 +187,49 @@
             this.cmbCantidad.Location = new System.Drawing.Point(193, 129);
             this.cmbCantidad.Name = "cmbCantidad";
             this.cmbCantidad.Size = new System.Drawing.Size(218, 24);
+=======
+            this.cmbIdProducto.Location = new System.Drawing.Point(176, 67);
+            this.cmbIdProducto.Name = "cmbIdProducto";
+            this.cmbIdProducto.Size = new System.Drawing.Size(218, 20);
+            this.cmbIdProducto.TabIndex = 6;
+            this.cmbIdProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
+            // 
+            // cmbCantidad
+            // 
+            this.cmbCantidad.Location = new System.Drawing.Point(176, 129);
+            this.cmbCantidad.Name = "cmbCantidad";
+            this.cmbCantidad.Size = new System.Drawing.Size(218, 20);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.cmbCantidad.TabIndex = 7;
             // 
             // cmbExistencias
             // 
             this.cmbExistencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Stock", true));
+<<<<<<< HEAD
             this.cmbExistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbExistencias.Location = new System.Drawing.Point(615, 129);
             this.cmbExistencias.Name = "cmbExistencias";
             this.cmbExistencias.Size = new System.Drawing.Size(218, 24);
+=======
+            this.cmbExistencias.Location = new System.Drawing.Point(615, 129);
+            this.cmbExistencias.Name = "cmbExistencias";
+            this.cmbExistencias.Size = new System.Drawing.Size(218, 20);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.cmbExistencias.TabIndex = 8;
             // 
             // btnRegistrar
             // 
+<<<<<<< HEAD
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(638, 182);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(86, 31);
+=======
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(757, 179);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.btnRegistrar.TabIndex = 9;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -169,6 +239,7 @@
             // 
             this.dgvRegistroVenta.AllowUserToAddRows = false;
             this.dgvRegistroVenta.BackgroundColor = System.Drawing.Color.PowderBlue;
+<<<<<<< HEAD
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,6 +248,8 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRegistroVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.dgvRegistroVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistroVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -185,6 +258,7 @@
             this.Cantidad,
             this.Precio,
             this.SubTotal});
+<<<<<<< HEAD
             this.dgvRegistroVenta.Location = new System.Drawing.Point(60, 233);
             this.dgvRegistroVenta.Name = "dgvRegistroVenta";
             this.dgvRegistroVenta.Size = new System.Drawing.Size(773, 179);
@@ -192,6 +266,13 @@
             this.dgvRegistroVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistroVenta_CellContentClick);
             this.dgvRegistroVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRegistroVenta_CellFormatting);
             this.dgvRegistroVenta.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegistroVenta_CellValueChanged);
+=======
+            this.dgvRegistroVenta.Location = new System.Drawing.Point(71, 237);
+            this.dgvRegistroVenta.Name = "dgvRegistroVenta";
+            this.dgvRegistroVenta.Size = new System.Drawing.Size(762, 179);
+            this.dgvRegistroVenta.TabIndex = 10;
+            this.dgvRegistroVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRegistroVenta_CellFormatting);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             // 
             // Codigo
             // 
@@ -206,7 +287,10 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
+<<<<<<< HEAD
             this.Nombre.Width = 230;
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             // 
             // Marca
             // 
@@ -237,10 +321,17 @@
             // 
             // btnCancelar
             // 
+<<<<<<< HEAD
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(732, 509);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 33);
+=======
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(758, 509);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -248,10 +339,17 @@
             // 
             // btnProcesar
             // 
+<<<<<<< HEAD
             this.btnProcesar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcesar.Location = new System.Drawing.Point(71, 509);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(84, 33);
+=======
+            this.btnProcesar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcesar.Location = new System.Drawing.Point(71, 509);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(75, 23);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.btnProcesar.TabIndex = 12;
             this.btnProcesar.Text = "Procesar";
             this.btnProcesar.UseVisualStyleBackColor = true;
@@ -259,19 +357,32 @@
             // 
             // cmbTotal
             // 
+<<<<<<< HEAD
             this.cmbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTotal.Location = new System.Drawing.Point(193, 454);
             this.cmbTotal.Name = "cmbTotal";
             this.cmbTotal.Size = new System.Drawing.Size(218, 24);
+=======
+            this.cmbTotal.Location = new System.Drawing.Point(176, 455);
+            this.cmbTotal.Name = "cmbTotal";
+            this.cmbTotal.Size = new System.Drawing.Size(218, 20);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.cmbTotal.TabIndex = 14;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(72, 456);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 19);
+=======
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(72, 456);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 16);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.label5.TabIndex = 13;
             this.label5.Text = "Total a Pagar:";
             // 
@@ -280,11 +391,18 @@
             this.cmbMetodoPago.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.DetalleVentaBindingSource, "idMetodoPago", true));
             this.cmbMetodoPago.DataSource = this.MetodoPagoBindingSource;
             this.cmbMetodoPago.DisplayMember = "FormaPago";
+<<<<<<< HEAD
             this.cmbMetodoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMetodoPago.FormattingEnabled = true;
             this.cmbMetodoPago.Location = new System.Drawing.Point(615, 454);
             this.cmbMetodoPago.Name = "cmbMetodoPago";
             this.cmbMetodoPago.Size = new System.Drawing.Size(218, 26);
+=======
+            this.cmbMetodoPago.FormattingEnabled = true;
+            this.cmbMetodoPago.Location = new System.Drawing.Point(615, 454);
+            this.cmbMetodoPago.Name = "cmbMetodoPago";
+            this.cmbMetodoPago.Size = new System.Drawing.Size(218, 21);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.cmbMetodoPago.TabIndex = 16;
             this.cmbMetodoPago.ValueMember = "idMetodoPago";
             // 
@@ -299,10 +417,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
+<<<<<<< HEAD
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(464, 455);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 19);
+=======
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(491, 455);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 16);
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.label6.TabIndex = 15;
             this.label6.Text = "Metodo de Pago:";
             // 
@@ -310,6 +435,7 @@
             // 
             this.VentaBindingSource.DataSource = typeof(CapaEntidades.Venta);
             // 
+<<<<<<< HEAD
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,13 +447,18 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             // RegistroVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(933, 554);
+<<<<<<< HEAD
             this.Controls.Add(this.button2);
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
             this.Controls.Add(this.cmbMetodoPago);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbTotal);
@@ -385,6 +516,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+<<<<<<< HEAD
         private System.Windows.Forms.Button button2;
+=======
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     }
 }

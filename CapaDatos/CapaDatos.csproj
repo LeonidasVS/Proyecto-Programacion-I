@@ -58,9 +58,15 @@
     <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="MarcaDAL.cs" />
     <Compile Include="MetodoPagoDAL.cs" />
+<<<<<<< HEAD
     <Compile Include="Migrations\202405021932477_A.cs" />
     <Compile Include="Migrations\202405021932477_A.Designer.cs">
       <DependentUpon>202405021932477_A.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\202404160453579_Modelitos.cs" />
+    <Compile Include="Migrations\202404160453579_Modelitos.Designer.cs">
+      <DependentUpon>202404160453579_Modelitos.cs</DependentUpon>
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
     </Compile>
     <Compile Include="Migrations\202405021949291_B.cs" />
     <Compile Include="Migrations\202405021949291_B.Designer.cs">
@@ -69,6 +75,10 @@
     <Compile Include="Migrations\202405031802404_productos.cs" />
     <Compile Include="Migrations\202405031802404_productos.Designer.cs">
       <DependentUpon>202405031802404_productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404242227079_ActPre.cs" />
+    <Compile Include="Migrations\202404242227079_ActPre.Designer.cs">
+      <DependentUpon>202404242227079_ActPre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
@@ -94,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405031802404_productos.resx">
       <DependentUpon>202405031802404_productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404242227079_ActPre.resx">
+      <DependentUpon>202404242227079_ActPre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

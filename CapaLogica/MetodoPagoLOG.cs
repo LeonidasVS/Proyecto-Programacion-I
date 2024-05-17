@@ -11,6 +11,7 @@ namespace CapaLogica
     public class MetodoPagoLOG
     {
         MetodoPagoDAL _metodoPagoDAL;
+<<<<<<< HEAD
         public List<MetodoPago> FormasDePago()
         {
             _metodoPagoDAL = new MetodoPagoDAL();
@@ -26,6 +27,12 @@ namespace CapaLogica
         {
             _metodoPagoDAL = new MetodoPagoDAL();
             return _metodoPagoDAL.ObtenerNombreMetdPagoDesdeBD(id);
+=======
+        public List<MetodoPago> metodopago()
+        {
+            _metodoPagoDAL = new MetodoPagoDAL();
+            return _metodoPagoDAL.MetodoPagos();
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
         }
     }
 }

@@ -167,6 +167,7 @@ namespace CapaVista
             this.Close();
         }
 
+<<<<<<< HEAD
         private void btnAdmMarcas_Click(object sender, EventArgs e)
         {
             AdministrarMarcas objAdministrarMarcas = new AdministrarMarcas();
@@ -185,6 +186,11 @@ namespace CapaVista
             cmbCategorias.DataSource = _categoriaLOG.ObtenerCategorias();
             cmbCategorias.DisplayMember = "Nombre";
             cmbCategorias.ValueMember = "idCategoria";
+=======
+        private void AgregarProducto_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> dbddcde63f085e1eacc57d2914303b1a816ccc31
         }
     }
 }
