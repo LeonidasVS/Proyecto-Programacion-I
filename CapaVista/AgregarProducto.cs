@@ -106,6 +106,20 @@ namespace CapaVista
                     txtExistencias.Focus();
                     txtExistencias.BackColor = Color.LightYellow;
                 }
+                else if (cmbMarcas.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Por favor ingrese la marca del producto", "Tienda AS | Agregar Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbMarcas.Focus();
+                    cmbMarcas.BackColor = Color.LightYellow;
+                }
+                else if (cmbCategorias.SelectedIndex == 0)
+                {
+                    MessageBox.Show("Por favor ingrese la categoria del producto", "Tienda AS | Agregar Producto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbCategorias.Focus();
+                    cmbCategorias.BackColor = Color.LightYellow;
+                }
                 else if(!chkEstado.Checked)
                 {
                     var dialogo = MessageBox.Show("¿Está seguro que desea guardar el producto como inactivo?", "Tienda | Agregar Producto",
@@ -117,21 +131,7 @@ namespace CapaVista
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                }
-                else if(cmbMarcas.SelectedIndex == 0)
-                {
-                    MessageBox.Show("Por favor ingrese la marca del producto", "Tienda AS | Agregar Producto",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cmbMarcas.Focus();
-                    cmbMarcas.BackColor = Color.LightYellow;
-                }
-                else if(cmbCategorias.SelectedIndex == 0)
-                {
-                    MessageBox.Show("Por favor ingrese la categoria del producto", "Tienda AS | Agregar Producto",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cmbCategorias.Focus();
-                    cmbCategorias.BackColor = Color.LightYellow;
-                }
+                }              
 
                 // En caso de ser actualizacion.
                 if (Convert.ToDecimal(txtExistencias.Text) > 0 && Convert.ToDecimal(txtPrecio.Text) > 0)
